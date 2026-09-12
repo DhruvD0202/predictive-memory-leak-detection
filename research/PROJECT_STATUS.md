@@ -52,6 +52,8 @@ These are planning targets, not scheduled automated actions or promises of futur
 
 ## Next checkpoint
 
+On 12 September, the professor's request for intermediate results was addressed with a [Review 2 demonstration guide](../reviews/Review2_Intermediate_Results.md). It assembles existing verified preparation counts, baseline errors, a learning curve, forecasts and warning outcomes, with source links and a suggested 6-8 minute demonstration. This is review material, not a new experiment or a drafted research-paper section.
+
 The user's warning run is verified; see [COLAB_WARNING_VERIFICATION.md](COLAB_WARNING_VERIFICATION.md). No rerun or further notebook upload is needed for this checkpoint. Use the complete verified Colab forecasting and warning runs for paper tables and figures; preserve the earlier local experiments separately.
 
 The verified Colab warning experiment gives trend-only F1 0.829670 versus LSTM-assisted F1 0.601469. LSTM-assisted precision is higher (0.847601 versus 0.802028), with fewer false alarm starts per non-leak hour (1.039211 versus 2.127908), but lower point recall. Trend-only detects 35/35 eligible test events and LSTM-assisted 34/35. These are recognition results after injection starts, not warnings before exhaustion. Westermo remains unlabeled and supports only descriptive alarm counts.
