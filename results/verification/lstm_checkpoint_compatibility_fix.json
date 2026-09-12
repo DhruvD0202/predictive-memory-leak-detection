@@ -1,0 +1,30 @@
+[
+  {
+    "dataset": "antarex_mono",
+    "selected_weights_unchanged": true,
+    "weight_sha256": "6cd2774b51e3f357b9a5d9f8dcfedaf5489e91e45cb369eef73899196bfd4aa8",
+    "checkpoint_loads_with_weights_only": true,
+    "field_normalized": "training history scalar converted to built-in float"
+  },
+  {
+    "dataset": "westermo_1",
+    "selected_weights_unchanged": true,
+    "weight_sha256": "2d7c8bcd0c2613e8bcc29f279129f74e055fe01bc9679b9ad7b350f38e949708",
+    "checkpoint_loads_with_weights_only": true,
+    "field_normalized": "training history scalar converted to built-in float"
+  },
+  {
+    "dataset": "westermo_2",
+    "selected_weights_unchanged": true,
+    "weight_sha256": "3a6d213baaffaf29e4ed5522c8d60f107e7dad939f529d41c711677b6c77fa0c",
+    "checkpoint_loads_with_weights_only": true,
+    "field_normalized": "training history scalar converted to built-in float"
+  },
+  {
+    "dataset": "westermo_3",
+    "selected_weights_unchanged": true,
+    "weight_sha256": "3972ca978230eea9593eb3335e52ac4c04d40764993486ffbf796cb03c96ba0c",
+    "checkpoint_loads_with_weights_only": true,
+    "field_normalized": "training history scalar converted to built-in float"
+  }
+]

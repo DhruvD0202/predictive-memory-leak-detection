@@ -1,0 +1,13 @@
+dataset,split,method,eligible_origins,observed_hours,warning_origins,warning_fraction,alarm_starts,alarm_starts_per_observed_hour,leak_labels_available
+westermo_1,test,trend_only,12891,107.425,0,0.0,0,0.0,False
+westermo_1,test,arima_growth,12891,107.425,0,0.0,0,0.0,False
+westermo_1,test,lstm_growth,12891,107.425,0,0.0,0,0.0,False
+westermo_1,test,always_off,12891,107.425,0,0.0,0,0.0,False
+westermo_2,test,trend_only,12745,106.20833333333333,0,0.0,0,0.0,False
+westermo_2,test,arima_growth,12745,106.20833333333333,0,0.0,0,0.0,False
+westermo_2,test,lstm_growth,12745,106.20833333333333,0,0.0,0,0.0,False
+westermo_2,test,always_off,12745,106.20833333333333,0,0.0,0,0.0,False
+westermo_3,test,trend_only,12891,107.425,1,7.757350089209525e-05,1,0.00930882010705143,False
+westermo_3,test,arima_growth,12891,107.425,0,0.0,0,0.0,False
+westermo_3,test,lstm_growth,12891,107.425,0,0.0,0,0.0,False
+westermo_3,test,always_off,12891,107.425,0,0.0,0,0.0,False

@@ -1,0 +1,23 @@
+{
+  "completed_utc": "2026-09-09T14:04:26.562192+00:00",
+  "all_checks_passed": true,
+  "warning_decisions_independently_reconstructed": 402364,
+  "event_outcomes_independently_checked": 264,
+  "least_squares_slopes_independently_recomputed": 100591,
+  "maximum_slope_difference_pp_per_minute": 4.263256414560601e-14,
+  "original_thresholds_unchanged": true,
+  "first_run_metric_and_candidate_files_unchanged": true,
+  "verified_result_files": 20,
+  "all_three_pngs_decode": true,
+  "three_pdf_headers_valid": true,
+  "result_package_sha256": "2247ef36633cef4e12c6c0338d23c9380e92e0e27247a5e965728df765f082a3",
+  "result_package_bytes": 6677468,
+  "notebook_execution": {
+    "environment": "Local Windows CPU using verified Colab inputs; hosted warning run pending",
+    "completed_utc": "2026-09-09T14:02:52.244708+00:00",
+    "elapsed_seconds": 11.8,
+    "code_cells_executed": 8,
+    "all_cells_succeeded": true
+  },
+  "scope": "Independent vectorized warning confirmation, least-squares slopes, event outcomes, confusion counts and archive audit; no parameter selection or training."
+}

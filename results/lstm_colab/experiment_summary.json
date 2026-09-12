@@ -1,0 +1,141 @@
+{
+  "stage": "initial multivariate LSTM forecasting",
+  "completed_utc": "2026-09-09T13:34:10.816484+00:00",
+  "protocol_version": "review2-lstm-v1",
+  "settings": {
+    "hidden_units": 32,
+    "layers": 1,
+    "batch_size": 64,
+    "evaluation_batch_size": 256,
+    "learning_rate": 0.001,
+    "max_epochs": 20,
+    "patience": 4,
+    "gradient_clip_norm": 1.0,
+    "seed": 42,
+    "antarex_training_stride": 12,
+    "westermo_training_stride": 4,
+    "cpu_threads": 2,
+    "forecast_clip_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "input_provenance": {
+    "combined_package_sha256": "208c3b38ffbd7564e95f7452e0a3d203b1d4734858383e43cf602093ef7a1222",
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "baseline_package_sha256": "2b242a47288ea5db25ddd4d79de2069980ef1dc462fea157580e67ec19c01ba3",
+    "datasets": [
+      "antarex_mono",
+      "westermo_1",
+      "westermo_2",
+      "westermo_3"
+    ]
+  },
+  "runtime": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "torch": "2.11.0+cpu",
+    "matplotlib": "3.10.0",
+    "device_type": "cpu",
+    "device_name": "x86_64",
+    "cuda": null,
+    "cudnn": null,
+    "deterministic_algorithms": true,
+    "cpu_threads": 2
+  },
+  "datasets": [
+    {
+      "dataset": "antarex_mono",
+      "best_epoch": 8,
+      "epochs_run": 12,
+      "training_origin_count": 12091,
+      "training_stride": 12,
+      "parameter_count": 5281,
+      "forecast_horizon_seconds": 60,
+      "test_origins": 31032,
+      "feature_names": [
+        "memory_pressure",
+        "anonymous_memory_gib",
+        "committed_memory_gib",
+        "cpu_busy_fraction",
+        "cpu_iowait_fraction",
+        "page_faults_per_second",
+        "major_page_faults_per_second"
+      ],
+      "training_seconds_including_validation": 56.98238068299929
+    },
+    {
+      "dataset": "westermo_1",
+      "best_epoch": 10,
+      "epochs_run": 14,
+      "training_origin_count": 14923,
+      "training_stride": 4,
+      "parameter_count": 5409,
+      "forecast_horizon_seconds": 300,
+      "test_origins": 12891,
+      "feature_names": [
+        "memory_pressure",
+        "swap_used_gib",
+        "cpu_user_rate",
+        "cpu_system_rate",
+        "cpu_iowait_rate",
+        "disk_read_bytes_per_second",
+        "disk_write_bytes_per_second",
+        "load_1m"
+      ],
+      "training_seconds_including_validation": 58.14447134400007
+    },
+    {
+      "dataset": "westermo_2",
+      "best_epoch": 20,
+      "epochs_run": 20,
+      "training_origin_count": 15103,
+      "training_stride": 4,
+      "parameter_count": 5281,
+      "forecast_horizon_seconds": 300,
+      "test_origins": 12745,
+      "feature_names": [
+        "memory_pressure",
+        "cpu_user_rate",
+        "cpu_system_rate",
+        "cpu_iowait_rate",
+        "disk_read_bytes_per_second",
+        "disk_write_bytes_per_second",
+        "load_1m"
+      ],
+      "training_seconds_including_validation": 78.92787346199998
+    },
+    {
+      "dataset": "westermo_3",
+      "best_epoch": 13,
+      "epochs_run": 17,
+      "training_origin_count": 15103,
+      "training_stride": 4,
+      "parameter_count": 5409,
+      "forecast_horizon_seconds": 300,
+      "test_origins": 12891,
+      "feature_names": [
+        "memory_pressure",
+        "swap_used_gib",
+        "cpu_user_rate",
+        "cpu_system_rate",
+        "cpu_iowait_rate",
+        "disk_read_bytes_per_second",
+        "disk_write_bytes_per_second",
+        "load_1m"
+      ],
+      "training_seconds_including_validation": 68.95861577300002
+    }
+  ],
+  "elapsed_this_run_seconds": 291.55054109799994,
+  "single_seed_pilot": true,
+  "classification_metrics_computed": false,
+  "paper_draft_written": false,
+  "limits": [
+    "No LSTM advantage is assumed.",
+    "One seed and spaced training origins; not an exhaustive evaluation.",
+    "No memory-exhaustion outcomes in Antarex pilot; Westermo leak labels unknown.",
+    "Training runtime is not deployment-monitoring overhead."
+  ]
+}

@@ -1,0 +1,5 @@
+# Colab may retain its existing compatible PyTorch/GPU installation; actual versions are recorded.
+numpy>=2.1,<3
+pandas>=2.2,<3.1
+matplotlib>=3.10,<4
+torch>=2.8,<3

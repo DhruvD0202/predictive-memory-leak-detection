@@ -1,0 +1,42 @@
+{
+  "protocol_version": "review2-warning-v1",
+  "settings": {
+    "trend_observations": 12,
+    "consecutive_samples": 3,
+    "threshold_grid_pp_per_minute": [
+      0.01,
+      0.025,
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.8,
+      1.6,
+      3.2
+    ],
+    "selection": "validation point F1; fewer FP; higher threshold",
+    "event_detection": "new alarm start within fully covered injected event",
+    "point_adjustment": false
+  },
+  "input_provenance": {
+    "combined_package_sha256": "22201607ad3e0778e38dbc8ed5f688a608a1a7fb3aa37f648448527e94b8199b",
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "forecast_package_sha256": "42cd2d51f29a06d2f6a0912a8b787d343898b11ac3ac55c4b397264743c1a7bf",
+    "protocol_sha256": "e2959497c559f86cf664893719ff27d014bbc431434eeb981c7d8d309c39b662"
+  },
+  "completed_utc": "2026-09-09T14:02:48.817038+00:00",
+  "selection_freeze_sha256": "0c8d9c6804fc6e330648872b8e65f8a3a7129f7d4c25a8a14015f4c0ea0c18a1",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8"
+  },
+  "elapsed_seconds": 7.025522700045258,
+  "timing_scope": "offline input-table reads, warning calibration/evaluation and plots; excludes input unpacking, model inference, final verification and ZIP creation",
+  "model_retraining_performed": false,
+  "warning_test_tuning_performed": false,
+  "westermo_leak_metrics_computed": false,
+  "memory_exhaustion_evaluated": false,
+  "paper_draft_written": false
+}

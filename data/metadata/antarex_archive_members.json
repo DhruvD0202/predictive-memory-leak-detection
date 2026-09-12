@@ -1,0 +1,338 @@
+[
+  {
+    "name": "Antarex/",
+    "size": 0,
+    "compressed": 0,
+    "method": 0,
+    "offset": 0,
+    "crc": 0
+  },
+  {
+    "name": "Antarex/CPU-MEM_mono/",
+    "size": 0,
+    "compressed": 0,
+    "method": 0,
+    "offset": 38,
+    "crc": 0
+  },
+  {
+    "name": "Antarex/CPU-MEM_mono/mono-core_dur.pdf",
+    "size": 12600,
+    "compressed": 12600,
+    "method": 0,
+    "offset": 89,
+    "crc": 3677508478
+  },
+  {
+    "name": "Antarex/CPU-MEM_mono/mono-core_mttf.pdf",
+    "size": 16042,
+    "compressed": 16042,
+    "method": 0,
+    "offset": 12757,
+    "crc": 2965062262
+  },
+  {
+    "name": "Antarex/CPU-MEM_mono/mono_workload.csv",
+    "size": 117822,
+    "compressed": 117822,
+    "method": 0,
+    "offset": 28868,
+    "crc": 545277222
+  },
+  {
+    "name": "Antarex/CPU-MEM_mono/probe-mono_workload.csv",
+    "size": 967,
+    "compressed": 967,
+    "method": 0,
+    "offset": 146758,
+    "crc": 3208284592
+  },
+  {
+    "name": "Antarex/CPU-MEM_mono/results_cpu-mem-mono.7z",
+    "size": 487811676,
+    "compressed": 487811676,
+    "method": 0,
+    "offset": 147799,
+    "crc": 674803618
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/",
+    "size": 0,
+    "compressed": 0,
+    "method": 0,
+    "offset": 487959549,
+    "crc": 0
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/Launch Scripts/",
+    "size": 0,
+    "compressed": 0,
+    "method": 0,
+    "offset": 487959601,
+    "crc": 0
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/Launch Scripts/dgemm.sh",
+    "size": 74,
+    "compressed": 74,
+    "method": 0,
+    "offset": 487959668,
+    "crc": 642508767
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/Launch Scripts/hpcc.sh",
+    "size": 63,
+    "compressed": 63,
+    "method": 0,
+    "offset": 487959817,
+    "crc": 3188593632
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/Launch Scripts/stream4.sh",
+    "size": 71,
+    "compressed": 71,
+    "method": 0,
+    "offset": 487959954,
+    "crc": 3586695568
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/Launch Scripts/stream8.sh",
+    "size": 71,
+    "compressed": 71,
+    "method": 0,
+    "offset": 487960102,
+    "crc": 368144961
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/Launch Scripts/xlinpack_xeon64.sh",
+    "size": 119,
+    "compressed": 119,
+    "method": 0,
+    "offset": 487960250,
+    "crc": 1909959965
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/multi-core_dur.pdf",
+    "size": 12599,
+    "compressed": 12599,
+    "method": 0,
+    "offset": 487960454,
+    "crc": 3226921227
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/multi-core_mttf.pdf",
+    "size": 16218,
+    "compressed": 16218,
+    "method": 0,
+    "offset": 487973123,
+    "crc": 761510567
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/multi_workload.csv",
+    "size": 115947,
+    "compressed": 115947,
+    "method": 0,
+    "offset": 487989412,
+    "crc": 2689725612
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/probe-multi_workload.csv",
+    "size": 7514,
+    "compressed": 7514,
+    "method": 0,
+    "offset": 488105429,
+    "crc": 1845811378
+  },
+  {
+    "name": "Antarex/CPU-MEM_multi/results_cpu-mem-multi.7z",
+    "size": 685529732,
+    "compressed": 685529732,
+    "method": 0,
+    "offset": 488113019,
+    "crc": 3673417161
+  },
+  {
+    "name": "Antarex/HDD_mono/",
+    "size": 0,
+    "compressed": 0,
+    "method": 0,
+    "offset": 1173642827,
+    "crc": 0
+  },
+  {
+    "name": "Antarex/HDD_mono/Launch Scripts/",
+    "size": 0,
+    "compressed": 0,
+    "method": 0,
+    "offset": 1173642874,
+    "crc": 0
+  },
+  {
+    "name": "Antarex/HDD_mono/Launch Scripts/bonnie++.sh",
+    "size": 138,
+    "compressed": 138,
+    "method": 0,
+    "offset": 1173642936,
+    "crc": 1771874077
+  },
+  {
+    "name": "Antarex/HDD_mono/Launch Scripts/iozone.sh",
+    "size": 143,
+    "compressed": 143,
+    "method": 0,
+    "offset": 1173643147,
+    "crc": 1221804291
+  },
+  {
+    "name": "Antarex/HDD_mono/mono-core-hdd_dur.pdf",
+    "size": 12542,
+    "compressed": 12542,
+    "method": 0,
+    "offset": 1173643361,
+    "crc": 2426604028
+  },
+  {
+    "name": "Antarex/HDD_mono/mono-core-hdd_mttf.pdf",
+    "size": 15766,
+    "compressed": 15766,
+    "method": 0,
+    "offset": 1173655971,
+    "crc": 2836295129
+  },
+  {
+    "name": "Antarex/HDD_mono/mono-hdd_workload.csv",
+    "size": 36368,
+    "compressed": 36368,
+    "method": 0,
+    "offset": 1173671806,
+    "crc": 3862793403
+  },
+  {
+    "name": "Antarex/HDD_mono/probe-mono-hdd_workload.csv",
+    "size": 434,
+    "compressed": 434,
+    "method": 0,
+    "offset": 1173708242,
+    "crc": 1131346280
+  },
+  {
+    "name": "Antarex/HDD_mono/results_hdd-mono.7z",
+    "size": 270025170,
+    "compressed": 270025170,
+    "method": 0,
+    "offset": 1173708750,
+    "crc": 2030100765
+  },
+  {
+    "name": "Antarex/HDD_multi/",
+    "size": 0,
+    "compressed": 0,
+    "method": 0,
+    "offset": 1443733986,
+    "crc": 0
+  },
+  {
+    "name": "Antarex/HDD_multi/multi-core-hdd_dur.pdf",
+    "size": 12413,
+    "compressed": 12413,
+    "method": 0,
+    "offset": 1443734034,
+    "crc": 4279850997
+  },
+  {
+    "name": "Antarex/HDD_multi/multi-core-hdd_mttf.pdf",
+    "size": 15990,
+    "compressed": 15990,
+    "method": 0,
+    "offset": 1443746517,
+    "crc": 2639456113
+  },
+  {
+    "name": "Antarex/HDD_multi/multi_workload_hdd.csv",
+    "size": 35223,
+    "compressed": 35223,
+    "method": 0,
+    "offset": 1443762578,
+    "crc": 2717178629
+  },
+  {
+    "name": "Antarex/HDD_multi/probe-multi_workload_hdd.csv",
+    "size": 2812,
+    "compressed": 2812,
+    "method": 0,
+    "offset": 1443797871,
+    "crc": 1081329795
+  },
+  {
+    "name": "Antarex/HDD_multi/results_hdd-multi.7z",
+    "size": 188483092,
+    "compressed": 188483092,
+    "method": 0,
+    "offset": 1443800759,
+    "crc": 2040498
+  },
+  {
+    "name": "Antarex/Scripts/",
+    "size": 0,
+    "compressed": 0,
+    "method": 0,
+    "offset": 1632283919,
+    "crc": 0
+  },
+  {
+    "name": "Antarex/Scripts/workload_gen_script_dummy.py",
+    "size": 6275,
+    "compressed": 6275,
+    "method": 0,
+    "offset": 1632283965,
+    "crc": 2892003854
+  },
+  {
+    "name": "Antarex/Scripts/workload_gen_script_mono.py",
+    "size": 7083,
+    "compressed": 7083,
+    "method": 0,
+    "offset": 1632290314,
+    "crc": 851907024
+  },
+  {
+    "name": "Antarex/Scripts/workload_gen_script_mono_hdd.py",
+    "size": 6260,
+    "compressed": 6260,
+    "method": 0,
+    "offset": 1632297470,
+    "crc": 1881342014
+  },
+  {
+    "name": "Antarex/Scripts/workload_gen_script_multi.py",
+    "size": 13971,
+    "compressed": 13971,
+    "method": 0,
+    "offset": 1632303807,
+    "crc": 840941937
+  },
+  {
+    "name": "Antarex/Scripts/workload_gen_script_multi_hdd.py",
+    "size": 8795,
+    "compressed": 8795,
+    "method": 0,
+    "offset": 1632317852,
+    "crc": 1229679159
+  },
+  {
+    "name": "Antarex/Workload_dur.pdf",
+    "size": 11514,
+    "compressed": 11514,
+    "method": 0,
+    "offset": 1632326725,
+    "crc": 2156262200
+  },
+  {
+    "name": "Antarex/Workload_mttf.pdf",
+    "size": 14073,
+    "compressed": 14073,
+    "method": 0,
+    "offset": 1632338293,
+    "crc": 11771429
+  }
+]

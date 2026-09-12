@@ -1,0 +1,10 @@
+{
+  "all_checks_passed": true,
+  "warning_decisions_recomputed": 402364,
+  "validation_selection_reproduced": true,
+  "test_confusion_counts_independently_reconstructed": true,
+  "event_outcomes_recomputed": true,
+  "westermo_labels_remain_unknown": true,
+  "selection_unchanged": true,
+  "point_adjustment_used": false
+}

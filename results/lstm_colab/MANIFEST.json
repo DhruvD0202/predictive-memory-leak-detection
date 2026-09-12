@@ -1,0 +1,288 @@
+{
+  "stage": "LSTM forecasting results",
+  "protocol_version": "review2-lstm-v1",
+  "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+  "baseline_package_sha256": "2b242a47288ea5db25ddd4d79de2069980ef1dc462fea157580e67ec19c01ba3",
+  "files": [
+    {
+      "entry": "antarex_mono/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "a2d8a20b5d87ecd0a7cd571ad3ccbfe50638499b3e186c035fb28e624ba351f7"
+    },
+    {
+      "entry": "antarex_mono/configuration.json",
+      "bytes": 1170,
+      "sha256": "4d2693171529c2452a0214d78d53ccf69c6c4d0d2371a35e0dab100ba162c3a0"
+    },
+    {
+      "entry": "antarex_mono/first_test_30min.csv",
+      "bytes": 78342,
+      "sha256": "a1d2b62f84f67dcc0aada9e29f31084b39527dac35ee381743929c8d79c4c9cf"
+    },
+    {
+      "entry": "antarex_mono/first_test_30min.pdf",
+      "bytes": 25624,
+      "sha256": "6d493a35099bc678dc09bd955fc31478333b5641f5bf25f151d14ebefa4d373f"
+    },
+    {
+      "entry": "antarex_mono/first_test_30min.png",
+      "bytes": 184243,
+      "sha256": "7d020f1e9948e5865f682dcaad1f06a00e46a221f5b7c0700896f9f592daa0f4"
+    },
+    {
+      "entry": "antarex_mono/first_test_leak.csv",
+      "bytes": 78257,
+      "sha256": "644b67cfcba45660928b428a015e638fa6596f121a44b479de3b042e82123c51"
+    },
+    {
+      "entry": "antarex_mono/first_test_leak.pdf",
+      "bytes": 25362,
+      "sha256": "6c0838167814e2fe6793e88d49e0edd6689db225cd0bd0f6766e4979eafd8c81"
+    },
+    {
+      "entry": "antarex_mono/first_test_leak.png",
+      "bytes": 185784,
+      "sha256": "ce20ff7f4080fdc139898fb85e83d837167b2252ce46dc18ad7b419b9f8ba82b"
+    },
+    {
+      "entry": "antarex_mono/last_checkpoint.pt",
+      "bytes": 78253,
+      "sha256": "491d655592500c20355bedb9c21fc6da6ef51650880b483e49960fb67cbb5b07"
+    },
+    {
+      "entry": "antarex_mono/learning_curve.pdf",
+      "bytes": 15856,
+      "sha256": "c77e81759d6ee5b8a56297757829090afdf21dfbd8f7fe0945cf596fdb7b1369"
+    },
+    {
+      "entry": "antarex_mono/learning_curve.png",
+      "bytes": 65619,
+      "sha256": "8b55f3febccf37a830c45e2d153dfe861a1861276a93ac7a8e060ad07df1272c"
+    },
+    {
+      "entry": "antarex_mono/selected_model.json",
+      "bytes": 2133,
+      "sha256": "85f6e86672b6b3afbb2148400bb447ec81b739914f7e77cd26470db5c3c2b28b"
+    },
+    {
+      "entry": "antarex_mono/test_forecast_errors_by_leak_state.csv",
+      "bytes": 1120,
+      "sha256": "020926579fea0e8bde3a833c89824cf2ed183af972c3f921241c3f1a4f6bcde9"
+    },
+    {
+      "entry": "antarex_mono/test_predictions.csv.gz",
+      "bytes": 1286298,
+      "sha256": "9ad6e0b0cb9e300930b5f1034627bceed7edbe6896d652fdcef9cdeab4fcb905"
+    },
+    {
+      "entry": "antarex_mono/training_history.csv",
+      "bytes": 1637,
+      "sha256": "83232934eb9051efee4a67b14d1a5ee6bb104734369749b362744103f12437e0"
+    },
+    {
+      "entry": "antarex_mono/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "entry": "antarex_mono/validation_predictions.csv.gz",
+      "bytes": 1264539,
+      "sha256": "433691680f05803b715f3193126276b4462cd7e2c28da8067832b5e2a71efa0f"
+    },
+    {
+      "entry": "experiment_summary.json",
+      "bytes": 4014,
+      "sha256": "a7162af1d29b1a7a011961c037d54e90d6c52bc14cd255b5f17cacb6da13d5ea"
+    },
+    {
+      "entry": "metrics.csv",
+      "bytes": 3740,
+      "sha256": "2563e16dc3de274846e9faa85e4e327ba7fc28a30ae4c93d8f935298d311d0c8"
+    },
+    {
+      "entry": "result_integrity_checks.json",
+      "bytes": 242,
+      "sha256": "70ff867ee1f8c7694173d4e4982a85bc68be04cf958037e6c51e24f70a249a1f"
+    },
+    {
+      "entry": "selection_freeze.json",
+      "bytes": 893,
+      "sha256": "7ddc96e726d8e2dd914daac2c18b39ab5f200de6b787e3a5c6997b9295abeedd"
+    },
+    {
+      "entry": "test_error_comparison.pdf",
+      "bytes": 19872,
+      "sha256": "7f5ea886c6d8659d1162622f799dbc671a7d780544494733ec43ee62d95f2d6f"
+    },
+    {
+      "entry": "test_error_comparison.png",
+      "bytes": 159672,
+      "sha256": "63c2465b4b0329927fa4ec206eccd8f78a1f8d9371ac162360b8c2b9dfbde2d4"
+    },
+    {
+      "entry": "westermo_1/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "e188dd88c0ae2b90a4e4bb84fbacfd752fb3a11b3d050de7ad1e21d1bed6fb5c"
+    },
+    {
+      "entry": "westermo_1/configuration.json",
+      "bytes": 1166,
+      "sha256": "4af6e630b8112734ffa50661f42336a508815dc0f8eb224b42c538d211f503c9"
+    },
+    {
+      "entry": "westermo_1/first_test_day.csv",
+      "bytes": 583272,
+      "sha256": "f16f6e25e9b97c882b62b545e393aff7231234fe279ceaffa836f7ad30702b39"
+    },
+    {
+      "entry": "westermo_1/first_test_day.pdf",
+      "bytes": 94109,
+      "sha256": "68cf47829a5a2de72c4da61c4e1c197820f0100f3c83253efcf30dbe731e1bfb"
+    },
+    {
+      "entry": "westermo_1/first_test_day.png",
+      "bytes": 182114,
+      "sha256": "8fed4f88c4332f2a0b08559a32df60a4657691c9807baf027e586260933a092a"
+    },
+    {
+      "entry": "westermo_1/last_checkpoint.pt",
+      "bytes": 79917,
+      "sha256": "2a478179983498d021a3a1f5977e7f1c3fda4d066669695271fb0f4e2c8639d2"
+    },
+    {
+      "entry": "westermo_1/learning_curve.pdf",
+      "bytes": 16431,
+      "sha256": "f58ac5d1d5a5d9331ca010f6e85e69e76966b0378ad9cd6de1255e8621b12c8a"
+    },
+    {
+      "entry": "westermo_1/learning_curve.png",
+      "bytes": 65130,
+      "sha256": "f3d6489f775f7142571915088d61711054a19fc906bb10224ccd67270a0fb622"
+    },
+    {
+      "entry": "westermo_1/selected_model.json",
+      "bytes": 2130,
+      "sha256": "1a00691b07864eaa60a076ee79ef8af9b543109074c307319ac2e2b629d8cd50"
+    },
+    {
+      "entry": "westermo_1/test_predictions.csv.gz",
+      "bytes": 666590,
+      "sha256": "531d7e85c58feb90d2a98aedf95b880118c89583cf181cff21bd9d397ebad035"
+    },
+    {
+      "entry": "westermo_1/training_history.csv",
+      "bytes": 1930,
+      "sha256": "cf5e215731e98ff89de740e8108037242fed4e07ef7f79414991cce71e98b1b2"
+    },
+    {
+      "entry": "westermo_1/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "entry": "westermo_1/validation_predictions.csv.gz",
+      "bytes": 674689,
+      "sha256": "2a6123959a7befc99fb4ec4361f004b43a8b68b83ce4379d02d5245ce35305cf"
+    },
+    {
+      "entry": "westermo_2/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "e79df48a814de68ba03934b15ecb8ee6ab8351fa1056a429eed28bf5c225d813"
+    },
+    {
+      "entry": "westermo_2/configuration.json",
+      "bytes": 1145,
+      "sha256": "e8fa0c269faa4139adb07116621c7b54649aef8d1e22c21f796c077a0ca2c88b"
+    },
+    {
+      "entry": "westermo_2/last_checkpoint.pt",
+      "bytes": 78829,
+      "sha256": "e9af82373d343cadc0d7cee349ed815cf11b2e74cb5f8238bb470e400b3879c6"
+    },
+    {
+      "entry": "westermo_2/learning_curve.pdf",
+      "bytes": 15626,
+      "sha256": "82bd5ec09b31436089e91bebef6dfa016d7814aa62764ec5df497c9862a02877"
+    },
+    {
+      "entry": "westermo_2/learning_curve.png",
+      "bytes": 68731,
+      "sha256": "eba921faf5dcce4dce8b5da834cf7b7874e6a8b24f3e7e5aaadc8df8cc86cfc7"
+    },
+    {
+      "entry": "westermo_2/selected_model.json",
+      "bytes": 2098,
+      "sha256": "6524d1d6c0ee9d41a0ba645c387abd91faf66265367d3ca5b77d49d0000d38a0"
+    },
+    {
+      "entry": "westermo_2/test_predictions.csv.gz",
+      "bytes": 669040,
+      "sha256": "2ae75d19b57b2c51590debe4818bb5d1ad518a11d37e7bc0c1cc4ad23e19229c"
+    },
+    {
+      "entry": "westermo_2/training_history.csv",
+      "bytes": 2678,
+      "sha256": "576593891fa3b2fcd0d1befb094c7d4b6bf31a1fb4270da5e2bd9c8f3491541e"
+    },
+    {
+      "entry": "westermo_2/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "entry": "westermo_2/validation_predictions.csv.gz",
+      "bytes": 668215,
+      "sha256": "f5d0930e397a7d04ffc2e6e1b03c61f127bc9b3a7437de48420adc2d38fa9158"
+    },
+    {
+      "entry": "westermo_3/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "dfcc11667f12288e3e5c1ecb6f5a162a676b34c5eb1ce458ed5930e9be505ec1"
+    },
+    {
+      "entry": "westermo_3/configuration.json",
+      "bytes": 1165,
+      "sha256": "e23348f61705ef3c01cececeda92dbe694c89470fb2937d2ece2fc2f32318079"
+    },
+    {
+      "entry": "westermo_3/last_checkpoint.pt",
+      "bytes": 80173,
+      "sha256": "46f3737741359c47c5cc4cae1a49683545e15ddd1caa796387f3654e5d5c7572"
+    },
+    {
+      "entry": "westermo_3/learning_curve.pdf",
+      "bytes": 16823,
+      "sha256": "e7c9c0669be9b7ca2fe555db14a4e63c2af8787fd795242e34b50208c3592ddc"
+    },
+    {
+      "entry": "westermo_3/learning_curve.png",
+      "bytes": 66433,
+      "sha256": "a5eb0abbd028655ce303151bcc851393178e8765d9ba78ec54694176959c7911"
+    },
+    {
+      "entry": "westermo_3/selected_model.json",
+      "bytes": 2128,
+      "sha256": "715f29efdaf0dbf27a7ab25456b12826c4e0cbd3735aab3567e6f3342c26956e"
+    },
+    {
+      "entry": "westermo_3/test_predictions.csv.gz",
+      "bytes": 680212,
+      "sha256": "aa51f67e90834fe42ef9cf6db1a693bfc3cad30ab18cbab9721338b3ba879dfc"
+    },
+    {
+      "entry": "westermo_3/training_history.csv",
+      "bytes": 2257,
+      "sha256": "f7f01c7ce7d0261b83815f713d9290524b68c810c3466b2761a57f803686e0ac"
+    },
+    {
+      "entry": "westermo_3/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "entry": "westermo_3/validation_predictions.csv.gz",
+      "bytes": 677220,
+      "sha256": "3635bbc18e7c7a70494fe7ead5b725f150c042b77fc943122a527c354e045368"
+    }
+  ]
+}

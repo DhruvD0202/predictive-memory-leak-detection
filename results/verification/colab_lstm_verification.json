@@ -1,0 +1,170 @@
+{
+  "verification_completed_utc": "2026-09-09T13:43:47.898508+00:00",
+  "all_checks_passed": true,
+  "colab_package": "data\\packages\\review2_lstm_results_colab.zip",
+  "colab_package_sha256": "42cd2d51f29a06d2f6a0912a8b787d343898b11ac3ac55c4b397264743c1a7bf",
+  "colab_package_bytes": 8105266,
+  "verified_result_files": 56,
+  "input_provenance": {
+    "combined_package_sha256": "208c3b38ffbd7564e95f7452e0a3d203b1d4734858383e43cf602093ef7a1222",
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "baseline_package_sha256": "2b242a47288ea5db25ddd4d79de2069980ef1dc462fea157580e67ec19c01ba3",
+    "datasets": [
+      "antarex_mono",
+      "westermo_1",
+      "westermo_2",
+      "westermo_3"
+    ]
+  },
+  "forecast_values_checked": 557056,
+  "lstm_forecasts_recomputed_from_saved_weights": 139264,
+  "metric_rows_recomputed": 32,
+  "leak_state_metric_rows_recomputed": 8,
+  "maximum_reload_difference_fraction": 9.8879238130678e-17,
+  "maximum_metric_difference_across_reported_columns": 2.6229018956769323e-15,
+  "forecast_reload_tolerance": {
+    "rtol": 1e-06,
+    "atol": 1e-07
+  },
+  "metric_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-12
+  },
+  "datasets": [
+    {
+      "dataset": "antarex_mono",
+      "best_epoch": 8,
+      "epochs_run": 12,
+      "training_origins": 12091,
+      "test_origins": 31032,
+      "protocol_configuration_matches": true,
+      "validation_selection_and_stopping_consistent": true,
+      "resume_checkpoint_safely_loadable": true,
+      "baseline_columns_unchanged": true,
+      "max_reloaded_forecast_difference_fraction": 9.8879238130678e-17
+    },
+    {
+      "dataset": "westermo_1",
+      "best_epoch": 10,
+      "epochs_run": 14,
+      "training_origins": 14923,
+      "test_origins": 12891,
+      "protocol_configuration_matches": true,
+      "validation_selection_and_stopping_consistent": true,
+      "resume_checkpoint_safely_loadable": true,
+      "baseline_columns_unchanged": true,
+      "max_reloaded_forecast_difference_fraction": 9.71445146547012e-17
+    },
+    {
+      "dataset": "westermo_2",
+      "best_epoch": 20,
+      "epochs_run": 20,
+      "training_origins": 15103,
+      "test_origins": 12745,
+      "protocol_configuration_matches": true,
+      "validation_selection_and_stopping_consistent": true,
+      "resume_checkpoint_safely_loadable": true,
+      "baseline_columns_unchanged": true,
+      "max_reloaded_forecast_difference_fraction": 9.71445146547012e-17
+    },
+    {
+      "dataset": "westermo_3",
+      "best_epoch": 13,
+      "epochs_run": 17,
+      "training_origins": 15103,
+      "test_origins": 12891,
+      "protocol_configuration_matches": true,
+      "validation_selection_and_stopping_consistent": true,
+      "resume_checkpoint_safely_loadable": true,
+      "baseline_columns_unchanged": true,
+      "max_reloaded_forecast_difference_fraction": 9.71445146547012e-17
+    }
+  ],
+  "test_comparison": [
+    {
+      "dataset": "antarex_mono",
+      "colab_lstm_mae_pp": 0.3581191871075647,
+      "colab_lstm_rmse_pp": 1.2163989438847036,
+      "arima_mae_pp": 0.3625205334853967,
+      "arima_rmse_pp": 1.516400826125572,
+      "relative_rmse_reduction_vs_arima_percent": 19.783811580173026,
+      "local_lstm_mae_pp": 0.3579799119906873,
+      "local_lstm_rmse_pp": 1.2158385357981831
+    },
+    {
+      "dataset": "westermo_1",
+      "colab_lstm_mae_pp": 0.0994993403913427,
+      "colab_lstm_rmse_pp": 0.2959903307545306,
+      "arima_mae_pp": 0.0929841999406467,
+      "arima_rmse_pp": 0.317915157822285,
+      "relative_rmse_reduction_vs_arima_percent": 6.896439672123577,
+      "local_lstm_mae_pp": 0.0994992622653017,
+      "local_lstm_rmse_pp": 0.2959903807774265
+    },
+    {
+      "dataset": "westermo_2",
+      "colab_lstm_mae_pp": 0.1165792005122034,
+      "colab_lstm_rmse_pp": 0.2575442634367952,
+      "arima_mae_pp": 0.1047070327954091,
+      "arima_rmse_pp": 0.2911660633513863,
+      "relative_rmse_reduction_vs_arima_percent": 11.54729350240763,
+      "local_lstm_mae_pp": 0.1197384499290425,
+      "local_lstm_rmse_pp": 0.2612308558037542
+    },
+    {
+      "dataset": "westermo_3",
+      "colab_lstm_mae_pp": 0.2512298581859702,
+      "colab_lstm_rmse_pp": 0.6080028508743857,
+      "arima_mae_pp": 0.2297370751117205,
+      "arima_rmse_pp": 0.658167420214074,
+      "relative_rmse_reduction_vs_arima_percent": 7.6218554427039065,
+      "local_lstm_mae_pp": 0.2512298954500313,
+      "local_lstm_rmse_pp": 0.6080029679004589
+    }
+  ],
+  "valid_png_figures": [
+    "antarex_mono/first_test_30min.png",
+    "antarex_mono/first_test_leak.png",
+    "antarex_mono/learning_curve.png",
+    "test_error_comparison.png",
+    "westermo_1/first_test_day.png",
+    "westermo_1/learning_curve.png",
+    "westermo_2/learning_curve.png",
+    "westermo_3/learning_curve.png"
+  ],
+  "plot_tables_verified": [
+    "antarex_mono/first_test_30min.csv",
+    "antarex_mono/first_test_leak.csv",
+    "westermo_1/first_test_day.csv"
+  ],
+  "colab_runtime": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "torch": "2.11.0+cpu",
+    "matplotlib": "3.10.0",
+    "device_type": "cpu",
+    "device_name": "x86_64",
+    "cuda": null,
+    "cudnn": null,
+    "deterministic_algorithms": true,
+    "cpu_threads": 2
+  },
+  "verification_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "torch": "2.8.0+cpu",
+    "matplotlib": "3.10.8",
+    "device_type": "cpu",
+    "device_name": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "cuda": null,
+    "cudnn": null,
+    "deterministic_algorithms": true,
+    "cpu_threads": 2
+  },
+  "colab_experiment_seconds": 291.55054109799994,
+  "original_integrity_report_preserved": true,
+  "all_extracted_result_hashes_unchanged": true,
+  "scope": "Artifact consistency and independent inference/scoring; no retraining or warning evaluation. Saved metadata is not an independent audit of historical execution order."
+}

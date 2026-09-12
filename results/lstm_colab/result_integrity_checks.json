@@ -1,0 +1,7 @@
+{
+  "all_checks_passed": true,
+  "saved_forecast_values_checked": 557056,
+  "lstm_forecasts_recomputed_from_saved_weights": true,
+  "selection_unchanged": true,
+  "maximum_checkpoint_reload_forecast_difference_fraction": 9.8879238130678e-17
+}

@@ -1,0 +1,9 @@
+dataset,split,method,intersecting_events,eligible_events,excluded_events,detected_events,missed_events,event_recall,median_delay_seconds_detected_only,p90_delay_seconds_detected_only
+antarex_mono,validation,trend_only,31,31,0,31,0,1.0,52.0,57.0
+antarex_mono,validation,arima_growth,31,31,0,0,31,0.0,,
+antarex_mono,validation,lstm_growth,31,31,0,31,0,1.0,37.0,48.0
+antarex_mono,validation,always_off,31,31,0,0,31,0.0,,
+antarex_mono,test,trend_only,35,35,0,35,0,1.0,30.0,56.0
+antarex_mono,test,arima_growth,35,35,0,0,35,0.0,,
+antarex_mono,test,lstm_growth,35,35,0,34,1,0.9714285714285714,31.0,45.7
+antarex_mono,test,always_off,35,35,0,0,35,0.0,,

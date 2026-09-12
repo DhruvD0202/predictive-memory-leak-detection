@@ -1,0 +1,123 @@
+{
+  "file": "data\\packages\\review2_pilot_raw.zip",
+  "bytes": 214243161,
+  "sha256": "06df79379df958405ab3d3486dea3e81dff2eb6fa26e53b4cf6ea634210db75e",
+  "source_content_bytes": 1880371872,
+  "all_entry_hashes_verified": true,
+  "files": [
+    {
+      "entry": "antarex/CPU-MEM_mono/meminfo.csv",
+      "source_project_path": "data\\raw\\antarex\\CPU-MEM_mono\\extracted\\results\\ldms\\csv\\meminfo",
+      "bytes": 307354713,
+      "sha256": "3527d2a84bb1633b38caf7198bf0031013995ee3d4c0176e15a599bc8261cece"
+    },
+    {
+      "entry": "antarex/CPU-MEM_mono/vmstat.csv",
+      "source_project_path": "data\\raw\\antarex\\CPU-MEM_mono\\extracted\\results\\ldms\\csv\\vmstat",
+      "bytes": 531862149,
+      "sha256": "ccd67dcb01a060240578c4066cc8d6626e04e2f2cd924b816c0c6da966790024"
+    },
+    {
+      "entry": "antarex/CPU-MEM_mono/procstat.csv",
+      "source_project_path": "data\\raw\\antarex\\CPU-MEM_mono\\extracted\\results\\ldms\\csv\\procstat",
+      "bytes": 784830990,
+      "sha256": "898ebca066b6a7fab5b65bf6d64db1c18b9479c1aa591fe97a013f7072c96fef"
+    },
+    {
+      "entry": "antarex/CPU-MEM_mono/procdiskstats.csv",
+      "source_project_path": "data\\raw\\antarex\\CPU-MEM_mono\\extracted\\results\\ldms\\csv\\procdiskstats",
+      "bytes": 165007630,
+      "sha256": "e69353293216b069ae48e3f4ece09075cac3f4d32533e0c6f4351c416da33331"
+    },
+    {
+      "entry": "antarex/CPU-MEM_mono/injection-mono_workload-129.132.24.206_30000.csv",
+      "source_project_path": "data\\raw\\antarex\\CPU-MEM_mono\\extracted\\results\\injection-mono_workload-129.132.24.206_30000.csv",
+      "bytes": 356109,
+      "sha256": "269e90c6f6e020077f11e74649656211aca16a16d0cb969de526f033012a28cc"
+    },
+    {
+      "entry": "antarex/CPU-MEM_mono/labels_injection-mono_workload-129.132.24.206_30000.csv",
+      "source_project_path": "data\\raw\\antarex\\CPU-MEM_mono\\extracted\\results\\labels_injection-mono_workload-129.132.24.206_30000.csv",
+      "bytes": 30106830,
+      "sha256": "980ea59206706da2a21a06d8eaba91cab7d6b99a115e89b0ff0e648308cec62c"
+    },
+    {
+      "entry": "westermo/system-1.csv",
+      "source_project_path": "data\\raw\\westermo\\system-1.csv",
+      "bytes": 20182096,
+      "sha256": "1ce25f9737c29292721a6b853d0f8f17c42a945353c28ed8fa3b2d8a3ad40f5e"
+    },
+    {
+      "entry": "westermo/system-2.csv",
+      "source_project_path": "data\\raw\\westermo\\system-2.csv",
+      "bytes": 20182281,
+      "sha256": "e03b268d1f46746dad573ba64a85d24d9cb06492800001aec642ea41726d24dd"
+    },
+    {
+      "entry": "westermo/system-3.csv",
+      "source_project_path": "data\\raw\\westermo\\system-3.csv",
+      "bytes": 20085421,
+      "sha256": "999909df59945744f4b5bd87b8bacab82e1abaf40f736933d9ae5d5a81064162"
+    },
+    {
+      "entry": "westermo/LICENSE",
+      "source_project_path": "data\\raw\\westermo\\LICENSE",
+      "bytes": 18650,
+      "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+    },
+    {
+      "entry": "westermo/README.md",
+      "source_project_path": "data\\raw\\westermo\\README.md",
+      "bytes": 16562,
+      "sha256": "871d353a3a73990e1873c44df662b5a532daa33ec47b5ec8e17ba012a8ceb114"
+    },
+    {
+      "entry": "antarex/Readme_Antarex_Dataset.pdf",
+      "source_project_path": "data\\raw\\antarex\\Readme_Antarex_Dataset.pdf",
+      "bytes": 191665,
+      "sha256": "5f12dc8f7dbf902be0abef286e33099940a1b4181c9b2d8df33f8b00cd1c6d62"
+    },
+    {
+      "entry": "provenance/antarex_archive_members.json",
+      "source_project_path": "data\\metadata\\antarex_archive_members.json",
+      "bytes": 7328,
+      "sha256": "d354f62836797dd65257347a2f389544e4c8e5a698c74bb5c4e0cd84cf0310ea"
+    },
+    {
+      "entry": "provenance/antarex_audit.json",
+      "source_project_path": "data\\metadata\\antarex_audit.json",
+      "bytes": 71021,
+      "sha256": "1e7eccac51bbec0702676f7cd66ddbc50c22c4fe15d825ddf18c9d4f3a83a97b"
+    },
+    {
+      "entry": "provenance/antarex_record_2553224.json",
+      "source_project_path": "data\\metadata\\antarex_record_2553224.json",
+      "bytes": 10376,
+      "sha256": "5660061c3aceea926ffeec17204615690a1b604a3318acac21a298568471b726"
+    },
+    {
+      "entry": "provenance/antarex_subset_manifest.json",
+      "source_project_path": "data\\metadata\\antarex_subset_manifest.json",
+      "bytes": 2335,
+      "sha256": "df35d9406ed7e0610066178974b6c0ccf4b3accb84c1c64b6bcaa183149a2732"
+    },
+    {
+      "entry": "provenance/download_manifest.json",
+      "source_project_path": "data\\metadata\\download_manifest.json",
+      "bytes": 10006,
+      "sha256": "20ba65eef5c2aaa5e63a30f4074d7083b853057f168a253245473b1a253ef82e"
+    },
+    {
+      "entry": "provenance/westermo_audit.json",
+      "source_project_path": "data\\metadata\\westermo_audit.json",
+      "bytes": 68698,
+      "sha256": "6c3268bf0f720ecbd7052480a4a3d1a439a77c3645eae16b0893a6e579c7cc17"
+    },
+    {
+      "entry": "provenance/westermo_tree.json",
+      "source_project_path": "data\\metadata\\westermo_tree.json",
+      "bytes": 7012,
+      "sha256": "1f3d36598587bffd933502c438ed605f1061fdd99d9366882af975c2dd577934"
+    }
+  ]
+}

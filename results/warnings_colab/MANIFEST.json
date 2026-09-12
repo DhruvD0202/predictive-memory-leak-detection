@@ -1,0 +1,108 @@
+{
+  "stage": "forecast-assisted warning evaluation",
+  "protocol_version": "review2-warning-v1",
+  "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+  "forecast_package_sha256": "42cd2d51f29a06d2f6a0912a8b787d343898b11ac3ac55c4b397264743c1a7bf",
+  "files": [
+    {
+      "entry": "antarex_confusion_matrices.pdf",
+      "bytes": 17023,
+      "sha256": "8ab12bb06bd2f68873d245b5724a751e94a5e083cd41c37c781b4557f2d5cc97"
+    },
+    {
+      "entry": "antarex_confusion_matrices.png",
+      "bytes": 59707,
+      "sha256": "50980fcae927d477ec1bdbeecede99c5bc5404d2815627ae37a39eddd9745579"
+    },
+    {
+      "entry": "antarex_event_metrics.csv",
+      "bytes": 644,
+      "sha256": "ab56d10a3afa78eb5fe6ad661d7d2c68f92c311220a1649c4598912aae0b8847"
+    },
+    {
+      "entry": "antarex_event_outcomes.csv",
+      "bytes": 19393,
+      "sha256": "8430e4de112dae844db85d368b971200e6535557af259935dcf9a5acd375b1bf"
+    },
+    {
+      "entry": "antarex_first_test_30min.csv",
+      "bytes": 100750,
+      "sha256": "8d0fea3043c9fca01f79711a3f823136d0a22d4b14d427b1f583905f2a5f88ec"
+    },
+    {
+      "entry": "antarex_point_metrics.csv",
+      "bytes": 1529,
+      "sha256": "1cda313b56f6d2a2995494c4ce9c9c8173056ab7369b76c52280e5349fd2b615"
+    },
+    {
+      "entry": "antarex_test_warnings.csv.gz",
+      "bytes": 1850225,
+      "sha256": "fcfa6d58747b5bb63bc90eaf832b8618d90f6b5228eb264955de90834d1a63f0"
+    },
+    {
+      "entry": "antarex_validation_warnings.csv.gz",
+      "bytes": 1821758,
+      "sha256": "3297e53844dc797bc851172e2b61dec7697e5170e30227d3468791014e7761d8"
+    },
+    {
+      "entry": "antarex_warning_comparison.pdf",
+      "bytes": 18655,
+      "sha256": "9e193c65cc3ad087d71810f3b13c5b4278ac3e2e4c991ecff56b1ad91277ae07"
+    },
+    {
+      "entry": "antarex_warning_comparison.png",
+      "bytes": 79873,
+      "sha256": "977ea4952415d3ba01c7150fbc6661b7e51bef359b1d038c52577f7dc0c9be48"
+    },
+    {
+      "entry": "antarex_warning_timeline.pdf",
+      "bytes": 29735,
+      "sha256": "314abad2e197f0b64407f4655a897d91f5ccb735db641de319f55426b01927e1"
+    },
+    {
+      "entry": "antarex_warning_timeline.png",
+      "bytes": 104972,
+      "sha256": "71c8b6fad9af96dd7ad921ac8637443d32dd819d6ceafc886fa8b43fb5eace1e"
+    },
+    {
+      "entry": "experiment_summary.json",
+      "bytes": 1541,
+      "sha256": "940165c646df38f0f5089a0f2d3305a6f98d85e87e255e410a13f5e188752fbb"
+    },
+    {
+      "entry": "result_integrity_checks.json",
+      "bytes": 321,
+      "sha256": "b56e929954e82f0aff1f9e67e90c8f8f5f280aeb40da35a07d5a902f817efc73"
+    },
+    {
+      "entry": "selection_freeze.json",
+      "bytes": 1645,
+      "sha256": "06bb0e4a1c9e01b997edf97bbdc2666a334b9a4833c9e94edf85f86cb1bde997"
+    },
+    {
+      "entry": "validation_candidates.csv",
+      "bytes": 4982,
+      "sha256": "a8a84ede40e40212b3f007e77476b7069cb73de3de27bf2faf9aeff32e041bb7"
+    },
+    {
+      "entry": "westermo_1_test_warnings.csv.gz",
+      "bytes": 931541,
+      "sha256": "6aaf602f0e98f9cef3a002ac6dc5b4a5b374c5d0cd10d5f03a1170bf72e28400"
+    },
+    {
+      "entry": "westermo_2_test_warnings.csv.gz",
+      "bytes": 923520,
+      "sha256": "98e7e7b7e0c1d0ff442a0b60f36879a854d5c9a0c63829c4c105e9e08822c3b2"
+    },
+    {
+      "entry": "westermo_3_test_warnings.csv.gz",
+      "bytes": 934588,
+      "sha256": "df8728febdcd882856ab98d3ec9b6ecb8d036f4431eb02304aea4efef3b90c6e"
+    },
+    {
+      "entry": "westermo_descriptive_alarms.csv",
+      "bytes": 947,
+      "sha256": "a244c05300ef119d2c520c94ef35d3cdf9c753758d015cd7295cf0676b63f74f"
+    }
+  ]
+}

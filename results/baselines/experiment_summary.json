@@ -1,0 +1,93 @@
+{
+  "stage": "baseline forecasting",
+  "input_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+  "completed_utc": "2026-09-08T14:21:43.558177+00:00",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.18.1",
+    "statsmodels": "0.14.6",
+    "matplotlib": "3.10.8"
+  },
+  "elapsed_seconds": 8.52486680005677,
+  "datasets": [
+    {
+      "dataset": "antarex_mono",
+      "forecast_horizon_seconds": 60,
+      "selected_settings": {
+        "linear_trend": 12,
+        "arima": 3
+      },
+      "best_family_by_validation_rmse": "arima",
+      "test_forecasts_per_model": 31032,
+      "evaluation_seconds_including_metrics": 0.025496399961411953
+    },
+    {
+      "dataset": "westermo_1",
+      "forecast_horizon_seconds": 300,
+      "selected_settings": {
+        "linear_trend": 60,
+        "arima": 5
+      },
+      "best_family_by_validation_rmse": "arima",
+      "test_forecasts_per_model": 12891,
+      "evaluation_seconds_including_metrics": 0.0193742997944355
+    },
+    {
+      "dataset": "westermo_2",
+      "forecast_horizon_seconds": 300,
+      "selected_settings": {
+        "linear_trend": 30,
+        "arima": 5
+      },
+      "best_family_by_validation_rmse": "arima",
+      "test_forecasts_per_model": 12745,
+      "evaluation_seconds_including_metrics": 0.013786799972876906
+    },
+    {
+      "dataset": "westermo_3",
+      "forecast_horizon_seconds": 300,
+      "selected_settings": {
+        "linear_trend": 30,
+        "arima": 5
+      },
+      "best_family_by_validation_rmse": "arima",
+      "test_forecasts_per_model": 12891,
+      "evaluation_seconds_including_metrics": 0.013271400006487966
+    }
+  ],
+  "figures": [
+    {
+      "file": "first_test_30min",
+      "start_timestamp": 1526734795,
+      "end_timestamp": 1526736595,
+      "plotted_rows": 361
+    },
+    {
+      "file": "first_test_leak",
+      "start_timestamp": 1526735090,
+      "end_timestamp": 1526736890,
+      "plotted_rows": 361
+    },
+    {
+      "file": "first_test_day",
+      "start_timestamp": 2205300,
+      "end_timestamp": 2291700,
+      "plotted_rows": 2881
+    }
+  ],
+  "forecast_clip_range": [
+    0,
+    1
+  ],
+  "classification_metrics_computed": false,
+  "lstm_trained": false,
+  "limitations": [
+    "Restricted ARIMA(p,1,0) search, no drift or MA terms.",
+    "No uncertainty or significance claim from overlapping windows.",
+    "Antarex does not reach memory exhaustion.",
+    "Westermo has no confirmed leak labels.",
+    "Local runtime measurements are not monitoring overhead or a Colab benchmark."
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "execution_evidence": {
+    "environment": "Local Windows CPU; hosted Colab run not yet verified",
+    "completed_utc": "2026-09-09T13:03:28.009368+00:00",
+    "elapsed_seconds": 175.59,
+    "code_cells_executed": 7,
+    "all_cells_succeeded": true
+  },
+  "original_source_sha256": "0886faa15c3952f3f7ad41d64cf7fbf002fce7ab3d90703f0b3ec13076eaf1fe",
+  "initial_experiment_summary": {
+    "stage": "initial multivariate LSTM forecasting",
+    "completed_utc": "2026-09-09T13:03:21.980945+00:00",
+    "protocol_version": "review2-lstm-v1",
+    "settings": {
+      "hidden_units": 32,
+      "layers": 1,
+      "batch_size": 64,
+      "evaluation_batch_size": 256,
+      "learning_rate": 0.001,
+      "max_epochs": 20,
+      "patience": 4,
+      "gradient_clip_norm": 1.0,
+      "seed": 42,
+      "antarex_training_stride": 12,
+      "westermo_training_stride": 4,
+      "cpu_threads": 2,
+      "forecast_clip_range": [
+        0.0,
+        1.0
+      ]
+    },
+    "input_provenance": {
+      "combined_package_sha256": "208c3b38ffbd7564e95f7452e0a3d203b1d4734858383e43cf602093ef7a1222",
+      "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+      "baseline_package_sha256": "2b242a47288ea5db25ddd4d79de2069980ef1dc462fea157580e67ec19c01ba3",
+      "datasets": [
+        "antarex_mono",
+        "westermo_1",
+        "westermo_2",
+        "westermo_3"
+      ]
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "torch": "2.8.0+cpu",
+      "matplotlib": "3.10.8",
+      "device_type": "cpu",
+      "device_name": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+      "cuda": null,
+      "cudnn": null,
+      "deterministic_algorithms": true,
+      "cpu_threads": 2
+    },
+    "datasets": [
+      {
+        "dataset": "antarex_mono",
+        "best_epoch": 8,
+        "epochs_run": 12,
+        "training_origin_count": 12091,
+        "training_stride": 12,
+        "parameter_count": 5281,
+        "forecast_horizon_seconds": 60,
+        "test_origins": 31032,
+        "feature_names": [
+          "memory_pressure",
+          "anonymous_memory_gib",
+          "committed_memory_gib",
+          "cpu_busy_fraction",
+          "cpu_iowait_fraction",
+          "page_faults_per_second",
+          "major_page_faults_per_second"
+        ],
+        "training_seconds_including_validation": 27.495787400053814
+      },
+      {
+        "dataset": "westermo_1",
+        "best_epoch": 10,
+        "epochs_run": 14,
+        "training_origin_count": 14923,
+        "training_stride": 4,
+        "parameter_count": 5409,
+        "forecast_horizon_seconds": 300,
+        "test_origins": 12891,
+        "feature_names": [
+          "memory_pressure",
+          "swap_used_gib",
+          "cpu_user_rate",
+          "cpu_system_rate",
+          "cpu_iowait_rate",
+          "disk_read_bytes_per_second",
+          "disk_write_bytes_per_second",
+          "load_1m"
+        ],
+        "training_seconds_including_validation": 31.21470049978234
+      },
+      {
+        "dataset": "westermo_2",
+        "best_epoch": 19,
+        "epochs_run": 20,
+        "training_origin_count": 15103,
+        "training_stride": 4,
+        "parameter_count": 5281,
+        "forecast_horizon_seconds": 300,
+        "test_origins": 12745,
+        "feature_names": [
+          "memory_pressure",
+          "cpu_user_rate",
+          "cpu_system_rate",
+          "cpu_iowait_rate",
+          "disk_read_bytes_per_second",
+          "disk_write_bytes_per_second",
+          "load_1m"
+        ],
+        "training_seconds_including_validation": 47.96612469991669
+      },
+      {
+        "dataset": "westermo_3",
+        "best_epoch": 13,
+        "epochs_run": 17,
+        "training_origin_count": 15103,
+        "training_stride": 4,
+        "parameter_count": 5409,
+        "forecast_horizon_seconds": 300,
+        "test_origins": 12891,
+        "feature_names": [
+          "memory_pressure",
+          "swap_used_gib",
+          "cpu_user_rate",
+          "cpu_system_rate",
+          "cpu_iowait_rate",
+          "disk_read_bytes_per_second",
+          "disk_write_bytes_per_second",
+          "load_1m"
+        ],
+        "training_seconds_including_validation": 39.0503100999631
+      }
+    ],
+    "elapsed_this_run_seconds": 165.51080540008843,
+    "single_seed_pilot": true,
+    "classification_metrics_computed": false,
+    "paper_draft_written": false,
+    "limits": [
+      "No LSTM advantage is assumed.",
+      "One seed and spaced training origins; not an exhaustive evaluation.",
+      "No memory-exhaustion outcomes in Antarex pilot; Westermo leak labels unknown.",
+      "Training runtime is not deployment-monitoring overhead."
+    ]
+  },
+  "initial_selection_freeze": {
+    "completed_utc": "2026-09-09T13:03:07.497053+00:00",
+    "test_evaluation_started": false,
+    "protocol_version": "review2-lstm-v1",
+    "selected_weight_hashes": {
+      "antarex_mono": "6cd2774b51e3f357b9a5d9f8dcfedaf5489e91e45cb369eef73899196bfd4aa8",
+      "westermo_1": "2d7c8bcd0c2613e8bcc29f279129f74e055fe01bc9679b9ad7b350f38e949708",
+      "westermo_2": "3a6d213baaffaf29e4ed5522c8d60f107e7dad939f529d41c711677b6c77fa0c",
+      "westermo_3": "3972ca978230eea9593eb3335e52ac4c04d40764993486ffbf796cb03c96ba0c"
+    },
+    "selected_model_hashes": {
+      "antarex_mono": "f2d2fbe3a144d00710bb7ac1d058627b28c0be4b78165640d7bc47f41656f04d",
+      "westermo_1": "e5cccd6714e1a900947479a23416e2eb502499dd23ead48af02a1736654218b3",
+      "westermo_2": "140b2d10093515dea15f2a92b653395748c6cff25e7d92db887cc3a501b6673f",
+      "westermo_3": "3a06b3ed80de7f23583c3446acc836071a85504fde0838ba6e338a5c877e8cbb"
+    }
+  },
+  "initial_metrics_sha256": "50672bbdeea413e6f84e43980417f98e75934269aa53044e889b5591c0a798ea"
+}

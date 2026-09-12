@@ -1,0 +1,47 @@
+[
+  {
+    "archive_url": "https://zenodo.org/api/records/2553224/files/Antarex.zip/content",
+    "archive_member": "Antarex/CPU-MEM_mono/mono_workload.csv",
+    "path": "data\\raw\\antarex\\CPU-MEM_mono\\mono_workload.csv",
+    "bytes": 117822,
+    "zip_crc_verified": true,
+    "sha256": "cbf8533c7327554c2cf726746da61eb4c23262689ad5214ef73c857cff62935b",
+    "note": "Complete member recovered from partial ZIP; full archive MD5 not verified."
+  },
+  {
+    "archive_url": "https://zenodo.org/api/records/2553224/files/Antarex.zip/content",
+    "archive_member": "Antarex/CPU-MEM_mono/probe-mono_workload.csv",
+    "path": "data\\raw\\antarex\\CPU-MEM_mono\\probe-mono_workload.csv",
+    "bytes": 967,
+    "zip_crc_verified": true,
+    "sha256": "cc3ade4d1229f6ba6d4a434ac3aa9a5d9764f95e3ff73392b8e90f35ce9d1569",
+    "note": "Complete member recovered from partial ZIP; full archive MD5 not verified."
+  },
+  {
+    "archive_url": "https://zenodo.org/api/records/2553224/files/Antarex.zip/content",
+    "archive_member": "Antarex/CPU-MEM_mono/results_cpu-mem-mono.7z",
+    "path": "data\\raw\\antarex\\CPU-MEM_mono\\results_cpu-mem-mono.7z",
+    "bytes": 487811676,
+    "zip_crc_verified": true,
+    "sha256": "597c65123ee8ecb33e5376fced997def86157f12326611b57c7d17d51d05d0fc",
+    "note": "Complete member recovered from partial ZIP; full archive MD5 not verified."
+  },
+  {
+    "archive_url": "https://zenodo.org/api/records/2553224/files/Antarex.zip/content",
+    "archive_member": "Antarex/CPU-MEM_multi/multi_workload.csv",
+    "path": "data\\raw\\antarex\\CPU-MEM_multi\\multi_workload.csv",
+    "bytes": 115947,
+    "zip_crc_verified": true,
+    "sha256": "0674332a6d44b7685cb7c5e375ee3fc3fa01c812ecc8bc686b49debf4af631ea",
+    "note": "Complete member recovered from partial ZIP; full archive MD5 not verified."
+  },
+  {
+    "archive_url": "https://zenodo.org/api/records/2553224/files/Antarex.zip/content",
+    "archive_member": "Antarex/CPU-MEM_multi/probe-multi_workload.csv",
+    "path": "data\\raw\\antarex\\CPU-MEM_multi\\probe-multi_workload.csv",
+    "bytes": 7514,
+    "zip_crc_verified": true,
+    "sha256": "c8aa47550cebc729d385996a83275c576530cf0c240c0df3e46133318b5629c5",
+    "note": "Complete member recovered from partial ZIP; full archive MD5 not verified."
+  }
+]

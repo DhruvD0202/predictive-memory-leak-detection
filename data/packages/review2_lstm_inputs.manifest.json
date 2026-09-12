@@ -1,0 +1,17 @@
+{
+  "file": "review2_lstm_inputs.zip",
+  "bytes": 28862158,
+  "sha256": "208c3b38ffbd7564e95f7452e0a3d203b1d4734858383e43cf602093ef7a1222",
+  "files": [
+    {
+      "entry": "review2_preprocessed_colab.zip",
+      "sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+      "bytes": 22804957
+    },
+    {
+      "entry": "review2_baseline_results_colab.zip",
+      "sha256": "2b242a47288ea5db25ddd4d79de2069980ef1dc462fea157580e67ec19c01ba3",
+      "bytes": 6056409
+    }
+  ]
+}

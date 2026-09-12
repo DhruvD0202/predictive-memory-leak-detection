@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "protocol_version": "review2-warning-v1",
+    "settings": {
+      "trend_observations": 12,
+      "consecutive_samples": 3,
+      "threshold_grid_pp_per_minute": [
+        0.01,
+        0.025,
+        0.05,
+        0.1,
+        0.2,
+        0.4,
+        0.8,
+        1.6,
+        3.2
+      ],
+      "selection": "validation point F1; fewer FP; higher threshold",
+      "event_detection": "new alarm start within fully covered injected event",
+      "point_adjustment": false
+    },
+    "input_provenance": {
+      "combined_package_sha256": "22201607ad3e0778e38dbc8ed5f688a608a1a7fb3aa37f648448527e94b8199b",
+      "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+      "forecast_package_sha256": "42cd2d51f29a06d2f6a0912a8b787d343898b11ac3ac55c4b397264743c1a7bf",
+      "protocol_sha256": "e2959497c559f86cf664893719ff27d014bbc431434eeb981c7d8d309c39b662"
+    },
+    "completed_utc": "2026-09-09T14:00:06.581767+00:00",
+    "selection_freeze_sha256": "d412e1bb2102195f1f9097fa849ca3b0d221ee0ebfb28ee7464a0a59b776b4ed",
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "matplotlib": "3.10.8"
+    },
+    "elapsed_seconds": 7.878800099948421,
+    "timing_scope": "offline input-table reads, warning calibration/evaluation and plots; excludes input unpacking, model inference, final verification and ZIP creation",
+    "model_retraining_performed": false,
+    "warning_test_tuning_performed": false,
+    "westermo_leak_metrics_computed": false,
+    "memory_exhaustion_evaluated": false,
+    "paper_draft_written": false
+  },
+  "freeze": {
+    "protocol_version": "review2-warning-v1",
+    "settings": {
+      "trend_observations": 12,
+      "consecutive_samples": 3,
+      "threshold_grid_pp_per_minute": [
+        0.01,
+        0.025,
+        0.05,
+        0.1,
+        0.2,
+        0.4,
+        0.8,
+        1.6,
+        3.2
+      ],
+      "selection": "validation point F1; fewer FP; higher threshold",
+      "event_detection": "new alarm start within fully covered injected event",
+      "point_adjustment": false
+    },
+    "input_provenance": {
+      "combined_package_sha256": "22201607ad3e0778e38dbc8ed5f688a608a1a7fb3aa37f648448527e94b8199b",
+      "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+      "forecast_package_sha256": "42cd2d51f29a06d2f6a0912a8b787d343898b11ac3ac55c4b397264743c1a7bf",
+      "protocol_sha256": "e2959497c559f86cf664893719ff27d014bbc431434eeb981c7d8d309c39b662"
+    },
+    "completed_utc": "2026-09-09T13:59:59.585777+00:00",
+    "test_warning_evaluation_started": false,
+    "selected": {
+      "trend_only": {
+        "threshold_pp_per_minute": 0.8,
+        "validation_f1": 0.8010204081632653,
+        "validation_fp": 408
+      },
+      "arima_growth": {
+        "threshold_pp_per_minute": null,
+        "validation_f1": 0.0,
+        "validation_fp": 0
+      },
+      "lstm_growth": {
+        "threshold_pp_per_minute": 0.4,
+        "validation_f1": 0.5739329268292683,
+        "validation_fp": 164
+      },
+      "always_off": {
+        "threshold_pp_per_minute": null,
+        "validation_f1": 0.0,
+        "validation_fp": 0
+      }
+    },
+    "selection_partition": "antarex_validation",
+    "validation_candidates_sha256": "2e7ce098f1f82b3d718d77379e8a19e4e58f50a07acc51cac33497d889b08317"
+  },
+  "metric_file_hashes": {
+    "antarex_point_metrics.csv": "dc8fcf6326471a8dc50565fc2984474109d8d030b031ecc807c3134bd03fbc7b",
+    "antarex_event_metrics.csv": "2a83f7ba9641823054448c28c8656ec62abb8828bf1ce7e6eb2d0b425eea2f4e",
+    "antarex_event_outcomes.csv": "dca3490099114fd88a067a297484fdcb5cb86ee4062a817f43db19f61ff43e50",
+    "westermo_descriptive_alarms.csv": "45f607c22ea181d280d4a4e09a5ca92dc17f89fc43b491be3f2b59aa1e73da8d",
+    "validation_candidates.csv": "2e7ce098f1f82b3d718d77379e8a19e4e58f50a07acc51cac33497d889b08317"
+  },
+  "note": "First complete evaluation before fixing CSV float32/float64 verification representation. Preserve scores and frozen settings; no threshold tuning."
+}

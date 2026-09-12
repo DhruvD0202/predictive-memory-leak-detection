@@ -1,0 +1,198 @@
+{
+  "checked_on": "2026-09-07",
+  "westermo_commit": "47e0ccdc10c30e86327d6eb828ed48d164469fd4",
+  "files": [
+    {
+      "url": "https://zenodo.org/api/records/2553224",
+      "path": "data\\metadata\\antarex_record_2553224.json",
+      "bytes": 10376,
+      "sha256": "5660061c3aceea926ffeec17204615690a1b604a3318acac21a298568471b726",
+      "md5": "9e01db753abdb437df4d700c976403da",
+      "publisher_hash_verified": false
+    },
+    {
+      "url": "https://api.github.com/repos/westermo/test-system-performance-dataset/git/trees/47e0ccdc10c30e86327d6eb828ed48d164469fd4?recursive=1",
+      "path": "data\\metadata\\westermo_tree.json",
+      "bytes": 7012,
+      "sha256": "1f3d36598587bffd933502c438ed605f1061fdd99d9366882af975c2dd577934",
+      "md5": "72646737f09c202ce6fafd8a61736f37",
+      "publisher_hash_verified": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/LICENSE",
+      "path": "data\\raw\\westermo\\LICENSE",
+      "bytes": 18650,
+      "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661",
+      "md5": "4a17ffc27c9f3b240fbf4fe17783c89c",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/README.md",
+      "path": "data\\raw\\westermo\\README.md",
+      "bytes": 16562,
+      "sha256": "871d353a3a73990e1873c44df662b5a532daa33ec47b5ec8e17ba012a8ceb114",
+      "md5": "0e35099bde19b6acf2fef0b8341258e7",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://zenodo.org/api/records/2553224/files/Readme_Antarex_Dataset.pdf/content",
+      "path": "data\\raw\\antarex\\Readme_Antarex_Dataset.pdf",
+      "bytes": 191665,
+      "sha256": "5f12dc8f7dbf902be0abef286e33099940a1b4181c9b2d8df33f8b00cd1c6d62",
+      "md5": "02cc040ae11f648a02d5e900b80353fa",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-1.csv",
+      "path": "data\\raw\\westermo\\system-1.csv",
+      "bytes": 20182096,
+      "sha256": "1ce25f9737c29292721a6b853d0f8f17c42a945353c28ed8fa3b2d8a3ad40f5e",
+      "md5": "6c201e3804ab741567998f5a82f1e2cf",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-10.csv",
+      "path": "data\\raw\\westermo\\system-10.csv",
+      "bytes": 20483796,
+      "sha256": "0ca170d173fa2aec8092c43aeecab26b11f223e7a2b4f949bdb79278850ce31b",
+      "md5": "fa1a612f1cd00231e6c8db7f24942d47",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-12.csv",
+      "path": "data\\raw\\westermo\\system-12.csv",
+      "bytes": 20066076,
+      "sha256": "065cdd3b468c80b58854564c7cd87417358834d2319bde98124a9b75f2b474b2",
+      "md5": "670f8e3f95f9bf76ce5f5287f7662e39",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-11.csv",
+      "path": "data\\raw\\westermo\\system-11.csv",
+      "bytes": 19661275,
+      "sha256": "bcd451c58d8cc103611194f107a3209dd8fabcb05ab1218d2818d7e9796bdb08",
+      "md5": "c4c805e6e19001449a8529549c7ed68a",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-13.csv",
+      "path": "data\\raw\\westermo\\system-13.csv",
+      "bytes": 21179628,
+      "sha256": "3c26803e3593cc183923d1f1374c57eb4a6adbe12a709725c1144178fed182df",
+      "md5": "85c685de5a4440b82682f0f8d97900d0",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-15.csv",
+      "path": "data\\raw\\westermo\\system-15.csv",
+      "bytes": 20080060,
+      "sha256": "5e85c067ac17cdf82341a028943f34369ae3464f484876b253520726a771d660",
+      "md5": "b819ed2463abd59527fe967335d15a4f",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-14.csv",
+      "path": "data\\raw\\westermo\\system-14.csv",
+      "bytes": 19364519,
+      "sha256": "b302865837e4e15418d3f20673a851a6cee86a4bbc6c4b6754b48a2f0ddc65a5",
+      "md5": "4103ffda7afdad1524c279b513f02a3b",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-16.csv",
+      "path": "data\\raw\\westermo\\system-16.csv",
+      "bytes": 20164654,
+      "sha256": "cd2cab1f4c1d2affe4a5941d846b0af8858a729878453678af5ae425f38faa44",
+      "md5": "1d14ba4773e6685dad9cbd0df8fa6695",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-17.csv",
+      "path": "data\\raw\\westermo\\system-17.csv",
+      "bytes": 19692663,
+      "sha256": "f4946c35576090a8a5425fb446a841a39a2c34b00592a1038d7fd47bf6a5f91a",
+      "md5": "c1465d6e27b228b6dbdf2afb83274628",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-18.csv",
+      "path": "data\\raw\\westermo\\system-18.csv",
+      "bytes": 20414012,
+      "sha256": "f0e11c3f7d7addc30c2eda65beed30b7fb32bec936357e024a6fee2f904b1a60",
+      "md5": "f6145b44e35bde03d3f397e2e12dce38",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-19.csv",
+      "path": "data\\raw\\westermo\\system-19.csv",
+      "bytes": 19865480,
+      "sha256": "cb954edb39bea916f0f6889c68726757b12dabe498f07bdca78bbedf207b8b45",
+      "md5": "28426b9afbcffc358df5ee67e4a2afe9",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-3.csv",
+      "path": "data\\raw\\westermo\\system-3.csv",
+      "bytes": 20085421,
+      "sha256": "999909df59945744f4b5bd87b8bacab82e1abaf40f736933d9ae5d5a81064162",
+      "md5": "5bb8e039203fd1624af59fbec98fff4e",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-2.csv",
+      "path": "data\\raw\\westermo\\system-2.csv",
+      "bytes": 20182281,
+      "sha256": "e03b268d1f46746dad573ba64a85d24d9cb06492800001aec642ea41726d24dd",
+      "md5": "4e8b28c82aa541b1dc0c81dd55dfe346",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-4.csv",
+      "path": "data\\raw\\westermo\\system-4.csv",
+      "bytes": 19877011,
+      "sha256": "15a5b24ce6d7fda8428bb0364cac373c9ca2fd23fc7cc2a28d089c4f81732e42",
+      "md5": "a601f95ba5e57e5236b85be3ca957bf1",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-5.csv",
+      "path": "data\\raw\\westermo\\system-5.csv",
+      "bytes": 20458108,
+      "sha256": "25339df56eca9dcf67de96fe4cc200d982c5eeb011fe5bb8e329f2b1303c0b36",
+      "md5": "fee6aa0cf0fb3ad0c54121caf5af549e",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-6.csv",
+      "path": "data\\raw\\westermo\\system-6.csv",
+      "bytes": 18485998,
+      "sha256": "833c508438a925761fe2bc38a2f95fe1e44a34d7b7a28f12145d40e3935153a2",
+      "md5": "fc02c2d6f7de7a0728e2a4a447aec48d",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-7.csv",
+      "path": "data\\raw\\westermo\\system-7.csv",
+      "bytes": 19812090,
+      "sha256": "a3f831d402c2fc5c6ccfedc7a5ba49a35e17f876fdbd4ac651fbecdcdb93ab64",
+      "md5": "6a005c993a49d5312a18de70d71d6d69",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-9.csv",
+      "path": "data\\raw\\westermo\\system-9.csv",
+      "bytes": 19605859,
+      "sha256": "cbf67102c0deb1fb96c594e4053ff08fbc8ef5bffbbb87ed42416ada18c70ec4",
+      "md5": "5da90c1141791ec04111558fc7887663",
+      "publisher_hash_verified": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/westermo/test-system-performance-dataset/47e0ccdc10c30e86327d6eb828ed48d164469fd4/data/system-8.csv",
+      "path": "data\\raw\\westermo\\system-8.csv",
+      "bytes": 19525918,
+      "sha256": "a06546cfdd21b622a34e08fe0df43a5ed398e0e2843300b71767f2cbcf9abd39",
+      "md5": "a5ad0fe888ae2152fdabe2af52618d34",
+      "publisher_hash_verified": true
+    }
+  ]
+}

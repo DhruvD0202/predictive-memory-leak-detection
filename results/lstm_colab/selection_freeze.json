@@ -1,0 +1,17 @@
+{
+  "completed_utc": "2026-09-09T13:33:45.907913+00:00",
+  "test_evaluation_started": false,
+  "protocol_version": "review2-lstm-v1",
+  "selected_weight_hashes": {
+    "antarex_mono": "a2d8a20b5d87ecd0a7cd571ad3ccbfe50638499b3e186c035fb28e624ba351f7",
+    "westermo_1": "e188dd88c0ae2b90a4e4bb84fbacfd752fb3a11b3d050de7ad1e21d1bed6fb5c",
+    "westermo_2": "e79df48a814de68ba03934b15ecb8ee6ab8351fa1056a429eed28bf5c225d813",
+    "westermo_3": "dfcc11667f12288e3e5c1ecb6f5a162a676b34c5eb1ce458ed5930e9be505ec1"
+  },
+  "selected_model_hashes": {
+    "antarex_mono": "85f6e86672b6b3afbb2148400bb447ec81b739914f7e77cd26470db5c3c2b28b",
+    "westermo_1": "1a00691b07864eaa60a076ee79ef8af9b543109074c307319ac2e2b629d8cd50",
+    "westermo_2": "6524d1d6c0ee9d41a0ba645c387abd91faf66265367d3ca5b77d49d0000d38a0",
+    "westermo_3": "715f29efdaf0dbf27a7ab25456b12826c4e0cbd3735aab3567e6f3342c26956e"
+  }
+}

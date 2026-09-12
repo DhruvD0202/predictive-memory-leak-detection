@@ -1,0 +1,83 @@
+{
+  "verification_completed_utc": "2026-09-09T19:41:46.291709+00:00",
+  "all_checks_passed": true,
+  "colab_package": "data\\packages\\review2_warning_results_colab.zip",
+  "colab_package_sha256": "76b169d3807ce0fcd5577c6f20cb94d9d4b78c819cc0fecdc32f1df80bdd6fc5",
+  "colab_package_bytes": 6695498,
+  "verified_result_files": 20,
+  "input_provenance": {
+    "combined_package_sha256": "22201607ad3e0778e38dbc8ed5f688a608a1a7fb3aa37f648448527e94b8199b",
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "forecast_package_sha256": "42cd2d51f29a06d2f6a0912a8b787d343898b11ac3ac55c4b397264743c1a7bf",
+    "protocol_sha256": "e2959497c559f86cf664893719ff27d014bbc431434eeb981c7d8d309c39b662"
+  },
+  "project_reconstruction": {
+    "all_checks_passed": true,
+    "warning_decisions_recomputed": 402364,
+    "validation_selection_reproduced": true,
+    "test_confusion_counts_independently_reconstructed": true,
+    "event_outcomes_recomputed": true,
+    "westermo_labels_remain_unknown": true,
+    "selection_unchanged": true,
+    "point_adjustment_used": false
+  },
+  "warning_decisions_independently_checked": 402364,
+  "event_outcomes_independently_checked": 264,
+  "slopes_independently_recalculated": 100591,
+  "maximum_slope_difference_pp_per_minute": 4.263256414560601e-14,
+  "maximum_colab_local_numeric_timeline_difference": 0.0,
+  "selected_thresholds_match_local": true,
+  "classification_and_event_tables_match_local": true,
+  "colab_runtime": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.0"
+  },
+  "colab_experiment_seconds": 12.924376768000002,
+  "timing_scope": "offline input-table reads, warning calibration/evaluation and plots; excludes input unpacking, model inference, final verification and ZIP creation",
+  "datasets": [
+    {
+      "dataset": "antarex_mono",
+      "split": "validation",
+      "origins": 31032,
+      "warning_decisions_match_local": true,
+      "warning_states_and_alarm_starts_independently_reconstructed": true
+    },
+    {
+      "dataset": "antarex_mono",
+      "split": "test",
+      "origins": 31032,
+      "warning_decisions_match_local": true,
+      "warning_states_and_alarm_starts_independently_reconstructed": true
+    },
+    {
+      "dataset": "westermo_1",
+      "split": "test",
+      "origins": 12891,
+      "warning_decisions_match_local": true,
+      "warning_states_and_alarm_starts_independently_reconstructed": true
+    },
+    {
+      "dataset": "westermo_2",
+      "split": "test",
+      "origins": 12745,
+      "warning_decisions_match_local": true,
+      "warning_states_and_alarm_starts_independently_reconstructed": true
+    },
+    {
+      "dataset": "westermo_3",
+      "split": "test",
+      "origins": 12891,
+      "warning_decisions_match_local": true,
+      "warning_states_and_alarm_starts_independently_reconstructed": true
+    }
+  ],
+  "valid_png_figures": [
+    "antarex_confusion_matrices.png",
+    "antarex_warning_comparison.png",
+    "antarex_warning_timeline.png"
+  ],
+  "original_integrity_report_and_all_extracted_files_preserved": true,
+  "scope": "Saved experiment verification, independent reconstruction and cross-runtime comparison. No parameter changes or new experiments. Metadata consistency does not independently prove historical execution order."
+}

@@ -1,0 +1,11 @@
+{
+  "completed_utc": "2026-09-08T14:21:38.955296+00:00",
+  "input_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+  "settings_files": {
+    "antarex_mono": "e92d2a3af0c1b0efe9ae5bf96ef767b6040a6211358dec6a23989892d6b22d25",
+    "westermo_1": "7e384746165cb9886de92e4958193416dc3a541da6eccdf1093e77e4628755a9",
+    "westermo_2": "f428434a2dbdadbeedc9477c74fc4a30c2d28bec0b87e0e9e4121255a355eca7",
+    "westermo_3": "5ccdcb6670da0a90250a0872ed97c0892c53684d0bea918d04e7c4555739aa50"
+  },
+  "test_evaluation_started": false
+}
