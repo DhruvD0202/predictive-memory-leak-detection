@@ -1,6 +1,6 @@
 # Review 2 progress
 
-Last updated: 10 September 2026
+Last updated: 12 September 2026
 
 ## Confirmed decisions
 
@@ -9,6 +9,14 @@ Last updated: 10 September 2026
 - User-approved datasets: Antarex paired with Westermo.
 - Workflow: validate data, review the architecture, then build preprocessing, baselines, LSTM, evaluation and visualizations incrementally. Draft the paper section by section using only completed experiments.
 - The user completed preprocessing, baselines, four small multivariate LSTMs and initial warning evaluation in free Colab. All four stages' saved outputs have been independently verified. On 10 September, the warning-result archive reproduced all 402,364 decisions and 264 event outcomes, matching the local experiment. The research-paper draft is the remaining core milestone requirement.
+
+## Repository workflow
+
+- GitHub repository: [DhruvD0202/predictive-memory-leak-detection](https://github.com/DhruvD0202/predictive-memory-leak-detection), private, with `main` as the default branch. The local remote was updated to this renamed repository on 12 September 2026.
+- On 12 September, the user authorized ongoing repository updates during project work. For each agreed project step, make the necessary changes, run appropriate checks, commit the intended files with a meaningful message, and push them to GitHub without requesting permission again for routine updates.
+- Check the working tree and remote changes before starting each step. Preserve collaborator edits, resolve conflicts before pushing, and do not force-push or overwrite shared history. Report any authentication or repository-rule blocker.
+- Keep large datasets, generated data archives and local environments outside ordinary Git commits, following `.gitignore`. Data archives belong in separately maintained release assets.
+- Continue the user's step-by-step workflow; this authorization does not schedule background work or skip review checkpoints. Paper drafting remains the next research step.
 
 ## Milestone status
 
