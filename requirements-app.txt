@@ -1,0 +1,3 @@
+# Replay itself uses Python 3.11+ standard libraries.
+# Real local telemetry uses psutil; inference also needs requirements-lstm.txt.
+psutil==7.2.2

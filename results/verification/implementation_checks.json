@@ -1,0 +1,209 @@
+{
+  "checked_utc": "2026-09-13T11:57:31.218991+00:00",
+  "source_files_verified": 76,
+  "test_origins_available": 69559,
+  "dataset_checks": [
+    {
+      "dataset": "antarex_mono",
+      "cases": [
+        {
+          "index": 0,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.01433808704151503,
+            "saved_prediction": 0.01433808704151503,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 3563.1626000395045,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 176317
+          }
+        },
+        {
+          "index": 15516,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.01369912477306979,
+            "saved_prediction": 0.01369912477306979,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 0.6953999982215464,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 191833
+          }
+        },
+        {
+          "index": 31031,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.020040513993178063,
+            "saved_prediction": 0.020040513993178063,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 1.0765999904833734,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 207348
+          }
+        }
+      ],
+      "replay_prepare_and_serialize_median_ms": 22.616950009251013,
+      "replay_prepare_and_serialize_max_ms": 25.96070000436157
+    },
+    {
+      "dataset": "westermo_1",
+      "cases": [
+        {
+          "index": 0,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.05230331098948144,
+            "saved_prediction": 0.05230331098948144,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 109.81769999489188,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 73500
+          }
+        },
+        {
+          "index": 6445,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.0531023098258164,
+            "saved_prediction": 0.0531023098258164,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 0.6332999910227954,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 79945
+          }
+        },
+        {
+          "index": 12890,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.07276394984424625,
+            "saved_prediction": 0.07276394984424625,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 0.6562999915331602,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 86390
+          }
+        }
+      ],
+      "replay_prepare_and_serialize_median_ms": 8.748950000153854,
+      "replay_prepare_and_serialize_max_ms": 10.89869998395443
+    },
+    {
+      "dataset": "westermo_2",
+      "cases": [
+        {
+          "index": 0,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.04817621676369199,
+            "saved_prediction": 0.04817621676369199,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 96.4189000078477,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 73500
+          }
+        },
+        {
+          "index": 6372,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.05919965775156859,
+            "saved_prediction": 0.05919965775156859,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 0.7812000112608075,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 80018
+          }
+        },
+        {
+          "index": 12744,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.06343108263637924,
+            "saved_prediction": 0.06343108263637924,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 0.8325999951921403,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 86390
+          }
+        }
+      ],
+      "replay_prepare_and_serialize_median_ms": 8.382600004551932,
+      "replay_prepare_and_serialize_max_ms": 12.743800005409867
+    },
+    {
+      "dataset": "westermo_3",
+      "cases": [
+        {
+          "index": 0,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.1018108805805843,
+            "saved_prediction": 0.1018108805805843,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 99.25609995843843,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 73500
+          }
+        },
+        {
+          "index": 6445,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.10206918448610892,
+            "saved_prediction": 0.10206918448610892,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 0.6072999676689506,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 79945
+          }
+        },
+        {
+          "index": 12890,
+          "causal_display_passed": true,
+          "inference": {
+            "prediction": 0.14648054499196364,
+            "saved_prediction": 0.14648054499196364,
+            "absolute_difference_fraction": 0.0,
+            "matches_saved": true,
+            "elapsed_ms": 0.645000021904707,
+            "timing_scope": "request model load (if needed), history assembly and inference; excludes HTTP/browser",
+            "history_steps": 60,
+            "origin_index": 86390
+          }
+        }
+      ],
+      "replay_prepare_and_serialize_median_ms": 8.874099992681295,
+      "replay_prepare_and_serialize_max_ms": 12.705300003290176
+    }
+  ],
+  "new_training_performed": false,
+  "paper_written": false,
+  "source_files_verified_after_checks": 76,
+  "timing_scope": "Local replay response assembly/JSON serialization; excludes browser/HTTP. Inference timings are separately scoped per request; not production monitoring overhead.",
+  "elapsed_seconds": 7.961228100000881,
+  "all_checks_passed": true
+}

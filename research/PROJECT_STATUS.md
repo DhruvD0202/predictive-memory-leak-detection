@@ -1,6 +1,6 @@
 # Review 2 progress
 
-Last updated: 12 September 2026
+Last updated: 13 September 2026
 
 ## Confirmed decisions
 
@@ -9,6 +9,7 @@ Last updated: 12 September 2026
 - User-approved datasets: Antarex paired with Westermo.
 - Workflow: validate data, review the architecture, then build preprocessing, baselines, LSTM, evaluation and visualizations incrementally. Draft the paper section by section using only completed experiments.
 - The user completed preprocessing, baselines, four small multivariate LSTMs and initial warning evaluation in free Colab. All four stages' saved outputs have been independently verified. On 10 September, the warning-result archive reproduced all 402,364 decisions and 264 event outcomes, matching the local experiment. The research-paper draft is the remaining core milestone requirement.
+- On 13 September, the user paused the learning walkthrough and explicitly chose to finish the implementation while keeping paper drafting paused. No paper content is authorized at this checkpoint.
 
 ## Repository workflow
 
@@ -16,7 +17,7 @@ Last updated: 12 September 2026
 - On 12 September, the user authorized ongoing repository updates during project work. For each agreed project step, make the necessary changes, run appropriate checks, commit the intended files with a meaningful message, and push them to GitHub without requesting permission again for routine updates.
 - Check the working tree and remote changes before starting each step. Preserve collaborator edits, resolve conflicts before pushing, and do not force-push or overwrite shared history. Report any authentication or repository-rule blocker.
 - Keep large datasets, generated data archives and local environments outside ordinary Git commits, following `.gitignore`. Data archives belong in separately maintained release assets.
-- Continue the user's step-by-step workflow; this authorization does not schedule background work or skip review checkpoints. Paper drafting remains the next research step.
+- Continue the user's step-by-step workflow; this authorization does not schedule background work or skip review checkpoints. Paper drafting is currently paused.
 
 ## Milestone status
 
@@ -27,6 +28,18 @@ Last updated: 12 September 2026
 | Research paper draft through supported preliminary results | Pending. Review 1 is the starting material; verified Colab forecasting and warning scores/figures are available for supported preliminary-results drafting. No new paper sections have been written. |
 
 No overall percentage is assigned: the three requirements have no agreed weighting, and data preparation alone does not establish 75% completion.
+
+## Runnable prototype — 13 September
+
+The experimental implementation now has a local browser dashboard. Start it with `.\.venv-baseline\Scripts\python.exe app.py` from the project folder; see the [launch and demonstration guide](../README.md).
+
+- Replay all 69,559 saved test forecast origins across four recordings, with playback controls, actual/forecast comparison, selectable warning rules, alarm history and CSV export. Observed values and labels stop at the cursor; future actual values are absent from the replay API.
+- Execute each saved LSTM on demand using the matching 60-observation input history. The verified prepared arrays and trained weights are used; this is separate from archived prediction playback.
+- View the full verified forecasting and warning metrics and saved learning curves.
+- Collect local Windows/Linux telemetry on demand with a bounded session, CSV export and exploratory trend warnings. Linux-specific features are not invented on Windows; the archived LSTM is not applied to incompatible live features. Live detection accuracy and transfer to a new machine remain unvalidated.
+- Startup validates 76 original result files. The complete 40-test suite passed; representative first/middle/last model predictions on all four recordings matched the saved results. See [implementation verification](IMPLEMENTATION_VERIFICATION.md).
+
+This completes the monitoring/replay implementation checkpoint. Broader scientific evaluation, validated live LSTM transfer and the paper remain separate outstanding work. It does not establish 100% research completion or production readiness.
 
 ## Proposed working schedule
 
@@ -60,4 +73,4 @@ The verified Colab warning experiment gives trend-only F1 0.829670 versus LSTM-a
 
 All 20 Colab warning-result files passed integrity checks; all 402,364 warning decisions and 264 event outcomes passed independent reconstruction. Verified archive: `data/packages/review2_warning_results_colab.zip`, SHA-256 `76b169d3807ce0fcd5577c6f20cb94d9d4b78c819cc0fecdc32f1df80bdd6fc5`. Its unchanged extracted files are in `results/warnings_colab`.
 
-Next, draft the paper section by section, starting with the Introduction. Confirm any required college template or page limit; otherwise use a conventional academic research-paper structure with numbered citations. The 75% milestone remains incomplete because the paper draft is pending; broader evaluation and deployment are later work.
+Next, run the completed dashboard using the README demonstration steps and address any review-specific implementation requirements. The learning walkthrough and paper drafting are both paused by the user. When drafting is resumed, begin with the Introduction and confirm any required college template or page limit. The 75% milestone remains incomplete because the paper draft is pending; broader evaluation and deployment validation are later work.
