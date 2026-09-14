@@ -6,7 +6,7 @@ These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. The Introduction has been approved. The user then requested at least 30+ references and asked to continue. The Literature Survey is now drafted, and the bibliography contains 36 distinct works, all cited in the manuscript. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. The Introduction and Literature Survey have been approved. The Research Gap and Problem Statement are now drafted as sections 3 and 4. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
@@ -17,15 +17,15 @@ The user resumed drafting, specified no template or page limit, and requested pr
 
 ## Preview checks
 
-The seven-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4 and References on pages 5-7. Each reference stays together on one page. Automated checks confirmed 36 sequential bibliography entries, all 36 cited in the text, and 36 PDF link targets matching the Markdown source. The approved Introduction body is unchanged. The [Literature Survey preview](../output/pdf/Literature_Survey_preview.png) shows page 2; the full PDF contains the entire section. The reference audit records source-access limitations.
+The nine-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, and References on pages 7-9. Each reference stays together on one page. Automated checks confirmed 36 sequential bibliography entries, all 36 cited in the text, and 36 PDF link targets matching the Markdown source. The approved Introduction and Literature Survey bodies and the existing bibliography are unchanged. The [Research Gap preview](../output/pdf/Research_Gap_preview.png) shows page 5 and the [Problem Statement continuation](../output/pdf/Problem_Statement_preview.png) shows page 6. The full PDF contains all sections. The reference audit records source-access limitations.
 
 ## Section checkpoints
 
 | Section | Status |
 |---|---|
 | Introduction | Approved by the user; body text preserved |
-| Literature Survey | Drafted; eight thematic subsections; ready for preview and feedback |
-| Research Gap and Problem Statement | Pending; distinguish the original aim from demonstrated scope |
+| Literature Survey | Approved by the user; body text preserved |
+| Research Gap and Problem Statement | Drafted as sections 3-4; three research questions, evaluation objectives and explicit scope; ready for preview and feedback |
 | Proposed Methodology | Pending; describe the implemented pipeline, including restricted ARIMA and warning rules |
 | Experimental Setup | Pending; dataset selection, splits, features, configurations and provenance |
 | Preliminary Results and Discussion | Pending; use verified complete Colab outputs only |
@@ -45,6 +45,22 @@ The seven-page PDF was rendered and visually inspected: Introduction on page 1, 
 | Antarex selection | `research/DATA_VALIDATION.md` and `data/metadata/antarex_record_2553224.json`. Reference [3] cites version 1.0 with the metadata publication date 2018-10-10; the repository record was created in January 2019. References [4]-[5] credit the associated injection and classification work. |
 | Westermo selection | Reference [6] and the [publisher's repository at the audited commit](https://github.com/westermo/test-system-performance-dataset/tree/47e0ccdc10c30e86327d6eb828ed48d164469fd4). Pilot systems 1-3 were selected in numerical order. They have no confirmed leak labels. |
 | Prototype and claim boundaries | `research/IMPLEMENTATION_VERIFICATION.md`, `README.md` and `research/PROJECT_STATUS.md`. Replay is implemented. Recognition follows injection onset; no exhausted-memory outcome or validated crash-prevention claim is available. |
+
+## Research Gap and Problem Statement evidence map
+
+The complete four-page Review 1 report was re-read for this checkpoint. The original motivation is retained, while claims that existing methods only detect leaks after abnormal behavior, that the model estimates leak probability, and that low monitoring overhead or crash prevention is demonstrated are not carried into the current evidence claims.
+
+| Passage | Grounding and limits |
+|---|---|
+| Section 3: empirical evaluation question | Existing paper references [1], [2], [8] and [15] establish relevant prior work. References [31]-[34] ground the distinction between forecast errors, point decisions and events. No exhaustive absence-of-prior-work or algorithmic novelty claim is made. |
+| Section 3: dataset roles | `research/DATA_VALIDATION.md`, `research/PREPROCESSING_RESULTS.md` and references [3]-[6]. Antarex has injection labels; the Westermo pilot has unknown leak status. |
+| Section 4.1: target, inputs and horizons | `research/BASELINE_PROTOCOL.md`, `research/LSTM_PROTOCOL.md` and `research/WARNING_PROTOCOL.md`. Warning inputs are causal; validation labels calibrate thresholds, so the overall procedure is not wholly unsupervised. |
+| RQ1: forecast comparison | Baseline and LSTM protocols use matching held-out origins; the baseline inputs are univariate and LSTM inputs multivariate. This is not an ablation isolating the effect of additional features. |
+| RQ2: warning comparison | Warning protocol specifies point precision/recall/F1, non-leak exposure, event eligibility, new alarm starts and detected-event delay. Results must retain missed-event counts and the denominator definitions. |
+| RQ3: Westermo behavior | Warning thresholds transfer unchanged; forecasting models are fitted independently per recording. Without labels, alarm counts are descriptive. |
+| Scope and original objectives | No observed 80% pressure crossing in the audited Antarex block; runtime timings do not establish continuous-monitoring overhead. The replay implementation is supported by `research/IMPLEMENTATION_VERIFICATION.md`. Research questions summarize the recorded pilot protocol, not a preregistration. |
+
+Jindal, RESIN and Westermo primary publication records were rechecked on 14 September 2026 for the limited claims reused here. No new references or experimental results were added. Next checkpoint: Proposed Methodology.
 
 ## Verified external sources
 
