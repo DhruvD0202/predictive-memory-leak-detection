@@ -1,10 +1,10 @@
 # Predictive Memory Leak Detection Using Time Series Analysis
 
-A reproducible research prototype with a local dashboard, four Colab notebooks, saved forecasting models and verified preliminary leak-warning results. The paper draft is in progress, beginning with the Introduction.
+A reproducible research prototype with a local dashboard, four Colab notebooks, saved forecasting models and verified preliminary leak-warning results. The paper draft now contains the Introduction and Literature Survey.
 
 ## Paper draft
 
-The [editable draft](paper/Predictive_Memory_Leak_Detection_Draft.md) currently contains the Introduction and six checked references. Read the [PDF preview](output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) or view its [Introduction page](output/pdf/Introduction_preview-1.png). Later sections will be added at separate review checkpoints, using only the verified experiments. See [drafting notes and source mapping](paper/DRAFTING_NOTES.md) for section status and evidence.
+The [editable draft](paper/Predictive_Memory_Leak_Detection_Draft.md) contains the approved Introduction, the Literature Survey and 36 distinct references, all cited in the text. Read the [PDF preview](output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) or view the [Literature Survey opening page](output/pdf/Literature_Survey_preview.png). Later sections will be added at separate review checkpoints, using only the verified experiments. See [drafting notes](paper/DRAFTING_NOTES.md) and the [reference audit](paper/REFERENCE_AUDIT.md) for section status, source verification and corrections to Review 1 references.
 
 ## Run the dashboard on the existing project computer
 
@@ -109,6 +109,6 @@ The verification command checks source integrity, replay boundaries, unknown lab
 
 The verified pilot shows lower LSTM RMSE than ARIMA on four recordings, while the trend-only warning rule has higher Antarex recall/F1 and the LSTM-assisted rule has higher precision with fewer false alarms. Antarex contains controlled injected leaks and no observed 80% memory-pressure crossing. Westermo is unlabeled. The current evidence does not establish warning before memory exhaustion, naturally occurring production-leak accuracy or production monitoring overhead.
 
-The monitoring/replay prototype complements the existing experimental implementation. Paper drafting resumed on 14 September 2026; the Introduction is available for review. Repeated seeds, broader labeled evaluation, feature ablations, new-machine LSTM validation and pre-exhaustion experiments remain further research work. See [project status](research/PROJECT_STATUS.md).
+The monitoring/replay prototype complements the existing experimental implementation. Paper drafting resumed on 14 September 2026; the Introduction is approved and the Literature Survey is available for review. Repeated seeds, broader labeled evaluation, feature ablations, new-machine LSTM validation and pre-exhaustion experiments remain further research work. See [project status](research/PROJECT_STATUS.md).
 
 Dataset sources: [Antarex / Zenodo 2553224](https://zenodo.org/records/2553224), [Westermo at the audited commit](https://github.com/westermo/test-system-performance-dataset/tree/47e0ccdc10c30e86327d6eb828ed48d164469fd4). Both datasets are published under CC BY 4.0; retain their attribution and provenance when sharing data.

@@ -6,20 +6,25 @@ These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Use a readable single-column draft with numbered citations. The Introduction is the first checkpoint. Other sections are not yet drafted; the abstract will be written after the supported results and conclusions.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. The Introduction has been approved. The user then requested at least 30+ references and asked to continue. The Literature Survey is now drafted, and the bibliography contains 36 distinct works, all cited in the manuscript. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
+- Reference verification and Review 1 corrections: [REFERENCE_AUDIT.md](REFERENCE_AUDIT.md). This records reading scope and distinguishes preprints, publications, books and dataset records.
 - Preview builder: [build_paper_preview.py](../scripts/build_paper_preview.py), requiring ReportLab 4.4.9. Run `python scripts/build_paper_preview.py` in an environment containing that dependency. The builder reads the Markdown source and makes the PDF; do not edit PDF text independently.
 - A Word file is not delivered at this checkpoint: the bundled Windows runtime has no LibreOffice renderer for the required visual verification workflow. Markdown remains editable in VS Code, and PDF is used for visual review.
 - Author names, affiliations and a submission venue have not been supplied and are not invented.
+
+## Preview checks
+
+The seven-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4 and References on pages 5-7. Each reference stays together on one page. Automated checks confirmed 36 sequential bibliography entries, all 36 cited in the text, and 36 PDF link targets matching the Markdown source. The approved Introduction body is unchanged. The [Literature Survey preview](../output/pdf/Literature_Survey_preview.png) shows page 2; the full PDF contains the entire section. The reference audit records source-access limitations.
 
 ## Section checkpoints
 
 | Section | Status |
 |---|---|
-| Introduction | Drafted; awaiting user feedback |
-| Literature Survey | Next; verify individual references before using them |
+| Introduction | Approved by the user; body text preserved |
+| Literature Survey | Drafted; eight thematic subsections; ready for preview and feedback |
 | Research Gap and Problem Statement | Pending; distinguish the original aim from demonstrated scope |
 | Proposed Methodology | Pending; describe the implemented pipeline, including restricted ARIMA and warning rules |
 | Experimental Setup | Pending; dataset selection, splits, features, configurations and provenance |
@@ -27,7 +32,7 @@ The user resumed drafting, specified no template or page limit, and requested pr
 | Limitations and Future Work | Pending; label unperformed evaluation explicitly |
 | Conclusion | Pending; bounded by executed experiments |
 | Abstract and Keywords | Pending; write last |
-| References | Six entries verified for the Introduction; expand as needed |
+| References | 36 distinct works, all cited; identity, relevance and reading scope audited |
 
 ## Introduction evidence map
 
@@ -43,7 +48,7 @@ The user resumed drafting, specified no template or page limit, and requested pr
 
 ## Verified external sources
 
-Checked on 14 September 2026. Numeric references are local to this paper draft, not the original report numbering.
+Checked on 14 September 2026. Numeric references are local to this paper draft, not the original report numbering. The entries below record the first Introduction checkpoint; the complete 36-work audit is in REFERENCE_AUDIT.md.
 
 1. [Jindal et al., arXiv](https://arxiv.org/abs/2106.08938): exact title, six authors, 2021, and memory-utilization-based detection approach checked.
 2. Assi et al.: the local publisher PDF supplies title, three authors, journal, volume 13(2), pages 2121-2131, 2022, and DOI 10.22075/ijnaa.2022.26974.3505. Do not infer its results describe our experiment.

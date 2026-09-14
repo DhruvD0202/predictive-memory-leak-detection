@@ -13,7 +13,7 @@ from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
-from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate
+from reportlab.platypus import KeepTogether, PageBreak, Paragraph, SimpleDocTemplate
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,7 +25,7 @@ def inline_markup(text, reference=False):
     """Escape prose while keeping the source's explicit web links clickable."""
     result = []
     cursor = 0
-    for match in re.finditer(r"\[([^\]]+)\]\((https?://[^\s)]+)\)", text):
+    for match in re.finditer(r"\[([^\]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)", text):
         result.append(escape(text[cursor:match.start()]))
         label, url = match.groups()
         if reference:
@@ -55,11 +55,15 @@ def main():
         "heading": ParagraphStyle("SectionHeading", fontName="Times-Bold", fontSize=13,
                                   leading=17, spaceBefore=3, spaceAfter=11,
                                   keepWithNext=True),
+        "subheading": ParagraphStyle("SubsectionHeading", fontName="Times-Bold", fontSize=11.5,
+                                     leading=15, spaceBefore=10, spaceAfter=7,
+                                     keepWithNext=True),
         "body": ParagraphStyle("PaperBody", fontName="Times-Roman", fontSize=11.5,
-                               leading=14.5, alignment=TA_JUSTIFY, spaceAfter=7),
+                               leading=14.5, alignment=TA_JUSTIFY, spaceAfter=7,
+                               allowWidows=0, allowOrphans=0),
         "reference": ParagraphStyle("Reference", fontName="Times-Roman", fontSize=10.5,
                                     leading=14, leftIndent=17, firstLineIndent=-17,
-                                    spaceAfter=13),
+                                    spaceAfter=6, allowWidows=0, allowOrphans=0),
     }
     story = []
     references = False
@@ -68,22 +72,27 @@ def main():
             text, style = block[2:], "title"
         elif block.startswith("> "):
             text, style = block[2:], "subtitle"
+        elif block.startswith("### "):
+            text, style = block[4:], "subheading"
         elif block.startswith("## "):
             text, style = block[3:], "heading"
             if text == "References":
                 references = True
                 story.append(PageBreak())
+            elif text.startswith("2. "):
+                story.append(PageBreak())
         else:
             text, style = block, "reference" if references else "body"
-        story.append(Paragraph(inline_markup(text.replace("\n", " "),
-                                            reference=style == "reference"), styles[style]))
+        paragraph = Paragraph(inline_markup(text.replace("\n", " "),
+                                            reference=style == "reference"), styles[style])
+        story.append(KeepTogether([paragraph]) if style == "reference" else paragraph)
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     doc = SimpleDocTemplate(str(OUTPUT), pagesize=A4, leftMargin=24 * mm,
                             rightMargin=24 * mm, topMargin=20 * mm,
                             bottomMargin=23 * mm,
                             title="Predictive Memory Leak Detection Using Time Series Analysis",
-                            subject="Preliminary research draft - Introduction")
+                            subject="Preliminary research draft - Introduction and Literature Survey")
     doc.build(story, onFirstPage=page_footer, onLaterPages=page_footer)
     print(f"Created {OUTPUT.relative_to(ROOT)}")
 
