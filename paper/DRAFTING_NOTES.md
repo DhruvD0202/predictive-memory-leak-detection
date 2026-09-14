@@ -6,18 +6,19 @@ These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. The Introduction and Literature Survey have been approved. The Research Gap and Problem Statement are now drafted as sections 3 and 4. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Sections 1-4 (Introduction, Literature Survey, Research Gap and Problem Statement) have been approved. Proposed Methodology is now drafted as section 5, with eight subsections and a pipeline overview figure. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
 - Reference verification and Review 1 corrections: [REFERENCE_AUDIT.md](REFERENCE_AUDIT.md). This records reading scope and distinguishes preprints, publications, books and dataset records.
 - Preview builder: [build_paper_preview.py](../scripts/build_paper_preview.py), requiring ReportLab 4.4.9. Run `python scripts/build_paper_preview.py` in an environment containing that dependency. The builder reads the Markdown source and makes the PDF; do not edit PDF text independently.
+- Figure 1 is saved in [PNG](figures/pipeline_overview.png) and editable [SVG](figures/pipeline_overview.svg). Its [figure builder](../scripts/build_methodology_figure.py) uses Matplotlib, available in the project's existing `.venv-baseline`. That environment generated the figure; the bundled document runtime built and rendered the paper PDF. No new dependency was installed.
 - A Word file is not delivered at this checkpoint: the bundled Windows runtime has no LibreOffice renderer for the required visual verification workflow. Markdown remains editable in VS Code, and PDF is used for visual review.
 - Author names, affiliations and a submission venue have not been supplied and are not invented.
 
 ## Preview checks
 
-The nine-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, and References on pages 7-9. Each reference stays together on one page. Automated checks confirmed 36 sequential bibliography entries, all 36 cited in the text, and 36 PDF link targets matching the Markdown source. The approved Introduction and Literature Survey bodies and the existing bibliography are unchanged. The [Research Gap preview](../output/pdf/Research_Gap_preview.png) shows page 5 and the [Problem Statement continuation](../output/pdf/Problem_Statement_preview.png) shows page 6. The full PDF contains all sections. The reference audit records source-access limitations.
+The thirteen-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, Proposed Methodology on pages 7-10, and References on pages 11-13. Figure 1 and its caption remain together on page 7. Each reference stays together on one page. Automated checks confirmed 36 sequential bibliography entries, all 36 cited in the text, and 36 PDF link targets matching the Markdown source. The approved sections 1-4 and the bibliography are unchanged. The [Methodology preview](../output/pdf/Methodology_preview.png) shows page 7; the full PDF contains the complete section. The reference audit records source-access limitations.
 
 ## Section checkpoints
 
@@ -25,8 +26,8 @@ The nine-page PDF was rendered and visually inspected: Introduction on page 1, L
 |---|---|
 | Introduction | Approved by the user; body text preserved |
 | Literature Survey | Approved by the user; body text preserved |
-| Research Gap and Problem Statement | Drafted as sections 3-4; three research questions, evaluation objectives and explicit scope; ready for preview and feedback |
-| Proposed Methodology | Pending; describe the implemented pipeline, including restricted ARIMA and warning rules |
+| Research Gap and Problem Statement | Approved by the user; body text preserved |
+| Proposed Methodology | Drafted; eight subsections and Figure 1; checked against code and protocols; ready for preview and feedback |
 | Experimental Setup | Pending; dataset selection, splits, features, configurations and provenance |
 | Preliminary Results and Discussion | Pending; use verified complete Colab outputs only |
 | Limitations and Future Work | Pending; label unperformed evaluation explicitly |
@@ -60,7 +61,22 @@ The complete four-page Review 1 report was re-read for this checkpoint. The orig
 | RQ3: Westermo behavior | Warning thresholds transfer unchanged; forecasting models are fitted independently per recording. Without labels, alarm counts are descriptive. |
 | Scope and original objectives | No observed 80% pressure crossing in the audited Antarex block; runtime timings do not establish continuous-monitoring overhead. The replay implementation is supported by `research/IMPLEMENTATION_VERIFICATION.md`. Research questions summarize the recorded pilot protocol, not a preregistration. |
 
-Jindal, RESIN and Westermo primary publication records were rechecked on 14 September 2026 for the limited claims reused here. No new references or experimental results were added. Next checkpoint: Proposed Methodology.
+Jindal, RESIN and Westermo primary publication records were rechecked on 14 September 2026 for the limited claims reused here. No new references or experimental results were added at that checkpoint.
+
+## Proposed Methodology evidence map
+
+| Subsection | Implementation and evidence checked |
+|---|---|
+| 5.1 Pipeline | Separate recording and model paths in `src/preprocessing.py`, `src/baselines.py`, `src/lstm_forecasting.py` and `src/warning_evaluation.py`; complete verified Colab runs are the result sources. Figure 1 is an explanatory diagram, not a new result. |
+| 5.2 Causal preparation | `align_past`, `counter_rates`, `build_antarex`, `build_westermo` and `reconstruct_episodes`. Bounded backward alignment, rate units, unknown labels and gaps are preserved. |
+| 5.3 Splits and windows | `partition_codes`, `fit_scaler`, `build_window_index` and `export_dataset`. Fractions apply to time extent; the first Antarex row of each split is invalidated. Feature filtering uses training population standard deviation. Complete future coverage affects offline eligibility, not prediction inputs. |
+| 5.4 Baselines | `linear_forecast`, `arima_forecast`, `longest_training_segment`, `fit_arima`, `select_settings` and the baseline protocol. Local line coefficients are recomputed per origin; ARIMA coefficients are fixed after training. The restricted estimator operates on first differences. |
+| 5.5 LSTM | `MemoryLSTM`, `train_recording`, `should_stop`, prediction routines and the LSTM protocol. One 32-unit layer, reset states, standardized target, spaced training origins, fixed configuration and validation-selected weights. Training subsets are not asserted identical across methods. |
+| 5.6 Warnings | `warning_scores`, `warning_state`, `select_thresholds` and the warning protocol. Minimum growth score, three consecutive origins, threshold grid, disabled option, validation calibration and unchanged Westermo thresholds. |
+| 5.7 Evaluation | Error functions, `point_metrics`, `alarm_starts`, `event_metrics` and `describe_unlabeled`. Origin/target times, non-leak exposure, full event coverage, new-start detection, detected-only delay and unlabeled Westermo counts are explicit. |
+| 5.8 Evidence and prototype | Colab LSTM/warning verification reports, implementation verification and the warning protocol's staged-development disclosure. No independent confirmation or live Windows LSTM transfer is claimed. |
+
+Primary [statsmodels ARIMA fit documentation](https://www.statsmodels.org/v0.14.6/generated/statsmodels.tsa.arima.model.ARIMA.fit.html), [PyTorch LSTM documentation](https://docs.pytorch.org/docs/2.8/generated/torch.nn.LSTM.html) and [Kim et al.'s publisher record](https://ojs.aaai.org/index.php/AAAI/article/view/20680) were rechecked on 14 September 2026. Source code determines the actual implementation choices. Documentation versions are not substituted for recorded Colab environment versions. No models, thresholds or saved experimental outputs were changed. Next checkpoint: Experimental Setup.
 
 ## Verified external sources
 

@@ -1,7 +1,7 @@
 """Build the current paper PDF from its editable Markdown source.
 
-Requires reportlab==4.4.9. This deliberately supports only the headings,
-paragraphs, links and editorial subtitle used by the current section draft.
+Requires reportlab==4.4.9. Supports the headings, paragraphs, links, figures,
+captions and editorial subtitle used by the current section draft.
 """
 
 from html import escape
@@ -13,7 +13,7 @@ from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
-from reportlab.platypus import KeepTogether, PageBreak, Paragraph, SimpleDocTemplate
+from reportlab.platypus import Image, KeepTogether, PageBreak, Paragraph, SimpleDocTemplate
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,6 +61,8 @@ def main():
         "body": ParagraphStyle("PaperBody", fontName="Times-Roman", fontSize=11.5,
                                leading=14.5, alignment=TA_JUSTIFY, spaceAfter=7,
                                allowWidows=0, allowOrphans=0),
+        "caption": ParagraphStyle("FigureCaption", fontName="Times-Italic", fontSize=10,
+                                  leading=13, spaceAfter=10, allowWidows=0, allowOrphans=0),
         "reference": ParagraphStyle("Reference", fontName="Times-Roman", fontSize=10.5,
                                     leading=14, leftIndent=17, firstLineIndent=-17,
                                     spaceAfter=6, allowWidows=0, allowOrphans=0),
@@ -68,6 +70,15 @@ def main():
     story = []
     references = False
     for block in re.split(r"\n\s*\n", SOURCE.read_text(encoding="utf-8").strip()):
+        figure = re.fullmatch(r"!\[([^\]]+)\]\(([^)]+)\)", block)
+        if figure:
+            path = (SOURCE.parent / figure.group(2)).resolve()
+            if not path.is_relative_to(SOURCE.parent.resolve()):
+                raise ValueError("Paper figures must stay within the paper folder")
+            item = Image(str(path), width=162 * mm, height=79.875 * mm)
+            item.keepWithNext = True
+            story.append(item)
+            continue
         if block.startswith("# "):
             text, style = block[2:], "title"
         elif block.startswith("> "):
@@ -79,8 +90,10 @@ def main():
             if text == "References":
                 references = True
                 story.append(PageBreak())
-            elif text.startswith(("2. ", "3. ")):
+            elif text.startswith(("2. ", "3. ", "5. ")):
                 story.append(PageBreak())
+        elif block.startswith("Figure "):
+            text, style = block, "caption"
         else:
             text, style = block, "reference" if references else "body"
         paragraph = Paragraph(inline_markup(text.replace("\n", " "),
@@ -92,7 +105,7 @@ def main():
                             rightMargin=24 * mm, topMargin=20 * mm,
                             bottomMargin=23 * mm,
                             title="Predictive Memory Leak Detection Using Time Series Analysis",
-                            subject="Preliminary research draft - Sections 1-4")
+                            subject="Preliminary research draft - Sections 1-5")
     doc.build(story, onFirstPage=page_footer, onLaterPages=page_footer)
     print(f"Created {OUTPUT.relative_to(ROOT)}")
 

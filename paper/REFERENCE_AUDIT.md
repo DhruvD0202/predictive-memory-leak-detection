@@ -1,6 +1,6 @@
 # Reference audit and relevance map
 
-Checked: 14 September 2026. Scope: Introduction, Literature Survey, Research Gap and Problem Statement.
+Checked: 14 September 2026. Scope: Introduction, Literature Survey, Research Gap, Problem Statement and Proposed Methodology.
 
 The user approved the Introduction and requested at least 30+ references. This checkpoint contains **36 distinct works**, each cited in the current manuscript. The sources are a mixture of journal/conference publications, books, a dataset and explicitly identified arXiv records. They are not described as 36 peer-reviewed research articles. Different versions or hosting pages of one work count once.
 
@@ -63,4 +63,4 @@ The original Review 1 report was read in full. Source titles, authors and dates 
 
 ## Scope of the survey
 
-This is a focused narrative survey, not a systematic review or a claim of exhaustive coverage. The Research Gap and Problem Statement reuse the verified sources to motivate a bounded empirical evaluation question; they do not assert that prior work has never combined forecasting and leak detection. No new experimental results were generated in these drafting steps. Later sections must preserve the verified Colab results and separately identify unperformed work.
+This is a focused narrative survey, not a systematic review or a claim of exhaustive coverage. The Research Gap and Problem Statement reuse the verified sources to motivate a bounded empirical evaluation question; they do not assert that prior work has never combined forecasting and leak detection. Proposed Methodology reuses existing citations and was checked against the implementation and protocols, as recorded in DRAFTING_NOTES.md. No new experimental results were generated in these drafting steps. Later sections must preserve the verified Colab results and separately identify unperformed work.
