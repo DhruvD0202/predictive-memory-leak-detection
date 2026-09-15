@@ -27,7 +27,7 @@ The [figure builder](../scripts/build_results_figures.py) redraws three scientif
 - Sections 1-6 and the 36-entry bibliography are unchanged apart from the cover's section range.
 - Four new tables match the saved source records, including undefined precision/delays and the missed event.
 - All 16 aggregate forecasting test rows were independently recalculated from the complete saved predictions within 1e-10 percentage points of the recorded values.
-- The PDF has 21 pages: Section 7 on pages 15-18, references on pages 19-21. All eight tables and five figures retain their captions; new figure labels were checked for overlap and legibility.
+- At the results checkpoint, the PDF had 21 pages: Section 7 on pages 15-18 and references on pages 19-21. All eight tables and five figures retained their captions; new figure labels were checked for overlap and legibility. Subsequent sections move the references; the current page map is in `DRAFTING_NOTES.md`.
 - All 36 works remain cited, with the PDF's 36 reference links matching the Markdown source.
 
-No new external reference was added. Existing references [6], [31]-[34] support the already-audited dataset and evaluation concepts; all project numbers come from local experimental records. Single-seed scope, correlated windows, reused validation data, prior forecast-test inspection and unperformed extensions remain explicit. The next checkpoint is Limitations and Future Work, followed by Conclusion and then Abstract/Keywords.
+No new external reference was added. Existing references [6], [31]-[34] support the already-audited dataset and evaluation concepts; all project numbers come from local experimental records. Single-seed scope, correlated windows, reused validation data, prior forecast-test inspection and unperformed extensions remain explicit. Current section status and the next checkpoint are recorded in `DRAFTING_NOTES.md`.

@@ -1,6 +1,6 @@
 # Predictive Memory Leak Detection Using Time Series Analysis
 
-> Preliminary research draft | 15 September 2026 | Sections 1-7
+> Preliminary research draft | 15 September 2026 | Sections 1-8
 
 ## 1. Introduction
 
@@ -354,6 +354,44 @@ RQ1 shows lower LSTM RMSE, qualified by worse Westermo MAE. For RQ2, LSTM assist
 The prototype replays 69,559 test origins and runs saved LSTMs on compatible inputs. Recorded checks passed 40 tests and reproduced 12 representative predictions within 1e-6 memory-pressure fraction. These support demonstration functionality; the separate live monitor has no validated leak-detection accuracy.
 
 One seed, correlated windows, limited workloads, reused validation data and earlier inspection of forecast test results restrict inference. Repeated-seed studies, feature ablations, independent labeled workloads, exhaustion outcomes and validated live deployment remain pending beyond this development pilot and the review milestone.
+
+## 8. Limitations and Future Work
+
+### 8.1 Dataset coverage and meaning of the target
+
+The labeled experiment uses one Antarex CPU-MEM_mono block with controlled injections on a real machine [3]-[5]. Its findings cannot establish performance on naturally occurring leaks, different applications or other machines. Other injected faults are included in the non-leak class, so false alarms are defined against this specific leak target rather than a universally healthy state. Westermo adds industrial workload variation but only three systems were modeled; its unknown leak status prevents detection-accuracy claims [6].
+
+Memory pressure summarizes available physical RAM. It does not identify unreleased allocations, the responsible process or a source-code location. Legitimate workload growth may produce similar aggregate behavior. In addition, the selected Antarex block has constant monitored disk activity and inactive swap, while Westermo lacks page-fault fields. These experiments therefore cannot establish the value of every initially proposed telemetry metric. No memory-exhaustion outcome was observed, so the original objective of warning before critical depletion remains untested.
+
+### 8.2 Experimental independence and comparison scope
+
+Each LSTM was trained with one seed on one chronological partitioning of its recording. Overlapping windows share observations, and the large number of forecast origins does not provide an equivalent number of independent trials. Multiple seeds, alternative time periods and uncertainty estimates that account for temporal dependence and event clustering are needed before making broader performance claims.
+
+The staged workflow also limits independence. Forecast test results were inspected before the warning protocol was finalized, and validation data served both model selection and warning calibration. Thresholds were frozen before warning test scoring, but this does not make the pilot an untouched external confirmation. Future comparisons should declare model, calibration and evaluation choices before inspecting new held-out outcomes, consistent with the validation and reproducibility concerns discussed in [27]-[30].
+
+The LSTM uses multiple features while the baselines use memory pressure alone. Training-origin spacing and fitting procedures also differ. Consequently, the observed differences concern complete predictors and do not isolate a benefit caused by recurrent architecture or additional telemetry. The restricted ARIMA(p,1,0) search does not represent all statistical forecasting models. Memory-only LSTM, matched-feature alternatives and broader baseline studies remain necessary ablations, with their search and compute budgets stated in advance.
+
+### 8.3 Warning interpretation and deployment limits
+
+Forecast-assisted warnings use a fixed conjunction of recent and forecast growth, with a finite threshold grid and three-sample confirmation. The score is not a calibrated leak probability. The inactive ARIMA-assisted rule and the LSTM precision-recall trade-off apply to this particular design. Event recognition requires a new alarm start within an injection interval; point recall measures coverage across individual timestamps. Delay summaries exclude missed events, which must remain visible in any comparison. Alternative alarm rules and objectives should be evaluated on new held-out data without retrospectively filling detected intervals [32]-[34].
+
+The local dashboard demonstrates replay and saved-model inference on compatible archived windows. Its live monitor uses exploratory trend warnings, and the archived LSTM has not been validated on the local Windows host. Windows cannot supply all of the Linux model's original features through the current collector. A deployable learned monitor therefore needs compatible collection, explicit handling of unavailable fields and independent validation of transfer or retraining. Existing offline timings and software checks do not establish continuous-monitoring overhead, production reliability or crash prevention.
+
+### 8.4 Priorities beyond the review milestone
+
+Table 9 separates planned extensions from completed work. The existing pilot provides the reference configuration for these studies; new results should be preserved separately with their own data, selection records and evaluation scope.
+
+Table 9. Proposed work beyond the review milestone. Every item below is pending; none contributes an experimental result in this draft.
+
+| Pending extension | Purpose | Evidence to produce |
+|---|---|---|
+| More recordings and seeds | Assess variation | Results across additional workloads, repeated training seeds and new chronological holdouts, with appropriate uncertainty estimates. |
+| Feature and model ablations | Isolate sources of improvement | Matched memory-only and multivariate comparisons, broader statistical baselines, and declared search and compute budgets. |
+| Warning and calibration study | Compare operational trade-offs | Frozen rules evaluated against independent labels under predefined coverage, false-alarm and delay objectives. |
+| Exhaustion-focused recordings | Test warning before depletion | Timestamped resource limits, warning times and observed pressure crossings or exhaustion outcomes; documented cases where no warning occurs. |
+| Compatible live evaluation | Test transfer and monitoring cost | Validated feature collection, labeled live trials, and measured sampling/inference latency, CPU, RAM and storage costs. |
+
+Autocorrelation-aware Mann-Kendall testing and Sen's slope [24]-[26], or hybrid statistical/neural forecasting [20]-[22], are possible later comparisons. They are not implemented in the reported pipeline and are not assumed to improve its results. The next scientific priority is independent validation of the existing findings, followed by controlled extensions whose benefits can be measured.
 
 ## References
 

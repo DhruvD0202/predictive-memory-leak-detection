@@ -6,7 +6,7 @@ These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Sections 1-6, including the verified architecture, have been accepted for continued drafting. This checkpoint adds Preliminary Results and Discussion as Section 7, with five subsections, four result tables and three scientific figures. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Sections 1-7, including the architecture and verified preliminary results, have been accepted for continued drafting. This checkpoint adds Limitations and Future Work as Section 8, with four subsections and a table of explicitly pending extensions. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
@@ -20,7 +20,7 @@ The user resumed drafting, specified no template or page limit, and requested pr
 
 ## Preview checks
 
-The twenty-one-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, the original Methodology subsections on pages 7-10, Architecture on page 11, Experimental Setup on pages 12-14, Preliminary Results and Discussion on pages 15-18, and References on pages 19-21. All five figures and eight tables retain their captions, and each reference stays on one page. Checks confirmed all 36 references are cited and all 36 PDF links match the Markdown source. Sections 1-6 and the bibliography are unchanged. All 16 aggregate forecasting test rows were recalculated from saved predictions; the four new tables match the source scores. The [Results opening page](../output/pdf/Preliminary_Results_preview.png), [forecast and training figures](../output/pdf/Forecast_Results_preview.png) and [warning tables](../output/pdf/Warning_Results_preview.png) show pages 15-17. The full PDF contains the complete section.
+The twenty-three-page PDF was rendered and checked: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, the original Methodology subsections on pages 7-10, Architecture on page 11, Experimental Setup on pages 12-14, Preliminary Results and Discussion on pages 15-18, Limitations and Future Work on pages 19-20, and References on pages 21-23. All five figures and nine tables retain their captions, and each reference stays on one page. All 36 references remain cited and all 36 PDF links match the source. Sections 1-7 and the bibliography are unchanged; rendered pages 2-18 are pixel-identical to the previously inspected results PDF. The updated first page, new section and relocated reference pages were visually inspected. Table 9 is a plan, not another experimental result. View the [Limitations opening page](../output/pdf/Limitations_preview.png) and [Future Work table](../output/pdf/Future_Work_preview.png); results previews remain on pages 15-18.
 
 ## Section checkpoints
 
@@ -31,8 +31,8 @@ The twenty-one-page PDF was rendered and visually inspected: Introduction on pag
 | Research Gap and Problem Statement | Approved by the user; body text preserved |
 | Proposed Methodology | Accepted for continued drafting, including verified architecture Figure 2; body preserved |
 | Experimental Setup | Accepted for continued drafting; six subsections and four tables; body preserved |
-| Preliminary Results and Discussion | Drafted; five subsections, four result tables and three figures checked against complete Colab outputs; ready for preview and feedback |
-| Limitations and Future Work | Pending; label unperformed evaluation explicitly |
+| Preliminary Results and Discussion | Accepted for continued drafting; five subsections, four result tables and three figures checked against complete Colab outputs; body preserved |
+| Limitations and Future Work | Drafted; four subsections and Table 9; completed evidence separated from pending extensions; ready for preview and feedback |
 | Conclusion | Pending; bounded by executed experiments |
 | Abstract and Keywords | Pending; write last |
 | References | 36 distinct works, all cited; identity, relevance and reading scope audited |
@@ -100,7 +100,18 @@ The four setup tables match their saved source records. References [3]-[6] suppl
 
 The complete [RESULTS_EVIDENCE.md](RESULTS_EVIDENCE.md) maps Section 7 to original metrics, forecast tables, training history, warning decisions and event outcomes. LSTM lowers test RMSE on all four recordings, while ARIMA has lower MAE on Westermo. Warning results preserve the higher LSTM-assisted precision and lower false-alarm rate alongside lower point recall/F1 and one missed event. Delay summaries include detected events only, and Westermo counts remain descriptive. Earlier result files and selection settings are unchanged.
 
-The user-defined 75% milestone now has evidence for all three requested components: audited pilot datasets, an executed and verified experimental pipeline, and a draft through supported preliminary results. This does not complete the full paper or broader research evaluation. Next checkpoint: Limitations and Future Work, followed by Conclusion and finally Abstract/Keywords.
+The user-defined 75% milestone now has evidence for all three requested components: audited pilot datasets, an executed and verified experimental pipeline, and a draft through supported preliminary results. This does not complete the full paper or broader research evaluation.
+
+## Limitations and Future Work evidence map
+
+| Subsection | Grounding and claim boundary |
+|---|---|
+| 8.1 Dataset and target | Dataset audit, preprocessing records and original references [3]-[6]. One controlled-leak block, three modeled Westermo systems, incomplete metric variation, unknown Westermo labels and no observed exhaustion constrain the target claims. |
+| 8.2 Design and comparison | LSTM and warning protocols, staged-development disclosure, fixed configurations and references [27]-[30]. One seed, correlated windows, reused validation, earlier test inspection, unequal feature sets and restricted baselines are explicit. Proposed remedies are not reported as completed experiments. |
+| 8.3 Warning and deployment | Warning protocol, point/event evaluation and implementation verification, with references [32]-[34]. Delays exclude missed events; the live monitor is exploratory and does not establish LSTM transfer, overhead or crash prevention. |
+| 8.4 Pending studies | Table 9 proposes broader data/seed evaluation, ablations, warning studies, exhaustion outcomes and compatible live validation. Every row is marked pending. Mann-Kendall/Sen and hybrid forecasting remain possible later comparisons grounded in existing references [20]-[26]. |
+
+No experiment, model, threshold or numerical result changed in this checkpoint. No new external reference was added. Next checkpoint: Conclusion, followed by Abstract/Keywords and final manuscript consistency checks.
 
 ## Verified external sources
 
