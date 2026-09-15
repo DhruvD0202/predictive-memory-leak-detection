@@ -7,9 +7,10 @@ All substantive manuscript writing is complete. The remaining front-page input i
 ## Deliverables
 
 - [Editable manuscript](Predictive_Memory_Leak_Detection_Draft.md).
-- [Checked PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf): 25 pages with 11 section bookmarks.
+- [Checked PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf): 27 pages with 11 section bookmarks.
 - [Abstract preview](../output/pdf/Abstract_preview.png) and [Conclusion preview](../output/pdf/Conclusion_preview.png).
-- Five figures, nine tables and 36 distinct references, each cited in the manuscript.
+- Five figures, nine tables and 46 distinct references, each cited in the manuscript.
+- [Ten IEEE/ACM additions](REFERENCE_ADDITIONS.md), integrated into the survey and verified within the documented reading scope.
 
 ## Completed writing
 
@@ -17,14 +18,14 @@ All substantive manuscript writing is complete. The remaining front-page input i
 |---|---|
 | Title, Abstract and six keywords | 1 |
 | 1. Introduction | 2 |
-| 2. Literature Survey | 3-5 |
-| 3. Research Gap; 4. Problem Statement | 6-7 |
-| 5. Proposed Methodology, including verified architecture | 8-12 |
-| 6. Experimental Setup | 13-15 |
-| 7. Preliminary Results and Discussion | 16-19 |
-| 8. Limitations and Future Work | 20-21 |
-| 9. Conclusion | 22 |
-| References | 23-25 |
+| 2. Literature Survey | 3-6 |
+| 3. Research Gap; 4. Problem Statement | 7-8 |
+| 5. Proposed Methodology, including verified architecture | 9-13 |
+| 6. Experimental Setup | 14-16 |
+| 7. Preliminary Results and Discussion | 17-20 |
+| 8. Limitations and Future Work | 21-22 |
+| 9. Conclusion | 23 |
+| References | 24-27 |
 
 The 237-word Abstract and 230-word Conclusion summarize the executed pilot. Section 7 remains titled Preliminary Results because the available evidence is a development pilot; this is not an unfinished writing section. Table 9 marks additional studies as pending.
 
@@ -32,10 +33,10 @@ The 237-word Abstract and 230-word Conclusion summarize the executed pilot. Sect
 
 - Checked summary metrics and rounded values against saved Colab forecasting and warning tables, including the Antarex 19.78% relative RMSE reduction. The text retains ARIMA's lower Westermo MAE and the trend-only rule's higher recall/F1 and event coverage.
 - Rechecked the size and SHA-256 of all 56 original forecasting and 20 warning result files against their manifests. All 76 passed and remain unchanged. No model, threshold or experiment was rerun for this drafting step.
-- Confirmed sections 1-8 and the full bibliography are unchanged from the preceding checkpoint. No unfinished-section placeholders remain.
-- Confirmed citations cover exactly references 1-36, and all 36 PDF reference links match the Markdown bibliography. The external-source audit remains dated 14 September; this final check does not imply a new external review or full-text reading of every reference.
+- Confirmed that substantive changes are confined to six Literature Survey paragraphs and ten bibliography entries. Earlier paragraph content, the Abstract/Keywords, sections 1 and 3-9, all experimental numbers and the original 36 bibliographic entries are preserved, allowing for reference renumbering. No unfinished-section placeholders remain.
+- Confirmed citations cover exactly references 1-46 in first-appearance order, and all 46 PDF reference links match the Markdown bibliography. Updated the reference numbers in the evidence maps while preserving explicit original Review 1 numbering. Original works were externally checked on 14 September and the ten additions on 15 September; neither audit implies full-text reading of every reference.
 - Confirmed five sequential figure captions, nine sequential table captions and all five figure files. Captions remain with their figures/tables; each reference remains on one page.
-- Rendered the 25-page PDF. The 22 unchanged body-page regions match the previously inspected PDF pixel for pixel, excluding updated footers. Visually inspected the Abstract, relocated Introduction and Conclusion; checked every page number/footer and all 11 section bookmarks.
+- Rendered the 27-page PDF. Twelve page bodies match the preceding checked PDF pixel for pixel, excluding page-number footers. Visually inspected all 15 changed page bodies, including the four survey pages and four bibliography pages. Checked every page number/footer and all 11 section bookmarks.
 - Refreshed the saved page previews to match the completed PDF.
 
 Detailed provenance is in [DRAFTING_NOTES.md](DRAFTING_NOTES.md), [RESULTS_EVIDENCE.md](RESULTS_EVIDENCE.md), [REFERENCE_AUDIT.md](REFERENCE_AUDIT.md) and [ARCHITECTURE_REVIEW.md](ARCHITECTURE_REVIEW.md).

@@ -6,11 +6,12 @@ These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews. On 15 September, the user asked to complete the draft in full. All substantive manuscript writing is now present: Abstract/Keywords, sections 1-9 and the bibliography. Conclusion was written from the supported findings, followed by the Abstract and final consistency checks. Sections 1-8 and the bibliography were preserved at this final checkpoint. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. The format is a readable single-column draft with numbered citations; author metadata remains to be supplied.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews. All substantive manuscript writing was completed on 15 September: Abstract/Keywords, sections 1-9 and the bibliography. The user then requested more reputable IEEE/ACM references and discovery through Google Scholar. Ten relevant published works have been added and integrated into Section 2, taking the bibliography from 36 to 46 distinct cited works. All citations and evidence maps use the revised order of first appearance. The completed Abstract, experimental methods, results and Conclusion retain their substance. The format remains a readable single-column draft; author metadata remains to be supplied.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
 - Reference verification and Review 1 corrections: [REFERENCE_AUDIT.md](REFERENCE_AUDIT.md). This records reading scope and distinguishes preprints, publications, books and dataset records.
+- The [IEEE/ACM additions](REFERENCE_ADDITIONS.md) list ten new papers, their relevance and access limits. Google Scholar was unavailable; no Scholar citation-count or indexing check is claimed.
 - Preview builder: [build_paper_preview.py](../scripts/build_paper_preview.py), requiring ReportLab 4.4.9. Run `python scripts/build_paper_preview.py` in an environment containing that dependency. The builder reads the Markdown source and makes the PDF; do not edit PDF text independently.
 - Figure 1 is saved in [PNG](figures/pipeline_overview.png) and editable [SVG](figures/pipeline_overview.svg). Its [figure builder](../scripts/build_methodology_figure.py) uses Matplotlib, available in the project's existing `.venv-baseline`. That environment generated the figure; the bundled document runtime built and rendered the paper PDF. No new dependency was installed.
 - Figure 2 is the [verified architecture](figures/system_architecture_verified.png). The [architecture review](ARCHITECTURE_REVIEW.md) records the original screenshot, implementation checks, corrected connections and edit provenance. The archived and live paths are separate; live telemetry does not use the saved LSTM.
@@ -21,16 +22,18 @@ The user resumed drafting, specified no template or page limit, and requested pr
 
 ## Preview checks
 
-The twenty-five-page PDF was rendered and checked. Abstract/Keywords is on page 1, Introduction on page 2, Literature Survey on pages 3-5, Research Gap and Problem Statement on pages 6-7, the original Methodology subsections on pages 8-11, Architecture on page 12, Experimental Setup on pages 13-15, Preliminary Results and Discussion on pages 16-19, Limitations and Future Work on pages 20-21, Conclusion on page 22, and References on pages 23-25.
+The revised PDF has 27 pages. Abstract/Keywords is on page 1, Introduction on page 2, Literature Survey on pages 3-6, Research Gap and Problem Statement on pages 7-8, the original Methodology subsections on pages 9-12, Architecture on page 13, Experimental Setup on pages 14-16, Preliminary Results and Discussion on pages 17-20, Limitations and Future Work on pages 21-22, Conclusion on page 23, and References on pages 24-27.
 
-All five figures and nine tables retain their captions, and each reference stays on one page. All 36 works remain cited and all 36 PDF reference links match the source. Eleven PDF bookmarks cover Abstract, sections 1-9 and References. The 22 unchanged body-page regions match the previously inspected PDF pixel for pixel, with footers excluded from that comparison; all page numbers and updated footers were checked separately. The new Abstract, relocated Introduction and new Conclusion pages were visually inspected. Table 9 is a plan, not another experimental result. All page previews were refreshed, including the new [Abstract](../output/pdf/Abstract_preview.png) and [Conclusion](../output/pdf/Conclusion_preview.png).
+All five figures and nine tables retain their captions, and each reference stays on one page. The final checks cover all 46 citations and PDF reference links, revised numbering, 11 section bookmarks, page layout and the unchanged experiment records. Twelve unchanged page bodies match the preceding checked PDF pixel for pixel, excluding page-number footers. All 15 changed page bodies were visually inspected, including the expanded survey and bibliography. Table 9 remains a plan rather than an experimental result. The saved page previews use the current pagination.
+
+View the survey on [page 3](../output/pdf/Literature_Survey_preview.png), [page 4](../output/pdf/Literature_Survey_preview-2.png), [page 5](../output/pdf/Literature_Survey_preview-3.png) and [page 6](../output/pdf/Literature_Survey_preview-4.png), or a [bibliography preview](../output/pdf/References_preview.png). The [addition record](REFERENCE_ADDITIONS.md) explains how each of the ten new sources contributes.
 
 ## Section checkpoints
 
 | Section | Status |
 |---|---|
 | Introduction | Approved by the user; body text preserved |
-| Literature Survey | Approved by the user; body text preserved |
+| Literature Survey | Complete; expanded with ten verified IEEE/ACM works under the user's latest request |
 | Research Gap and Problem Statement | Approved by the user; body text preserved |
 | Proposed Methodology | Accepted for continued drafting, including verified architecture Figure 2; body preserved |
 | Experimental Setup | Accepted for continued drafting; six subsections and four tables; body preserved |
@@ -38,7 +41,7 @@ All five figures and nine tables retain their captions, and each reference stays
 | Limitations and Future Work | Complete; four subsections and Table 9; completed evidence separated from pending extensions; body preserved |
 | Conclusion | Complete; 230 words, bounded by executed experiments and checked against saved results |
 | Abstract and Keywords | Complete; 237-word abstract written last, six keywords; summary metrics checked against saved results |
-| References | 36 distinct works, all cited; identity, relevance and reading scope audited |
+| References | 46 distinct works, all cited and renumbered by first appearance; identity, relevance and reading scope audited |
 
 ## Introduction evidence map
 
@@ -48,7 +51,7 @@ All five figures and nine tables retain their captions, and each reference stays
 | Box-Jenkins versus LSTM comparison | Paper reference [2], corresponding to Review 1 reference [3]. Bibliographic details and comparison checked against the local publisher PDF, `Time series forecast modeling for the Windows operating.pdf`, pp. 1-11. Does not claim our restricted ARIMA reproduces their entire Box-Jenkins procedure. |
 | Memory target and model comparison | `research/PREPROCESSING_RESULTS.md`, `BASELINE_PROTOCOL.md`, `LSTM_PROTOCOL.md` and the corresponding implementation. The memory-pressure proxy is `1 - available / total`; it is neither Linux PSI nor a learned leak probability. |
 | Temporal validation and warning separation | `research/WARNING_PROTOCOL.md`, `WARNING_RESULTS.md`, `COLAB_WARNING_VERIFICATION.md`. Warning thresholds are selected on validation data. Forecast metrics and leak recognition are separate tasks. |
-| Antarex selection | `research/DATA_VALIDATION.md` and `data/metadata/antarex_record_2553224.json`. Reference [3] cites version 1.0 with the metadata publication date 2018-10-10; the repository record was created in January 2019. References [4]-[5] credit the associated injection and classification work. |
+| Antarex selection | `research/DATA_VALIDATION.md` and `data/metadata/antarex_record_2553224.json`. Reference [3] cites version 1.0 with the metadata publication date 2018-10-10; the repository record was created in January 2019. References [4], [5] credit the associated injection and classification work. |
 | Westermo selection | Reference [6] and the [publisher's repository at the audited commit](https://github.com/westermo/test-system-performance-dataset/tree/47e0ccdc10c30e86327d6eb828ed48d164469fd4). Pilot systems 1-3 were selected in numerical order. They have no confirmed leak labels. |
 | Prototype and claim boundaries | `research/IMPLEMENTATION_VERIFICATION.md`, `README.md` and `research/PROJECT_STATUS.md`. Replay is implemented. Recognition follows injection onset; no exhausted-memory outcome or validated crash-prevention claim is available. |
 
@@ -58,7 +61,7 @@ The complete four-page Review 1 report was re-read for this checkpoint. The orig
 
 | Passage | Grounding and limits |
 |---|---|
-| Section 3: empirical evaluation question | Existing paper references [1], [2], [8] and [15] establish relevant prior work. References [31]-[34] ground the distinction between forecast errors, point decisions and events. No exhaustive absence-of-prior-work or algorithmic novelty claim is made. |
+| Section 3: empirical evaluation question | Existing paper references [1], [2], [8] and [21] establish relevant prior work. References [41]-[44] ground the distinction between forecast errors, point decisions and events. No exhaustive absence-of-prior-work or algorithmic novelty claim is made. |
 | Section 3: dataset roles | `research/DATA_VALIDATION.md`, `research/PREPROCESSING_RESULTS.md` and references [3]-[6]. Antarex has injection labels; the Westermo pilot has unknown leak status. |
 | Section 4.1: target, inputs and horizons | `research/BASELINE_PROTOCOL.md`, `research/LSTM_PROTOCOL.md` and `research/WARNING_PROTOCOL.md`. Warning inputs are causal; validation labels calibrate thresholds, so the overall procedure is not wholly unsupervised. |
 | RQ1: forecast comparison | Baseline and LSTM protocols use matching held-out origins; the baseline inputs are univariate and LSTM inputs multivariate. This is not an ablation isolating the effect of additional features. |
@@ -110,9 +113,9 @@ The user-defined 75% milestone has evidence for all three requested components: 
 | Subsection | Grounding and claim boundary |
 |---|---|
 | 8.1 Dataset and target | Dataset audit, preprocessing records and original references [3]-[6]. One controlled-leak block, three modeled Westermo systems, incomplete metric variation, unknown Westermo labels and no observed exhaustion constrain the target claims. |
-| 8.2 Design and comparison | LSTM and warning protocols, staged-development disclosure, fixed configurations and references [27]-[30]. One seed, correlated windows, reused validation, earlier test inspection, unequal feature sets and restricted baselines are explicit. Proposed remedies are not reported as completed experiments. |
-| 8.3 Warning and deployment | Warning protocol, point/event evaluation and implementation verification, with references [32]-[34]. Delays exclude missed events; the live monitor is exploratory and does not establish LSTM transfer, overhead or crash prevention. |
-| 8.4 Pending studies | Table 9 proposes broader data/seed evaluation, ablations, warning studies, exhaustion outcomes and compatible live validation. Every row is marked pending. Mann-Kendall/Sen and hybrid forecasting remain possible later comparisons grounded in existing references [20]-[26]. |
+| 8.2 Design and comparison | LSTM and warning protocols, staged-development disclosure, fixed configurations and references [36]-[39]. One seed, correlated windows, reused validation, earlier test inspection, unequal feature sets and restricted baselines are explicit. Proposed remedies are not reported as completed experiments. |
+| 8.3 Warning and deployment | Warning protocol, point/event evaluation and implementation verification, with references [42]-[44]. Delays exclude missed events; the live monitor is exploratory and does not establish LSTM transfer, overhead or crash prevention. |
+| 8.4 Pending studies | Table 9 proposes broader data/seed evaluation, ablations, warning studies, exhaustion outcomes and compatible live validation. Every row is marked pending. Mann-Kendall/Sen and hybrid forecasting remain possible later comparisons grounded in existing references [29]-[35]. |
 
 No experiment, model, threshold or numerical result changed in the limitations checkpoint. No new external reference was added. Conclusion, Abstract/Keywords and final manuscript checks have now been completed.
 
@@ -130,7 +133,7 @@ All 76 original Colab result files were rechecked against their manifests at the
 
 ## Verified external sources
 
-Checked on 14 September 2026. Numeric references are local to this paper draft, not the original report numbering. The entries below record the first Introduction checkpoint; the complete 36-work audit is in REFERENCE_AUDIT.md.
+The entries below record the first Introduction checkpoint on 14 September 2026. Paper citations in these notes have been updated to the current numbering; explicit original Review 1 reference numbers are preserved. The original 36 works were checked on 14 September and ten additions on 15 September; the complete 46-work audit is in REFERENCE_AUDIT.md.
 
 1. [Jindal et al., arXiv](https://arxiv.org/abs/2106.08938): exact title, six authors, 2021, and memory-utilization-based detection approach checked.
 2. Assi et al.: the local publisher PDF supplies title, three authors, journal, volume 13(2), pages 2121-2131, 2022, and DOI 10.22075/ijnaa.2022.26974.3505. Do not infer its results describe our experiment.

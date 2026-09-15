@@ -22,7 +22,9 @@ Checked: 15 September 2026. This checkpoint adds Section 7 only. No model, thres
 
 The [figure builder](../scripts/build_results_figures.py) redraws three scientific charts directly from their original result tables using the existing `.venv-baseline` Matplotlib environment. It verifies all 56 forecasting and 20 warning files against the original manifests before plotting. The original figure files remain unchanged. No smoothing, interval reselection or model fitting occurs. PNG and editable SVG copies are stored in `paper/figures`; [results_figure_sources.json](figures/results_figure_sources.json) records input hashes and interval timestamps.
 
-## Draft verification
+## Results-checkpoint verification
+
+The checks below describe the original results-drafting checkpoint. The completed paper subsequently gained its remaining sections and ten additional IEEE/ACM references. Current page counts and citation checks are in `FINAL_DRAFT_CHECKS.md`; numeric citations in this record use the current manuscript numbering.
 
 - Sections 1-6 and the 36-entry bibliography are unchanged apart from the cover's section range.
 - Four new tables match the saved source records, including undefined precision/delays and the missed event.
@@ -30,4 +32,4 @@ The [figure builder](../scripts/build_results_figures.py) redraws three scientif
 - At the results checkpoint, the PDF had 21 pages: Section 7 on pages 15-18 and references on pages 19-21. All eight tables and five figures retained their captions; new figure labels were checked for overlap and legibility. Subsequent sections move the references; the current page map is in `DRAFTING_NOTES.md`.
 - All 36 works remain cited, with the PDF's 36 reference links matching the Markdown source.
 
-No new external reference was added. Existing references [6], [31]-[34] support the already-audited dataset and evaluation concepts; all project numbers come from local experimental records. Single-seed scope, correlated windows, reused validation data, prior forecast-test inspection and unperformed extensions remain explicit. Current section status and the next checkpoint are recorded in `DRAFTING_NOTES.md`.
+No new external reference was added during the results checkpoint. Existing references [6], [41]-[44] support the already-audited dataset and evaluation concepts; all project numbers come from local experimental records. Single-seed scope, correlated windows, reused validation data, prior forecast-test inspection and unperformed extensions remain explicit. Current section status and later literature additions are recorded in `DRAFTING_NOTES.md`.
