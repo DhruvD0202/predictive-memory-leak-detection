@@ -6,6 +6,8 @@
 
 **Prepared:** 12 September 2026
 
+**Review preparation update, 15 September:** The manuscript text is now complete, with 46 references. Use the [three-person final-review script](Final_Review_Three_Person_Script.md) for the confirmed 10-12 minute presentation. Experimental values below remain those from the original verified runs.
+
 This guide presents completed experimental stages and preliminary findings. All forecasting and warning scores below come from the user's verified Google Colab runs. It assembles existing results; no new training, threshold tuning or experiment was performed to prepare this guide.
 
 ## 1. Data preparation: usable model inputs
@@ -109,7 +111,7 @@ Evidence: [point metrics](../results/warnings_colab/antarex_point_metrics.csv), 
 
 The working pilot demonstrates data preparation, memory forecasting and recognition of controlled injected leaks. The Antarex block reaches approximately 42.24% memory pressure and has no observed 80% threshold crossing. These results do not demonstrate warning before exhaustion or crash prevention. Westermo lacks confirmed leak labels and supports workload forecasting and descriptive alarm counts only.
 
-Dataset validation and the experimental showcase requirements are complete for this pilot. The research-paper draft remains the core outstanding requirement for the 75% milestone. Broader labeled data, repeated seeds, uncertainty estimates, ablation studies and deployment evaluation remain later work. No overall completion percentage is assigned without an agreed weighting.
+Dataset validation, the experimental showcase and the supported research-paper draft are complete for this pilot. As of 15 September, the manuscript has 27 pages and 46 cited references; author names/order and affiliation remain to be supplied. This covers the user's three requirements for the 75% milestone. Broader labeled data, repeated seeds, uncertainty estimates, ablation studies and validated deployment remain later research work.
 
 ## Suggested review demonstration: 6-8 minutes
 

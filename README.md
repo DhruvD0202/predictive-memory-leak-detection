@@ -43,7 +43,7 @@ The available test recordings contain 69,559 forecast origins in total. The warn
 6. Open **Results & evidence** for full-test metrics, then **Live monitor** to collect this machine's measurements.
 7. In live mode, allow about 55 seconds for 12 samples. Three qualifying estimates are required for a warning, so the earliest confirmed warning from a fresh session is about 65 seconds. Stop monitoring and export the CSV.
 
-For the stage-by-stage results and review speaking notes, see [the intermediate-results guide](reviews/Review2_Intermediate_Results.md).
+For the 16 September review, use the [three-person speaking guide](reviews/Final_Review_Three_Person_Script.md): an 11-minute split, speaking lines, a 90-second demo and likely reviewer questions. The [intermediate-results guide](reviews/Review2_Intermediate_Results.md) provides additional stage-by-stage evidence.
 
 ## Fresh clone setup
 

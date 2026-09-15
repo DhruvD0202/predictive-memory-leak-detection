@@ -66,6 +66,8 @@ These are planning targets, not scheduled automated actions or promises of futur
 
 ## Review handoff
 
+For the user's final review on 16 September, the confirmed presentation slot is 10-12 minutes excluding questions. The [three-person speaking guide](../reviews/Final_Review_Three_Person_Script.md) targets 11 minutes: Person 1 handles the problem/data/preprocessing, Person 2 handles models and forecasting results, and Person 3 handles warnings, the replay demo and the conclusion. It includes handoffs, a 90-second demo, a results card and reviewer questions. Preparing this guide did not run a new experiment or demonstration.
+
 On 12 September, the professor's request for intermediate results was addressed with a [Review 2 demonstration guide](../reviews/Review2_Intermediate_Results.md). It assembles existing verified preparation counts, baseline errors, a learning curve, forecasts and warning outcomes, with source links and a suggested 6-8 minute demonstration. This is review material, not a new experiment or a drafted research-paper section.
 
 The user's warning run is verified; see [COLAB_WARNING_VERIFICATION.md](COLAB_WARNING_VERIFICATION.md). No rerun or further notebook upload is needed for this checkpoint. Use the complete verified Colab forecasting and warning runs for paper tables and figures; preserve the earlier local experiments separately.
