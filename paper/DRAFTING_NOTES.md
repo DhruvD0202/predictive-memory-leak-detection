@@ -6,7 +6,7 @@ These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Sections 1-5 have been accepted for continued drafting. This checkpoint adds Experimental Setup as Section 6 and the verified user-supplied architecture as subsection 5.9 and Figure 2. The original eight methodology subsections and Figure 1 are preserved. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Sections 1-6, including the verified architecture, have been accepted for continued drafting. This checkpoint adds Preliminary Results and Discussion as Section 7, with five subsections, four result tables and three scientific figures. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
@@ -14,12 +14,13 @@ The user resumed drafting, specified no template or page limit, and requested pr
 - Preview builder: [build_paper_preview.py](../scripts/build_paper_preview.py), requiring ReportLab 4.4.9. Run `python scripts/build_paper_preview.py` in an environment containing that dependency. The builder reads the Markdown source and makes the PDF; do not edit PDF text independently.
 - Figure 1 is saved in [PNG](figures/pipeline_overview.png) and editable [SVG](figures/pipeline_overview.svg). Its [figure builder](../scripts/build_methodology_figure.py) uses Matplotlib, available in the project's existing `.venv-baseline`. That environment generated the figure; the bundled document runtime built and rendered the paper PDF. No new dependency was installed.
 - Figure 2 is the [verified architecture](figures/system_architecture_verified.png). The [architecture review](ARCHITECTURE_REVIEW.md) records the original screenshot, implementation checks, corrected connections and edit provenance. The archived and live paths are separate; live telemetry does not use the saved LSTM.
+- Figures 3-5 show forecasts, learning curves and warnings from unchanged Colab result tables. Their [builder](../scripts/build_results_figures.py) uses the existing Matplotlib environment and checks all 76 original result files before plotting. The [results evidence record](RESULTS_EVIDENCE.md) maps every new table, figure and finding to its sources.
 - A Word file is not delivered at this checkpoint: the bundled Windows runtime has no LibreOffice renderer for the required visual verification workflow. Markdown remains editable in VS Code, and PDF is used for visual review.
 - Author names, affiliations and a submission venue have not been supplied and are not invented.
 
 ## Preview checks
 
-The seventeen-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, the original Methodology subsections on pages 7-10, Architecture on page 11, Experimental Setup on pages 12-14, and References on pages 15-17. Each figure remains with its caption; all four tables remain intact with their captions. Each reference stays together on one page. Automated checks confirmed 36 sequential bibliography entries, all 36 cited in the text, and 36 PDF link targets matching the Markdown source. Sections 1-4, subsections 5.1-5.8 and the bibliography are unchanged. The setup tables were checked against the original Colab package summaries, selected configurations and recorded runtime versions. The [Architecture preview](../output/pdf/Architecture_preview.png) and [Experimental Setup preview](../output/pdf/Experimental_Setup_preview.png) show pages 11 and 12; the full PDF contains the complete sections. The reference audit records source-access limitations.
+The twenty-one-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, the original Methodology subsections on pages 7-10, Architecture on page 11, Experimental Setup on pages 12-14, Preliminary Results and Discussion on pages 15-18, and References on pages 19-21. All five figures and eight tables retain their captions, and each reference stays on one page. Checks confirmed all 36 references are cited and all 36 PDF links match the Markdown source. Sections 1-6 and the bibliography are unchanged. All 16 aggregate forecasting test rows were recalculated from saved predictions; the four new tables match the source scores. The [Results opening page](../output/pdf/Preliminary_Results_preview.png), [forecast and training figures](../output/pdf/Forecast_Results_preview.png) and [warning tables](../output/pdf/Warning_Results_preview.png) show pages 15-17. The full PDF contains the complete section.
 
 ## Section checkpoints
 
@@ -28,9 +29,9 @@ The seventeen-page PDF was rendered and visually inspected: Introduction on page
 | Introduction | Approved by the user; body text preserved |
 | Literature Survey | Approved by the user; body text preserved |
 | Research Gap and Problem Statement | Approved by the user; body text preserved |
-| Proposed Methodology | Original eight subsections accepted for continued drafting; subsection 5.9 and verified architecture Figure 2 added for review |
-| Experimental Setup | Drafted; six subsections and four tables checked against saved Colab records; ready for preview and feedback |
-| Preliminary Results and Discussion | Pending; use verified complete Colab outputs only |
+| Proposed Methodology | Accepted for continued drafting, including verified architecture Figure 2; body preserved |
+| Experimental Setup | Accepted for continued drafting; six subsections and four tables; body preserved |
+| Preliminary Results and Discussion | Drafted; five subsections, four result tables and three figures checked against complete Colab outputs; ready for preview and feedback |
 | Limitations and Future Work | Pending; label unperformed evaluation explicitly |
 | Conclusion | Pending; bounded by executed experiments |
 | Abstract and Keywords | Pending; write last |
@@ -93,7 +94,13 @@ Checked on 15 September 2026. The original architecture was reviewed before a co
 | 6.5 Table 4 | Runtime dictionaries in all four Colab stage summaries. CPU architecture and thread count were captured for LSTM; CPU model and assigned RAM were not. Recorded Matplotlib 3.10.0 differs from the baseline cell's requested 3.10.8. |
 | 6.6 Artifacts | The shared prepared-package SHA-256 is `287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2`; baseline, LSTM and warning summaries record that identity. Result manifests and verification reports preserve the separation from earlier local experiments. |
 
-The four setup tables match their saved source records. References [3]-[6] supply dataset attribution already audited on 14 September; no new external sources were added in this checkpoint. Next checkpoint: Preliminary Results and Discussion, using the complete verified Colab runs and reporting unfavorable outcomes alongside improvements.
+The four setup tables match their saved source records. References [3]-[6] supply dataset attribution already audited on 14 September; no new external sources were added in that checkpoint.
+
+## Preliminary Results and Discussion evidence map
+
+The complete [RESULTS_EVIDENCE.md](RESULTS_EVIDENCE.md) maps Section 7 to original metrics, forecast tables, training history, warning decisions and event outcomes. LSTM lowers test RMSE on all four recordings, while ARIMA has lower MAE on Westermo. Warning results preserve the higher LSTM-assisted precision and lower false-alarm rate alongside lower point recall/F1 and one missed event. Delay summaries include detected events only, and Westermo counts remain descriptive. Earlier result files and selection settings are unchanged.
+
+The user-defined 75% milestone now has evidence for all three requested components: audited pilot datasets, an executed and verified experimental pipeline, and a draft through supported preliminary results. This does not complete the full paper or broader research evaluation. Next checkpoint: Limitations and Future Work, followed by Conclusion and finally Abstract/Keywords.
 
 ## Verified external sources
 

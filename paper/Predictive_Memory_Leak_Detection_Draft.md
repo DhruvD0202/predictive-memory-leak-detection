@@ -1,6 +1,6 @@
 # Predictive Memory Leak Detection Using Time Series Analysis
 
-> Preliminary research draft | 15 September 2026 | Sections 1-6
+> Preliminary research draft | 15 September 2026 | Sections 1-7
 
 ## 1. Introduction
 
@@ -258,6 +258,102 @@ The baseline runtime records Matplotlib 3.10.0 despite its setup cell requesting
 ### 6.6 Experimental artifacts
 
 The four notebooks preserve manifest-checked preprocessing, baseline, LSTM and warning packages. The stages share prepared windows and scalers, with hashes linking inputs to configurations, selected weights and outputs. Complete Colab runs supply the reported analyses; earlier local runs remain separate.
+
+## 7. Preliminary Results and Discussion
+
+### 7.1 Held-out memory forecasting
+
+Tables 5 and 6 report the complete Colab test results at the matching origins defined in Section 6. Lower values indicate smaller forecast errors. Models and checkpoints remain fixed by their validation selections. Results are reported separately for each recording because forecast horizons, features and workloads differ.
+
+Table 5. Test RMSE in percentage points of total RAM. Antarex uses a 60-second horizon; Westermo uses 300 seconds.
+
+| Recording | Persistence | Linear trend | ARIMA | LSTM |
+|---|---:|---:|---:|---:|
+| Antarex mono | 1.516596 | 1.743690 | 1.516401 | 1.216399 |
+| Westermo 1 | 0.363477 | 0.375828 | 0.317915 | 0.295990 |
+| Westermo 2 | 0.316791 | 0.348487 | 0.291166 | 0.257544 |
+| Westermo 3 | 0.715420 | 0.818381 | 0.658167 | 0.608003 |
+
+Table 6. Test MAE in percentage points of total RAM, on the same origins as Table 5.
+
+| Recording | Persistence | Linear trend | ARIMA | LSTM |
+|---|---:|---:|---:|---:|
+| Antarex mono | 0.361399 | 0.377387 | 0.362521 | 0.358119 |
+| Westermo 1 | 0.094208 | 0.145035 | 0.092984 | 0.099499 |
+| Westermo 2 | 0.108831 | 0.143653 | 0.104707 | 0.116579 |
+| Westermo 3 | 0.240245 | 0.328811 | 0.229737 | 0.251230 |
+
+The LSTM has the lowest test RMSE on all four recordings. Relative to the validation-selected ARIMA baseline, the reductions are 19.78% on Antarex and 6.90%, 11.55% and 7.62% on Westermo systems 1-3. These are relative reductions in forecast error, not leak-detection accuracy. LSTM also has the lowest Antarex MAE, but ARIMA has the lowest MAE on every Westermo recording. RMSE weights larger errors more heavily than MAE [31]; the joint result indicates lower squared-error cost without uniformly lower average absolute error.
+
+Persistence and ARIMA are nearly tied on Antarex: their RMSE differs by approximately 0.000196 percentage points. The selected no-drift ARIMA(3,1,0) has three first-difference coefficients near -0.01. Small corrections to recent differences are consistent with forecasts close to the last observed level. This explanation concerns the fitted restricted baseline; it does not imply that all ARIMA specifications behave like persistence. Linear extrapolation has the highest test RMSE on each recording, showing that extending recent growth alone does not improve this forecast comparison.
+
+Antarex's saved origin-label breakdown further qualifies the aggregate result. At the 1,933 leak-active origins, LSTM RMSE is 4.5169 versus ARIMA's 5.7501 percentage points. At the 29,099 remaining origins, LSTM RMSE is lower (0.4718 versus 0.5059), while its MAE is higher (0.1824 versus 0.1258). These groups use injection status at the forecast origin; the future target may lie outside that status interval. The latter group also includes other injected faults and is not a verified healthy cohort.
+
+<!-- pagebreak -->
+
+### 7.2 Forecast behavior and training
+
+Figure 3 shows the first 30 minutes of eligible Antarex test targets, using the interval already fixed in the baseline experiment. Persistence and ARIMA largely overlap. LSTM follows portions of the changing signal but also overshoots and misses abrupt decreases; the full-period error reduction does not mean every individual forecast improves. The figure includes all four methods and is illustrative rather than a substitute for complete-test scoring.
+
+![Antarex forecasts on the fixed first test interval](figures/antarex_forecast_results.png)
+
+Figure 3. Antarex 60-second-ahead forecasts plotted at target times, beginning at timestamp 1526734795. Shading denotes recorded leak activity at the target, not a predicted alarm. All 361 saved interval rows are shown; predictions use only data available 60 seconds earlier.
+
+Figure 4 shows the saved Antarex training run. Validation RMSE reaches its minimum of 0.981917 percentage points at epoch 8; four later epochs do not improve it, so training stops at epoch 12. The training curve summarizes batches evaluated while weights change, whereas validation uses fixed end-of-epoch weights on a different time period. Their vertical ordering therefore does not by itself establish a generalization advantage or prove absence of overfitting.
+
+![Antarex training and validation learning curves](figures/antarex_training_results.png)
+
+Figure 4. Recorded Antarex learning curves and the validation-selected checkpoint. The training and validation curves have different evaluation conditions. The selected model's separate test RMSE is 1.216399 percentage points.
+
+<!-- pagebreak -->
+
+### 7.3 Antarex leak-warning performance
+
+The warning test contains 31,032 origins, including 1,933 leak-active origins. Table 7 reports unadjusted point scores: identifying part of a leak does not convert its missed samples into true positives [32]-[34]. Thresholds remain 0.8 percentage points per minute for trend-only and 0.4 for LSTM-assisted warnings, as selected on validation data.
+
+Table 7. Antarex test warning scores. Precision, recall and F1 are fractions. FA/h denotes new false alarm starts per observed non-leak hour; undefined precision means no positive predictions.
+
+| Rule | Precision | Point recall | Point F1 | FA/h |
+|---|---:|---:|---:|---:|
+| Trend only | 0.802028 | 0.859286 | 0.829670 | 2.127908 |
+| ARIMA + trend | Undefined | 0.000000 | 0.000000 | 0.000000 |
+| LSTM + trend | 0.847601 | 0.466115 | 0.601469 | 1.039211 |
+| Always off | Undefined | 0.000000 | 0.000000 | 0.000000 |
+
+LSTM-assisted warnings have higher precision and fewer false alarm starts, but substantially lower point recall and F1 than trend-only warnings. Trend-only marks 1,661 leak-active origins correctly and 410 non-leak origins incorrectly; LSTM-assisted warnings mark 901 and 162, respectively. Across 40.4153 observed non-leak hours, new false alarm starts fall from 86 to 42. False-positive exposure falls from 34.17 to 13.50 minutes. These measures distinguish alarm initiation from sustained alarm activity.
+
+The ARIMA-assisted rule selects the disabled option because no candidate threshold generated validation warnings. Its zero test recall and undefined precision are retained outcomes of this rule and grid. They do not show that statistical forecasts cannot support other warning designs. The always-off control illustrates why absence of false alarms alone cannot establish a useful detector.
+
+Table 8. Antarex test event recognition and delay. All 35 intersecting events are eligible. Median and 90th-percentile delays are in seconds after injection onset and include detected events only.
+
+| Rule | Detected / eligible | Missed | Median delay | 90th percentile |
+|---|---:|---:|---:|---:|
+| Trend only | 35 / 35 | 0 | 30.0 | 56.0 |
+| ARIMA + trend | 0 / 35 | 35 | Undefined | Undefined |
+| LSTM + trend | 34 / 35 | 1 | 31.0 | 45.7 |
+| Always off | 0 / 35 | 35 | Undefined | Undefined |
+
+Trend-only recognizes every eligible event; LSTM-assisted warnings recognize 34 of 35. An event requires a new alarm start within its recorded interval. Recognizing most events at least once is compatible with low point recall when many leak-active samples receive no warning. The delay summaries cover different detected-event sets, so the lower LSTM 90th percentile does not establish faster detection overall. These are recognition delays after injection, not lead times before exhaustion.
+
+<!-- pagebreak -->
+
+### 7.4 Warning timelines and Westermo transfer
+
+Figure 5 shows the same fixed sequence as Figure 3. LSTM-assisted activity pauses within both shown leaks, illustrating the distinction between event recognition and sustained point coverage. The plots' horizontal zeros differ by 60 seconds: Figure 3 starts at the first forecast target, while Figure 5 starts at its origin.
+
+![Antarex observed memory and warning activity](figures/antarex_warning_results.png)
+
+Figure 5. Observed Antarex memory pressure and causal warnings over the first 30 minutes of eligible test origins, beginning at timestamp 1526734735. Shading denotes recorded injection; colored bands denote actual warning decisions. ARIMA-assisted warnings are disabled. The always-off control is omitted visually and reported in Tables 7-8.
+
+No rule fires on Westermo systems 1 or 2. System 3 has one trend-only warning observation and alarm start; other rules produce none. Exposure is 107.425 hours for systems 1 and 3 and 106.2083 hours for system 2. Thresholds transfer unchanged, but the 30-second cadence changes the trend-history span and confirmation duration. Unknown leak labels prevent conclusions about false-alarm rates or detection accuracy [6].
+
+### 7.5 Interpretation and prototype evidence
+
+RQ1 shows lower LSTM RMSE, qualified by worse Westermo MAE. For RQ2, LSTM assistance favors precision and fewer false alarms; trend-only favors point recall, F1 and event coverage. Different thresholds and multivariate versus univariate inputs prevent attributing these differences to the LSTM architecture alone. RQ3 supports forecasting comparisons and descriptive alarm counts, without labeled Westermo detection evidence.
+
+The prototype replays 69,559 test origins and runs saved LSTMs on compatible inputs. Recorded checks passed 40 tests and reproduced 12 representative predictions within 1e-6 memory-pressure fraction. These support demonstration functionality; the separate live monitor has no validated leak-detection accuracy.
+
+One seed, correlated windows, limited workloads, reused validation data and earlier inspection of forecast test results restrict inference. Repeated-seed studies, feature ablations, independent labeled workloads, exhaustion outcomes and validated live deployment remain pending beyond this development pilot and the review milestone.
 
 ## References
 

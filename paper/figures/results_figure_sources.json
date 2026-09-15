@@ -1,0 +1,22 @@
+{
+  "verified_original_files": 76,
+  "new_experiment": false,
+  "interval_selection": "unchanged first eligible 30-minute interval",
+  "forecast_target_start": 1526734795,
+  "warning_origin_start": 1526734735,
+  "interval_rows": 361,
+  "sources": {
+    "forecast": {
+      "path": "results/lstm_colab/antarex_mono/first_test_30min.csv",
+      "sha256": "a1d2b62f84f67dcc0aada9e29f31084b39527dac35ee381743929c8d79c4c9cf"
+    },
+    "learning": {
+      "path": "results/lstm_colab/antarex_mono/training_history.csv",
+      "sha256": "83232934eb9051efee4a67b14d1a5ee6bb104734369749b362744103f12437e0"
+    },
+    "warnings": {
+      "path": "results/warnings_colab/antarex_first_test_30min.csv",
+      "sha256": "8d0fea3043c9fca01f79711a3f823136d0a22d4b14d427b1f583905f2a5f88ec"
+    }
+  }
+}

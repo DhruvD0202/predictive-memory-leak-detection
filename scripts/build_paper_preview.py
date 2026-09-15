@@ -134,7 +134,7 @@ def main():
             if text == "References":
                 references = True
                 story.append(PageBreak())
-            elif text.startswith(("2. ", "3. ", "5. ", "6. ")):
+            elif text.startswith(("2. ", "3. ", "5. ", "6. ", "7. ")):
                 story.append(PageBreak())
         elif re.match(r"Figure \d+\.", block):
             text, style = block, "caption"
@@ -151,7 +151,7 @@ def main():
                             rightMargin=24 * mm, topMargin=20 * mm,
                             bottomMargin=23 * mm,
                             title="Predictive Memory Leak Detection Using Time Series Analysis",
-                            subject="Preliminary research draft - Sections 1-6")
+                            subject="Preliminary research draft - Sections 1-7")
     doc.build(story, onFirstPage=page_footer, onLaterPages=page_footer)
     print(f"Created {OUTPUT.relative_to(ROOT)}")
 
