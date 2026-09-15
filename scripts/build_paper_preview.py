@@ -21,6 +21,17 @@ SOURCE = ROOT / "paper" / "Predictive_Memory_Leak_Detection_Draft.md"
 OUTPUT = ROOT / "output" / "pdf" / "Predictive_Memory_Leak_Detection_Draft.pdf"
 
 
+class PaperDocument(SimpleDocTemplate):
+    """Keep the complete manuscript navigable through PDF section bookmarks."""
+
+    def afterFlowable(self, flowable):
+        if isinstance(flowable, Paragraph) and flowable.style.name == "SectionHeading":
+            title = flowable.getPlainText()
+            key = "section-" + re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+            self.canv.bookmarkPage(key)
+            self.canv.addOutlineEntry(title, key, level=0, closed=False)
+
+
 def inline_markup(text, reference=False):
     """Escape prose while keeping the source's explicit web links clickable."""
     result = []
@@ -40,7 +51,7 @@ def page_footer(canvas, doc):
     canvas.saveState()
     canvas.setFont("Times-Roman", 9)
     canvas.setFillColor(colors.HexColor("#555555"))
-    canvas.drawString(doc.leftMargin, 15 * mm, "Preliminary draft | 15 September 2026")
+    canvas.drawString(doc.leftMargin, 15 * mm, "Research paper draft | 15 September 2026")
     canvas.drawRightString(A4[0] - doc.rightMargin, 15 * mm, str(doc.page))
     canvas.restoreState()
 
@@ -52,6 +63,8 @@ def main():
         "subtitle": ParagraphStyle("DraftStatus", fontName="Times-Roman", fontSize=10,
                                    leading=13, alignment=TA_CENTER, spaceAfter=14,
                                    textColor=colors.HexColor("#555555")),
+        "keywords": ParagraphStyle("Keywords", fontName="Times-Italic", fontSize=10.5,
+                                    leading=14, spaceBefore=7, spaceAfter=7),
         "heading": ParagraphStyle("SectionHeading", fontName="Times-Bold", fontSize=13,
                                   leading=17, spaceBefore=3, spaceAfter=11,
                                   keepWithNext=True),
@@ -134,8 +147,10 @@ def main():
             if text == "References":
                 references = True
                 story.append(PageBreak())
-            elif text.startswith(("2. ", "3. ", "5. ", "6. ", "7. ", "8. ")):
+            elif text.startswith(("2. ", "3. ", "5. ", "6. ", "7. ", "8. ", "9. ")):
                 story.append(PageBreak())
+        elif block.startswith("Keywords:"):
+            text, style = block, "keywords"
         elif re.match(r"Figure \d+\.", block):
             text, style = block, "caption"
         elif re.match(r"Table \d+\.", block):
@@ -147,11 +162,11 @@ def main():
         story.append(KeepTogether([paragraph]) if style == "reference" else paragraph)
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    doc = SimpleDocTemplate(str(OUTPUT), pagesize=A4, leftMargin=24 * mm,
+    doc = PaperDocument(str(OUTPUT), pagesize=A4, leftMargin=24 * mm,
                             rightMargin=24 * mm, topMargin=20 * mm,
                             bottomMargin=23 * mm,
                             title="Predictive Memory Leak Detection Using Time Series Analysis",
-                            subject="Preliminary research draft - Sections 1-8")
+                            subject="Complete pilot-study manuscript draft", author="")
     doc.build(story, onFirstPage=page_footer, onLaterPages=page_footer)
     print(f"Created {OUTPUT.relative_to(ROOT)}")
 

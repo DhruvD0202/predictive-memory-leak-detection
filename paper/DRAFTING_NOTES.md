@@ -6,7 +6,7 @@ These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Sections 1-7, including the architecture and verified preliminary results, have been accepted for continued drafting. This checkpoint adds Limitations and Future Work as Section 8, with four subsections and a table of explicitly pending extensions. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews. On 15 September, the user asked to complete the draft in full. All substantive manuscript writing is now present: Abstract/Keywords, sections 1-9 and the bibliography. Conclusion was written from the supported findings, followed by the Abstract and final consistency checks. Sections 1-8 and the bibliography were preserved at this final checkpoint. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. The format is a readable single-column draft with numbered citations; author metadata remains to be supplied.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
@@ -15,12 +15,15 @@ The user resumed drafting, specified no template or page limit, and requested pr
 - Figure 1 is saved in [PNG](figures/pipeline_overview.png) and editable [SVG](figures/pipeline_overview.svg). Its [figure builder](../scripts/build_methodology_figure.py) uses Matplotlib, available in the project's existing `.venv-baseline`. That environment generated the figure; the bundled document runtime built and rendered the paper PDF. No new dependency was installed.
 - Figure 2 is the [verified architecture](figures/system_architecture_verified.png). The [architecture review](ARCHITECTURE_REVIEW.md) records the original screenshot, implementation checks, corrected connections and edit provenance. The archived and live paths are separate; live telemetry does not use the saved LSTM.
 - Figures 3-5 show forecasts, learning curves and warnings from unchanged Colab result tables. Their [builder](../scripts/build_results_figures.py) uses the existing Matplotlib environment and checks all 76 original result files before plotting. The [results evidence record](RESULTS_EVIDENCE.md) maps every new table, figure and finding to its sources.
-- A Word file is not delivered at this checkpoint: the bundled Windows runtime has no LibreOffice renderer for the required visual verification workflow. Markdown remains editable in VS Code, and PDF is used for visual review.
-- Author names, affiliations and a submission venue have not been supplied and are not invented.
+- The deliverables are editable Markdown and a visually checked PDF. A Word file is not supplied because the bundled Windows runtime has no LibreOffice renderer for the required visual verification workflow.
+- Author names/order and affiliation have not been supplied. The author line is omitted, and no personal details are inferred. No submission venue or venue-specific format was requested.
+- The [final draft checks](FINAL_DRAFT_CHECKS.md) record completed writing, validation and remaining author metadata.
 
 ## Preview checks
 
-The twenty-three-page PDF was rendered and checked: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, the original Methodology subsections on pages 7-10, Architecture on page 11, Experimental Setup on pages 12-14, Preliminary Results and Discussion on pages 15-18, Limitations and Future Work on pages 19-20, and References on pages 21-23. All five figures and nine tables retain their captions, and each reference stays on one page. All 36 references remain cited and all 36 PDF links match the source. Sections 1-7 and the bibliography are unchanged; rendered pages 2-18 are pixel-identical to the previously inspected results PDF. The updated first page, new section and relocated reference pages were visually inspected. Table 9 is a plan, not another experimental result. View the [Limitations opening page](../output/pdf/Limitations_preview.png) and [Future Work table](../output/pdf/Future_Work_preview.png); results previews remain on pages 15-18.
+The twenty-five-page PDF was rendered and checked. Abstract/Keywords is on page 1, Introduction on page 2, Literature Survey on pages 3-5, Research Gap and Problem Statement on pages 6-7, the original Methodology subsections on pages 8-11, Architecture on page 12, Experimental Setup on pages 13-15, Preliminary Results and Discussion on pages 16-19, Limitations and Future Work on pages 20-21, Conclusion on page 22, and References on pages 23-25.
+
+All five figures and nine tables retain their captions, and each reference stays on one page. All 36 works remain cited and all 36 PDF reference links match the source. Eleven PDF bookmarks cover Abstract, sections 1-9 and References. The 22 unchanged body-page regions match the previously inspected PDF pixel for pixel, with footers excluded from that comparison; all page numbers and updated footers were checked separately. The new Abstract, relocated Introduction and new Conclusion pages were visually inspected. Table 9 is a plan, not another experimental result. All page previews were refreshed, including the new [Abstract](../output/pdf/Abstract_preview.png) and [Conclusion](../output/pdf/Conclusion_preview.png).
 
 ## Section checkpoints
 
@@ -32,9 +35,9 @@ The twenty-three-page PDF was rendered and checked: Introduction on page 1, Lite
 | Proposed Methodology | Accepted for continued drafting, including verified architecture Figure 2; body preserved |
 | Experimental Setup | Accepted for continued drafting; six subsections and four tables; body preserved |
 | Preliminary Results and Discussion | Accepted for continued drafting; five subsections, four result tables and three figures checked against complete Colab outputs; body preserved |
-| Limitations and Future Work | Drafted; four subsections and Table 9; completed evidence separated from pending extensions; ready for preview and feedback |
-| Conclusion | Pending; bounded by executed experiments |
-| Abstract and Keywords | Pending; write last |
+| Limitations and Future Work | Complete; four subsections and Table 9; completed evidence separated from pending extensions; body preserved |
+| Conclusion | Complete; 230 words, bounded by executed experiments and checked against saved results |
+| Abstract and Keywords | Complete; 237-word abstract written last, six keywords; summary metrics checked against saved results |
 | References | 36 distinct works, all cited; identity, relevance and reading scope audited |
 
 ## Introduction evidence map
@@ -100,7 +103,7 @@ The four setup tables match their saved source records. References [3]-[6] suppl
 
 The complete [RESULTS_EVIDENCE.md](RESULTS_EVIDENCE.md) maps Section 7 to original metrics, forecast tables, training history, warning decisions and event outcomes. LSTM lowers test RMSE on all four recordings, while ARIMA has lower MAE on Westermo. Warning results preserve the higher LSTM-assisted precision and lower false-alarm rate alongside lower point recall/F1 and one missed event. Delay summaries include detected events only, and Westermo counts remain descriptive. Earlier result files and selection settings are unchanged.
 
-The user-defined 75% milestone now has evidence for all three requested components: audited pilot datasets, an executed and verified experimental pipeline, and a draft through supported preliminary results. This does not complete the full paper or broader research evaluation.
+The user-defined 75% milestone has evidence for all three requested components: audited pilot datasets, an executed and verified experimental pipeline, and a draft through supported preliminary results. The manuscript text is now complete; broader research evaluation remains future work.
 
 ## Limitations and Future Work evidence map
 
@@ -111,7 +114,19 @@ The user-defined 75% milestone now has evidence for all three requested componen
 | 8.3 Warning and deployment | Warning protocol, point/event evaluation and implementation verification, with references [32]-[34]. Delays exclude missed events; the live monitor is exploratory and does not establish LSTM transfer, overhead or crash prevention. |
 | 8.4 Pending studies | Table 9 proposes broader data/seed evaluation, ablations, warning studies, exhaustion outcomes and compatible live validation. Every row is marked pending. Mann-Kendall/Sen and hybrid forecasting remain possible later comparisons grounded in existing references [20]-[26]. |
 
-No experiment, model, threshold or numerical result changed in this checkpoint. No new external reference was added. Next checkpoint: Conclusion, followed by Abstract/Keywords and final manuscript consistency checks.
+No experiment, model, threshold or numerical result changed in the limitations checkpoint. No new external reference was added. Conclusion, Abstract/Keywords and final manuscript checks have now been completed.
+
+## Abstract and Conclusion evidence map
+
+| Summary claim | Grounding and limits |
+|---|---|
+| Pipeline, datasets and prototype | Sections 5-6 and the implementation verification record. Archived saved-model inference is distinguished from exploratory live telemetry; live LSTM transfer is not claimed. |
+| Antarex forecast improvement | `results/lstm_colab/metrics.csv`: test LSTM RMSE 1.2163989439 versus ARIMA 1.5164008261 percentage points of RAM, a 19.78% relative reduction. Abstract values use four decimal places; Conclusion uses six. |
+| Cross-recording comparison | The same test metric table: LSTM has lower RMSE than all three baselines on each of four recordings; ARIMA has lower MAE on all three Westermo systems. These are single-seed pilot comparisons. |
+| Warning trade-off | `results/warnings_colab/antarex_point_metrics.csv` and `antarex_event_metrics.csv`: LSTM assistance increases precision and reduces false alarm starts, but decreases recall/F1 and recognizes 34 rather than 35 of 35 eligible test events. |
+| Claim boundary and next research | Section 8 and Table 9: controlled injections, unknown Westermo labels, development-test exposure and absent exhaustion/live-transfer evidence. Independent labeled evaluation, ablations and compatible live validation remain unperformed. |
+
+All 76 original Colab result files were rechecked against their manifests at the final checkpoint and remain unchanged. The manuscript contains no unfinished section placeholders. Author names/order and affiliation are the only outstanding front-page details. Completion of the draft does not establish 100% scientific validation or publication acceptance.
 
 ## Verified external sources
 
@@ -124,7 +139,7 @@ Checked on 14 September 2026. Numeric references are local to this paper draft, 
 5. [Online Fault Classification, arXiv](https://arxiv.org/abs/1810.11208): six authors, original submission 26 October 2018 and revised version 11 July 2019; identifies injected-fault data and Euro-Par 2019 acceptance. This draft cites the identified arXiv version, not an unverified publisher record.
 6. [Westermo, arXiv](https://arxiv.org/abs/2311.14510): Per Erik Strandberg and Yosh Marklund, 24 November 2023; real performance measurements on 19 test systems, twice per minute over a month. The experiments use three of those systems.
 
-## Guardrails for later sections
+## Guardrails for future revisions
 
 - Use `results/lstm_colab` and `results/warnings_colab`, with their verification reports, for quantitative claims; preserve earlier local runs as separate experiments.
 - Do not claim Mann-Kendall testing or a hybrid ARIMA-LSTM was implemented. They may be discussed as literature or future work if accurately sourced.

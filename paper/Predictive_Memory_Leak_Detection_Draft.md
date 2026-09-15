@@ -1,6 +1,14 @@
 # Predictive Memory Leak Detection Using Time Series Analysis
 
-> Preliminary research draft | 15 September 2026 | Sections 1-8
+> Research paper draft | 15 September 2026
+
+## Abstract
+
+Accurate memory forecasts do not necessarily produce useful leak warnings. This study evaluates these tasks separately using operating-system telemetry from one labeled Antarex fault-injection block and three unlabeled Westermo industrial test systems. A reproducible pipeline preserves chronological training, validation and test partitions, fits preprocessing parameters on training data, and compares persistence, local linear trend, restricted autoregressive integrated moving average (ARIMA) and a small multivariate long short-term memory (LSTM) network. Forecast horizons are 60 seconds for Antarex and 300 seconds for Westermo. Validation-calibrated, forecast-assisted rules combine recent observed growth with forecast growth and require three consecutive qualifying observations. On Antarex, LSTM reduces test root mean squared error from ARIMA's 1.5164 to 1.2164 percentage points of total RAM, a relative reduction of 19.78%. LSTM also has lower root mean squared error on all three Westermo recordings, while ARIMA has lower mean absolute error there. Compared with trend-only warnings, LSTM assistance increases Antarex point precision from 0.8020 to 0.8476 and reduces false alarm starts from 2.1279 to 1.0392 per observed non-leak hour, but point F1 decreases from 0.8297 to 0.6015. Trend-only warnings recognize 35 of 35 eligible injected events; LSTM assistance recognizes 34. A local prototype supports replay and saved-model inference on compatible archived inputs. These single-seed pilot results concern recognition after injection begins; they do not establish warning before exhaustion or validated live LSTM transfer. The findings support assessing forecast errors, warning coverage and false-alarm burden as distinct outcomes.
+
+Keywords: memory leaks; operating-system telemetry; time-series forecasting; LSTM; ARIMA; leak-warning evaluation.
+
+<!-- pagebreak -->
 
 ## 1. Introduction
 
@@ -392,6 +400,14 @@ Table 9. Proposed work beyond the review milestone. Every item below is pending;
 | Compatible live evaluation | Test transfer and monitoring cost | Validated feature collection, labeled live trials, and measured sampling/inference latency, CPU, RAM and storage costs. |
 
 Autocorrelation-aware Mann-Kendall testing and Sen's slope [24]-[26], or hybrid statistical/neural forecasting [20]-[22], are possible later comparisons. They are not implemented in the reported pipeline and are not assumed to improve its results. The next scientific priority is independent validation of the existing findings, followed by controlled extensions whose benefits can be measured.
+
+## 9. Conclusion
+
+This study implemented and evaluated a reproducible memory-forecasting and leak-warning pipeline using real telemetry from controlled Antarex fault injections and separate Westermo workloads. Chronological preprocessing, explicit model selection, preserved output packages and a local replay prototype connect the reported comparisons to inspectable experimental artifacts. The study's contribution is this documented pilot evaluation, including outcomes that do not favor the more complex model.
+
+The multivariate LSTM achieved lower test RMSE than all three forecasting baselines on each recording. Its Antarex RMSE was 1.216399 percentage points of total RAM, compared with 1.516401 for ARIMA. This advantage did not extend uniformly across error measures: ARIMA retained lower MAE on all three Westermo systems. Warning evaluation exposed a further distinction. LSTM assistance increased precision and reduced false alarm starts, while trend-only warnings achieved higher point recall and F1 and recognized all 35 eligible test events, compared with 34 for LSTM assistance. The findings therefore support a trade-off between selectivity and coverage, rather than a single ranking of overall detector quality.
+
+These conclusions apply to the documented controlled-leak, single-seed development pilot. Westermo contributes unlabeled workload evidence; the study has no observed exhaustion outcome or validated live LSTM deployment. Independent labeled evaluation, feature and model ablations, and compatible live measurements are the priorities for extending the work. Forecast accuracy should remain one component of that assessment, alongside warning coverage, false alarms, missed events and detection timing.
 
 ## References
 

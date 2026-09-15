@@ -10,7 +10,7 @@ Last updated: 15 September 2026
 - Workflow: validate data, review the architecture, then build preprocessing, baselines, LSTM, evaluation and visualizations incrementally. Draft the paper section by section using only completed experiments.
 - The user completed preprocessing, baselines, four small multivariate LSTMs and initial warning evaluation in free Colab. All four stages' saved outputs have been independently verified. On 10 September, the warning-result archive reproduced all 402,364 decisions and 264 event outcomes, matching the local experiment. Paper drafting was then the remaining core milestone requirement; its required coverage is now present.
 - On 13 September, the user paused the learning walkthrough and chose to finish the implementation while keeping paper drafting paused at that time.
-- On 14 September, the user resumed paper drafting, specified no template or page limit, and requested updates and previews at each step. Sections 1-7, including the checked architecture and verified results, have been accepted for continued drafting. On 15 September, Limitations and Future Work was added with four subsections and a table that explicitly marks all extensions as pending. All 36 distinct references remain cited. Continue section by section; the learning walkthrough remains paused.
+- On 14 September, the user resumed paper drafting, specified no template or page limit, and requested updates and previews. On 15 September, the user asked to finish the draft in full. The complete manuscript text now includes Abstract/Keywords, sections 1-9, five figures, nine tables and 36 distinct references, all cited. The 25-page PDF was rendered and checked. Author names/order and affiliation remain to be supplied; the author line is omitted. The learning walkthrough remains paused.
 
 ## Repository workflow
 
@@ -18,7 +18,7 @@ Last updated: 15 September 2026
 - On 12 September, the user authorized ongoing repository updates during project work. For each agreed project step, make the necessary changes, run appropriate checks, commit the intended files with a meaningful message, and push them to GitHub without requesting permission again for routine updates.
 - Check the working tree and remote changes before starting each step. Preserve collaborator edits, resolve conflicts before pushing, and do not force-push or overwrite shared history. Report any authentication or repository-rule blocker.
 - Keep large datasets, generated data archives and local environments outside ordinary Git commits, following `.gitignore`. Data archives belong in separately maintained release assets.
-- Continue the user's step-by-step workflow; this authorization does not schedule background work or skip review checkpoints. Paper drafting is now active.
+- Continue the user's requested workflow; this authorization does not schedule background work. The latest request authorized finishing the full paper draft with progress updates and previews.
 
 ## Milestone status
 
@@ -26,9 +26,9 @@ Last updated: 15 September 2026
 |---|---|
 | Datasets identified and validated | Pilot data acquired and audited: complete Antarex CPU-MEM_mono block, selected required metric streams; all 19 Westermo CSVs. Limitations documented in DATA_VALIDATION.md. Antarex multi-core telemetry remains unacquired. |
 | Working preprocessing, trained model and demonstrable results | Complete for the documented pilot and verified in free Colab: preprocessing, three forecasting baselines, four LSTMs, MAE/RMSE, initial warning precision/recall/F1, false alarms, event outcomes/delays and figures. |
-| Research paper draft through supported preliminary results | Draft coverage complete for the requested milestone. Sections 1-7 accepted for continued drafting; Section 8 Limitations and Future Work added for review. Conclusion and Abstract/Keywords remain pending for the complete paper. |
+| Research paper draft through supported preliminary results | Complete manuscript text available: Abstract/Keywords, sections 1-9, verified results, architecture and 36 references. Author metadata remains to be supplied. Unperformed research is explicitly marked as future work. |
 
-The user's defined 75% review scope is now evidenced across all three requirements for the documented pilot. This is milestone coverage, not a measured percentage of all possible research work. Section 8 remains at the user-preview checkpoint; the full paper and broader evaluation are not complete.
+The user's defined 75% review scope is evidenced across all three requirements for the documented pilot. All manuscript sections are now drafted and checked. This is completion of the draft content and milestone coverage, not a measured percentage of all possible research work; broader evaluation remains future work.
 
 ## Runnable prototype — 13 September
 
@@ -40,7 +40,7 @@ The experimental implementation now has a local browser dashboard. Start it with
 - Collect local Windows/Linux telemetry on demand with a bounded session, CSV export and exploratory trend warnings. Linux-specific features are not invented on Windows; the archived LSTM is not applied to incompatible live features. Live detection accuracy and transfer to a new machine remain unvalidated.
 - Startup validates 76 original result files. The complete 40-test suite passed; representative first/middle/last model predictions on all four recordings matched the saved results. See [implementation verification](IMPLEMENTATION_VERIFICATION.md).
 
-This completes the monitoring/replay implementation checkpoint. Broader scientific evaluation, validated live LSTM transfer and the paper remain separate outstanding work. It does not establish 100% research completion or production readiness.
+This completes the monitoring/replay implementation checkpoint. The paper text was subsequently completed on 15 September. Broader scientific evaluation and validated live LSTM transfer remain outstanding research work. Neither the prototype nor the completed draft establishes 100% research completion or production readiness.
 
 ## Proposed working schedule
 
@@ -64,7 +64,7 @@ These are planning targets, not scheduled automated actions or promises of futur
 - Antarex: 5-second samples, 60 past observations (approximately 5 minutes), 60-second forecast horizon. Westermo: 30-second samples, 60 observations, 5-minute forecast horizon. These are initial defaults, not tuned optima.
 - Distinguish forecasting and leak detection from pre-exhaustion warning: the audited Antarex block has no memory-pressure threshold crossing at 80%, inactive swap and constant monitored disk counters.
 
-## Next checkpoint
+## Review handoff
 
 On 12 September, the professor's request for intermediate results was addressed with a [Review 2 demonstration guide](../reviews/Review2_Intermediate_Results.md). It assembles existing verified preparation counts, baseline errors, a learning curve, forecasts and warning outcomes, with source links and a suggested 6-8 minute demonstration. This is review material, not a new experiment or a drafted research-paper section.
 
@@ -74,6 +74,6 @@ The verified Colab warning experiment gives trend-only F1 0.829670 versus LSTM-a
 
 All 20 Colab warning-result files passed integrity checks; all 402,364 warning decisions and 264 event outcomes passed independent reconstruction. Verified archive: `data/packages/review2_warning_results_colab.zip`, SHA-256 `76b169d3807ce0fcd5577c6f20cb94d9d4b78c819cc0fecdc32f1df80bdd6fc5`. Its unchanged extracted files are in `results/warnings_colab`.
 
-The [paper draft](../paper/Predictive_Memory_Leak_Detection_Draft.md) and [PDF preview](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) now contain sections 1-8. Architecture remains on page 11, Experimental Setup on pages 12-14, and Preliminary Results and Discussion on pages 15-18. Limitations and Future Work occupies pages 19-20, documenting scope, validation independence, comparison limits, warning semantics and deployment requirements. Table 9 marks every proposed extension as pending. Earlier sections and results are unchanged; rendered pages 2-18 match the checked results PDF exactly. All 36 references remain cited on pages 21-23. Evidence maps and checkpoints are in [DRAFTING_NOTES.md](../paper/DRAFTING_NOTES.md).
+The [complete paper draft](../paper/Predictive_Memory_Leak_Detection_Draft.md) and [25-page PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) contain Abstract/Keywords and sections 1-9. Abstract is on page 1, Architecture on page 12, Experimental Setup on pages 13-15, Preliminary Results and Discussion on pages 16-19, Limitations and Future Work on pages 20-21, Conclusion on page 22, and the 36 cited references on pages 23-25. Table 9 marks all proposed extensions as pending. Earlier section bodies and the bibliography are unchanged, all 76 original result files still pass integrity checks, and all reference links and figure/table captions passed final checks. See [final draft checks](../paper/FINAL_DRAFT_CHECKS.md) and [drafting notes](../paper/DRAFTING_NOTES.md).
 
-Next, incorporate feedback on Limitations and Future Work, then draft Conclusion and finally Abstract/Keywords at separate checkpoints. The user-defined milestone draft coverage is present; repeated-seed studies, ablations, independent labeled evaluation, exhaustion outcomes and validated live deployment remain later research work.
+The remaining document input is the author names in order and institutional affiliation. The author line has been omitted until those details are supplied. The manuscript is ready for the user's proofread and review preparation. No new notebook run is required to support its reported pilot results. Repeated-seed studies, ablations, independent labeled evaluation, exhaustion outcomes and validated live deployment remain later research work, as stated in the completed paper.
