@@ -1,6 +1,6 @@
 # Predictive Memory Leak Detection Using Time Series Analysis
 
-> Preliminary research draft | 14 September 2026 | Sections 1-5
+> Preliminary research draft | 15 September 2026 | Sections 1-6
 
 ## 1. Introduction
 
@@ -165,6 +165,99 @@ Event evaluation includes only episodes with complete eligible-origin coverage d
 Each stage saves its inputs' hashes, configuration, selected settings and outputs in manifest-checked packages. Forecast tables retain origins, target times, actual values and predictions; warning tables retain scores, states and event outcomes. Saved metrics and model inference are checked against their source artifacts. Earlier forecast test results were inspected during staged development before the warning protocol was defined; warning thresholds still use validation data only. This remains a development pilot with a reused validation partition, not an independent confirmatory test.
 
 The local prototype replays these verified artifacts while revealing observations only through the replay cursor. It also supports inference with the saved LSTM weights on compatible archived input windows. A separate local telemetry mode offers exploratory trend monitoring; it does not transfer the Linux-trained LSTM to incompatible Windows features. Demonstration functionality therefore remains distinct from evidence of validated continuous leak detection on a new machine.
+
+<!-- pagebreak -->
+
+### 5.9 System architecture
+
+Figure 2 distinguishes the archived experimental path from the exploratory live monitor. Both feed the local dashboard, but only the archived path uses the trained LSTM and labeled Antarex warning evaluation. The live monitor uses raw memory-pressure histories and a separate trend rule. Forecast error metrics and warning metrics are computed through separate evaluation paths.
+
+![Verified system architecture with separate archived and live paths](figures/system_architecture_verified.png)
+
+Figure 2. Implemented system architecture. Archived models use recording-specific features and training-only standardization. ARIMA- and LSTM-assisted rules combine their forecast growth with recent observed growth; the trend-only rule and always-off control provide comparisons. Antarex labels calibrate and evaluate warnings, while Westermo alarms remain descriptive. The live branch produces exploratory warnings and does not apply archived LSTM weights to incompatible local features.
+
+## 6. Experimental Setup
+
+### 6.1 Dataset scope and provenance
+
+The primary recording is the CPU-MEM_mono block of the Antarex HPC Fault Dataset, version 1.0 [3]-[5]. Four telemetry streams covering approximately 12 days were audited: meminfo, vmstat, procstat and procdiskstats. Their median sampling interval is approximately 1.005 seconds; the experiment uses the five-second alignment described in Section 5. The block contains 228 deliberately injected leak episodes on a real machine. It does not represent a collection of naturally occurring production leaks.
+
+The complete nested CPU-MEM_mono archive was recovered and checked against the publisher ZIP member's recorded size and CRC. The full outer ZIP was not completely downloaded, and its published MD5 was not verified. The experiment therefore uses the recovered, verified block without claiming validation of every Antarex archive or telemetry stream.
+
+Westermo provides a separate industrial workload setting [6]. All 19 published CSV files were acquired and checked against their Git blob hashes and sizes at repository commit 47e0ccdc10c30e86327d6eb828ed48d164469fd4. Systems 1-3 were selected in numerical order before modeling and evaluated independently. Each spans 30 days on a native 30-second grid. Both sources are distributed under CC BY 4.0; attribution and source manifests are retained with the pilot packages.
+
+### 6.2 Sampling and model inputs
+
+Table 1 describes the processed recordings. Grid rows include unavailable or invalid observations; valid rows satisfy the preprocessing checks. Antarex excludes three rate-dependent partition-start rows. Westermo systems 1 and 2 preserve 652 and 8 missing grid observations, respectively; system 3 has none. These gaps affect the eligible windows rather than being filled with synthetic measurements.
+
+Table 1. Processed pilot recordings. Cadence and forecast horizon are in seconds; inputs denote retained LSTM features.
+
+| Recording | Grid rows | Valid rows | Inputs | Cadence / horizon |
+|---|---:|---:|---:|---|
+| Antarex mono | 207,361 | 207,358 | 7 | 5 / 60 |
+| Westermo 1 | 86,401 | 85,749 | 8 | 30 / 300 |
+| Westermo 2 | 86,401 | 86,393 | 7 | 30 / 300 |
+| Westermo 3 | 86,401 | 86,401 | 8 | 30 / 300 |
+
+Antarex retains memory pressure, anonymous memory and committed memory in GiB, CPU busy and iowait fractions, page faults per second and major page faults per second. Committed memory is not necessarily resident memory. Swap usage, swap-in, swap-out and the monitored disk read/write rates are constant in training and are removed from the model input array. They remain available in the unscaled audit table. Thus this block cannot test the benefit of varying swap or disk activity.
+
+Westermo systems 1 and 3 retain memory pressure, swap usage in GiB, published CPU user/system/iowait rates, disk read/write rates and one-minute load. System 2 omits training-constant swap usage. Its CPU fields retain the publisher's aggregate rate units and are not converted into bounded utilization percentages. Page-fault fields are absent and are not fabricated. The baselines use only memory pressure; the LSTM uses the recording's retained feature set.
+
+All recordings use a 60-observation input history. The first-to-last history span is 295 seconds for Antarex and 1,770 seconds for Westermo. Forecast horizons of 60 and 300 seconds are measured from the final input timestamp. Chronological training, validation and test fractions are 70/15/15 by recorded time extent; Table 2 gives counts after gap and boundary exclusions.
+
+Table 2. Eligible forecast windows and retained LSTM training windows. Validation and test origins are shared by all four predictors.
+
+| Recording | Eligible train | LSTM train | Validation | Test |
+|---|---:|---:|---:|---:|
+| Antarex mono | 145,081 | 12,091 | 31,032 | 31,032 |
+| Westermo 1 | 59,691 | 14,923 | 12,891 | 12,891 |
+| Westermo 2 | 60,412 | 15,103 | 12,891 | 12,745 |
+| Westermo 3 | 60,412 | 15,103 | 12,891 | 12,891 |
+
+The four recordings provide 69,559 test origins per forecasting method. Overlapping windows are correlated and are not independent trials. The LSTM training column reflects the fixed origin strides in Section 5; it is distinct from the count of all eligible training windows. ARIMA fitting instead uses the longest valid contiguous training segment: 145,152 observations for Antarex and 53,188, 60,481 and 60,481 for Westermo systems 1, 2 and 3.
+
+### 6.3 Fixed settings and selected models
+
+The candidate baselines and fixed LSTM configuration follow Section 5. Four independent LSTMs use one 32-unit recurrent layer, a linear output, seed 42, Adam at 0.001, batch size 64, gradient-norm clipping at 1.0 and a maximum of 20 epochs with patience four. Inference batches contain up to 256 windows. The seven-feature models have 5,281 trainable parameters; the eight-feature models have 5,409. Table 3 records validation-selected settings and checkpoints rather than settings selected by test performance.
+
+Table 3. Retained forecasting configurations. Trend history is in observations; LSTM epochs show the selected checkpoint followed by the number of epochs run.
+
+| Recording | Trend history | ARIMA order | LSTM epochs selected / run |
+|---|---:|---|---|
+| Antarex mono | 12 | (3,1,0) | 8 / 12 |
+| Westermo 1 | 60 | (5,1,0) | 10 / 14 |
+| Westermo 2 | 30 | (5,1,0) | 20 / 20 |
+| Westermo 3 | 30 | (5,1,0) | 13 / 17 |
+
+Persistence has no fitted hyperparameter. ARIMA was the baseline family with the lowest validation RMSE on each recording, but all three baseline families are retained in the test comparison. Westermo 2 reached the declared epoch limit; the other LSTMs stopped after four epochs without a new validation minimum. This is a single-seed experiment, with no repeated-seed or feature-ablation study.
+
+### 6.4 Warning calibration and labeled coverage
+
+Warning calibration uses the 31,032 eligible Antarex validation origins, including 1,707 leak-active origins. The frozen thresholds are 0.8 percentage points per minute for trend-only and 0.4 for LSTM-assisted warnings. ARIMA-assisted warnings select the disabled option because no fixed-grid candidate produced a validation warning; this choice is specific to the implemented score and grid. The always-off control remains disabled by definition. No threshold is recalibrated on Westermo or the test partition.
+
+The Antarex test cohort contains 31,032 eligible origins: 1,933 leak-active and 29,099 non-leak. All 35 leak episodes intersecting this test interval satisfy the complete-coverage event criteria. These are evaluation denominators, not detection outcomes. Non-leak exposure includes other injected faults. The audited block peaks at approximately 42.24% memory pressure and never reaches the illustrative 80% reference threshold, so this setup cannot measure warning lead time before an observed exhaustion event. Westermo remains unlabeled and contributes only the separate forecasting and descriptive warning analyses.
+
+### 6.5 Recorded execution environment
+
+The four notebooks were executed in Google Colab's free tier. The saved LSTM runtime reports CPU execution on x86_64, two CPU worker threads and deterministic algorithms enabled; CUDA and cuDNN are absent from that run. GPU execution was not exercised. Table 4 reports recorded software versions, rather than substituting the versions requested by installation cells or used by the separate local reference run.
+
+Table 4. Software versions recorded in the Colab artifacts. P: preprocessing; B: baselines; L: LSTM; W: warning evaluation.
+
+| Component | Recorded version | Recorded stages |
+|---|---|---|
+| Python | 3.13.15 | P, B, L, W |
+| NumPy | 2.1.3 | P, B, L, W |
+| pandas | 2.2.3 | P, B, L, W |
+| SciPy | 1.16.3 | B |
+| statsmodels | 0.14.6 | B |
+| PyTorch | 2.11.0+cpu | L |
+| Matplotlib | 3.10.0 | B, L, W |
+
+The baseline runtime records Matplotlib 3.10.0 despite its setup cell requesting 3.10.8. CPU model and assigned RAM were not captured; neither hardware specifications nor continuous-monitoring overhead are inferred from the saved stage timings.
+
+### 6.6 Experimental artifacts
+
+The four notebooks preserve manifest-checked preprocessing, baseline, LSTM and warning packages. The stages share prepared windows and scalers, with hashes linking inputs to configurations, selected weights and outputs. Complete Colab runs supply the reported analyses; earlier local runs remain separate.
 
 ## References
 

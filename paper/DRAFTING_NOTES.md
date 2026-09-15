@@ -1,24 +1,25 @@
 # Paper drafting record
 
-Updated: 14 September 2026.
+Updated: 15 September 2026.
 
 These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Sections 1-4 (Introduction, Literature Survey, Research Gap and Problem Statement) have been approved. Proposed Methodology is now drafted as section 5, with eight subsections and a pipeline overview figure. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews at each step. Sections 1-5 have been accepted for continued drafting. This checkpoint adds Experimental Setup as Section 6 and the verified user-supplied architecture as subsection 5.9 and Figure 2. The original eight methodology subsections and Figure 1 are preserved. The bibliography contains 36 distinct works, all cited in the manuscript, meeting the requested 30+ references. Use a readable single-column draft with numbered citations. The abstract will be written after the supported results and conclusions.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
 - Reference verification and Review 1 corrections: [REFERENCE_AUDIT.md](REFERENCE_AUDIT.md). This records reading scope and distinguishes preprints, publications, books and dataset records.
 - Preview builder: [build_paper_preview.py](../scripts/build_paper_preview.py), requiring ReportLab 4.4.9. Run `python scripts/build_paper_preview.py` in an environment containing that dependency. The builder reads the Markdown source and makes the PDF; do not edit PDF text independently.
 - Figure 1 is saved in [PNG](figures/pipeline_overview.png) and editable [SVG](figures/pipeline_overview.svg). Its [figure builder](../scripts/build_methodology_figure.py) uses Matplotlib, available in the project's existing `.venv-baseline`. That environment generated the figure; the bundled document runtime built and rendered the paper PDF. No new dependency was installed.
+- Figure 2 is the [verified architecture](figures/system_architecture_verified.png). The [architecture review](ARCHITECTURE_REVIEW.md) records the original screenshot, implementation checks, corrected connections and edit provenance. The archived and live paths are separate; live telemetry does not use the saved LSTM.
 - A Word file is not delivered at this checkpoint: the bundled Windows runtime has no LibreOffice renderer for the required visual verification workflow. Markdown remains editable in VS Code, and PDF is used for visual review.
 - Author names, affiliations and a submission venue have not been supplied and are not invented.
 
 ## Preview checks
 
-The thirteen-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, Proposed Methodology on pages 7-10, and References on pages 11-13. Figure 1 and its caption remain together on page 7. Each reference stays together on one page. Automated checks confirmed 36 sequential bibliography entries, all 36 cited in the text, and 36 PDF link targets matching the Markdown source. The approved sections 1-4 and the bibliography are unchanged. The [Methodology preview](../output/pdf/Methodology_preview.png) shows page 7; the full PDF contains the complete section. The reference audit records source-access limitations.
+The seventeen-page PDF was rendered and visually inspected: Introduction on page 1, Literature Survey on pages 2-4, Research Gap and Problem Statement on pages 5-6, the original Methodology subsections on pages 7-10, Architecture on page 11, Experimental Setup on pages 12-14, and References on pages 15-17. Each figure remains with its caption; all four tables remain intact with their captions. Each reference stays together on one page. Automated checks confirmed 36 sequential bibliography entries, all 36 cited in the text, and 36 PDF link targets matching the Markdown source. Sections 1-4, subsections 5.1-5.8 and the bibliography are unchanged. The setup tables were checked against the original Colab package summaries, selected configurations and recorded runtime versions. The [Architecture preview](../output/pdf/Architecture_preview.png) and [Experimental Setup preview](../output/pdf/Experimental_Setup_preview.png) show pages 11 and 12; the full PDF contains the complete sections. The reference audit records source-access limitations.
 
 ## Section checkpoints
 
@@ -27,8 +28,8 @@ The thirteen-page PDF was rendered and visually inspected: Introduction on page 
 | Introduction | Approved by the user; body text preserved |
 | Literature Survey | Approved by the user; body text preserved |
 | Research Gap and Problem Statement | Approved by the user; body text preserved |
-| Proposed Methodology | Drafted; eight subsections and Figure 1; checked against code and protocols; ready for preview and feedback |
-| Experimental Setup | Pending; dataset selection, splits, features, configurations and provenance |
+| Proposed Methodology | Original eight subsections accepted for continued drafting; subsection 5.9 and verified architecture Figure 2 added for review |
+| Experimental Setup | Drafted; six subsections and four tables checked against saved Colab records; ready for preview and feedback |
 | Preliminary Results and Discussion | Pending; use verified complete Colab outputs only |
 | Limitations and Future Work | Pending; label unperformed evaluation explicitly |
 | Conclusion | Pending; bounded by executed experiments |
@@ -76,7 +77,23 @@ Jindal, RESIN and Westermo primary publication records were rechecked on 14 Sept
 | 5.7 Evaluation | Error functions, `point_metrics`, `alarm_starts`, `event_metrics` and `describe_unlabeled`. Origin/target times, non-leak exposure, full event coverage, new-start detection, detected-only delay and unlabeled Westermo counts are explicit. |
 | 5.8 Evidence and prototype | Colab LSTM/warning verification reports, implementation verification and the warning protocol's staged-development disclosure. No independent confirmation or live Windows LSTM transfer is claimed. |
 
-Primary [statsmodels ARIMA fit documentation](https://www.statsmodels.org/v0.14.6/generated/statsmodels.tsa.arima.model.ARIMA.fit.html), [PyTorch LSTM documentation](https://docs.pytorch.org/docs/2.8/generated/torch.nn.LSTM.html) and [Kim et al.'s publisher record](https://ojs.aaai.org/index.php/AAAI/article/view/20680) were rechecked on 14 September 2026. Source code determines the actual implementation choices. Documentation versions are not substituted for recorded Colab environment versions. No models, thresholds or saved experimental outputs were changed. Next checkpoint: Experimental Setup.
+Primary [statsmodels ARIMA fit documentation](https://www.statsmodels.org/v0.14.6/generated/statsmodels.tsa.arima.model.ARIMA.fit.html), [PyTorch LSTM documentation](https://docs.pytorch.org/docs/2.8/generated/torch.nn.LSTM.html) and [Kim et al.'s publisher record](https://ojs.aaai.org/index.php/AAAI/article/view/20680) were rechecked on 14 September 2026. Source code determines the actual implementation choices. Documentation versions are not substituted for recorded Colab environment versions. No models, thresholds or saved experimental outputs were changed.
+
+## Architecture and Experimental Setup evidence map
+
+Checked on 15 September 2026. The original architecture was reviewed before a corrected version was included. Experimental values were read directly from the complete Colab archives and unchanged extracted outputs; no experiment was rerun.
+
+| Passage | Evidence and limits |
+|---|---|
+| 5.9 and Figure 2 | `src/preprocessing.py`, `src/baselines.py`, `src/lstm_forecasting.py`, `src/warning_evaluation.py` and `src/demo_service.py`; detailed corrections in `ARCHITECTURE_REVIEW.md`. The live monitor uses raw memory history, a trend rule and simple forecasts; saved LSTM inference requires matching archived features. |
+| 6.1 Provenance | `research/DATA_VALIDATION.md`, the Antarex metadata and nested-member CRC/size audit, and the pinned Westermo acquisition manifest. Full outer Antarex MD5 verification is not claimed. |
+| 6.2 Tables 1-2 and features | `preprocessing_summary.json` inside `data/packages/review2_preprocessed_colab.zip`; LSTM `experiment_summary.json` and per-recording `configuration.json`; baseline per-recording `frozen_settings.json` inside its Colab ZIP for contiguous training lengths. Valid rows and eligible windows are distinct. |
+| 6.3 Table 3 and training settings | Baseline `experiment_summary.json` in `data/packages/review2_baseline_results_colab.zip`; `results/lstm_colab/experiment_summary.json`, selected checkpoints and configurations. Selected and executed epochs are distinct; model selection uses validation data. |
+| 6.4 Warning cohort | Preprocessing label counts, `results/warnings_colab/selection_freeze.json` and the verified warning report. The 35 eligible test events are a denominator, not a new reported detection score. Westermo has no confirmed labels. |
+| 6.5 Table 4 | Runtime dictionaries in all four Colab stage summaries. CPU architecture and thread count were captured for LSTM; CPU model and assigned RAM were not. Recorded Matplotlib 3.10.0 differs from the baseline cell's requested 3.10.8. |
+| 6.6 Artifacts | The shared prepared-package SHA-256 is `287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2`; baseline, LSTM and warning summaries record that identity. Result manifests and verification reports preserve the separation from earlier local experiments. |
+
+The four setup tables match their saved source records. References [3]-[6] supply dataset attribution already audited on 14 September; no new external sources were added in this checkpoint. Next checkpoint: Preliminary Results and Discussion, using the complete verified Colab runs and reporting unfavorable outcomes alongside improvements.
 
 ## Verified external sources
 

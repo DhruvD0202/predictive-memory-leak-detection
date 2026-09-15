@@ -1,6 +1,6 @@
 # Reference audit and relevance map
 
-Checked: 14 September 2026. Scope: Introduction, Literature Survey, Research Gap, Problem Statement and Proposed Methodology.
+External sources checked: 14 September 2026. Current scope: Introduction, Literature Survey, Research Gap, Problem Statement, Proposed Methodology and Experimental Setup. The 15 September architecture and setup additions use implementation records and existing dataset references [3]-[6]; the 36-entry bibliography is unchanged. See `DRAFTING_NOTES.md` for the new evidence map.
 
 The user approved the Introduction and requested at least 30+ references. This checkpoint contains **36 distinct works**, each cited in the current manuscript. The sources are a mixture of journal/conference publications, books, a dataset and explicitly identified arXiv records. They are not described as 36 peer-reviewed research articles. Different versions or hosting pages of one work count once.
 

@@ -1,0 +1,43 @@
+Architecture diagram edits, 15 September 2026
+Tool: built-in image generation
+
+Initial correction prompt
+
+Edit the supplied architecture diagram into an accurate, clean academic system architecture diagram. The supplied image is the edit target and establishes the broad five component groups. Correct its scientific and software inaccuracies; reorganize into two clearly separated vertical panels and a shared output area. White background, black crisp large text, pale blue/purple/orange/green/red boxes similar to the original categories, clean straight arrows with arrowheads, no crossing arrows, no dark panels, no decorative icons. High resolution landscape 4:3, print-legible at page width. Use actual line breaks, never literal backslash-n characters. Preserve the major data/preprocessing/forecasting/warning/output structure, but replace all original text with the following accurate content. Keep text concise, exactly spelled. No invented results or probabilities.
+
+Title: "System architecture"
+
+Larger left panel title: "A. Archived experiments"
+Top source box: "Antarex mono | Westermo 1-3"
+Arrow down to "Align timestamps; derive valid rates"
+Arrow down to "Chronological split: 70 / 15 / 15" and second line "Training-only z-score scaling"
+Arrow down to "60-observation windows" and second line "Forecast horizon: Antarex 60 s | Westermo 300 s"
+Arrow down to four parallel model boxes, all visible: "LSTM" second line "1 layer, 32 units"; "ARIMA(p,1,0)" second line "No drift"; "Persistence"; "Linear trend".
+All four model arrows converge on "Memory-pressure forecasts".
+From forecasts, branch to "Forecast evaluation" second line "MAE / RMSE", and separately to a warning component.
+Warning component text: "Recent trend: last 12 observations" then "Trend only | ARIMA + trend | LSTM + trend" then "3 consecutive qualifying samples" then "Always-off control retained".
+Draw an additional arrow entering this warning component labeled "Observed memory history" so observed trend is not implied to use future forecasts only.
+Below warning component: "Antarex: precision / recall / F1, false alarms, event delay" and "Westermo: alarm counts only".
+A concise note inside archived panel: "Antarex validation labels calibrate thresholds; test labels score warnings." This is annotation only and must not be drawn as input to forecasting models.
+
+Smaller separate right panel title: "B. Exploratory live monitor"
+Top box: "psutil via app.py" second line "Local samples every 5 s"
+Arrow down to "Raw memory-pressure history"
+Arrow down to "12-sample trend rule" second line "3 consecutive qualifying samples"
+Arrow down to "Exploratory warnings" second line "Persistence / linear 60 s forecasts"
+Prominent note: "No saved LSTM applied to live telemetry"
+There must be NO connection from live telemetry to archived scaling, windows, or trained forecast models.
+
+Shared output area at bottom: "Local dashboard" then "Archived replay and compatible-window LSTM inference | Live monitoring" then "Charts, alarm history and CSV export".
+Arrows from the archived forecast and warning outputs and live monitor output enter the shared dashboard.
+
+Do not claim confirmed leak diagnosis, crash prevention, MinMax scaling, future leak probability, only 3 baseline/model types, identical forecast horizons, or direct live LSTM deployment. Keep the diagram uncluttered with enough whitespace and legible text.
+
+Evaluation-arrow correction prompt
+
+Correct ONLY the bottom-left evaluation connections in this architecture diagram, preserving all accurate text, upper boxes, two panels, colors and layout as much as possible.
+There is a semantic error: the "Forecast evaluation / MAE / RMSE" box currently points into the red Antarex classification-metrics box. Forecast errors must NOT feed warning classification metrics.
+Move the red box whose exact text is "Antarex: precision / recall / F1, false alarms, event delay" and "Westermo: alarm counts only" directly below the green WARNING RULES box on the right of panel A, and draw a downward arrow from the warning rules into this red classification box. Then arrow from this red box to Local dashboard.
+The Forecast evaluation MAE/RMSE box on the left must instead point directly to Local dashboard. There must be no connection between forecast error evaluation and warning metrics.
+Remove the existing direct warning-rules-to-dashboard line because the corrected line passes through its red warning-evaluation box. Keep the "Antarex validation labels calibrate thresholds; test labels score warnings." note in clear whitespace, with no collisions.
+Make enough vertical space for the changed connections. Do not change any wording, model names, time horizons, live path or other correct details. Keep the sharp white-background academic diagram, legible text, no crossing or ambiguous arrows.

@@ -1,6 +1,6 @@
 # Review 2 progress
 
-Last updated: 14 September 2026
+Last updated: 15 September 2026
 
 ## Confirmed decisions
 
@@ -10,7 +10,7 @@ Last updated: 14 September 2026
 - Workflow: validate data, review the architecture, then build preprocessing, baselines, LSTM, evaluation and visualizations incrementally. Draft the paper section by section using only completed experiments.
 - The user completed preprocessing, baselines, four small multivariate LSTMs and initial warning evaluation in free Colab. All four stages' saved outputs have been independently verified. On 10 September, the warning-result archive reproduced all 402,364 decisions and 264 event outcomes, matching the local experiment. The research-paper draft is the remaining core milestone requirement.
 - On 13 September, the user paused the learning walkthrough and chose to finish the implementation while keeping paper drafting paused at that time.
-- On 14 September, the user resumed paper drafting, specified no template or page limit, and requested updates and previews at each step. Sections 1-4 are approved. Proposed Methodology is now drafted with eight subsections and a pipeline overview figure. All 36 distinct references remain cited, meeting the requested 30+ references. Continue section by section; the learning walkthrough remains paused.
+- On 14 September, the user resumed paper drafting, specified no template or page limit, and requested updates and previews at each step. Sections 1-5 have been accepted for continued drafting. On 15 September, Experimental Setup was drafted with six subsections and four source-checked tables, and the supplied architecture was corrected against the implementation and added as subsection 5.9 and Figure 2. All 36 distinct references remain cited, meeting the requested 30+ references. Continue section by section; the learning walkthrough remains paused.
 
 ## Repository workflow
 
@@ -26,7 +26,7 @@ Last updated: 14 September 2026
 |---|---|
 | Datasets identified and validated | Pilot data acquired and audited: complete Antarex CPU-MEM_mono block, selected required metric streams; all 19 Westermo CSVs. Limitations documented in DATA_VALIDATION.md. Antarex multi-core telemetry remains unacquired. |
 | Working preprocessing, trained model and demonstrable results | Complete for the documented pilot and verified in free Colab: preprocessing, three forecasting baselines, four LSTMs, MAE/RMSE, initial warning precision/recall/F1, false alarms, event outcomes/delays and figures. |
-| Research paper draft through supported preliminary results | In progress. Introduction, Literature Survey, Research Gap and Problem Statement approved; Proposed Methodology drafted; 36 distinct works cited and audited. Experimental Setup, Preliminary Results and closing sections remain pending. |
+| Research paper draft through supported preliminary results | In progress. Sections 1-5 accepted for continued drafting; Experimental Setup and the verified architecture added for review; 36 distinct works cited and audited. Preliminary Results and closing sections remain pending. |
 
 No overall percentage is assigned: the three requirements have no agreed weighting, and data preparation alone does not establish 75% completion.
 
@@ -74,6 +74,6 @@ The verified Colab warning experiment gives trend-only F1 0.829670 versus LSTM-a
 
 All 20 Colab warning-result files passed integrity checks; all 402,364 warning decisions and 264 event outcomes passed independent reconstruction. Verified archive: `data/packages/review2_warning_results_colab.zip`, SHA-256 `76b169d3807ce0fcd5577c6f20cb94d9d4b78c819cc0fecdc32f1df80bdd6fc5`. Its unchanged extracted files are in `results/warnings_colab`.
 
-The [paper draft](../paper/Predictive_Memory_Leak_Detection_Draft.md) and [PDF preview](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) now include approved sections 1-4 and Proposed Methodology on pages 7-10. The new section documents causal preprocessing, temporal windows, baselines, LSTM training, warning calibration, point/event evaluation and reproducibility, with a pipeline overview figure. Its descriptions were checked against the source code and fixed protocols; no experiments were rerun or changed. All 36 references remain cited. Source verification is in [REFERENCE_AUDIT.md](../paper/REFERENCE_AUDIT.md); section evidence maps and checkpoints are in [DRAFTING_NOTES.md](../paper/DRAFTING_NOTES.md).
+The [paper draft](../paper/Predictive_Memory_Leak_Detection_Draft.md) and [PDF preview](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) now contain sections 1-6. The original Methodology remains on pages 7-10, the verified architecture is on page 11, and Experimental Setup is on pages 12-14. Its four tables document dataset sizes, eligible windows, retained model settings and recorded Colab software versions. The [architecture review](../paper/ARCHITECTURE_REVIEW.md) explains corrections to the supplied screenshot, especially the separate exploratory live path, training-only z-score scaling, four forecast models and source-specific horizons. No experiments were rerun or changed. All 36 references remain cited on pages 15-17. Source verification is in [REFERENCE_AUDIT.md](../paper/REFERENCE_AUDIT.md); section evidence maps and checkpoints are in [DRAFTING_NOTES.md](../paper/DRAFTING_NOTES.md).
 
-Next, incorporate feedback on Proposed Methodology, then draft Experimental Setup using the recorded dataset scope, feature lists, partition sizes, configurations and Colab environment. No template or page-limit clarification is needed. The 75% milestone remains incomplete until the paper covers all required sections through supported preliminary results; broader scientific evaluation and deployment validation remain later work.
+Next, incorporate feedback on Experimental Setup and the architecture, then draft Preliminary Results and Discussion using the verified forecast and warning outputs. No template or page-limit clarification is needed. The 75% milestone remains incomplete until the paper covers all required sections through supported preliminary results; broader scientific evaluation and deployment validation remain later work.
