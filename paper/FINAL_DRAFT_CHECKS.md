@@ -1,8 +1,8 @@
-# Complete draft checks
+# Final draft checks
 
-Checked: 15 September 2026.
+Checked: 24 September 2026 (author finalization); substantive manuscript and reference checks: 15 September 2026.
 
-All substantive manuscript writing is complete. The remaining front-page input is the author names in order and institutional affiliation; the author line is omitted until supplied. No venue-specific format was requested.
+All substantive manuscript writing is complete. The final draft includes Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180) and Bs srivallabha (24BCE0457), exactly as supplied and in that order. The first page and page footers identify Final draft | 24 September 2026. No affiliation was supplied, and no venue-specific format was requested.
 
 ## Deliverables
 
@@ -29,7 +29,7 @@ All substantive manuscript writing is complete. The remaining front-page input i
 
 The 237-word Abstract and 230-word Conclusion summarize the executed pilot. Section 7 remains titled Preliminary Results because the available evidence is a development pilot; this is not an unfinished writing section. Table 9 marks additional studies as pending.
 
-## Verification performed
+## Verification performed on 15 September 2026
 
 - Checked summary metrics and rounded values against saved Colab forecasting and warning tables, including the Antarex 19.78% relative RMSE reduction. The text retains ARIMA's lower Westermo MAE and the trend-only rule's higher recall/F1 and event coverage.
 - Rechecked the size and SHA-256 of all 56 original forecasting and 20 warning result files against their manifests. All 76 passed and remain unchanged. No model, threshold or experiment was rerun for this drafting step.
@@ -40,6 +40,15 @@ The 237-word Abstract and 230-word Conclusion summarize the executed pilot. Sect
 - Refreshed the saved page previews to match the completed PDF.
 
 Detailed provenance is in [DRAFTING_NOTES.md](DRAFTING_NOTES.md), [RESULTS_EVIDENCE.md](RESULTS_EVIDENCE.md), [REFERENCE_AUDIT.md](REFERENCE_AUDIT.md) and [ARCHITECTURE_REVIEW.md](ARCHITECTURE_REVIEW.md).
+
+## Author finalization on 24 September 2026
+
+- Added the exact three author names and registration numbers in the user-supplied order, beneath the title and in PDF author metadata. No affiliation was inferred.
+- Changed the document subtitle and all page footers to Final draft | 24 September 2026. The existing manuscript and PDF paths remain stable for repository links.
+- Rebuilt the PDF from its updated Markdown source. Confirmed 27 pages and all 11 unchanged bookmark destinations.
+- Compared extracted text page by page with the preceding PDF, excluding only the new byline and changed status/date. All substantive text, results, 46 references, five figures and nine tables remain unchanged; PDF links also match page by page.
+- Rendered all 27 pages and compared their page bodies with the preceding PDF. Pages 2-27 match pixel for pixel when the updated footer is excluded. Visually inspected the changed first page, final reference page and representative footer strips; no overlap or clipping was found.
+- Refreshed the saved page previews to match the final draft. No model training, warning recalibration or experiment rerun was performed for this author update.
 
 ## Evidence boundary
 

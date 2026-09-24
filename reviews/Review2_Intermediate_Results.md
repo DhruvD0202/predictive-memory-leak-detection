@@ -111,7 +111,7 @@ Evidence: [point metrics](../results/warnings_colab/antarex_point_metrics.csv), 
 
 The working pilot demonstrates data preparation, memory forecasting and recognition of controlled injected leaks. The Antarex block reaches approximately 42.24% memory pressure and has no observed 80% threshold crossing. These results do not demonstrate warning before exhaustion or crash prevention. Westermo lacks confirmed leak labels and supports workload forecasting and descriptive alarm counts only.
 
-Dataset validation, the experimental showcase and the supported research-paper draft are complete for this pilot. As of 15 September, the manuscript has 27 pages and 46 cited references; author names/order and affiliation remain to be supplied. This covers the user's three requirements for the 75% milestone. Broader labeled data, repeated seeds, uncertainty estimates, ablation studies and validated deployment remain later research work.
+Dataset validation, the experimental showcase and the supported research-paper draft are complete for this pilot. The final draft has 27 pages and 46 cited references; the three supplied authors and registration numbers were added on 24 September. This covers the user's three requirements for the 75% milestone. Broader labeled data, repeated seeds, uncertainty estimates, ablation studies and validated deployment remain later research work.
 
 ## Suggested review demonstration: 6-8 minutes
 

@@ -1,6 +1,8 @@
 # Predictive Memory Leak Detection Using Time Series Analysis
 
-> Research paper draft | 15 September 2026
+Authors: Dhruv Dudeja (24BCE0968); Ayush Bhatt (24BDS0180); Bs srivallabha (24BCE0457)
+
+> Final draft | 24 September 2026
 
 ## Abstract
 

@@ -1,6 +1,6 @@
 # Review 2 progress
 
-Last updated: 15 September 2026
+Last updated: 24 September 2026
 
 ## Confirmed decisions
 
@@ -10,7 +10,7 @@ Last updated: 15 September 2026
 - Workflow: validate data, review the architecture, then build preprocessing, baselines, LSTM, evaluation and visualizations incrementally. Draft the paper section by section using only completed experiments.
 - The user completed preprocessing, baselines, four small multivariate LSTMs and initial warning evaluation in free Colab. All four stages' saved outputs have been independently verified. On 10 September, the warning-result archive reproduced all 402,364 decisions and 264 event outcomes, matching the local experiment. Paper drafting was then the remaining core milestone requirement; its required coverage is now present.
 - On 13 September, the user paused the learning walkthrough and chose to finish the implementation while keeping paper drafting paused at that time.
-- On 14 September, the user resumed paper drafting, specified no template or page limit, and requested updates and previews. On 15 September, the complete manuscript text was finished, followed by the user's request for more reputable IEEE/ACM references. The expanded draft includes Abstract/Keywords, sections 1-9, five figures, nine tables and 46 distinct references, all cited. Ten new IEEE/ACM works are integrated into the survey. The revised PDF has 27 pages. Author names/order and affiliation remain to be supplied; the author line is omitted. The learning walkthrough remains paused.
+- On 14 September, the user resumed paper drafting, specified no template or page limit, and requested updates and previews. On 15 September, the complete manuscript text was finished, followed by the user's request for more reputable IEEE/ACM references. The expanded draft includes Abstract/Keywords, sections 1-9, five figures, nine tables and 46 distinct references, all cited. Ten new IEEE/ACM works are integrated into the survey. The revised PDF has 27 pages. The author line was omitted at that checkpoint; the three supplied authors were added in the final draft on 24 September. The learning walkthrough remains paused.
 
 ## Repository workflow
 
@@ -26,7 +26,7 @@ Last updated: 15 September 2026
 |---|---|
 | Datasets identified and validated | Pilot data acquired and audited: complete Antarex CPU-MEM_mono block, selected required metric streams; all 19 Westermo CSVs. Limitations documented in DATA_VALIDATION.md. Antarex multi-core telemetry remains unacquired. |
 | Working preprocessing, trained model and demonstrable results | Complete for the documented pilot and verified in free Colab: preprocessing, three forecasting baselines, four LSTMs, MAE/RMSE, initial warning precision/recall/F1, false alarms, event outcomes/delays and figures. |
-| Research paper draft through supported preliminary results | Complete manuscript text available: Abstract/Keywords, sections 1-9, verified results, architecture and 46 references. Author metadata remains to be supplied. Unperformed research is explicitly marked as future work. |
+| Research paper draft through supported preliminary results | Final draft available: Abstract/Keywords, sections 1-9, verified results, architecture and 46 references. The three supplied authors and registration numbers were added on 24 September. Unperformed research is explicitly marked as future work. |
 
 The user's defined 75% review scope is evidenced across all three requirements for the documented pilot. All manuscript sections are now drafted and checked. This is completion of the draft content and milestone coverage, not a measured percentage of all possible research work; broader evaluation remains future work.
 
@@ -78,4 +78,4 @@ All 20 Colab warning-result files passed integrity checks; all 402,364 warning d
 
 The [complete paper draft](../paper/Predictive_Memory_Leak_Detection_Draft.md) and [27-page PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) contain Abstract/Keywords and sections 1-9. The expanded Literature Survey is on pages 3-6, Architecture on page 13, Experimental Setup on pages 14-16, Preliminary Results and Discussion on pages 17-20, Limitations and Future Work on pages 21-22, Conclusion on page 23, and the 46 cited references on pages 24-27. Table 9 marks all proposed extensions as pending. The [ten additions](../paper/REFERENCE_ADDITIONS.md) comprise six IEEE-published and four ACM-published works; Google Scholar access was unavailable and is not claimed as a completed search. The literature update preserves all experimental findings and original result files. See [final draft checks](../paper/FINAL_DRAFT_CHECKS.md) and [drafting notes](../paper/DRAFTING_NOTES.md).
 
-The remaining document input is the author names in order and institutional affiliation. The author line has been omitted until those details are supplied. The manuscript is ready for the user's proofread and review preparation. No new notebook run is required to support its reported pilot results. Repeated-seed studies, ablations, independent labeled evaluation, exhaustion outcomes and validated live deployment remain later research work, as stated in the completed paper.
+On 24 September, the user supplied Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180) and Bs srivallabha (24BCE0457), in that order, and requested the final draft. Those exact names and registration numbers appear on the first page and in PDF author metadata. The subtitle and every page footer read Final draft | 24 September 2026. Affiliation was not supplied and is omitted. No new notebook run is required to support the reported pilot results. Repeated-seed studies, ablations, independent labeled evaluation, exhaustion outcomes and validated live deployment remain later research work, as stated in the final draft.

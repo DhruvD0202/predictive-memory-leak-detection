@@ -1,12 +1,12 @@
 # Paper drafting record
 
-Updated: 15 September 2026.
+Updated: 24 September 2026.
 
 These are editorial and evidence notes, not paper content.
 
 ## Format and current scope
 
-The user resumed drafting, specified no template or page limit, and requested progress updates and previews. All substantive manuscript writing was completed on 15 September: Abstract/Keywords, sections 1-9 and the bibliography. The user then requested more reputable IEEE/ACM references and discovery through Google Scholar. Ten relevant published works have been added and integrated into Section 2, taking the bibliography from 36 to 46 distinct cited works. All citations and evidence maps use the revised order of first appearance. The completed Abstract, experimental methods, results and Conclusion retain their substance. The format remains a readable single-column draft; author metadata remains to be supplied.
+The user resumed drafting, specified no template or page limit, and requested progress updates and previews. All substantive manuscript writing was completed on 15 September: Abstract/Keywords, sections 1-9 and the bibliography. The user then requested more reputable IEEE/ACM references and discovery through Google Scholar. Ten relevant published works have been added and integrated into Section 2, taking the bibliography from 36 to 46 distinct cited works. All citations and evidence maps use the revised order of first appearance. The completed Abstract, experimental methods, results and Conclusion retain their substance. The format remains a readable single-column manuscript. On 24 September, the supplied authors were added and the document was designated the final draft.
 
 - Editable source: [Predictive_Memory_Leak_Detection_Draft.md](Predictive_Memory_Leak_Detection_Draft.md).
 - Checked preview: [PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf).
@@ -17,8 +17,8 @@ The user resumed drafting, specified no template or page limit, and requested pr
 - Figure 2 is the [verified architecture](figures/system_architecture_verified.png). The [architecture review](ARCHITECTURE_REVIEW.md) records the original screenshot, implementation checks, corrected connections and edit provenance. The archived and live paths are separate; live telemetry does not use the saved LSTM.
 - Figures 3-5 show forecasts, learning curves and warnings from unchanged Colab result tables. Their [builder](../scripts/build_results_figures.py) uses the existing Matplotlib environment and checks all 76 original result files before plotting. The [results evidence record](RESULTS_EVIDENCE.md) maps every new table, figure and finding to its sources.
 - The deliverables are editable Markdown and a visually checked PDF. A Word file is not supplied because the bundled Windows runtime has no LibreOffice renderer for the required visual verification workflow.
-- Author names/order and affiliation have not been supplied. The author line is omitted, and no personal details are inferred. No submission venue or venue-specific format was requested.
-- The [final draft checks](FINAL_DRAFT_CHECKS.md) record completed writing, validation and remaining author metadata.
+- On 24 September, the user supplied the authors in this order: Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180), Bs srivallabha (24BCE0457). Names, capitalization and registration numbers are reproduced exactly. No affiliation was supplied, so none is invented. No submission venue or venue-specific format was requested.
+- The [final draft checks](FINAL_DRAFT_CHECKS.md) record completed writing, validation and author finalization. The manuscript is designated Final draft, dated 24 September 2026.
 
 ## Preview checks
 
@@ -27,6 +27,8 @@ The revised PDF has 27 pages. Abstract/Keywords is on page 1, Introduction on pa
 All five figures and nine tables retain their captions, and each reference stays on one page. The final checks cover all 46 citations and PDF reference links, revised numbering, 11 section bookmarks, page layout and the unchanged experiment records. Twelve unchanged page bodies match the preceding checked PDF pixel for pixel, excluding page-number footers. All 15 changed page bodies were visually inspected, including the expanded survey and bibliography. Table 9 remains a plan rather than an experimental result. The saved page previews use the current pagination.
 
 View the survey on [page 3](../output/pdf/Literature_Survey_preview.png), [page 4](../output/pdf/Literature_Survey_preview-2.png), [page 5](../output/pdf/Literature_Survey_preview-3.png) and [page 6](../output/pdf/Literature_Survey_preview-4.png), or a [bibliography preview](../output/pdf/References_preview.png). The [addition record](REFERENCE_ADDITIONS.md) explains how each of the ten new sources contributes.
+
+The final author update on 24 September preserves this pagination and every substantive paragraph. The first page now contains the supplied author byline; the subtitle and all footers identify the final draft and its date. Pages 2-27 retain pixel-identical page bodies compared with the preceding PDF, excluding the footer. The first page, final reference page and representative footers were visually checked, and the saved previews were refreshed. See the author-finalization checks in [FINAL_DRAFT_CHECKS.md](FINAL_DRAFT_CHECKS.md).
 
 ## Section checkpoints
 
@@ -129,7 +131,7 @@ No experiment, model, threshold or numerical result changed in the limitations c
 | Warning trade-off | `results/warnings_colab/antarex_point_metrics.csv` and `antarex_event_metrics.csv`: LSTM assistance increases precision and reduces false alarm starts, but decreases recall/F1 and recognizes 34 rather than 35 of 35 eligible test events. |
 | Claim boundary and next research | Section 8 and Table 9: controlled injections, unknown Westermo labels, development-test exposure and absent exhaustion/live-transfer evidence. Independent labeled evaluation, ablations and compatible live validation remain unperformed. |
 
-All 76 original Colab result files were rechecked against their manifests at the final checkpoint and remain unchanged. The manuscript contains no unfinished section placeholders. Author names/order and affiliation are the only outstanding front-page details. Completion of the draft does not establish 100% scientific validation or publication acceptance.
+All 76 original Colab result files were rechecked against their manifests at the final checkpoint and remain unchanged. The manuscript contains no unfinished section placeholders. The three supplied authors and registration numbers were subsequently added on 24 September; no affiliation was supplied. Completion of the draft does not establish 100% scientific validation or publication acceptance.
 
 ## Verified external sources
 

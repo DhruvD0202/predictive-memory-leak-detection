@@ -130,7 +130,7 @@ Non-leak exposure means time outside the labeled leak intervals; it can contain 
 3. Rehearse once with a timer, including figure explanations, handoffs and the demo. Aim to switch at about minute 3 and minute 7 and finish around minute 11.
 4. If you run over 12 minutes, omit the detailed epoch discussion and extra Westermo values, and shorten the replay. Retain the main warning trade-off and the scope statement.
 5. Keep the PDF and saved figures available locally. No additional Colab training is needed to present the existing results.
-6. Add the team author names/order and affiliation to the manuscript before submitting it; that front-page metadata has not yet been supplied.
+6. Before submitting, check the author details on the final manuscript. The three names and registration numbers were added on 24 September 2026 in the user-supplied order; no affiliation was supplied.
 
 ## Local evidence and display files
 
