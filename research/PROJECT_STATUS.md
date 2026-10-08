@@ -1,6 +1,6 @@
 # Review 2 progress
 
-Last updated: 24 September 2026
+Last updated: 8 October 2026
 
 ## Confirmed decisions
 
@@ -78,4 +78,9 @@ All 20 Colab warning-result files passed integrity checks; all 402,364 warning d
 
 The [complete paper draft](../paper/Predictive_Memory_Leak_Detection_Draft.md) and [27-page PDF](../output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) contain Abstract/Keywords and sections 1-9. The expanded Literature Survey is on pages 3-6, Architecture on page 13, Experimental Setup on pages 14-16, Preliminary Results and Discussion on pages 17-20, Limitations and Future Work on pages 21-22, Conclusion on page 23, and the 46 cited references on pages 24-27. Table 9 marks all proposed extensions as pending. The [ten additions](../paper/REFERENCE_ADDITIONS.md) comprise six IEEE-published and four ACM-published works; Google Scholar access was unavailable and is not claimed as a completed search. The literature update preserves all experimental findings and original result files. See [final draft checks](../paper/FINAL_DRAFT_CHECKS.md) and [drafting notes](../paper/DRAFTING_NOTES.md).
 
-On 24 September, the user supplied Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180) and Bs srivallabha (24BCE0457), in that order, and requested the final draft. Those exact names and registration numbers appear on the first page and in PDF author metadata. The subtitle and every page footer read Final draft | 24 September 2026. Affiliation was not supplied and is omitted. No new notebook run is required to support the reported pilot results. Repeated-seed studies, ablations, independent labeled evaluation, exhaustion outcomes and validated live deployment remain later research work, as stated in the final draft.
+On 24 September, the user supplied Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180) and Bs srivallabha (24BCE0457), in that order, and requested the final draft. Those exact names and registration numbers appear on the first page and in PDF author metadata. That subtitle and its matching page-footer text were removed on 8 October at the user's request; page numbers remain. Affiliation was not supplied and is omitted. No new notebook run is required to support the reported pilot results. Repeated-seed studies, ablations, independent labeled evaluation, exhaustion outcomes and validated live deployment remain later research work, as stated in the final draft.
+
+
+## Journal preparation - 8 October
+
+The user intends to submit to a college journal and reported no template or AI-use policy when asked. The current PDF omits the draft/date label on every page and retains page numbering and the exact supplied authors. A focused clarity edit revised the Abstract, Introduction and Conclusion, plus review-milestone wording in Sections 7.5 and 8.4. The 27-page manuscript retains all 46 references, five figures, nine tables and experimental findings. No AI-detector score was measured or promised, no manuscript was uploaded to an external checker, and journal-specific compliance or acceptance is not established. See the 8 October checks in [FINAL_DRAFT_CHECKS.md](../paper/FINAL_DRAFT_CHECKS.md).

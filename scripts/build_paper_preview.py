@@ -1,7 +1,7 @@
 """Build the current paper PDF from its editable Markdown source.
 
 Requires reportlab==4.4.9. Supports the headings, paragraphs, links, figures, tables,
-captions, author byline and editorial subtitle used by the final draft.
+captions and author byline used by the manuscript.
 """
 
 from html import escape
@@ -51,7 +51,6 @@ def page_footer(canvas, doc):
     canvas.saveState()
     canvas.setFont("Times-Roman", 9)
     canvas.setFillColor(colors.HexColor("#555555"))
-    canvas.drawString(doc.leftMargin, 15 * mm, doc.paper_status)
     canvas.drawRightString(A4[0] - doc.rightMargin, 15 * mm, str(doc.page))
     canvas.restoreState()
 
@@ -59,9 +58,8 @@ def page_footer(canvas, doc):
 def main():
     source_text = SOURCE.read_text(encoding="utf-8")
     author_line = re.search(r"^Authors: (.+)$", source_text, re.MULTILINE)
-    status_line = re.search(r"^> (.+)$", source_text, re.MULTILINE)
-    if author_line is None or status_line is None:
-        raise ValueError("The manuscript must specify its authors and draft status")
+    if author_line is None:
+        raise ValueError("The manuscript must specify its authors")
     authors = [entry.strip() for entry in author_line.group(1).split(";")]
     styles = {
         "title": ParagraphStyle("PaperTitle", fontName="Times-Bold", fontSize=18,
@@ -180,9 +178,8 @@ def main():
                             rightMargin=24 * mm, topMargin=20 * mm,
                             bottomMargin=23 * mm,
                             title="Predictive Memory Leak Detection Using Time Series Analysis",
-                            subject="Final draft of pilot-study manuscript",
+                            subject="Memory-forecasting and leak-warning pilot study",
                             author="; ".join(authors))
-    doc.paper_status = status_line.group(1)
     doc.build(story, onFirstPage=page_footer, onLaterPages=page_footer)
     print(f"Created {OUTPUT.relative_to(ROOT)}")
 

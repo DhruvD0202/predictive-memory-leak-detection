@@ -1,8 +1,8 @@
 # Final draft checks
 
-Checked: 24 September 2026 (author finalization); substantive manuscript and reference checks: 15 September 2026.
+Checked: 8 October 2026 (journal-preparation edit); author finalization: 24 September; substantive manuscript and reference checks: 15 September.
 
-All substantive manuscript writing is complete. The final draft includes Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180) and Bs srivallabha (24BCE0457), exactly as supplied and in that order. The first page and page footers identify Final draft | 24 September 2026. No affiliation was supplied, and no venue-specific format was requested.
+All substantive manuscript writing is complete. The manuscript includes Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180) and Bs srivallabha (24BCE0457), exactly as supplied and in that order. The draft/date subtitle and footer text were removed on 8 October; page numbers remain. No affiliation was supplied. The user reported no journal template or AI-use policy when asked; journal-specific submission requirements have not been verified.
 
 ## Deliverables
 
@@ -27,7 +27,7 @@ All substantive manuscript writing is complete. The final draft includes Dhruv D
 | 9. Conclusion | 23 |
 | References | 24-27 |
 
-The 237-word Abstract and 230-word Conclusion summarize the executed pilot. Section 7 remains titled Preliminary Results because the available evidence is a development pilot; this is not an unfinished writing section. Table 9 marks additional studies as pending.
+The 213-word Abstract and 181-word Conclusion summarize the executed pilot. Section 7 remains titled Preliminary Results because the available evidence is a development pilot; this is not an unfinished writing section. Table 9 marks additional studies as pending.
 
 ## Verification performed on 15 September 2026
 
@@ -49,6 +49,15 @@ Detailed provenance is in [DRAFTING_NOTES.md](DRAFTING_NOTES.md), [RESULTS_EVIDE
 - Compared extracted text page by page with the preceding PDF, excluding only the new byline and changed status/date. All substantive text, results, 46 references, five figures and nine tables remain unchanged; PDF links also match page by page.
 - Rendered all 27 pages and compared their page bodies with the preceding PDF. Pages 2-27 match pixel for pixel when the updated footer is excluded. Visually inspected the changed first page, final reference page and representative footer strips; no overlap or clipping was found.
 - Refreshed the saved page previews to match the final draft. No model training, warning recalibration or experiment rerun was performed for this author update.
+
+## Journal-preparation edit on 8 October 2026
+
+- Removed the draft/date statement from the title page and all 27 page footers; kept author metadata and page numbers. Checked both extracted text and the rendered left-footer areas for complete removal.
+- Tightened the Abstract, Introduction and Conclusion for clarity and reduced repetition. Replaced review-milestone wording in Section 7.5, the Section 8.4 heading and Table 9 caption with research-focused wording. No result or limitation was upgraded into a stronger claim.
+- Verified sections 2-6 and the bibliography are textually unchanged. All table data, figure paths and 46 PDF reference links match the prior version. All 11 section bookmarks retain their page destinations.
+- Rendered every page. Page bodies changed only on pages 1, 2, 20, 22 and 23; all five were visually checked for clipping, overlap and disrupted figure/table placement. The other 22 page bodies match the prior PDF pixel for pixel when the removed footer is excluded.
+- Refreshed all 19 existing manuscript page previews. Preserved unrelated PDFs and working files in the project folder.
+- No experiment or model was rerun. No AI-detector score was measured, and the manuscript was not uploaded to a third-party detector. Editorial changes do not establish a detector score or journal acceptance.
 
 ## Evidence boundary
 

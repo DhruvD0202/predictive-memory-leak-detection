@@ -1,6 +1,6 @@
 # Paper drafting record
 
-Updated: 24 September 2026.
+Updated: 8 October 2026.
 
 These are editorial and evidence notes, not paper content.
 
@@ -18,7 +18,7 @@ The user resumed drafting, specified no template or page limit, and requested pr
 - Figures 3-5 show forecasts, learning curves and warnings from unchanged Colab result tables. Their [builder](../scripts/build_results_figures.py) uses the existing Matplotlib environment and checks all 76 original result files before plotting. The [results evidence record](RESULTS_EVIDENCE.md) maps every new table, figure and finding to its sources.
 - The deliverables are editable Markdown and a visually checked PDF. A Word file is not supplied because the bundled Windows runtime has no LibreOffice renderer for the required visual verification workflow.
 - On 24 September, the user supplied the authors in this order: Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180), Bs srivallabha (24BCE0457). Names, capitalization and registration numbers are reproduced exactly. No affiliation was supplied, so none is invented. No submission venue or venue-specific format was requested.
-- The [final draft checks](FINAL_DRAFT_CHECKS.md) record completed writing, validation and author finalization. The manuscript is designated Final draft, dated 24 September 2026.
+- The [final draft checks](FINAL_DRAFT_CHECKS.md) record completed writing, validation, author finalization and the 8 October journal-preparation edit. The user requested removal of the draft/date label, so the manuscript now has no editorial subtitle or footer beyond page numbering.
 
 ## Preview checks
 
@@ -28,21 +28,21 @@ All five figures and nine tables retain their captions, and each reference stays
 
 View the survey on [page 3](../output/pdf/Literature_Survey_preview.png), [page 4](../output/pdf/Literature_Survey_preview-2.png), [page 5](../output/pdf/Literature_Survey_preview-3.png) and [page 6](../output/pdf/Literature_Survey_preview-4.png), or a [bibliography preview](../output/pdf/References_preview.png). The [addition record](REFERENCE_ADDITIONS.md) explains how each of the ten new sources contributes.
 
-The final author update on 24 September preserves this pagination and every substantive paragraph. The first page now contains the supplied author byline; the subtitle and all footers identify the final draft and its date. Pages 2-27 retain pixel-identical page bodies compared with the preceding PDF, excluding the footer. The first page, final reference page and representative footers were visually checked, and the saved previews were refreshed. See the author-finalization checks in [FINAL_DRAFT_CHECKS.md](FINAL_DRAFT_CHECKS.md).
+The author update on 24 September preserved this pagination and every substantive paragraph. It added the supplied author byline and, at that time, a draft/date subtitle and footer. The subtitle and footer were removed on 8 October; the authors remain. Pages 2-27 retain pixel-identical page bodies compared with the preceding PDF, excluding the footer. The first page, final reference page and representative footers were visually checked, and the saved previews were refreshed. See the author-finalization checks in [FINAL_DRAFT_CHECKS.md](FINAL_DRAFT_CHECKS.md).
 
 ## Section checkpoints
 
 | Section | Status |
 |---|---|
-| Introduction | Approved by the user; body text preserved |
+| Introduction | Originally approved; clarity edit on 8 October preserves its citations and scientific claims |
 | Literature Survey | Complete; expanded with ten verified IEEE/ACM works under the user's latest request |
 | Research Gap and Problem Statement | Approved by the user; body text preserved |
 | Proposed Methodology | Accepted for continued drafting, including verified architecture Figure 2; body preserved |
 | Experimental Setup | Accepted for continued drafting; six subsections and four tables; body preserved |
-| Preliminary Results and Discussion | Accepted for continued drafting; five subsections, four result tables and three figures checked against complete Colab outputs; body preserved |
-| Limitations and Future Work | Complete; four subsections and Table 9; completed evidence separated from pending extensions; body preserved |
-| Conclusion | Complete; 230 words, bounded by executed experiments and checked against saved results |
-| Abstract and Keywords | Complete; 237-word abstract written last, six keywords; summary metrics checked against saved results |
+| Preliminary Results and Discussion | Complete; five subsections, four result tables and three figures checked against complete Colab outputs; review-milestone wording in Section 7.5 removed on 8 October |
+| Limitations and Future Work | Complete; four subsections and Table 9; Section 8.4 heading and Table 9 caption revised for journal context on 8 October; pending status preserved |
+| Conclusion | Complete; 181 words after the 8 October clarity edit, bounded by executed experiments |
+| Abstract and Keywords | Complete; 213-word abstract after the 8 October clarity edit, six keywords; reported metrics preserved |
 | References | 46 distinct works, all cited and renumbered by first appearance; identity, relevance and reading scope audited |
 
 ## Introduction evidence map
@@ -143,6 +143,14 @@ The entries below record the first Introduction checkpoint on 14 September 2026.
 4. [FINJ institutional publication record](https://cris.unibo.it/handle/11585/668910): six authors, published workshop proceedings in 2019, volume 11339, pages 800-812 and DOI checked. The workshop title contains 2018; this is not the publication year used here.
 5. [Online Fault Classification, arXiv](https://arxiv.org/abs/1810.11208): six authors, original submission 26 October 2018 and revised version 11 July 2019; identifies injected-fault data and Euro-Par 2019 acceptance. This draft cites the identified arXiv version, not an unverified publisher record.
 6. [Westermo, arXiv](https://arxiv.org/abs/2311.14510): Per Erik Strandberg and Yosh Marklund, 24 November 2023; real performance measurements on 19 test systems, twice per minute over a month. The experiments use three of those systems.
+
+## Journal preparation and AI assistance - 8 October 2026
+
+The user intends to submit to a college journal and requested removal of the draft/date statement and attention to writing quality ahead of an AI check. No journal template or AI-use policy was supplied. The edit removes that statement, tightens the Abstract, Introduction and Conclusion, and replaces review-specific wording in Sections 7.5 and 8.4. All tables, experimental settings, numerical findings, citations and research limitations remain supported by the same saved evidence. The PDF remains 27 pages with unchanged section destinations.
+
+No AI detector was run, no manuscript was sent to an external checking service, and no lower AI score is claimed. The editorial objective is clear, accurate academic writing. Turnitin's [official guidance on its AI Writing Report](https://guides.turnitin.com/hc/en-us/articles/22774058814093-Using-the-AI-Writing-Report) states that its model may misidentify human-written, generated and paraphrased text and should not be the sole basis for adverse action. This guidance is contextual information, not a policy attributed to the unnamed journal.
+
+AI assistance has been used in project implementation and manuscript drafting; the edit does not establish unaided human authorship. The named authors should review the submitted wording and check any disclosure requirements with the journal. No claim that this author review has already occurred is made.
 
 ## Guardrails for future revisions
 
