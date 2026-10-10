@@ -8,6 +8,10 @@ The [editable draft](paper/Predictive_Memory_Leak_Detection_Draft.md) contains A
 
 View the [expanded Literature Survey](output/pdf/Literature_Survey_preview.png), [Abstract](output/pdf/Abstract_preview.png), [forecast figures](output/pdf/Forecast_Results_preview.png), [warning results](output/pdf/Warning_Results_preview.png) or [Conclusion](output/pdf/Conclusion_preview.png). The [final draft checks](paper/FINAL_DRAFT_CHECKS.md) summarize completion and validation. The manuscript includes Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180) and Bs srivallabha (24BCE0457), in the supplied order. On 8 October, the draft/date label was removed and the Abstract, Introduction and Conclusion were edited for clarity; experimental findings remain unchanged. The [results evidence record](paper/RESULTS_EVIDENCE.md) links findings to complete Colab runs, including unfavorable outcomes. See [drafting notes](paper/DRAFTING_NOTES.md) and the [reference audit](paper/REFERENCE_AUDIT.md) for evidence maps and source verification. Unperformed studies remain explicitly marked as future work.
 
+## Two-column manuscript and Overleaf
+
+The [14-page two-column PDF](output/pdf/Predictive_Memory_Leak_Detection_Two_Column.pdf) is a separate, compiled version of the same manuscript. The [complete Overleaf ZIP](output/latex/Predictive_Memory_Leak_Detection_Overleaf.zip) includes [main.tex](paper/overleaf/main.tex), all five figures and all 46 references. Upload the ZIP using **New Project > Upload Project**, select **XeLaTeX** and recompile. Figures span both columns for readability; tables are sized to their content. See [layout and verification notes](paper/TWO_COLUMN_NOTES.md). The original single-column version remains available above.
+
 ## Run the dashboard on the existing project computer
 
 Open this project folder in VS Code, choose **Terminal > New Terminal**, then run:

@@ -1,0 +1,111 @@
+{
+  "source": "paper/Predictive_Memory_Leak_Detection_Draft.md",
+  "source_sha256": "62e4c8d423c36b83cf56853ebc90f3ea66f66e79c34ca1eac94af3d94ed237d6",
+  "paragraphs": 105,
+  "references": 46,
+  "figures": [
+    {
+      "number": 1,
+      "source": "figures/pipeline_overview.png",
+      "caption": "Figure 1. Implemented pipeline, repeated independently for each recording. Training data determine learned preprocessing and model parameters; validation data select forecast settings and calibrate Antarex warning thresholds. The two evaluation paths retain their distinct targets and label requirements."
+    },
+    {
+      "number": 2,
+      "source": "figures/system_architecture_verified.png",
+      "caption": "Figure 2. Implemented system architecture. Archived models use recording-specific features and training-only standardization. ARIMA- and LSTM-assisted rules combine their forecast growth with recent observed growth; the trend-only rule and always-off control provide comparisons. Antarex labels calibrate and evaluate warnings, while Westermo alarms remain descriptive. The live branch produces exploratory warnings and does not apply archived LSTM weights to incompatible local features."
+    },
+    {
+      "number": 3,
+      "source": "figures/antarex_forecast_results.png",
+      "caption": "Figure 3. Antarex 60-second-ahead forecasts plotted at target times, beginning at timestamp 1526734795. Shading denotes recorded leak activity at the target, not a predicted alarm. All 361 saved interval rows are shown; predictions use only data available 60 seconds earlier."
+    },
+    {
+      "number": 4,
+      "source": "figures/antarex_training_results.png",
+      "caption": "Figure 4. Recorded Antarex learning curves and the validation-selected checkpoint. The training and validation curves have different evaluation conditions. The selected model's separate test RMSE is 1.216399 percentage points."
+    },
+    {
+      "number": 5,
+      "source": "figures/antarex_warning_results.png",
+      "caption": "Figure 5. Observed Antarex memory pressure and causal warnings over the first 30 minutes of eligible test origins, beginning at timestamp 1526734735. Shading denotes recorded injection; colored bands denote actual warning decisions. ARIMA-assisted warnings are disabled. The always-off control is omitted visually and reported in Tables 7-8."
+    }
+  ],
+  "tables": [
+    {
+      "number": 1,
+      "source": "| Recording | Grid rows | Valid rows | Inputs | Cadence / horizon |\n|---|---:|---:|---:|---|\n| Antarex mono | 207,361 | 207,358 | 7 | 5 / 60 |\n| Westermo 1 | 86,401 | 85,749 | 8 | 30 / 300 |\n| Westermo 2 | 86,401 | 86,393 | 7 | 30 / 300 |\n| Westermo 3 | 86,401 | 86,401 | 8 | 30 / 300 |",
+      "caption": "Table 1. Processed pilot recordings. Cadence and forecast horizon are in seconds; inputs denote retained LSTM features."
+    },
+    {
+      "number": 2,
+      "source": "| Recording | Eligible train | LSTM train | Validation | Test |\n|---|---:|---:|---:|---:|\n| Antarex mono | 145,081 | 12,091 | 31,032 | 31,032 |\n| Westermo 1 | 59,691 | 14,923 | 12,891 | 12,891 |\n| Westermo 2 | 60,412 | 15,103 | 12,891 | 12,745 |\n| Westermo 3 | 60,412 | 15,103 | 12,891 | 12,891 |",
+      "caption": "Table 2. Eligible forecast windows and retained LSTM training windows. Validation and test origins are shared by all four predictors."
+    },
+    {
+      "number": 3,
+      "source": "| Recording | Trend history | ARIMA order | LSTM epochs selected / run |\n|---|---:|---|---|\n| Antarex mono | 12 | (3,1,0) | 8 / 12 |\n| Westermo 1 | 60 | (5,1,0) | 10 / 14 |\n| Westermo 2 | 30 | (5,1,0) | 20 / 20 |\n| Westermo 3 | 30 | (5,1,0) | 13 / 17 |",
+      "caption": "Table 3. Retained forecasting configurations. Trend history is in observations; LSTM epochs show the selected checkpoint followed by the number of epochs run."
+    },
+    {
+      "number": 4,
+      "source": "| Component | Recorded version | Recorded stages |\n|---|---|---|\n| Python | 3.13.15 | P, B, L, W |\n| NumPy | 2.1.3 | P, B, L, W |\n| pandas | 2.2.3 | P, B, L, W |\n| SciPy | 1.16.3 | B |\n| statsmodels | 0.14.6 | B |\n| PyTorch | 2.11.0+cpu | L |\n| Matplotlib | 3.10.0 | B, L, W |",
+      "caption": "Table 4. Software versions recorded in the Colab artifacts. P: preprocessing; B: baselines; L: LSTM; W: warning evaluation."
+    },
+    {
+      "number": 5,
+      "source": "| Recording | Persistence | Linear trend | ARIMA | LSTM |\n|---|---:|---:|---:|---:|\n| Antarex mono | 1.516596 | 1.743690 | 1.516401 | 1.216399 |\n| Westermo 1 | 0.363477 | 0.375828 | 0.317915 | 0.295990 |\n| Westermo 2 | 0.316791 | 0.348487 | 0.291166 | 0.257544 |\n| Westermo 3 | 0.715420 | 0.818381 | 0.658167 | 0.608003 |",
+      "caption": "Table 5. Test RMSE in percentage points of total RAM. Antarex uses a 60-second horizon; Westermo uses 300 seconds."
+    },
+    {
+      "number": 6,
+      "source": "| Recording | Persistence | Linear trend | ARIMA | LSTM |\n|---|---:|---:|---:|---:|\n| Antarex mono | 0.361399 | 0.377387 | 0.362521 | 0.358119 |\n| Westermo 1 | 0.094208 | 0.145035 | 0.092984 | 0.099499 |\n| Westermo 2 | 0.108831 | 0.143653 | 0.104707 | 0.116579 |\n| Westermo 3 | 0.240245 | 0.328811 | 0.229737 | 0.251230 |",
+      "caption": "Table 6. Test MAE in percentage points of total RAM, on the same origins as Table 5."
+    },
+    {
+      "number": 7,
+      "source": "| Rule | Precision | Point recall | Point F1 | FA/h |\n|---|---:|---:|---:|---:|\n| Trend only | 0.802028 | 0.859286 | 0.829670 | 2.127908 |\n| ARIMA + trend | Undefined | 0.000000 | 0.000000 | 0.000000 |\n| LSTM + trend | 0.847601 | 0.466115 | 0.601469 | 1.039211 |\n| Always off | Undefined | 0.000000 | 0.000000 | 0.000000 |",
+      "caption": "Table 7. Antarex test warning scores. Precision, recall and F1 are fractions. FA/h denotes new false alarm starts per observed non-leak hour; undefined precision means no positive predictions."
+    },
+    {
+      "number": 8,
+      "source": "| Rule | Detected / eligible | Missed | Median delay | 90th percentile |\n|---|---:|---:|---:|---:|\n| Trend only | 35 / 35 | 0 | 30.0 | 56.0 |\n| ARIMA + trend | 0 / 35 | 35 | Undefined | Undefined |\n| LSTM + trend | 34 / 35 | 1 | 31.0 | 45.7 |\n| Always off | 0 / 35 | 35 | Undefined | Undefined |",
+      "caption": "Table 8. Antarex test event recognition and delay. All 35 intersecting events are eligible. Median and 90th-percentile delays are in seconds after injection onset and include detected events only."
+    },
+    {
+      "number": 9,
+      "source": "| Pending extension | Purpose | Evidence to produce |\n|---|---|---|\n| More recordings and seeds | Assess variation | Results across additional workloads, repeated training seeds and new chronological holdouts, with appropriate uncertainty estimates. |\n| Feature and model ablations | Isolate sources of improvement | Matched memory-only and multivariate comparisons, broader statistical baselines, and declared search and compute budgets. |\n| Warning and calibration study | Compare operational trade-offs | Frozen rules evaluated against independent labels under predefined coverage, false-alarm and delay objectives. |\n| Exhaustion-focused recordings | Test warning before depletion | Timestamped resource limits, warning times and observed pressure crossings or exhaustion outcomes; documented cases where no warning occurs. |\n| Compatible live evaluation | Test transfer and monitoring cost | Validated feature collection, labeled live trials, and measured sampling/inference latency, CPU, RAM and storage costs. |",
+      "caption": "Table 9. Planned extensions and the evidence each would provide. All items remain unperformed."
+    }
+  ],
+  "zip_sha256": "b7acde7522b4a1122d199c6858d9139b1df72fe78de74059f12c2fd94ca2fa4a",
+  "files": [
+    {
+      "path": "main.tex",
+      "sha256": "ab25e1192f5d03981f429ffbd0c3b6e89078d057bf957db51255c9e7ddf40035"
+    },
+    {
+      "path": "figures/pipeline_overview.png",
+      "sha256": "e1daf161e884d82c39a6300f2659e1ec1d2b0f8afa866ce5696add1482011218"
+    },
+    {
+      "path": "figures/system_architecture_verified.png",
+      "sha256": "edf4ae93d9fe2bcfd8456a1af340b98bb2ae1bb042143f9b38cfddf945286484"
+    },
+    {
+      "path": "figures/antarex_forecast_results.png",
+      "sha256": "460bb1cb67ce689629459694443041950d39808178cb44f80f6c7e634ca252da"
+    },
+    {
+      "path": "figures/antarex_training_results.png",
+      "sha256": "41aa05021785d2a07e298b62c017e17ee3acf14a403b6db3e334be014fd3d805"
+    },
+    {
+      "path": "figures/antarex_warning_results.png",
+      "sha256": "a0af98eba798c4aaff883c139c08c4f0b2fba07c5e13714a72f8c19c9b919771"
+    },
+    {
+      "path": "README.txt",
+      "sha256": "c6588fa2f5cc0b3cae1754a0b74392c6bd58eea4d01a815a613fb19fd8004cc5"
+    }
+  ]
+}

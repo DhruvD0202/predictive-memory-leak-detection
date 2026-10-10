@@ -1,6 +1,6 @@
 # Review 2 progress
 
-Last updated: 8 October 2026
+Last updated: 10 October 2026
 
 ## Confirmed decisions
 
@@ -80,6 +80,10 @@ The [complete paper draft](../paper/Predictive_Memory_Leak_Detection_Draft.md) a
 
 On 24 September, the user supplied Dhruv Dudeja (24BCE0968), Ayush Bhatt (24BDS0180) and Bs srivallabha (24BCE0457), in that order, and requested the final draft. Those exact names and registration numbers appear on the first page and in PDF author metadata. That subtitle and its matching page-footer text were removed on 8 October at the user's request; page numbers remain. Affiliation was not supplied and is omitted. No new notebook run is required to support the reported pilot results. Repeated-seed studies, ablations, independent labeled evaluation, exhaustion outcomes and validated live deployment remain later research work, as stated in the final draft.
 
+
+## Two-column manuscript - 10 October
+
+At the user's request, a separate [14-page two-column PDF](../output/pdf/Predictive_Memory_Leak_Detection_Two_Column.pdf) and [complete Overleaf ZIP](../output/latex/Predictive_Memory_Leak_Detection_Overleaf.zip) are available. The package contains the full editable LaTeX manuscript, five figures and 46 embedded bibliography entries. The title and Abstract span the page; the body and references use two columns, with wide figures and appropriately sized tables. Local LaTeX compilation succeeded, every rendered page was inspected, and source/package checks preserved all paragraphs, nine tables, figures, references and supplied authors. This is a formatting change to the documented pilot manuscript; no new experimental result or journal-template compliance is claimed. See [two-column notes](../paper/TWO_COLUMN_NOTES.md).
 
 ## Journal preparation - 8 October
 
