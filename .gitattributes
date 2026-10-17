@@ -1,2 +1,14 @@
 # Preserve PDF bytes and cross-reference offsets on Windows checkouts.
 *.pdf binary
+
+# Preserve exact bytes for the frozen study's SHA-256 integrity checks.
+results/revision_20261016/** -text whitespace=cr-at-eol
+results/revision_diagnostics/configuration/** -text whitespace=cr-at-eol
+research/REVISION_PROTOCOL_20261016.md -text
+scripts/run_revision_study.py -text
+src/lstm_forecasting.py -text
+src/warning_evaluation.py -text
+
+# Keep the supplied official Springer template byte-identical.
+paper/spin2027/llncs.cls -text
+paper/spin2027/splncs04.bst -text

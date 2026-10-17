@@ -1,0 +1,62 @@
+{
+  "seeds": [
+    7,
+    21,
+    42,
+    84,
+    123
+  ],
+  "variants": [
+    "multivariate",
+    "memory_only"
+  ],
+  "settings": {
+    "hidden_units": 32,
+    "layers": 1,
+    "batch_size": 64,
+    "evaluation_batch_size": 256,
+    "learning_rate": 0.001,
+    "max_epochs": 20,
+    "patience": 4,
+    "gradient_clip_norm": 1.0,
+    "seed": 42,
+    "antarex_training_stride": 12,
+    "westermo_training_stride": 4,
+    "cpu_threads": 2,
+    "forecast_clip_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "torch": "2.8.0+cpu",
+    "matplotlib": "3.10.8",
+    "device_type": "cpu",
+    "device_name": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "cuda": null,
+    "cudnn": null,
+    "deterministic_algorithms": true,
+    "cpu_threads": 2
+  },
+  "input_receipt": {
+    "combined_package_sha256": "208c3b38ffbd7564e95f7452e0a3d203b1d4734858383e43cf602093ef7a1222",
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "baseline_package_sha256": "2b242a47288ea5db25ddd4d79de2069980ef1dc462fea157580e67ec19c01ba3",
+    "datasets": [
+      "antarex_mono",
+      "westermo_1",
+      "westermo_2",
+      "westermo_3"
+    ]
+  },
+  "created_utc": "2026-10-16T07:30:09.090661+00:00",
+  "protocol_sha256": "4efe064776d0ca8e9e5a72f3cbfb36f006feea14b23dcbf9e6b17ed3a96883a1",
+  "runner_sha256": "f57cc442d69de2198810d7aacbf06e3a1c3654b8248cd2ab6515573622c09108",
+  "training_implementation_sha256": "c6cb9718f17e0ea80d8148c9391c4aee87e7718808f1e846a851bf70b357f8e6",
+  "warning_implementation_sha256": "d6289c28116135c61be6cceec2057e61f9d58ff363b0378b58097baa1cce4ddf",
+  "original_holdout_previously_inspected": true,
+  "additional_labeled_recordings": 0
+}

@@ -1,8 +1,16 @@
-# Predictive Memory Leak Detection Using Time Series Analysis
+# Memory-Pressure Forecasting and Growth-Based Warnings
 
-A reproducible research prototype with a local dashboard, four Colab notebooks, saved forecasting models, verified preliminary leak-warning results and a complete manuscript draft of the documented pilot study.
+A research prototype with a local dashboard, four Colab notebooks, saved forecasting models and an evidence-bounded study of forecasting and warnings. Controlled injected-leak recognition, unlabeled forecasting and pre-exhaustion warning are different claims.
 
-## Final paper draft
+## Current conference revision — 16 October 2026
+
+The [revised SPIN manuscript](output/pdf/Memory_Pressure_Forecasting_SPIN2027.pdf) responds to the professor's 23 comments. Its [Overleaf ZIP](output/latex/SPIN2027_Overleaf.zip) uses the official Springer single-column template, with anonymous initial-submission formatting and no page numbers. The [response record](paper/PROFESSOR_RESPONSE_20261016.md), [format notes](paper/SPIN2027_REVISION_NOTES.md), [citation map](paper/SPIN2027_CITATION_MAP.md) and [final checks](paper/SPIN2027_FINAL_CHECKS.md) explain the changes. Earlier author and two-column versions remain below for history.
+
+The revision adds **40 LSTM runs**: five seeds, memory-only versus multivariate inputs, and four recordings. All models use matched origins and fixed validation selection. The [independent audit](results/revision_diagnostics/revision_integrity_checks.json) verifies 1,392,640 validation/test forecast rows, direct inference from all 40 models and warning/event summaries. Extra features improve mean RMSE on two recordings and worsen it on two; the original false-alarm advantage is not consistent across seeds. Trend-only still has higher Antarex warning F1 than every new LSTM-assisted run.
+
+The new [prototype benchmark](results/revision_diagnostics/prototype_benchmark.json) measures saved replay and model inference. A live attempt failed before collecting samples; live timing, CPU overhead and leak accuracy remain unvalidated. No exhaustion experiment or additional labeled recording was added. The [reproduction guide](research/REVISION_REPRODUCTION.md) and [anonymous code supplement](output/supplement/SPIN2027_Reproducibility_Code.zip) cover code, configurations, selected weights and required input access. The repository is private, and no conference submission has been made. Human author review and an appropriate reviewer-access route remain necessary.
+
+## Earlier paper draft
 
 The [editable draft](paper/Predictive_Memory_Leak_Detection_Draft.md) contains Abstract/Keywords, sections 1-9 and 46 distinct references, all cited in the text. Ten [IEEE/ACM additions](paper/REFERENCE_ADDITIONS.md) strengthen the Literature Survey. The checked [27-page PDF](output/pdf/Predictive_Memory_Leak_Detection_Draft.pdf) includes five figures, nine tables and section bookmarks. Abstract/Keywords is on page 1, Introduction on page 2, Literature Survey on pages 3-6, Research Gap and Problem Statement on pages 7-8, Methodology on pages 9-13, Experimental Setup on pages 14-16, Preliminary Results and Discussion on pages 17-20, Limitations and Future Work on pages 21-22, Conclusion on page 23, and references on pages 24-27.
 
@@ -115,6 +123,6 @@ The verification command checks source integrity, replay boundaries, unknown lab
 
 The verified pilot shows lower LSTM RMSE than ARIMA on four recordings, while the trend-only warning rule has higher Antarex recall/F1 and the LSTM-assisted rule has higher precision with fewer false alarms. Antarex contains controlled injected leaks and no observed 80% memory-pressure crossing. Westermo is unlabeled. The current evidence does not establish warning before memory exhaustion, naturally occurring production-leak accuracy or production monitoring overhead.
 
-The monitoring/replay prototype complements the existing experimental implementation. The full pilot-study manuscript text was completed on 15 September 2026 and finalized with the supplied authors on 24 September. The three user-defined requirements for the 75% review milestone are covered. Repeated seeds, broader labeled evaluation, feature ablations, new-machine LSTM validation and pre-exhaustion experiments remain further research work. See [project status](research/PROJECT_STATUS.md).
+The monitoring/replay prototype complements the experimental implementation. The September pilot manuscript covered the three user-defined requirements for the 75% review milestone. Repeated seeds and a memory-only feature ablation were completed in the October revision above. Broader labeled evaluation, individual-feature ablations, new-machine LSTM validation and pre-exhaustion experiments remain further research work. See [project status](research/PROJECT_STATUS.md).
 
 Dataset sources: [Antarex / Zenodo 2553224](https://zenodo.org/records/2553224), [Westermo at the audited commit](https://github.com/westermo/test-system-performance-dataset/tree/47e0ccdc10c30e86327d6eb828ed48d164469fd4). Both datasets are published under CC BY 4.0; retain their attribution and provenance when sharing data.

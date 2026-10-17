@@ -1,0 +1,213 @@
+{
+  "stage": "preprocessing only",
+  "datasets": [
+    {
+      "dataset": "antarex_mono",
+      "grid_rows": 207361,
+      "valid_rows": 207358,
+      "invalid_rows": 3,
+      "cadence_seconds": 5,
+      "history_steps": 60,
+      "horizon_steps": 12,
+      "forecast_horizon_seconds": 60,
+      "feature_names": [
+        "memory_pressure",
+        "anonymous_memory_gib",
+        "committed_memory_gib",
+        "cpu_busy_fraction",
+        "cpu_iowait_fraction",
+        "page_faults_per_second",
+        "major_page_faults_per_second"
+      ],
+      "removed_training_constant_features": [
+        "swap_used_gib",
+        "swap_in_pages_per_second",
+        "swap_out_pages_per_second",
+        "disk_read_bytes_per_second",
+        "disk_write_bytes_per_second"
+      ],
+      "split_time_boundaries": [
+        1526578910.7,
+        1526734430.85
+      ],
+      "window_counts": {
+        "train": 145081,
+        "validation": 31032,
+        "test": 31032
+      },
+      "valid_row_counts": {
+        "train": 145152,
+        "validation": 31103,
+        "test": 31103
+      },
+      "labeled_leak_origin_counts": {
+        "train": 8992,
+        "validation": 1707,
+        "test": 1933
+      },
+      "scaled_feature_array_bytes": 5806108,
+      "quality": {
+        "meminfo": {
+          "raw_rows": 1031998,
+          "unmatched_grid_rows": 0,
+          "max_observation_age_seconds": 2.0044729709625244
+        },
+        "vmstat": {
+          "raw_rows": 1031988,
+          "unmatched_grid_rows": 0,
+          "max_observation_age_seconds": 2.0044939517974854
+        },
+        "procstat": {
+          "raw_rows": 1031985,
+          "unmatched_grid_rows": 0,
+          "max_observation_age_seconds": 2.0052690505981445
+        },
+        "procdiskstats": {
+          "raw_rows": 1032014,
+          "unmatched_grid_rows": 0,
+          "max_observation_age_seconds": 2.0057010650634766
+        }
+      },
+      "label_policy": "active injected leak at origin; not a future onset/exhaustion label",
+      "model_training_performed": false
+    },
+    {
+      "dataset": "westermo_1",
+      "grid_rows": 86401,
+      "valid_rows": 85749,
+      "invalid_rows": 652,
+      "cadence_seconds": 30,
+      "history_steps": 60,
+      "horizon_steps": 10,
+      "forecast_horizon_seconds": 300,
+      "feature_names": [
+        "memory_pressure",
+        "swap_used_gib",
+        "cpu_user_rate",
+        "cpu_system_rate",
+        "cpu_iowait_rate",
+        "disk_read_bytes_per_second",
+        "disk_write_bytes_per_second",
+        "load_1m"
+      ],
+      "removed_training_constant_features": [],
+      "split_time_boundaries": [
+        1814400.7,
+        2203200.85
+      ],
+      "window_counts": {
+        "train": 59691,
+        "validation": 12891,
+        "test": 12891
+      },
+      "valid_row_counts": {
+        "train": 59829,
+        "validation": 12960,
+        "test": 12960
+      },
+      "labeled_leak_origin_counts": null,
+      "scaled_feature_array_bytes": 2764832,
+      "quality": {
+        "missing_or_unavailable_grid_rows": 652,
+        "rule": "No filling. Original gaps split the model sequences."
+      },
+      "label_policy": "unlabeled; no leak precision/recall available",
+      "model_training_performed": false
+    },
+    {
+      "dataset": "westermo_2",
+      "grid_rows": 86401,
+      "valid_rows": 86393,
+      "invalid_rows": 8,
+      "cadence_seconds": 30,
+      "history_steps": 60,
+      "horizon_steps": 10,
+      "forecast_horizon_seconds": 300,
+      "feature_names": [
+        "memory_pressure",
+        "cpu_user_rate",
+        "cpu_system_rate",
+        "cpu_iowait_rate",
+        "disk_read_bytes_per_second",
+        "disk_write_bytes_per_second",
+        "load_1m"
+      ],
+      "removed_training_constant_features": [
+        "swap_used_gib"
+      ],
+      "split_time_boundaries": [
+        1814400.7,
+        2203200.85
+      ],
+      "window_counts": {
+        "train": 60412,
+        "validation": 12891,
+        "test": 12745
+      },
+      "valid_row_counts": {
+        "train": 60481,
+        "validation": 12960,
+        "test": 12952
+      },
+      "labeled_leak_origin_counts": null,
+      "scaled_feature_array_bytes": 2419228,
+      "quality": {
+        "missing_or_unavailable_grid_rows": 8,
+        "rule": "No filling. Original gaps split the model sequences."
+      },
+      "label_policy": "unlabeled; no leak precision/recall available",
+      "model_training_performed": false
+    },
+    {
+      "dataset": "westermo_3",
+      "grid_rows": 86401,
+      "valid_rows": 86401,
+      "invalid_rows": 0,
+      "cadence_seconds": 30,
+      "history_steps": 60,
+      "horizon_steps": 10,
+      "forecast_horizon_seconds": 300,
+      "feature_names": [
+        "memory_pressure",
+        "swap_used_gib",
+        "cpu_user_rate",
+        "cpu_system_rate",
+        "cpu_iowait_rate",
+        "disk_read_bytes_per_second",
+        "disk_write_bytes_per_second",
+        "load_1m"
+      ],
+      "removed_training_constant_features": [],
+      "split_time_boundaries": [
+        1814400.7,
+        2203200.85
+      ],
+      "window_counts": {
+        "train": 60412,
+        "validation": 12891,
+        "test": 12891
+      },
+      "valid_row_counts": {
+        "train": 60481,
+        "validation": 12960,
+        "test": 12960
+      },
+      "labeled_leak_origin_counts": null,
+      "scaled_feature_array_bytes": 2764832,
+      "quality": {
+        "missing_or_unavailable_grid_rows": 0,
+        "rule": "No filling. Original gaps split the model sequences."
+      },
+      "label_policy": "unlabeled; no leak precision/recall available",
+      "model_training_performed": false
+    }
+  ],
+  "raw_package_sha256": "06df79379df958405ab3d3486dea3e81dff2eb6fa26e53b4cf6ea634210db75e",
+  "models_trained": 0,
+  "runtime": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3"
+  },
+  "important_limit": "Antarex mono has inactive swap, constant monitored disk I/O and no 80% memory-pressure crossing. Westermo has no confirmed leak labels."
+}

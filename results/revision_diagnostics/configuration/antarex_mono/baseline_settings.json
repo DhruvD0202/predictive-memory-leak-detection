@@ -1,0 +1,99 @@
+{
+  "dataset": "antarex_mono",
+  "selected_settings": {
+    "linear_trend": 12,
+    "arima": 3
+  },
+  "best_family_by_validation_rmse": "arima",
+  "training_segment": {
+    "start_index": 1,
+    "end_index_exclusive": 145153,
+    "rows": 145152,
+    "first_timestamp": 1525853155,
+    "last_timestamp": 1526578910
+  },
+  "fits": {
+    "1": {
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "trend": "n",
+      "estimator": "yule_walker",
+      "coefficients": [
+        -0.010984229136471981
+      ],
+      "parameters_percentage_point_scale": {
+        "ar.L1": -0.010984229136471981,
+        "sigma2": 0.19771850731020515
+      },
+      "fit_seconds": 0.24789658200000986,
+      "training_rows": 145152,
+      "warnings": [
+        "Provided `endog` series has been differenced to eliminate integration prior to parameter estimation by method \"yule_walker\"."
+      ]
+    },
+    "3": {
+      "order": [
+        3,
+        1,
+        0
+      ],
+      "trend": "n",
+      "estimator": "yule_walker",
+      "coefficients": [
+        -0.01120829885023272,
+        -0.0102374888100569,
+        -0.011171187589265231
+      ],
+      "parameters_percentage_point_scale": {
+        "ar.L1": -0.01120829885023272,
+        "ar.L2": -0.0102374888100569,
+        "ar.L3": -0.011171187589265231,
+        "sigma2": 0.19767361208495557
+      },
+      "fit_seconds": 0.2819136680000156,
+      "training_rows": 145152,
+      "warnings": [
+        "Provided `endog` series has been differenced to eliminate integration prior to parameter estimation by method \"yule_walker\"."
+      ]
+    },
+    "5": {
+      "order": [
+        5,
+        1,
+        0
+      ],
+      "trend": "n",
+      "estimator": "yule_walker",
+      "coefficients": [
+        -0.011222505229845152,
+        -0.01003199693006766,
+        -0.010974584506440418,
+        0.004695232181863306,
+        0.014303353629573709
+      ],
+      "parameters_percentage_point_scale": {
+        "ar.L1": -0.011222505229845152,
+        "ar.L2": -0.01003199693006766,
+        "ar.L3": -0.010974584506440418,
+        "ar.L4": 0.004695232181863306,
+        "ar.L5": 0.014303353629573709,
+        "sigma2": 0.19762910512944373
+      },
+      "fit_seconds": 0.2703350229999728,
+      "training_rows": 145152,
+      "warnings": [
+        "Provided `endog` series has been differenced to eliminate integration prior to parameter estimation by method \"yule_walker\"."
+      ]
+    }
+  },
+  "input_checks": {
+    "complete_windows_checked": 207145,
+    "passed": true
+  },
+  "selection_partition": "validation",
+  "fit_partition": "train",
+  "test_used_for_selection": false
+}

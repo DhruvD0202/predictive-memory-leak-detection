@@ -1,0 +1,43 @@
+{
+  "protocol_version": "review2-lstm-v1",
+  "dataset": "westermo_1",
+  "settings": {
+    "hidden_units": 32,
+    "layers": 1,
+    "batch_size": 64,
+    "evaluation_batch_size": 256,
+    "learning_rate": 0.001,
+    "max_epochs": 20,
+    "patience": 4,
+    "gradient_clip_norm": 1.0,
+    "seed": 123,
+    "antarex_training_stride": 12,
+    "westermo_training_stride": 4,
+    "cpu_threads": 2,
+    "forecast_clip_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+  "feature_names": [
+    "memory_pressure",
+    "swap_used_gib",
+    "cpu_user_rate",
+    "cpu_system_rate",
+    "cpu_iowait_rate",
+    "disk_read_bytes_per_second",
+    "disk_write_bytes_per_second",
+    "load_1m"
+  ],
+  "history_steps": 60,
+  "horizon_steps": 10,
+  "target_mean": 0.06612121703284901,
+  "target_std": 0.010242141357038617,
+  "training_origin_count": 14923,
+  "training_origin_sha256": "4fc18092b1d995292541c4d531ea79a4fb9cced8ae7dc4786df166eb7b458ae7",
+  "validation_origin_count": 12891,
+  "test_used_for_selection": false,
+  "runtime_device_type": "cpu",
+  "runtime_torch_version": "2.8.0+cpu"
+}

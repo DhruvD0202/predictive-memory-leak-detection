@@ -1,0 +1,35 @@
+{
+  "fit_partition": "train",
+  "training_rows": 59829,
+  "features": [
+    "memory_pressure",
+    "swap_used_gib",
+    "cpu_user_rate",
+    "cpu_system_rate",
+    "cpu_iowait_rate",
+    "disk_read_bytes_per_second",
+    "disk_write_bytes_per_second",
+    "load_1m"
+  ],
+  "removed_training_constant_features": [],
+  "mean": {
+    "memory_pressure": 0.06612121703284901,
+    "swap_used_gib": 0.00025650196821112696,
+    "cpu_user_rate": 0.06089842548878239,
+    "cpu_system_rate": 0.034270047768060134,
+    "cpu_iowait_rate": 0.010512446701289596,
+    "disk_read_bytes_per_second": 1281.562926875004,
+    "disk_write_bytes_per_second": 41303.41600943645,
+    "load_1m": 0.13123301409015695
+  },
+  "std": {
+    "memory_pressure": 0.010242141357038617,
+    "swap_used_gib": 0.0002493398094758568,
+    "cpu_user_rate": 0.08007064471939472,
+    "cpu_system_rate": 0.021794926088596445,
+    "cpu_iowait_rate": 0.01607825415697755,
+    "disk_read_bytes_per_second": 82725.60120918645,
+    "disk_write_bytes_per_second": 399930.8906729152,
+    "load_1m": 0.20948250203940882
+  }
+}

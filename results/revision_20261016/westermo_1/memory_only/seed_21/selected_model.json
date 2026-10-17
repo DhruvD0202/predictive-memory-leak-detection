@@ -1,0 +1,64 @@
+{
+  "dataset": "westermo_1",
+  "config_hash": "635eee3934d1cbfa370c2ecd8564baf21987b6f2934115f5be4b33e49e322654",
+  "best_epoch": 13,
+  "epochs_run": 17,
+  "stop_reason": "validation_patience",
+  "best_validation_rmse_fraction": 0.0028883834409452695,
+  "training_origin_count": 14923,
+  "validation_origin_count": 12891,
+  "training_stride": 4,
+  "parameter_count": 4513,
+  "best_weight_sha256": "bd26f8e3f1940a52bda354ed7e4f240c2c6452400376e8061ad24819bed53964",
+  "training_seconds_including_validation": 60.149808699963614,
+  "configuration": {
+    "protocol_version": "review2-lstm-v1",
+    "dataset": "westermo_1",
+    "settings": {
+      "hidden_units": 32,
+      "layers": 1,
+      "batch_size": 64,
+      "evaluation_batch_size": 256,
+      "learning_rate": 0.001,
+      "max_epochs": 20,
+      "patience": 4,
+      "gradient_clip_norm": 1.0,
+      "seed": 21,
+      "antarex_training_stride": 12,
+      "westermo_training_stride": 4,
+      "cpu_threads": 2,
+      "forecast_clip_range": [
+        0.0,
+        1.0
+      ]
+    },
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "feature_names": [
+      "memory_pressure"
+    ],
+    "history_steps": 60,
+    "horizon_steps": 10,
+    "target_mean": 0.06612121703284901,
+    "target_std": 0.010242141357038617,
+    "training_origin_count": 14923,
+    "training_origin_sha256": "4fc18092b1d995292541c4d531ea79a4fb9cced8ae7dc4786df166eb7b458ae7",
+    "validation_origin_count": 12891,
+    "test_used_for_selection": false,
+    "runtime_device_type": "cpu",
+    "runtime_torch_version": "2.8.0+cpu"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "torch": "2.8.0+cpu",
+    "matplotlib": "3.10.8",
+    "device_type": "cpu",
+    "device_name": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "cuda": null,
+    "cudnn": null,
+    "deterministic_algorithms": true,
+    "cpu_threads": 2
+  },
+  "test_used_for_selection": false
+}

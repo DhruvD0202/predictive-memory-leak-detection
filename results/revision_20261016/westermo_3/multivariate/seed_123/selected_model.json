@@ -1,0 +1,71 @@
+{
+  "dataset": "westermo_3",
+  "config_hash": "843192246c95fdd7ba93005841c73477928abe4e36a00353c29ef59792f13cb1",
+  "best_epoch": 11,
+  "epochs_run": 15,
+  "stop_reason": "validation_patience",
+  "best_validation_rmse_fraction": 0.005993460688207663,
+  "training_origin_count": 15103,
+  "validation_origin_count": 12891,
+  "training_stride": 4,
+  "parameter_count": 5409,
+  "best_weight_sha256": "596405d92fd5f92a40aaffcfe378b59e59b2435d2ad2a2ccab49b4145474991b",
+  "training_seconds_including_validation": 28.76719300003606,
+  "configuration": {
+    "protocol_version": "review2-lstm-v1",
+    "dataset": "westermo_3",
+    "settings": {
+      "hidden_units": 32,
+      "layers": 1,
+      "batch_size": 64,
+      "evaluation_batch_size": 256,
+      "learning_rate": 0.001,
+      "max_epochs": 20,
+      "patience": 4,
+      "gradient_clip_norm": 1.0,
+      "seed": 123,
+      "antarex_training_stride": 12,
+      "westermo_training_stride": 4,
+      "cpu_threads": 2,
+      "forecast_clip_range": [
+        0.0,
+        1.0
+      ]
+    },
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "feature_names": [
+      "memory_pressure",
+      "swap_used_gib",
+      "cpu_user_rate",
+      "cpu_system_rate",
+      "cpu_iowait_rate",
+      "disk_read_bytes_per_second",
+      "disk_write_bytes_per_second",
+      "load_1m"
+    ],
+    "history_steps": 60,
+    "horizon_steps": 10,
+    "target_mean": 0.12775583536610155,
+    "target_std": 0.02476637568082177,
+    "training_origin_count": 15103,
+    "training_origin_sha256": "96270cba0200a83edd1008bfe078dcb52b906b585d2cc8febb1079ee3d343f95",
+    "validation_origin_count": 12891,
+    "test_used_for_selection": false,
+    "runtime_device_type": "cpu",
+    "runtime_torch_version": "2.8.0+cpu"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "torch": "2.8.0+cpu",
+    "matplotlib": "3.10.8",
+    "device_type": "cpu",
+    "device_name": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "cuda": null,
+    "cudnn": null,
+    "deterministic_algorithms": true,
+    "cpu_threads": 2
+  },
+  "test_used_for_selection": false
+}

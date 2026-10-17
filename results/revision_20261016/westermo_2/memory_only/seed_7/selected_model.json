@@ -1,0 +1,64 @@
+{
+  "dataset": "westermo_2",
+  "config_hash": "d90c28a5d9baa59930ca4150dd513fcf8a910c1d161224a2bcf75c5868a2edc7",
+  "best_epoch": 19,
+  "epochs_run": 20,
+  "stop_reason": "max_epochs",
+  "best_validation_rmse_fraction": 0.0017154814365189209,
+  "training_origin_count": 15103,
+  "validation_origin_count": 12891,
+  "training_stride": 4,
+  "parameter_count": 4513,
+  "best_weight_sha256": "fa970b638a155dbd4b6b799b4deeb2dcfdfb6ff1e0e0f37e088c644266559a41",
+  "training_seconds_including_validation": 36.10873369996261,
+  "configuration": {
+    "protocol_version": "review2-lstm-v1",
+    "dataset": "westermo_2",
+    "settings": {
+      "hidden_units": 32,
+      "layers": 1,
+      "batch_size": 64,
+      "evaluation_batch_size": 256,
+      "learning_rate": 0.001,
+      "max_epochs": 20,
+      "patience": 4,
+      "gradient_clip_norm": 1.0,
+      "seed": 7,
+      "antarex_training_stride": 12,
+      "westermo_training_stride": 4,
+      "cpu_threads": 2,
+      "forecast_clip_range": [
+        0.0,
+        1.0
+      ]
+    },
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "feature_names": [
+      "memory_pressure"
+    ],
+    "history_steps": 60,
+    "horizon_steps": 10,
+    "target_mean": 0.05521852076364062,
+    "target_std": 0.009050384630542283,
+    "training_origin_count": 15103,
+    "training_origin_sha256": "96270cba0200a83edd1008bfe078dcb52b906b585d2cc8febb1079ee3d343f95",
+    "validation_origin_count": 12891,
+    "test_used_for_selection": false,
+    "runtime_device_type": "cpu",
+    "runtime_torch_version": "2.8.0+cpu"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "torch": "2.8.0+cpu",
+    "matplotlib": "3.10.8",
+    "device_type": "cpu",
+    "device_name": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "cuda": null,
+    "cudnn": null,
+    "deterministic_algorithms": true,
+    "cpu_threads": 2
+  },
+  "test_used_for_selection": false
+}

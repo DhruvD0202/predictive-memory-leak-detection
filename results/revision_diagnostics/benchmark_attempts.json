@@ -1,0 +1,17 @@
+{
+  "initial_attempt": {
+    "date": "2026-10-16",
+    "environment": "Restricted execution environment",
+    "live_samples_collected": 0,
+    "error": "PdhAddEnglishCounterW failed. Performance counters may be disabled.",
+    "used_for_reported_timing_or_accuracy": false
+  },
+  "follow_up_check": {
+    "environment": "Same machine outside the execution sandbox",
+    "memory_swap_disk_and_cpu_reads_succeeded": true
+  },
+  "unrestricted_benchmark": {
+    "executed": false,
+    "reason": "Automatic approval review could not complete because of its usage limit. This was not an unsafe-action determination."
+  }
+}

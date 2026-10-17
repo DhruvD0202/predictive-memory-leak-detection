@@ -1,0 +1,44 @@
+{
+  "dataset": "westermo_2",
+  "grid_rows": 86401,
+  "valid_rows": 86393,
+  "invalid_rows": 8,
+  "cadence_seconds": 30,
+  "history_steps": 60,
+  "horizon_steps": 10,
+  "forecast_horizon_seconds": 300,
+  "feature_names": [
+    "memory_pressure",
+    "cpu_user_rate",
+    "cpu_system_rate",
+    "cpu_iowait_rate",
+    "disk_read_bytes_per_second",
+    "disk_write_bytes_per_second",
+    "load_1m"
+  ],
+  "removed_training_constant_features": [
+    "swap_used_gib"
+  ],
+  "split_time_boundaries": [
+    1814400.7,
+    2203200.85
+  ],
+  "window_counts": {
+    "train": 60412,
+    "validation": 12891,
+    "test": 12745
+  },
+  "valid_row_counts": {
+    "train": 60481,
+    "validation": 12960,
+    "test": 12952
+  },
+  "labeled_leak_origin_counts": null,
+  "scaled_feature_array_bytes": 2419228,
+  "quality": {
+    "missing_or_unavailable_grid_rows": 8,
+    "rule": "No filling. Original gaps split the model sequences."
+  },
+  "label_policy": "unlabeled; no leak precision/recall available",
+  "model_training_performed": false
+}

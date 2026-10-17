@@ -1,0 +1,185 @@
+% SPIN 2027 initial submission: anonymous, single column, no page numbers.
+% Official Springer proceedings package: LLNCS v2.25, 03 September 2026.
+% Compile with XeLaTeX and BibTeX (Overleaf runs the necessary passes).
+\documentclass{llncs}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage[varvw]{newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,array}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\emergencystretch=1em
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\graphicspath{{figures/}}
+\pagestyle{empty}
+\begin{document}
+\title{Memory-Pressure Forecasting and Growth-Based Warnings: An Empirical Study\thanks{AI assistance was used in preparing this manuscript and its supporting code. The disclosure at the end describes its scope.}}
+\author{}
+\institute{}
+\maketitle
+\thispagestyle{empty}
+\begin{abstract}
+\input{abstract.tex}
+\keywords{Memory pressure \and Time-series forecasting \and LSTM \and Warning evaluation \and Operating-system telemetry}
+\end{abstract}
+
+\section{Introduction}
+An operating system can report growing memory use without identifying its cause. A larger workload, a cache, or an application retaining allocations can produce similar aggregate measurements. A forecast of memory availability is therefore a resource estimate, not proof of a memory leak. This distinction matters when a forecasting model is used to trigger operational warnings.
+
+We study whether a more accurate short-horizon forecast gives more useful warnings on recorded telemetry. The target is the memory-pressure proxy
+\begin{equation}
+y_t=1-\frac{\operatorname{available\ memory}_t}{\operatorname{total\ physical\ memory}_t}.
+\label{eq:target}
+\end{equation}
+It measures the fraction of RAM unavailable for immediate use. Models predict $y_{t+h}$ using observations through time $t$. Warning rules then assess recent growth, optionally requiring the forecast to indicate continued growth. These two tasks are evaluated separately.
+
+The study uses controlled Antarex fault injections and three unlabeled Westermo industrial test-system recordings. Its contribution is empirical: (1) a reproducible comparison of forecast error and warning coverage under the same temporal evaluation protocol; (2) a matched five-seed comparison of memory-only and multivariate LSTMs; and (3) an explanation of a missed injected event using the saved decision scores. We also measure the local replay and inference prototype. We do not propose a new neural architecture, diagnose allocation-level causes, or demonstrate advance warning before memory exhaustion.
+
+\section{Related Work and Research Gap}
+Software-aging research links resource behavior, workload and failure. Measurement-based models estimate resource exhaustion~\cite{ref8}; web-server experiments examine aging under workload~\cite{ref9}. Surveys organize aging, rejuvenation and online failure-prediction methods~\cite{ref10,ref22}. These works establish the research direction; they do not imply that every rising RAM trace is a leak. Zhao et al. use injected leaks to study accelerated failures~\cite{ref11}, illustrating the additional outcome evidence needed to discuss exhaustion.
+
+Different observation levels support different conclusions. Valgrind provides dynamic instrumentation~\cite{ref12}; adaptive profiling and methods using garbage-collector information inspect heap behavior~\cite{ref14,ref17}. Beneder et al. examine runtime measurements on embedded Linux~\cite{ref19}. Differential aging analysis compares software versions~\cite{ref20}. RESIN combines detection, diagnosis and mitigation in production infrastructure~\cite{ref21}. Our aggregate telemetry has neither heap-allocation traces nor paired software versions, so those diagnostic claims are outside its scope.
+
+Jindal et al. detect leak patterns from memory-utilization histories using LBR and Precog variants~\cite{ref1}. Assi et al. compare Box--Jenkins and LSTM forecasts for Windows performance~\cite{ref2}. Statistical forecasting and simple benchmarks remain essential comparisons~\cite{ref24,ref25}. LSTM provides a learned sequence model~\cite{ref26}, but architecture studies and strong linear baselines caution against assuming that complexity ensures better forecasts~\cite{ref28,ref32}. Hybrid ARIMA--neural forecasting~\cite{ref29}, software-fault ARIMA--LSTM forecasting~\cite{ref30}, and hLSTM-Aging~\cite{ref31} use different model combinations. We evaluate separate predictors and do not reproduce their architectures or compare scores from different tasks.
+
+Table~\ref{tab:related} summarizes the closest methodological contrasts. Its final column describes the boundary relevant to this study, rather than asserting that an earlier method is generally inadequate.
+\begin{table}[htbp]
+\caption{Selected earlier studies and the evidence they provide. Table prepared with OpenAI Codex assistance (GPT-6-based, October 2026).}
+\label{tab:related}
+\small
+\begin{tabularx}{\textwidth}{@{}p{2.15cm}YY@{}}
+\toprule
+Study & Observation and purpose & Boundary for the present comparison\\
+\midrule
+Jindal et al.~\cite{ref1} & Utilization histories; LBR/Precog leak-pattern methods & Their labels and algorithms differ from our injected-event and forecast-warning protocol.\\
+Assi et al.~\cite{ref2} & Windows counters; ARIMA/LSTM forecast errors & Forecast-error ranking alone does not answer our timestamp/event warning question.\\
+Zhao et al.~\cite{ref11} & Injected leaks; accelerated failure study & Failure outcomes are available there; our audited block has no exhaustion outcome.\\
+Lou et al.~\cite{ref21} & Production service with detection, diagnosis and mitigation & Requires evidence beyond our aggregate replay and growth warnings.\\
+Battisti et al.~\cite{ref31} & Hybrid neural model for software-aging forecasts & Different architecture and target setting; its scores cannot rank our warning rules.\\
+Kim et al.~\cite{ref44} & Evaluation of time-series anomaly detection & Warns about point adjustment; we retain timestamp scores and separate event counts.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Assumptions and benchmark quality affect anomaly-detection results~\cite{ref40,ref45,ref46}. Forecast errors and warning scores assess different outcomes~\cite{ref41,ref42,ref43}. Chronological holdouts and training-only scaling make the information available at each prediction explicit~\cite{ref36,ref39}.
+
+\noindent\textbf{Research gap.} On these recordings, it remains unclear whether lower forecast error improves growth-warning coverage, false-alarm frequency and recognition delay under one temporal protocol. We address this question using matched origins, injected-event labels, repeated seeds and a memory-only ablation. Unlabeled workload data support forecasting comparisons, not leak-detection claims.
+
+\section{Data and Experimental Protocol}
+\subsection{Dataset Choice and Forecast Horizons}
+Antarex was chosen because it combines real machine telemetry with recorded, controlled fault injections~\cite{ref3,ref4,ref5}. The experiment uses the complete recovered CPU-MEM\_mono block, approximately 12 days long, containing 228 injected leak episodes. Only the metric streams needed by this pipeline were selected. The nested archive was verified using recorded size and CRC; the full outer archive was not acquired, and its published MD5 was not verified. This is a defined subset, not validation of the entire Antarex release.
+
+Westermo supplies a complementary industrial workload: 19 test systems monitored twice per minute for one month~\cite{ref6}. All 19 CSVs were acquired and checked against repository metadata; systems 1--3 were selected in numerical order for this pilot. Each is modeled separately. They have no confirmed memory-leak labels, so their contribution is forecasting evaluation and descriptive alarm counts only. Both sources are available under CC BY 4.0, with their attribution retained.
+
+Antarex is aligned to a five-second grid; Westermo retains its native 30-second cadence. The preset horizons are 12 Antarex steps (60 s) and 10 Westermo steps (300 s). These choices keep both forecasts roughly ten observations ahead while respecting each source's cadence. They are practical pilot settings, not validated optimal warning lead times. The same 60-observation history spans 295 s and 1770 s respectively. Consequently, error magnitudes across sources should not be interpreted as a controlled comparison at an equal physical horizon.
+
+\begin{table}[htbp]
+\caption{Recording scope and eligible samples. A: Antarex; W1--W3: Westermo systems. Train is the eligible count before LSTM training stride. Table formatted with OpenAI Codex assistance (GPT-6-based, October 2026).}
+\label{tab:data}
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Recording & Grid rows & Train & Validation & Test & Inputs\\
+\midrule
+A &207361&145081&31032&31032&7\\
+W1&86401&59691&12891&12891&8\\
+W2&86401&60412&12891&12745&7\\
+W3&86401&60412&12891&12891&8\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Causal Preparation and Feature Availability}
+Antarex uses the most recent source observation at or before each grid time, with maximum age 2.1 s. Counter differences produce page-fault, swap and disk rates using actual elapsed time. Counter resets, nonpositive intervals and intervals above 7.2 s invalidate a rate. CPU features use non-overlapping tick categories. Westermo's published CPU and disk rates are retained without differentiating them again. Missing values and gaps are not interpolated.
+
+The retained Antarex inputs are memory pressure, anonymous and committed memory, busy and I/O-wait CPU fractions, and total and major page-fault rates. Swap and monitored disk streams are constant in its training partition and are removed. Westermo uses memory pressure, user/system/I/O-wait CPU rates, disk read/write rates, one-minute load and swap use; system 2 drops constant swap. Westermo has no page-fault fields. A training standard deviation at most $10^{-12}$ identifies constant inputs. Removing them avoids undefined standardization and extra uninformative inputs; it does not show that disk or swap is useless under other workloads. The feature ablation below evaluates the retained feature set as a group, not each feature's causal effect.
+
+Each recording is split by time extent into 70\% training, 15\% validation and 15\% test. Boundaries are set before constructing windows. Training means and population standard deviations scale later data. A window is retained only when its history and target lie in one valid contiguous segment and one partition. The first Antarex row in each partition is excluded to avoid rates depending on a preceding partition. Westermo systems 1 and 2 contain 652 and 8 missing grid rows respectively. The memory-only ablation uses exactly the same coverage mask as the multivariate model, so sample availability cannot account for their difference.
+
+Antarex injection starts and ends define half-open labeled intervals $[s,e)$. They are checked against supplied fault labels. IDs, timestamps, commands and fault labels are never predictor inputs. Labels confirm the controlled injection task; there are no process-allocation measurements establishing naturally occurring leaks. A non-leak label can also coincide with another injected fault and does not certify a healthy system.
+
+\subsection{Predictors and Repeated Runs}
+Persistence repeats the latest memory pressure. Linear trend extends a least-squares line fitted to 12, 30 or 60 recent values; validation RMSE selects the window. Restricted ARIMA uses orders $(1,1,0)$, $(3,1,0)$ and $(5,1,0)$ without drift. Parameters are estimated by Yule--Walker on the longest contiguous training segment, and validation RMSE selects the order. This limited comparison does not implement a full Box--Jenkins search. Forecasts are clipped to $[0,1]$ for scoring.
+
+Both LSTM variants use one unidirectional layer with 32 hidden units and a linear output from its final hidden state. The recurrent state resets for each window. Training uses standardized-target mean squared error, Adam at 0.001, batch size 64 and gradient clipping at 1.0. Training retains every twelfth eligible Antarex origin and every fourth Westermo origin; validation/test use all eligible origins. The best validation-RMSE checkpoint is selected from at most 20 epochs, with patience four. There is no dropout, bidirectional layer or hybrid ARIMA stage.
+
+The original September Colab experiment used seed 42. The revision trains both feature variants from scratch with seeds 7, 21, 42, 84 and 123 on the same local CPU runtime: 40 runs in total. All checkpoints are frozen before the new test scores are computed. Every seed is reported, with mean and sample standard deviation (SD). This is variation from training randomness on fixed data, not uncertainty across new machines. Memory-only LSTM matches the baselines' input variable; model fitting and training sample use still differ. Fixed hidden width yields 4513 parameters for memory-only, versus 5281 or 5409 for seven or eight inputs. No new labeled recording is added.
+
+\section{Warning Procedure and Evaluation}
+\subsection{Growth Rules and Threshold Calibration}
+Let $g_t$ be the least-squares slope over the latest 12 memory-pressure observations, expressed in percentage points (pp) of RAM per minute. For forecast $f_m(t)$ with horizon $h$ in seconds, define
+\begin{equation}
+q_m(t)=\frac{100[f_m(t)-y_t]}{h/60},\qquad
+s_m(t)=\min\{g_t,q_m(t)\}.
+\label{eq:score}
+\end{equation}
+Trend-only uses $s(t)=g_t$. Forecast-assisted warnings require both observed and forecast growth. A warning becomes active on the third consecutive eligible score at or above its threshold; one failure clears it. Gaps and split boundaries reset the count. Three readings suppress isolated excursions but add 10 s of confirmation at Antarex cadence and 60 s at Westermo cadence. This was a fixed engineering choice, not an optimized duration or a statistical-significance test. Mann--Kendall testing and autocorrelation corrections are alternative future comparisons~\cite{ref33,ref35}.
+
+Each rule selects independently from $\{0.01,0.025,0.05,0.1,0.2,0.4,0.8,1.6,3.2\}$ pp/min and a disabled option. Antarex validation point F1 is maximized, with ties resolved by fewer false-positive timestamps and then the higher threshold; disabled ranks highest in the last tie-break. The original thresholds were 0.8 for trend-only and 0.4 for LSTM-assisted. Every ARIMA candidate produced zero validation warning timestamps after confirmation, so the disabled option won the tie. This describes the selected no-drift ARIMA and rule, not a general inability of ARIMA to support warnings. Each new LSTM run recalibrates on validation only; original results are preserved separately.
+
+Algorithm~\ref{alg:pipeline} separates archived-model evaluation from the live monitor. The live branch records OS telemetry every five seconds using \texttt{psutil}, computes the same memory proxy and an exploratory observed-growth rule, and exports measurements. It does not apply the archived LSTM to incompatible Windows features.
+\begin{algorithm}[t]
+\caption{Telemetry forecasting and causal warning generation}
+\label{alg:pipeline}
+\begin{algorithmic}[1]
+\Require Archived telemetry or live OS sampler; history 60; trend history 12
+\If{archived experiment}
+  \State Align past observations; derive rates; retain gaps and label provenance
+  \State Split chronologically; fit scalers on training rows; form valid windows
+  \State Fit predictors on training data; select checkpoints on validation RMSE
+  \State Select warning thresholds using validation labels; freeze choices
+\Else
+  \State Initialize five-second sampler and exploratory trend threshold
+\EndIf
+\For{each new observation at time $t$}
+  \State Read available telemetry; compute $y_t$ using Eq.~\ref{eq:target}
+  \State Reset history/count after a gap; wait until history is sufficient
+  \State Compute observed slope $g_t$ from the last 12 readings
+  \If{compatible archived-model inputs}
+    \State Scale history with saved training statistics; predict $f_m(t)$
+    \State Set $s_t=g_t$ for trend-only or Eq.~\ref{eq:score} for assisted rules
+  \Else
+    \State Set $s_t=g_t$; do not substitute invented model inputs
+  \EndIf
+  \State Update consecutive qualifying count; warn when count $\geq3$
+  \State Save forecast, score, warning and transition into alarm state
+\EndFor
+\State Score stored forecasts/decisions only where suitable outcomes exist
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{What Each Measure Means}
+MAE is the average absolute difference between predicted and observed future pressure. RMSE squares the errors before averaging and taking the square root, giving large mistakes greater weight~\cite{ref41}. Both are reported in pp of total RAM. An RMSE of 1.5 pp describes forecast deviation on this scale; it is neither 98.5\% detection accuracy nor a bound on every error.
+
+At each eligible origin, TP means a warning during a recorded leak, FP a warning outside one, and FN an active leak without a warning. Precision $=\mathrm{TP}/(\mathrm{TP+FP})$ asks how many warned timestamps are leak-active. Recall $=\mathrm{TP}/(\mathrm{TP+FN})$ asks how much labeled leak time is covered. F1 $=2\mathrm{TP}/(2\mathrm{TP+FP+FN})$ balances these two aspects. Zero-denominator ratios remain undefined. Imbalance makes these measures more informative than overall accuracy alone~\cite{ref42}.
+
+An alarm start is an inactive-to-active transition, including activation after a gap. False alarm starts per non-leak hour (FA/h) divide starts outside injected-leak intervals by observed non-leak exposure: eligible non-leak origins times cadence. Persistent false warnings are also reported as false-positive minutes. These are distinct costs.
+
+Event recognition requires a new alarm start inside a fully covered injected interval, with a covered sample immediately before it. A prior alarm does not count again. Event recall is recognized events divided by eligible events; detection delay is first alarm time minus injection start. Medians and 90th percentiles describe detected events only, so missed-event counts accompany them. Detecting one timestamp does not make every timestamp in that interval correct~\cite{ref43,ref44}. These delays measure recognition after injection begins, not warning lead time before exhaustion.
+
+\section{Results and Interpretation}
+\input{results.tex}
+
+\section{Limitations, Reproducibility and Conclusion}
+The expanded study still uses one labeled Antarex recording, controlled injections, overlapping windows and reused holdouts. Earlier test forecasts were inspected during development before the original warning protocol was finalized. Five-seed repetition measures optimization variability; it does not remove that development dependence. The multivariate/memory-only comparison controls history, origins and training settings but changes input dimension and parameter count. It cannot attribute improvement to an individual feature. Selected horizons, thresholds and confirmation length also require independent validation.
+
+Antarex never reaches the illustrative 80\% pressure level in the audited block; its peak is approximately 42.24\%. No exhaustion or crash outcome is observed. The study therefore makes no claim of warning before memory runs out. Such a claim needs labeled trials with resource limits, observed depletion times and warning lead times, including failures to warn. Westermo cannot establish real-leak detection because its leak labels are unknown. Additional labeled recordings, process-level allocation evidence, matched multivariate statistical baselines, independent temporal holdouts and longer compatible live trials remain future work.
+
+\paragraph{Reproducibility.} The project retains preprocessing, baseline, LSTM and warning code, four executable notebooks, model configurations, weights, origin indices, checksums and scoring scripts. The revision adds a fixed seed/feature protocol, per-run forecasts and warning outcomes, a missed-event analysis and a prototype benchmark. Reproduction uses the verified input package, runs the seed study, then independently checks saved predictions and warning scores. The repository is currently private; these materials are not claimed to be publicly accessible. An anonymized supplementary code package accompanies this revision for author review, while raw/derived data packages require separate access. Public dataset sources are cited above; a public code release or reviewer-access route must be arranged before claiming open reproducibility.
+
+\begin{samepage}
+\paragraph{Conclusion.} Lower forecasting error and better warning performance are different outcomes. LSTM reduced RMSE relative to restricted ARIMA, but trend-only covered more labeled time and had higher warning F1. The original LSTM precision/false-alarm benefit was not consistent across seeds. Extra features improved mean RMSE on only two of four recordings, and the missed-event scores exposed a failed forecast-growth gate. These findings support evaluating forecast accuracy and operational warnings separately. They do not establish production leak diagnosis or pre-exhaustion warning; independent labeled trials, process measurements and longer live evaluation are the next tests.
+\end{samepage}
+
+\subsubsection{Disclosure of AI Assistance}
+OpenAI Codex, a GPT-6-based assistant accessed during September--October 2026, assisted with code development, experimental analysis, manuscript drafting, revision and formatting. Numerical results were obtained from executed code and saved artifacts. AI assistance also supported plotting and table preparation, as noted in captions. The authors are responsible for checking the interpretation, citations and final submitted text.
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+\end{document}

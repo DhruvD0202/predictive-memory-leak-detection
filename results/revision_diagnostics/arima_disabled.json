@@ -1,0 +1,68 @@
+{
+  "arima_validation_candidates": [
+    {
+      "threshold_pp_per_minute": 0.01,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": 0.025,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": 0.05,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": 0.1,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": 0.2,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": 0.4,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": 0.8,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": 1.6,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": 3.2,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    },
+    {
+      "threshold_pp_per_minute": null,
+      "tp": 0,
+      "fp": 0,
+      "f1": 0.0
+    }
+  ],
+  "max_arima_forecast_growth_pp_per_minute": 0.6086930541070873,
+  "maximum_joint_growth_score_pp_per_minute": 0.1006979746595068,
+  "smallest_positive_candidate_threshold": 0.01,
+  "explanation": "All candidates have zero true-positive warning timestamps; the disabled option wins the recorded F1/false-positive/threshold tie-break."
+}

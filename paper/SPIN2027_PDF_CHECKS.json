@@ -1,0 +1,149 @@
+{
+  "page_count": 14,
+  "references": 36,
+  "first_page_disclosure": true,
+  "anonymous_text_and_metadata": true,
+  "no_overflow_or_unresolved_citations": true,
+  "page_geometry": [
+    {
+      "page": 1,
+      "words": 362,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76463,
+      "content_x_max": 480.59811968000014,
+      "content_y_min": 114.39304417999995,
+      "content_y_max": 664.8680235919999
+    },
+    {
+      "page": 2,
+      "words": 441,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76462999999998,
+      "content_x_max": 480.59931831999995,
+      "content_y_min": 117.99752288000002,
+      "content_y_max": 665.0842228799997
+    },
+    {
+      "page": 3,
+      "words": 404,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76462999999998,
+      "content_x_max": 480.59926143999996,
+      "content_y_min": 114.87622108000005,
+      "content_y_max": 665.0842428799997
+    },
+    {
+      "page": 4,
+      "words": 442,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76462999999998,
+      "content_x_max": 480.60122999999993,
+      "content_y_min": 114.87622108000005,
+      "content_y_max": 665.08422288
+    },
+    {
+      "page": 5,
+      "words": 497,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76458999999997,
+      "content_x_max": 480.59773231999986,
+      "content_y_min": 115.83563000000004,
+      "content_y_max": 665.0842328799997
+    },
+    {
+      "page": 6,
+      "words": 410,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76460999999995,
+      "content_x_max": 480.59845064,
+      "content_y_min": 117.58906120000006,
+      "content_y_max": 665.0842228799999
+    },
+    {
+      "page": 7,
+      "words": 435,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76462999999998,
+      "content_x_max": 480.60011615999997,
+      "content_y_min": 117.99752288000002,
+      "content_y_max": 665.0842228799999
+    },
+    {
+      "page": 8,
+      "words": 295,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76462999999998,
+      "content_x_max": 480.5977523200001,
+      "content_y_min": 118.80580661967474,
+      "content_y_max": 665.08422288
+    },
+    {
+      "page": 9,
+      "words": 379,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76462999999995,
+      "content_x_max": 480.59776231999996,
+      "content_y_min": 117.99752288000002,
+      "content_y_max": 566.73010288
+    },
+    {
+      "page": 10,
+      "words": 165,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76462999999995,
+      "content_x_max": 480.59775232000015,
+      "content_y_min": 159.16728174318575,
+      "content_y_max": 625.8177435919999
+    },
+    {
+      "page": 11,
+      "words": 436,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76463,
+      "content_x_max": 480.59775232,
+      "content_y_min": 117.87797120000005,
+      "content_y_max": 665.0842328799996
+    },
+    {
+      "page": 12,
+      "words": 405,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76462999999998,
+      "content_x_max": 480.59775432000026,
+      "content_y_min": 117.99752288000002,
+      "content_y_max": 664.8680235919999
+    },
+    {
+      "page": 13,
+      "words": 455,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76463,
+      "content_x_max": 480.59775232000015,
+      "content_y_min": 118.777597592,
+      "content_y_max": 664.868033592
+    },
+    {
+      "page": 14,
+      "words": 317,
+      "width_pt": 612,
+      "height_pt": 792,
+      "content_x_min": 134.76463,
+      "content_x_max": 480.5977523200004,
+      "content_y_min": 118.777597592,
+      "content_y_max": 478.4289035919999
+    }
+  ]
+}

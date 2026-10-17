@@ -1,0 +1,64 @@
+{
+  "dataset": "antarex_mono",
+  "config_hash": "731b4843d48c376ef383c84ca8cc12742823a779649c586947d91e887f773062",
+  "best_epoch": 9,
+  "epochs_run": 13,
+  "stop_reason": "validation_patience",
+  "best_validation_rmse_fraction": 0.009764395792861601,
+  "training_origin_count": 12091,
+  "validation_origin_count": 31032,
+  "training_stride": 12,
+  "parameter_count": 4513,
+  "best_weight_sha256": "2b56af647996efdcf8c272b355b73bfe756f1f3848d03c52cfba15aa1fbffc7e",
+  "training_seconds_including_validation": 44.25364580002497,
+  "configuration": {
+    "protocol_version": "review2-lstm-v1",
+    "dataset": "antarex_mono",
+    "settings": {
+      "hidden_units": 32,
+      "layers": 1,
+      "batch_size": 64,
+      "evaluation_batch_size": 256,
+      "learning_rate": 0.001,
+      "max_epochs": 20,
+      "patience": 4,
+      "gradient_clip_norm": 1.0,
+      "seed": 123,
+      "antarex_training_stride": 12,
+      "westermo_training_stride": 4,
+      "cpu_threads": 2,
+      "forecast_clip_range": [
+        0.0,
+        1.0
+      ]
+    },
+    "prepared_package_sha256": "287ffaa139819f78f493e540e527c56ac0c240477034c76fa8b258b94d5e6bb2",
+    "feature_names": [
+      "memory_pressure"
+    ],
+    "history_steps": 60,
+    "horizon_steps": 12,
+    "target_mean": 0.024499973733366192,
+    "target_std": 0.02323501373846276,
+    "training_origin_count": 12091,
+    "training_origin_sha256": "3142f0b80327feaa16bd33e99fb1edf8a7bc7fc130b53789b1f2700aae7d6e4f",
+    "validation_origin_count": 31032,
+    "test_used_for_selection": false,
+    "runtime_device_type": "cpu",
+    "runtime_torch_version": "2.8.0+cpu"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "torch": "2.8.0+cpu",
+    "matplotlib": "3.10.8",
+    "device_type": "cpu",
+    "device_name": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "cuda": null,
+    "cudnn": null,
+    "deterministic_algorithms": true,
+    "cpu_threads": 2
+  },
+  "test_used_for_selection": false
+}

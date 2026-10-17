@@ -1,0 +1,1611 @@
+{
+  "completed_utc": "2026-10-16T07:58:20.228654+00:00",
+  "models": 40,
+  "files": [
+    {
+      "path": "antarex_mono/memory_only/seed_123/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "2b56af647996efdcf8c272b355b73bfe756f1f3848d03c52cfba15aa1fbffc7e"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/configuration.json",
+      "bytes": 1031,
+      "sha256": "e05197b5fd1ef7fc941515ef115198e2aaca6d5daa78201361c83470f4cef370"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/selected_model.json",
+      "bytes": 2054,
+      "sha256": "21f1fe5999603f6275a928636817faa1c79ed896a61cbc9e6639e4e4621fe9d1"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/test_predictions.csv.gz",
+      "bytes": 765700,
+      "sha256": "3bb2c1683408f4181ace12c2ad3ce51475adc3998ca91666050a4340e7c85673"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/test_warnings.csv.gz",
+      "bytes": 1285207,
+      "sha256": "51a56d2a2d14369210edb726189850b428978a625ccb50edfab730aba3b506fa"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/training_history.csv",
+      "bytes": 1776,
+      "sha256": "08c2ebd369ac65bb699c0715fbda00124bf1e2d58448213d3c7ea2477784a359"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/validation_predictions.csv.gz",
+      "bytes": 751927,
+      "sha256": "f733cc5b5fdbee50ca4d25b0203d295f6375d6b21aa4be2badab64ea7188339e"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/validation_warnings.csv.gz",
+      "bytes": 1261603,
+      "sha256": "3a7f3673305554cc2c003b24e78974f1bd0b07aa8d598aeba99bb74fd9fd0fb7"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_123/warning_selection_freeze.json",
+      "bytes": 631,
+      "sha256": "1a3c9f030a95146fe81bcdeabac65e1debaaba1e21dbc9f94402cc15f81e3734"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "98f48c2e923eb3fffbd9fca7c9606e2bd8f147ca379de191e8e4824b2d2ff7d2"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/configuration.json",
+      "bytes": 1030,
+      "sha256": "8f17171d63394baefb6e06376456df06c678fc75afa0ce1c9fd6417541e7ec7e"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/selected_model.json",
+      "bytes": 2053,
+      "sha256": "58028bf9f7730e00d06fb8346e76fe0969ec582faded78ce91a2be53a95e261f"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/test_predictions.csv.gz",
+      "bytes": 767700,
+      "sha256": "d944a9c41f50d9f698a83c3fa75530658323e0cad751781da8b34e0cb8e61a9d"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/test_warnings.csv.gz",
+      "bytes": 1285782,
+      "sha256": "42a10a7e51b3f48efc196efed6eaee7d68ef8a3025095ffa7511bcbacfc96544"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/training_history.csv",
+      "bytes": 1779,
+      "sha256": "7bcad784cad575170f41874ba3d702a87c1d091c411709713c92452fbd312c5d"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/validation_predictions.csv.gz",
+      "bytes": 757176,
+      "sha256": "9b4a4ad0b323e818b6af8e7f92a7b9f438462216c08e382d9729e5b37ffafba2"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/validation_warnings.csv.gz",
+      "bytes": 1265126,
+      "sha256": "5f947250fd497efdf1fe6cd7db4b3c9a3cb55410e5ee45764e7a6dfc273e86f8"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_21/warning_selection_freeze.json",
+      "bytes": 629,
+      "sha256": "6e230d1c4dbd69c71365970d1dac746d7b99d01ab75ee7a74e9e85d13995055b"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "364de4513c4504e06b77a9f94050ff3a33ff45bf4d630af616986881c86a47d8"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/configuration.json",
+      "bytes": 1030,
+      "sha256": "ad19add383e6a0b2644c44086bd6ffb27575fedbaec5395844c4925263d8f67f"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/selected_model.json",
+      "bytes": 2045,
+      "sha256": "a0e3c9e8fa8f2ad56cfe9b5a2f54a3fb513b95cb134eb869e810a15a5ffb3c83"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/test_predictions.csv.gz",
+      "bytes": 774512,
+      "sha256": "84583281b0b6d1300c5ce7fb4b9c1446c3baa663e521593f77554178f14b2045"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/test_warnings.csv.gz",
+      "bytes": 1290861,
+      "sha256": "f495456025db9405720bd7eca761841710987761f68b579b3969bd4f0c8d4f88"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/training_history.csv",
+      "bytes": 2629,
+      "sha256": "0cb8b531eb73e85afbf275ab6deb3490ee0aa2c37a2e4b0b6132f727cc03d820"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/validation_predictions.csv.gz",
+      "bytes": 765113,
+      "sha256": "cf6f3950db9161ab119c8163917dcef154910f8ef20e35ac8eaada1ff42bdc3c"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/validation_warnings.csv.gz",
+      "bytes": 1268147,
+      "sha256": "d83043c019d8a67229dd2dd2105ddc9bc13056c4097c8bf25ef0b7fe4507676b"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_42/warning_selection_freeze.json",
+      "bytes": 630,
+      "sha256": "92b29c24968b653dd7c4e0e9af82e0804531162f87b5c7414bd81f0042f52c3e"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "38d21f85d1eb5e41e27bb9e5796c7cbb61741c5de8c2d068b3ed11d4016d784d"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/configuration.json",
+      "bytes": 1029,
+      "sha256": "b1d062e5457265d9c3484f029165231fee7e36f5bd9790a2401bd3bed0b2380a"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/selected_model.json",
+      "bytes": 2044,
+      "sha256": "d9e2c569389599a9a3d64da454ec5a8faaffa6944cab0ab36c6b2ca720c8ef67"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/test_predictions.csv.gz",
+      "bytes": 778368,
+      "sha256": "a416930115a3b1588471ae0f6da1e96f8a4e1ac9c890befe3068f23fc5b3d94d"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/test_warnings.csv.gz",
+      "bytes": 1290690,
+      "sha256": "70aafdd77c9475d671b3c0c17e3346830cbcc6ad890210544a78ca0f813a14d4"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/training_history.csv",
+      "bytes": 2627,
+      "sha256": "8a5f749307f17ca33b1c5703c011a2514d4587a5cc76972f7ed5a3c46280043e"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/validation_predictions.csv.gz",
+      "bytes": 767051,
+      "sha256": "5f6a60582f2eb3ca292b6157832d1eed8b2e8dc351929ecec8cbfe6700211d4f"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/validation_warnings.csv.gz",
+      "bytes": 1265779,
+      "sha256": "d4cae74a60bd42badaa0d159046f4bc6c9ca3a1840de44aaa0e3a490e1921fa1"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_7/warning_selection_freeze.json",
+      "bytes": 630,
+      "sha256": "433d78666b68de4f54db6f5c6f5c771ce44e06c0553a8d52ac6f9954eaab5621"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "cbb909a56aa065045ff1d2ff54fb18bb2c460dc73ee9e03dceb523a7473e969c"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/configuration.json",
+      "bytes": 1030,
+      "sha256": "df489b18515b4b2164bdece532436ff6994e82b402f908f45b95b37f4e076eb7"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/selected_model.json",
+      "bytes": 2053,
+      "sha256": "e06675764488bdd22d7628779cf463219463b136cdc6c2979a9534df503efc8a"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/test_predictions.csv.gz",
+      "bytes": 765870,
+      "sha256": "415772fe288cfd7bfa6c6026f42c3f741f27c14691739e19bc824662096f2485"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/test_warnings.csv.gz",
+      "bytes": 1287785,
+      "sha256": "7ea5ce87d744c2a055212c58ee78824515c16cf2117910ed0e4ed705e7d736eb"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/training_history.csv",
+      "bytes": 1534,
+      "sha256": "5d318368b4ad4851e64164c8310c2f289fd6914380a06ec10b1f2dd6b76211aa"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/validation_predictions.csv.gz",
+      "bytes": 753788,
+      "sha256": "79c88804422384d5d7c9ff6ca54c89ce4fedd8c7a6d80e83efedee44c3ad0f36"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/validation_warnings.csv.gz",
+      "bytes": 1265105,
+      "sha256": "849bb8e2f6b118e1478356983f219e42e0f9f4d394d7204649e1bf0bb5834083"
+    },
+    {
+      "path": "antarex_mono/memory_only/seed_84/warning_selection_freeze.json",
+      "bytes": 631,
+      "sha256": "924470b45d06c1b6ada990e2f95e3348b872a36f7b8d34150a797d81cfae1eb8"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "9bed36d38805d5849f2693f9a68ba6e34abb072bd15828879c6aaef0a8558243"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/configuration.json",
+      "bytes": 1211,
+      "sha256": "402728f8a68667c949dfc3a9e6545515527120460b1ac7f9bbc97240ecdd8111"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/selected_model.json",
+      "bytes": 2246,
+      "sha256": "6070c640cb0701e78949712615a8ab225f8e4d3d54a1d6888ce81cfc0c9653f1"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/test_predictions.csv.gz",
+      "bytes": 802930,
+      "sha256": "600e1a7410aac24d79ba66f34a3b1f734d7e416255526ece7c0a30fd509abce8"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/test_warnings.csv.gz",
+      "bytes": 1318923,
+      "sha256": "91a00a89478c073f77a8c1873cac2684fdb4e1dd608a53d2973695446d19ea0c"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/training_history.csv",
+      "bytes": 1775,
+      "sha256": "86f0c0d57e3b89cb9d27dff586cf8a74306841942cf9f97d900c578822a80dca"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/validation_predictions.csv.gz",
+      "bytes": 797230,
+      "sha256": "50609e12302e46053cde1831844224bb7f50e5f5ad0aa8ecd36deadba1d97c4b"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/validation_warnings.csv.gz",
+      "bytes": 1300904,
+      "sha256": "896fb20f1587423b378f7858accdf13a9d97e7bb76832230c4c37b098298d715"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_123/warning_selection_freeze.json",
+      "bytes": 630,
+      "sha256": "1fff0f255f84bd616276ba87f110621060405fcd94034b00b29aca1fefe85d14"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "4e75f7ee9a1184f1fa4290e5283659f60834be5712831471c9e78307c32c81ad"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/configuration.json",
+      "bytes": 1210,
+      "sha256": "a3254d9b36f75c7d9a3c5a9c140ced37850f52b465ccf5631a5aa6146845b4b2"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/selected_model.json",
+      "bytes": 2237,
+      "sha256": "9e086caef3163d0d0054016c34a2812a155e02f7ddbf36a7b17eb9ad913dea4b"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/test_predictions.csv.gz",
+      "bytes": 804069,
+      "sha256": "ecd923541a0ac3cc046e0f752fce123a21a70a9b723135d59f6205181e29ebe0"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/test_warnings.csv.gz",
+      "bytes": 1324456,
+      "sha256": "312303c2dd278c13d9c6e41a14d980a80660ef5ddb7fe96cf7a0233c4534bf9e"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/training_history.csv",
+      "bytes": 2627,
+      "sha256": "a5a24cc883ddc67b8e972f8115b1293e7ba3b77cac680f0b84cf4fa4cc3a1dac"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/validation_predictions.csv.gz",
+      "bytes": 798171,
+      "sha256": "ae8010f997fbcbb4ec45cc8ec8bb291cabe34ac745a531d5afcf3ebe78488aea"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/validation_warnings.csv.gz",
+      "bytes": 1306475,
+      "sha256": "0871fcf4918aacf2e6935842ea06b0928732a7d773d440bd79a4608d02b08df0"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_21/warning_selection_freeze.json",
+      "bytes": 630,
+      "sha256": "4de54a41a853debc462724ae68178556655e29e44772ea3a8e6615665c87bf41"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "6cd2774b51e3f357b9a5d9f8dcfedaf5489e91e45cb369eef73899196bfd4aa8"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/configuration.json",
+      "bytes": 1210,
+      "sha256": "22bc18020ce2398e62f599db749708e1f4b6f8a8976a02d4d2360835c449ef43"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/selected_model.json",
+      "bytes": 2244,
+      "sha256": "fb98e123638f7beb01a408aca91f070b03538ef3b3cb14fc0d97d52a5316e838"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/test_predictions.csv.gz",
+      "bytes": 803590,
+      "sha256": "1dbd23f33ddcc244a9c19f4741b487e8560ffad6015c7f1eb949ced30e5aa823"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/test_warnings.csv.gz",
+      "bytes": 1325210,
+      "sha256": "badeee5678b1c88bfaab0079f66b628009b63e3812b7dd68b200dea85a5ab700"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/training_history.csv",
+      "bytes": 1669,
+      "sha256": "4fe62678f5f95c7f05ba34dfe7568ce8283726d3149894238091960674fb8668"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/validation_predictions.csv.gz",
+      "bytes": 798087,
+      "sha256": "9e54f2626027829418f7f2f25a7870f202b6e76ebb1cbc0633dea821416d1497"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/validation_warnings.csv.gz",
+      "bytes": 1309479,
+      "sha256": "d8e15e405e86e763d4fbe4d6239dac7b2b1f99f16556e0a18c808ae158a3df16"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_42/warning_selection_freeze.json",
+      "bytes": 630,
+      "sha256": "676849d47433e8eb7490d4654bdd5e4cfe95511fdaafee92a68e0af53d1c8ed6"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "9802e61e785c24cf545740c7fa7d71a54069b86da51be32d2502668d592e7c0e"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/configuration.json",
+      "bytes": 1209,
+      "sha256": "7929430bfb2f54ffe0943b0f603acb1cd7e3df482f0d928914ca583593afdb7c"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/selected_model.json",
+      "bytes": 2235,
+      "sha256": "20d08c86243c0b1f120dea46cd8db1458907e79c86ede859db644b1e22671357"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/test_predictions.csv.gz",
+      "bytes": 804038,
+      "sha256": "624b1f18f73f11c580bbb5e6f7679938b78b4adc8ea3415fe7dfa00f44718005"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/test_warnings.csv.gz",
+      "bytes": 1330239,
+      "sha256": "387fc15e894e7dfc81112b9180f8215894d644a2e4f8ec80cb20794292aedf6c"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/training_history.csv",
+      "bytes": 2640,
+      "sha256": "c2abb4d0053d79f2b9d1f3a69be20e3d8347efa5642575ddab59983221609d4d"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/validation_predictions.csv.gz",
+      "bytes": 798170,
+      "sha256": "056d37c218b55261da9810ecc7b74fc7903ac1890edc64cb8e9baf5b35ab2a40"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/validation_warnings.csv.gz",
+      "bytes": 1314832,
+      "sha256": "b7c43474fcd7055818c4aaed35e2ff29317b0eddbc7fedd85a28891c33ab8ad0"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_7/warning_selection_freeze.json",
+      "bytes": 630,
+      "sha256": "8574d362767559ecfc93a40a3b8abfe25ce876e91beed02cab636019cfe4085e"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "5b4fd98bc89a549ca2edfb250ea43c326120cb216005895cb9b157a6f2c666ee"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/configuration.json",
+      "bytes": 1210,
+      "sha256": "8255844bd93b121e6030de0a5cf030fe8b36e9dd911fc5886112915dc7ece64e"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/selected_model.json",
+      "bytes": 2246,
+      "sha256": "b95739f91c0a3abc09c0eb440e0a4253be6cf0b59d1029d78fee5168de827004"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/test_predictions.csv.gz",
+      "bytes": 803816,
+      "sha256": "439b8a94d6776328e5c914631ac2628013711a6c23410e1edc720da85aed10d2"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/test_warnings.csv.gz",
+      "bytes": 1325250,
+      "sha256": "ab70352fdb68ee3541ff9e0ce047986b57212754393874c0dd7011f43da22aba"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/training_history.csv",
+      "bytes": 2520,
+      "sha256": "d7cf07c70a9f87e2920a49c4f1db6414b87507466b2e3972b77387ac38c56a05"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/training_origins.npy",
+      "bytes": 96856,
+      "sha256": "3471bb8272058028a74525972578209d2ad065e462fac84e42410ae38b849ee9"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/validation_predictions.csv.gz",
+      "bytes": 797744,
+      "sha256": "783c05f70369583c671e3c4acaaef19f39f71828e30d52eff1ed0cde47c8a7bb"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/validation_warnings.csv.gz",
+      "bytes": 1309744,
+      "sha256": "792998130fb029fdde086ce6705bd0393b79ca2f38399319670c844841c665f1"
+    },
+    {
+      "path": "antarex_mono/multivariate/seed_84/warning_selection_freeze.json",
+      "bytes": 630,
+      "sha256": "56d0581cc00408692776f75287885f7d29413422b98737354a67395e65cd5131"
+    },
+    {
+      "path": "forecast_runs.csv",
+      "bytes": 42501,
+      "sha256": "6be5aa99b3807c127fce8c64176b9180b637d4411c1a9199821ad9ef9d43b1bb"
+    },
+    {
+      "path": "forecast_summary.csv",
+      "bytes": 1781,
+      "sha256": "acee74099182fbbc0ca003bf8a0087ede86292582615618851c44500b47ccd6e"
+    },
+    {
+      "path": "paired_feature_differences.csv",
+      "bytes": 1293,
+      "sha256": "86fde5a5c89312838e0b7f7b20c510c222f9fb79c032c37c4e18362ac0a49146"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 1852,
+      "sha256": "526c484576ce9bee72a75fca2b03729b79bc7ba9ebf649d836a9b183d7e758b6"
+    },
+    {
+      "path": "selection_freeze.json",
+      "bytes": 17756,
+      "sha256": "02a66600378f8f674e793fe1dbf98253db7a3867061d98aae4f3842e992d0d3e"
+    },
+    {
+      "path": "training_runs.csv",
+      "bytes": 7614,
+      "sha256": "250ea92894f1d897197f0b3885bc5b9c7ed5a31aaa7e5fab1fa58f6ed04b4a37"
+    },
+    {
+      "path": "warning_event_outcomes.csv",
+      "bytes": 235851,
+      "sha256": "1f04b6367d757b56a59d41a079364f931d40394c8b640ffaa278f8a8549cd303"
+    },
+    {
+      "path": "warning_event_runs.csv",
+      "bytes": 6197,
+      "sha256": "0b1c86c59c001d25ca20ff50b8972b66d7192bdfad751d800ddfb010a4235ad9"
+    },
+    {
+      "path": "warning_point_runs.csv",
+      "bytes": 14584,
+      "sha256": "50a3af1b6fb0a3ecf8555a731420fdd95794030cbfc156d95d978d237cab4982"
+    },
+    {
+      "path": "warning_summary.csv",
+      "bytes": 2805,
+      "sha256": "1464aeee681276000992feb719e27db4448a0ab02eb60dfd8ec24e7bf25a1112"
+    },
+    {
+      "path": "warning_validation_candidates.csv",
+      "bytes": 56451,
+      "sha256": "1db7cbbabfc7dbbfd2912a3bc362fed6c0827770c2f5a480bd05b4824ddbb6ab"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_123/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "8be16952fdd665028a55cc9519e1de2f59c3d3775efcfa08ab9fe3588ad4c92f"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_123/configuration.json",
+      "bytes": 1029,
+      "sha256": "cf3af9115ad4f55ca8aa18cc63aae562f7f1dc98a6adaef047f07b06f8645a94"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_123/selected_model.json",
+      "bytes": 2043,
+      "sha256": "7aaf717beb4f40137d89688cac3961897ad6446fc50d91f5b0ff1c68acfe366a"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_123/test_predictions.csv.gz",
+      "bytes": 361341,
+      "sha256": "f43847388556e582da9ee4d3902ca3a896675a93b5554178e17a4a77de9cbdfe"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_123/training_history.csv",
+      "bytes": 2694,
+      "sha256": "3233ec275950893ebfe6df1349b90c20ba6531b1fe447324d82d124d88d2cf3a"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_123/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_123/validation_predictions.csv.gz",
+      "bytes": 367522,
+      "sha256": "f845d4a7231a35017afb779b35214ffad7e2e650ec0f87ca707147156878f93d"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_21/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "bd26f8e3f1940a52bda354ed7e4f240c2c6452400376e8061ad24819bed53964"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_21/configuration.json",
+      "bytes": 1028,
+      "sha256": "6763490882dd1b2f251cb8e2267affe51c4f46afd647e67a597d9cc66f281f9b"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_21/selected_model.json",
+      "bytes": 2051,
+      "sha256": "1e34d945d6b2e65dc29233dbca5c2ebc0730fd83e9e3ff5134ce68577de3c9e7"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_21/test_predictions.csv.gz",
+      "bytes": 361085,
+      "sha256": "21da392d94e68b3d7d6359a80e515aa8c1881313a7111c8e07189938b5b276dd"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_21/training_history.csv",
+      "bytes": 2315,
+      "sha256": "599b2d95f28fcdb24411e6a9d18c2ec545d6340b7e4e730b87556105d9269851"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_21/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_21/validation_predictions.csv.gz",
+      "bytes": 366844,
+      "sha256": "b16d2d5bbbf5cae6583abd6a19d581543a66f58ce00aa2fc06c5783ed883207d"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_42/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "58256017726be8c97f84f417063bda23018d6fce9c60ffa1874cfaec8bdcf140"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_42/configuration.json",
+      "bytes": 1028,
+      "sha256": "714f5165c5d33222de70ae85c56bfef92b651e5d9b9efeb734aef501d59aec2b"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_42/selected_model.json",
+      "bytes": 2042,
+      "sha256": "80592a6552d192274a81ca2c50930fb0b2162a77a6388cc378d7a936dd33f98f"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_42/test_predictions.csv.gz",
+      "bytes": 361280,
+      "sha256": "a013f558fe2aa4350bd31b44c782eab58606446c87fed9726b9b46501284ccf1"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_42/training_history.csv",
+      "bytes": 2693,
+      "sha256": "0d9675c126ebce63499067946faa86cade39d2cc179e0ead39e6d9027ce853fd"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_42/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_42/validation_predictions.csv.gz",
+      "bytes": 366887,
+      "sha256": "9cd3e52f45fef984f3a99818fe5a529642b5b596d438d2295777cf4413f5c4b8"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_7/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "d7e240102d0f5e6bb476e413bcaca5dd97670c258b3b254b5a5e31cf5b251d0a"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_7/configuration.json",
+      "bytes": 1027,
+      "sha256": "1f5d123f282824d3166987f7e6708da71f75da1b22b1c75114a25f531d91a837"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_7/selected_model.json",
+      "bytes": 2039,
+      "sha256": "cc7e2d3f7867350d0201f8cab60fd79075a2926c887b9178e0f9319db4cb0149"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_7/test_predictions.csv.gz",
+      "bytes": 360712,
+      "sha256": "61d3adc5adbce0f2abd0401cc99fbdb20026f9c7f0bb850210f55d3664469ae9"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_7/training_history.csv",
+      "bytes": 2675,
+      "sha256": "a84b2122780484eb33c2b6b9dd2827ea51d15f3d1bc7fe8dc20c382abd0e1ea8"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_7/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_7/validation_predictions.csv.gz",
+      "bytes": 366785,
+      "sha256": "025f9014009768867ba7329c19c7d40ff6fe7b6ffa5c85bce606f83b8fa6164c"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_84/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "7109fc8809f89565fea39cb76cf37a7681a2f29d26a78e143ae8c543f352d958"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_84/configuration.json",
+      "bytes": 1028,
+      "sha256": "a58ac044063490557faf5a0f9ace35c4b79a7d9b9357aa2d831a22a19f77e3b2"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_84/selected_model.json",
+      "bytes": 2041,
+      "sha256": "847231f4da1698b4ba75d10641eac745fc95390d7f5ba9c50f6bf7dc84133cfb"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_84/test_predictions.csv.gz",
+      "bytes": 361390,
+      "sha256": "6f06d79267f0c78ffe427a9a84aeca4677274749a71b810755a2f32d642f3d44"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_84/training_history.csv",
+      "bytes": 2684,
+      "sha256": "9bd01a220d91f0fd32c09840f96bd578dd60bacbc29ad3743193797b00e5f5b3"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_84/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/memory_only/seed_84/validation_predictions.csv.gz",
+      "bytes": 366957,
+      "sha256": "d41a15461d71f89af6c160427586c2b03177b5d8b933c321ca979ce042cc3101"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_123/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "fa5e439e3b3891c4ae250b2043566cb74b8625b67159776bd3d9a39a106b6748"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_123/configuration.json",
+      "bytes": 1208,
+      "sha256": "482e1d455657ff1db92d7855b11756fc4046beeb15d0d799ad6e1d70dd085059"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_123/selected_model.json",
+      "bytes": 2243,
+      "sha256": "50f14674bf19e4461f1b83b414fe9dccfe4d2a00722415debc23bcd3846906a7"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_123/test_predictions.csv.gz",
+      "bytes": 364744,
+      "sha256": "eb43a00e62b6eac4204d9a4b85ccef6f953ef15b0caedfc2b6fc56b7fa73abf6"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_123/training_history.csv",
+      "bytes": 1447,
+      "sha256": "545b0a253fca41292fb736ed500a2cae824c3a9c4a151c03324f53f272df9a41"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_123/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_123/validation_predictions.csv.gz",
+      "bytes": 370414,
+      "sha256": "af1366b4d6f2d94f62f3e53ba05a053e94f28f3234a8d25c01e69e9eefbf3093"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_21/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "459fa2fe829c4961cc17d972d8287684c5abd68126ef7c508ad4a6d60434955a"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_21/configuration.json",
+      "bytes": 1207,
+      "sha256": "33e7d7589e390380927251e9a0d321b89ef1f7917bd3454305518dfaaf92d7dc"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_21/selected_model.json",
+      "bytes": 2242,
+      "sha256": "9f13e211715d2ef781a12e90f16d854d39afd4eb3c390e3491f40622a4917fac"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_21/test_predictions.csv.gz",
+      "bytes": 364270,
+      "sha256": "4f4fc3996f2165ba659d33e2772c6144b8b1e7af6a88c853679587b355a8e194"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_21/training_history.csv",
+      "bytes": 1941,
+      "sha256": "0c35dcfea5179583f293c0bb929c90b236c9e7835a0404cd6627dc92e025c884"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_21/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_21/validation_predictions.csv.gz",
+      "bytes": 370291,
+      "sha256": "286e586b7f750c019e61698814bd02e45d5bd238bf96354263ff2ce79c8884ec"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_42/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "2d7c8bcd0c2613e8bcc29f279129f74e055fe01bc9679b9ad7b350f38e949708"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_42/configuration.json",
+      "bytes": 1207,
+      "sha256": "37bb9947e1ac80e2ef317dc23f425594d886defda995f1d95587f0eb90e428e9"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_42/selected_model.json",
+      "bytes": 2240,
+      "sha256": "c64ebf1ad2335ec90cd849f59a53b0200a3037ef9761b2cd48a1408ac60c186d"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_42/test_predictions.csv.gz",
+      "bytes": 364055,
+      "sha256": "709a7ba55e5c9148d4e37619fb7a18c503bc9800284206068cb7fe35bf5b955f"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_42/training_history.csv",
+      "bytes": 1931,
+      "sha256": "7a84f66af28103f4ef93fd289e2f49a008548fe38b953deb1ebdb8cc04804b5c"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_42/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_42/validation_predictions.csv.gz",
+      "bytes": 369724,
+      "sha256": "02491e4d2435cb1e1a04b582e9b23593349c569bcafe1d70f0648bbe45bd0abf"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_7/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "f3e91c4a1367387f030b588ae93dfde569e4915540481120294ee8eb7217eea3"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_7/configuration.json",
+      "bytes": 1206,
+      "sha256": "e488f12f9ee193e214c2fce14356904f8e084da72bcb01dd4e1bca21fe4d5537"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_7/selected_model.json",
+      "bytes": 2240,
+      "sha256": "c977d1e5b78be2e6d94d03be859608218667ac4e1de9a70eaf71c268f994159d"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_7/test_predictions.csv.gz",
+      "bytes": 364569,
+      "sha256": "389824ebba5e7bfb9d35fef5b18f5610d5a392f72bcf4856e1622a18b84d64ed"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_7/training_history.csv",
+      "bytes": 1195,
+      "sha256": "dfee76d0bf4708395c10ac40bd843caedf11c8f315bfe50967d84698e6054fbb"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_7/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_7/validation_predictions.csv.gz",
+      "bytes": 370345,
+      "sha256": "d15328218cd7beb3736129787b6f5f752ad7806f93cb2170adc824b2515d2392"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_84/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "5cdf08ac0acabf72e91e0fc39f48b1ee63c091d229f158b1e694fff8de4c3357"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_84/configuration.json",
+      "bytes": 1207,
+      "sha256": "6badfd5a423caea37e23028f527f3bf8f78d38ca5792d02620882e81b4ff3c4a"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_84/selected_model.json",
+      "bytes": 2241,
+      "sha256": "68d6eef53041ac7c78022dd2c4e89402beb4c25a87bb83ab3dbdb63e6670841f"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_84/test_predictions.csv.gz",
+      "bytes": 365074,
+      "sha256": "725d81f1aa6471079a627777356f737a8c0bdfdf051924809fe999cfe9a1dbe7"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_84/training_history.csv",
+      "bytes": 1316,
+      "sha256": "c679f1bb95ceb39b5811e49ff60dbc708167cf1177c770ed243207e421afefb6"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_84/training_origins.npy",
+      "bytes": 119512,
+      "sha256": "76f41ec54be45ceda5c4afcb8e0c37a36299ff3e75c9c71ec1f63c40b7f6c7e8"
+    },
+    {
+      "path": "westermo_1/multivariate/seed_84/validation_predictions.csv.gz",
+      "bytes": 370388,
+      "sha256": "e648f1429b4d988aa70de406d47f8cc322401db14011e1c798cc6b9954bbe5cd"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_123/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "d07a6045369e822723abcd0a1943c367b0f42d2f2355a3905c2b0dda4aeeca10"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_123/configuration.json",
+      "bytes": 1029,
+      "sha256": "75de8d1ffdaaf06c4638bd0566676268a95e6cfe4b666f02a326b54d467c5dc9"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_123/selected_model.json",
+      "bytes": 2042,
+      "sha256": "aa10150ed86b761bc9a2281babe2996476aa91e80dd93c8aa0a0db1ed7a7d8bd"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_123/test_predictions.csv.gz",
+      "bytes": 364843,
+      "sha256": "1da6bdcb5d0b5056f525b70c933e4d2b6924de1ce607b4274b64cc00aba74a9f"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_123/training_history.csv",
+      "bytes": 2715,
+      "sha256": "4364d78bd412f6e090912731aa6bfc31dfc04e66104c9f8fcca3395b2555e2e7"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_123/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_123/validation_predictions.csv.gz",
+      "bytes": 363719,
+      "sha256": "77891fb0e1d071adbc5aa5889f7c543d61bf2fd7a281909a87f21e22bfcaed29"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_21/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "c7bfa365cb6f622b62c8a73c3603d227c9fd73daed844b979c814dce344efeff"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_21/configuration.json",
+      "bytes": 1028,
+      "sha256": "31e8e324879096c5afdafd808a5882b64b25ec83e8c7e17f539c8273347b3969"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_21/selected_model.json",
+      "bytes": 2041,
+      "sha256": "47911cc5258ae2d38816e4913be9f6593a31a7ec906839a65f39ba83b768ff95"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_21/test_predictions.csv.gz",
+      "bytes": 365025,
+      "sha256": "3b70c6c9066f7ab72caf00547c0a5127defa14a0f112a2f7477b5959b624803a"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_21/training_history.csv",
+      "bytes": 2719,
+      "sha256": "1bd2dff4d50b9acbdf0757e58638ef6dd596cd585e50a7d437c68547c4750c53"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_21/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_21/validation_predictions.csv.gz",
+      "bytes": 363928,
+      "sha256": "bc2c0f4ff9c79771c60111bcaa8915e01622dd41a1c46e08bf29f930c18b5915"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_42/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "f950f0c3d5a3aedc5c6ce6cc56f2a05ac103eaa9db2e720b04409541a5fcbd5d"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_42/configuration.json",
+      "bytes": 1028,
+      "sha256": "fa898e719f357c60752d7327d25cee93270a37901693493408724c5cc3a22e49"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_42/selected_model.json",
+      "bytes": 2040,
+      "sha256": "dc4e4bbec09be676c6cd1fe5c2500cf34c876256667b68242639c10df6828188"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_42/test_predictions.csv.gz",
+      "bytes": 364697,
+      "sha256": "8ab0fde94c983d8a6d804ceb45dc775cb03a9436567c1158c54a687944f3234f"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_42/training_history.csv",
+      "bytes": 2716,
+      "sha256": "520e243aeafbb73c76c13754d2f970154aadd6db3a209a07ddc562f0105cf771"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_42/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_42/validation_predictions.csv.gz",
+      "bytes": 363518,
+      "sha256": "e8d6278533f38930f4ae6ac5931c23ff510a36cbcac1c1efbc04483e9217ec26"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_7/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "fa970b638a155dbd4b6b799b4deeb2dcfdfb6ff1e0e0f37e088c644266559a41"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_7/configuration.json",
+      "bytes": 1027,
+      "sha256": "af92df4996f25e8a3e229328446cf7b48c90960b6c372f4568f482bc891f82a1"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_7/selected_model.json",
+      "bytes": 2040,
+      "sha256": "18e75db2783f78b81db95e941cb0c6c7397adc966a195510c57bfa032897145d"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_7/test_predictions.csv.gz",
+      "bytes": 364741,
+      "sha256": "13db601eb4c833871d353f5e8e8fb960d7d2e607df76ed51ca9e78d6f626949c"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_7/training_history.csv",
+      "bytes": 2717,
+      "sha256": "0bdf50bc1f804858ed1b658f8de2510f3be68cbc9c4953f3c12415a3b9ad7a13"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_7/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_7/validation_predictions.csv.gz",
+      "bytes": 363872,
+      "sha256": "dc3c3d883c60e508bc22633eff3f07bb64181aac06c88e31b19e4d203e04e988"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_84/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "6c2cd18642e4197270a08540d7c8d729cfd7ea20954f2f4e10bf31c875aeafcd"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_84/configuration.json",
+      "bytes": 1028,
+      "sha256": "cc3e44c1bd4b84ce0a4024217c2b35c835c2faff1752b970d605ac343d34bda1"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_84/selected_model.json",
+      "bytes": 2041,
+      "sha256": "b3d5988c155611479cb41dad43046e70626968ae306b7b03a1246a4e60a9329a"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_84/test_predictions.csv.gz",
+      "bytes": 365182,
+      "sha256": "fe2fc9146d368e404ec79b3775c6f81a73ac9e2804003bcdea8808558976e5f4"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_84/training_history.csv",
+      "bytes": 2707,
+      "sha256": "aa4f9c9b48a2cdbda38dda8f10cd3a06b5a1d2e9e4bb6becd43c76100ba01726"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_84/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/memory_only/seed_84/validation_predictions.csv.gz",
+      "bytes": 363799,
+      "sha256": "8d00e09124018a81aeb41cabcd18ecd629fe5e232652b2408ccfcbcd6ce50ad9"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_123/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "d0d0fa5d42b05a3ab7daad099c6cb7eede49a8c55d44983d72c949bbc4ec0d27"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_123/configuration.json",
+      "bytes": 1186,
+      "sha256": "76c1a82b58aed9d8b79b7e19387af7acac57d0f1f4592015074c049499c59122"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_123/selected_model.json",
+      "bytes": 2221,
+      "sha256": "110b83b96a59d11f4376659a7997fd23a327363dd6a3fa86924c804d64082a83"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_123/test_predictions.csv.gz",
+      "bytes": 366526,
+      "sha256": "bd864b448f44afc1cd4efd18dc2485508abf9a02aa90be3573960e28116fd058"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_123/training_history.csv",
+      "bytes": 2081,
+      "sha256": "2ae652091dee9617a57d87f35713b90e5b1565f1cb064189c1424cc7f6de439f"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_123/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_123/validation_predictions.csv.gz",
+      "bytes": 365873,
+      "sha256": "6b270b9b2b1b50bf968a67010fb8d09c1ddb24a5e3d4d104f0188008a84cd546"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_21/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "06dde03e51db7ed9a3260cfc52f179389421c5628712297bbdade19fd9cc9675"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_21/configuration.json",
+      "bytes": 1185,
+      "sha256": "001c8dd51b8e015eb9fc07aff1ff1602ddc04af65c7a1d48a1f908242b00a10d"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_21/selected_model.json",
+      "bytes": 2219,
+      "sha256": "ae11c18ac506671917554b3825b56b98b74628cec271d7ddf0932dd725f08cf0"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_21/test_predictions.csv.gz",
+      "bytes": 366159,
+      "sha256": "82cd0f820e2fce26a790839efa4235636e2fc0547e556263d3ef3b4f793983f2"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_21/training_history.csv",
+      "bytes": 2462,
+      "sha256": "a3f3ce5077e8fd38ec12fd1f4b8e8a2f9e0f56e3d8744b0ec4a27cc9797d35c1"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_21/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_21/validation_predictions.csv.gz",
+      "bytes": 365585,
+      "sha256": "db61e5bccb37f898e5e2a8afa3b5e27179ab610e9c4c4852a262f4db069ff10c"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_42/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "3a6d213baaffaf29e4ed5522c8d60f107e7dad939f529d41c711677b6c77fa0c"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_42/configuration.json",
+      "bytes": 1185,
+      "sha256": "0ec05e5343d78a090ad83a8b9594c0a95698aabb0ddcc437c85145bee8991c14"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_42/selected_model.json",
+      "bytes": 2209,
+      "sha256": "137d203f076779c7663794bcd9cae8cc1272005864e8219cbda800afe1806c60"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_42/test_predictions.csv.gz",
+      "bytes": 366482,
+      "sha256": "e3f175f2ed7a24e4ab600548eab96208bf6bdd6b95fd3399ed5c6c64e109213e"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_42/training_history.csv",
+      "bytes": 2712,
+      "sha256": "b7855648f92c775436589c9cab6982c17f556bad230c7ff05954c5188780ca3d"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_42/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_42/validation_predictions.csv.gz",
+      "bytes": 365913,
+      "sha256": "e13782641777e6e1593f15b9fba7d2ffecf252fb21412b20c607301604c9d5e1"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_7/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "9577a14c7235739afe75c26861cb30a4d4a33eb7ffc61c9b22d9f6219809e795"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_7/configuration.json",
+      "bytes": 1184,
+      "sha256": "a5f03a984d0e2f68a4d1459d687689b2bbc17150e4d6ea885f081a0c9904c896"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_7/selected_model.json",
+      "bytes": 2218,
+      "sha256": "c0ea4a7b39d0ccb9e921fb4966582f5b0c6144045aa9393e1ed412004a8f7f1b"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_7/test_predictions.csv.gz",
+      "bytes": 366487,
+      "sha256": "36166a14650bf544daa7f4c4dc2acc2b2a6fa51a66a89ddc60e9a69f1b201c93"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_7/training_history.csv",
+      "bytes": 2335,
+      "sha256": "18134d29e46397c0baf715e51786783bbbd94db5df96cc281790a87b4e38febd"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_7/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_7/validation_predictions.csv.gz",
+      "bytes": 366331,
+      "sha256": "84ad1dfa71dc59c26adcb33375f0a2404183844e6994705203b961acbe601f6f"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_84/best_weights.pt",
+      "bytes": 24117,
+      "sha256": "8d51f37224c4f1c2f407794d404c96158bf005a33ffbb003a37f42d031038ebe"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_84/configuration.json",
+      "bytes": 1185,
+      "sha256": "799bc7d5e0037ea927081cd2d42b819fb1cde04cf65a200ac1831fbedd7a06cd"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_84/selected_model.json",
+      "bytes": 2219,
+      "sha256": "2765da0f7510686da2ae9c1511ce77da820c11616eb9e329d4f008ebe357087d"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_84/test_predictions.csv.gz",
+      "bytes": 366834,
+      "sha256": "5d6c6b08517a6c08c5d24552dae4fc8a2a9609cef1e2771aebbad70962d79842"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_84/training_history.csv",
+      "bytes": 2714,
+      "sha256": "c59028de41e5760b10724f48dc1c836eab067be7c7060563aeeb2fbfc3d671e7"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_84/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_2/multivariate/seed_84/validation_predictions.csv.gz",
+      "bytes": 365836,
+      "sha256": "f04eb2dcda17079f88d3cf22ee3f71a8107dfd426b2f82e0e9cf3b26a3e68b0a"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_123/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "2e47438e6e221ac0eab43b564a5f38afdcf95b29d1affca0b256e64eb0454a83"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_123/configuration.json",
+      "bytes": 1028,
+      "sha256": "eb8a2b596d71d7e49ee10562bb059a062b3c45c53b9a4cf61cf04adf3ae9be40"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_123/selected_model.json",
+      "bytes": 2050,
+      "sha256": "cc560a0fa0374d461f3776039b62974a6d16b141df360900736d88dee84329a1"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_123/test_predictions.csv.gz",
+      "bytes": 368660,
+      "sha256": "4e28ba3e695afa31583c7aca215504488b16a9a6ffce2994eb5781bb03c2705c"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_123/training_history.csv",
+      "bytes": 2418,
+      "sha256": "17429490928e724fb67f9f61ed28450faa910a3e9fd13d49c8a34c7ef782de21"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_123/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_123/validation_predictions.csv.gz",
+      "bytes": 367006,
+      "sha256": "09747277f6c9d79c7d25d2bc1564877434037156952b501f8efedc6a2f90e41a"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_21/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "7fee8d73a1c33c3d373742f44620de714fbb02e165a84d75d35a1e3fbf73ca96"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_21/configuration.json",
+      "bytes": 1027,
+      "sha256": "a1be3ee6965a63ce748d9f94d57608d78c84579e0605bc3dff717d704e8ac093"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_21/selected_model.json",
+      "bytes": 2049,
+      "sha256": "d186b2b18c4c2f4cbcd287aca35573e091848d2a70177954bb7dfd8c4fc9542b"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_21/test_predictions.csv.gz",
+      "bytes": 368487,
+      "sha256": "8fb5db247b6e648cd4da74e0f3d8fa8bbce721efce2de401b48101762cd2d08a"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_21/training_history.csv",
+      "bytes": 1796,
+      "sha256": "3f20815520eb381c9af52bb5e4a4a5b3a9574518c1fb410d092a731eeb03cd35"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_21/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_21/validation_predictions.csv.gz",
+      "bytes": 367088,
+      "sha256": "f317a2864ae25fd13aed736125e4769a6b71643716157b5e2d8e8c9a4d90ca50"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_42/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "12ce54ee5d7cfa0670edd7f626c6968876813fc1d4f3bc3da4e7136f9f712fcd"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_42/configuration.json",
+      "bytes": 1027,
+      "sha256": "204373f1d11520a1868afdb20a039ef9dbaabd5fab84d97593afcd43893ac93a"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_42/selected_model.json",
+      "bytes": 2049,
+      "sha256": "e814def6be7e0e1c13f57c46ce32516f22ec8bcc3756e032e4718a997107c485"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_42/test_predictions.csv.gz",
+      "bytes": 368874,
+      "sha256": "fd5a57cda81ba06b1e8b19841d7b9f70693409af275c4740d062855c7333785b"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_42/training_history.csv",
+      "bytes": 2166,
+      "sha256": "b0ea41cb7a829d6fb78410ab2f64e18b09b3a72b7af1c2245eec2fd4396cd71a"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_42/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_42/validation_predictions.csv.gz",
+      "bytes": 366854,
+      "sha256": "8bcc9de2b4477fa6ebfd38d511d13eeaa30a2075409a5aa2a28240afad978e4d"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_7/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "2b1825ba05953208ba9e8a74463eda8cb3bbf3359c055affbd5d2ab5f5a48f9f"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_7/configuration.json",
+      "bytes": 1026,
+      "sha256": "902e08dc5975d35124807a3a5ffd46361040adfcad1202e4bda9960342dabd1e"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_7/selected_model.json",
+      "bytes": 2048,
+      "sha256": "f497973e67e1eb896ad6166c74a45adea440274300f9cbc0d090713df9073347"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_7/test_predictions.csv.gz",
+      "bytes": 368592,
+      "sha256": "8ec8811d53bfbe93d7e601b69b414beb151c129fbb912d078c81e3eb7621296a"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_7/training_history.csv",
+      "bytes": 2288,
+      "sha256": "14f3ea200efc9e455ecb942e6808e099719f1524c9df706cff5535e147940b38"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_7/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_7/validation_predictions.csv.gz",
+      "bytes": 366693,
+      "sha256": "11cc2e17fe8052456f7c36104af70d66d40995136b7ab49fa97815bfd715c419"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_84/best_weights.pt",
+      "bytes": 21045,
+      "sha256": "9d75ea04f6881b06686359eb0022a1dc046ed5815812b6e3daa246e2ad36bd2b"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_84/configuration.json",
+      "bytes": 1027,
+      "sha256": "55c61a8605573127f30e60b9ef7d84a63cca61b632ddd27219be90a780855c1f"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_84/selected_model.json",
+      "bytes": 2048,
+      "sha256": "66daadd107971fe0c9b2cfc8df0091cbae0c03e9b5c38ed39365b04e90f25558"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_84/test_predictions.csv.gz",
+      "bytes": 368621,
+      "sha256": "d0ec2a36c4cf942da13fca2c653df6c86976eea7c24022d3c3429d4849b60db4"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_84/training_history.csv",
+      "bytes": 2537,
+      "sha256": "fa91a593bee30782beb65f96a3316abf63a4491c72ef3abee7cbc05a803063f2"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_84/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/memory_only/seed_84/validation_predictions.csv.gz",
+      "bytes": 366770,
+      "sha256": "9fbda00203366b8f36cd11dbbe3ab895c9be3c0c3f7bc6e7fd1846ce24136c5c"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_123/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "596405d92fd5f92a40aaffcfe378b59e59b2435d2ad2a2ccab49b4145474991b"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_123/configuration.json",
+      "bytes": 1207,
+      "sha256": "de6e558de6c23e3eb86c2bea62b896dc3689ea9c722dec5027faa068a0c93809"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_123/selected_model.json",
+      "bytes": 2242,
+      "sha256": "9c4b9aef9c49ed9c0ce3dfe4c07de39feea023ca0adf7488ea58d8d3b86283f7"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_123/test_predictions.csv.gz",
+      "bytes": 370259,
+      "sha256": "d45ba552dd1ba3d52aff5ff145fb30083442ea70a1ec5e1e305f08c69349b4ed"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_123/training_history.csv",
+      "bytes": 2044,
+      "sha256": "cab63d8c4395380328444d52c40696047448b01cb373b8a54e433d889850566b"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_123/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_123/validation_predictions.csv.gz",
+      "bytes": 368920,
+      "sha256": "20029ceb304e1638b687626658d3065678bd93eed0cd63aa54d4473e4e9a8361"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_21/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "65ff391c71174f2ad6a974f0ac22c31d9d6b1696eebb8aed05275df295750eb3"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_21/configuration.json",
+      "bytes": 1206,
+      "sha256": "809a2a6a60d1d6db7e9c326e11b70eaa5df951890c54121e7e0f75d80b6c2cf0"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_21/selected_model.json",
+      "bytes": 2240,
+      "sha256": "863d9437eb2330c3c4fe43a76c1efa8e0b33e413cd0e4a41513418ed117b3471"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_21/test_predictions.csv.gz",
+      "bytes": 370610,
+      "sha256": "ab56c80cecc9babc8504d3d3563809f883715f7f42baa6cf12aab00dda83a895"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_21/training_history.csv",
+      "bytes": 2403,
+      "sha256": "2580620c372a8fd499d00874057fb8ede8478364d6202e47e15a2f76da0253c6"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_21/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_21/validation_predictions.csv.gz",
+      "bytes": 369514,
+      "sha256": "50aa8cea2bbfebe3589385d23117611eeee7a9c863f2b7c7f308a0a2a4cf5168"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_42/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "3972ca978230eea9593eb3335e52ac4c04d40764993486ffbf796cb03c96ba0c"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_42/configuration.json",
+      "bytes": 1206,
+      "sha256": "1c8391539ae686114ac4c77c2cc27cc5d8320197595b4f935861e75323aa9bdf"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_42/selected_model.json",
+      "bytes": 2241,
+      "sha256": "3ac5936ad648521f323937c0c2f6fc9a72bcdf826f502927a97c86121f67dbc0"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_42/test_predictions.csv.gz",
+      "bytes": 370716,
+      "sha256": "ddaf7728a1a4bef7cd410398d5a6531b31565e21554f99d1e8d7245667daf815"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_42/training_history.csv",
+      "bytes": 2292,
+      "sha256": "63ae7d2783c02f84552c93ac23147a47a8fb55c0fd5c64e75295204437eb1075"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_42/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_42/validation_predictions.csv.gz",
+      "bytes": 368726,
+      "sha256": "e346c980c6940e543effb2fa05dfbc189d1c43047650f4a62aed1b88283936f6"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_7/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "8af1c6a5c99f3c2df550f3babd26b167cd3e0756481b489e6a69f69c8f84ecf3"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_7/configuration.json",
+      "bytes": 1205,
+      "sha256": "468d8463de60814aeb7dd82ff998f4dcfbefd668d5fa1a270dc1690782b77821"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_7/selected_model.json",
+      "bytes": 2241,
+      "sha256": "2e363d82b3976bef56be5546de826de9cdc737b5ba2a06a43691888854bb59ed"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_7/test_predictions.csv.gz",
+      "bytes": 370633,
+      "sha256": "7dfce3ae8386ce046f84934e0abdc0ee27cd629cef38dbdb7938adb8d3927a0c"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_7/training_history.csv",
+      "bytes": 1680,
+      "sha256": "3645f4bd4227b916ba7fd50be202f7fd299ce2cd2a31cdce12a7f83b1bd46742"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_7/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_7/validation_predictions.csv.gz",
+      "bytes": 368781,
+      "sha256": "9286e74110c348df1d737d04d3ab663031c3b3ceca9fe1a1fb1176326cdee7f1"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_84/best_weights.pt",
+      "bytes": 24629,
+      "sha256": "12bd9c12148cb7168f35d4fc99c052dbcf67655b7c6f79da15302ba405a82063"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_84/configuration.json",
+      "bytes": 1206,
+      "sha256": "4ed480b2834dd4affd3d63040822e4cc92de346429fee7b5b5e5f154fac4a849"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_84/selected_model.json",
+      "bytes": 2240,
+      "sha256": "41443efdb56e8e80b9bfa3412e08054843e1c524e4c96fcc6596ffba8793cd76"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_84/test_predictions.csv.gz",
+      "bytes": 370662,
+      "sha256": "59ad10ba2c2c2a3e078ae6b291051363fb3e1681d83dde55a2afb47431c8b9b6"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_84/training_history.csv",
+      "bytes": 2659,
+      "sha256": "05a2ff2e32252f24b0712db4c91f481b4bd61d4a52adc273e7e3c0c165832bcc"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_84/training_origins.npy",
+      "bytes": 120952,
+      "sha256": "7fde928e8e155b48739f141a6d8a01a809e5bbf378af55f51073019de854778e"
+    },
+    {
+      "path": "westermo_3/multivariate/seed_84/validation_predictions.csv.gz",
+      "bytes": 368874,
+      "sha256": "da207cb71d617308df7741c22ded0e5e0d42abf975bb32f1c315dcbb9248ddad"
+    }
+  ]
+}

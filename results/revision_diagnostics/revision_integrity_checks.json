@@ -1,0 +1,10 @@
+{
+  "all_checks_passed": true,
+  "models_verified": 40,
+  "manifest_files_verified": 321,
+  "validation_and_test_forecast_rows_verified": 1392640,
+  "fresh_weight_inferences_checked": 240,
+  "warning_partition_method_checks": 80,
+  "seed_summary_checks": true,
+  "checks": "Hashes, configuration/protocol freeze, checkpoint selection, identical origins, direct model inference, error recomputation, independent warning confirmation/threshold selection, confusion counts, event recognition/delay and summaries."
+}

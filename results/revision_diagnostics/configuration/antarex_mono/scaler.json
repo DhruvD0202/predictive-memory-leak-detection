@@ -1,0 +1,38 @@
+{
+  "fit_partition": "train",
+  "training_rows": 145152,
+  "features": [
+    "memory_pressure",
+    "anonymous_memory_gib",
+    "committed_memory_gib",
+    "cpu_busy_fraction",
+    "cpu_iowait_fraction",
+    "page_faults_per_second",
+    "major_page_faults_per_second"
+  ],
+  "removed_training_constant_features": [
+    "swap_used_gib",
+    "swap_in_pages_per_second",
+    "swap_out_pages_per_second",
+    "disk_read_bytes_per_second",
+    "disk_write_bytes_per_second"
+  ],
+  "mean": {
+    "memory_pressure": 0.024499973733366192,
+    "anonymous_memory_gib": 1.7807110908853525,
+    "committed_memory_gib": 4.76496982839898,
+    "cpu_busy_fraction": 0.04911167442554457,
+    "cpu_iowait_fraction": 1.705761389678676e-05,
+    "page_faults_per_second": 241.63852836507027,
+    "major_page_faults_per_second": 0.00022501026317884424
+  },
+  "std": {
+    "memory_pressure": 0.02323501373846276,
+    "anonymous_memory_gib": 2.9097429166349342,
+    "committed_memory_gib": 6.552470810731772,
+    "cpu_busy_fraction": 0.02578287506423874,
+    "cpu_iowait_fraction": 4.331873412241417e-05,
+    "page_faults_per_second": 796.6870916232383,
+    "major_page_faults_per_second": 0.031216535024539263
+  }
+}

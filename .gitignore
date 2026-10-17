@@ -21,3 +21,12 @@ __pycache__/
 
 # Local machine telemetry stays on the collecting computer.
 /results/live/
+
+# Bulk repeated-study files are archived separately with hashes.
+/results/revision_20261016/**/last_checkpoint.pt
+/results/revision_20261016/**/training_origins.npy
+/results/revision_20261016/**/*_predictions.csv.gz
+/results/revision_20261016/**/*_warnings.csv.gz
+/results/revision_reproduction/
+/tmp/pdfs/spin_20261016/
+/tmp/revision_*.log

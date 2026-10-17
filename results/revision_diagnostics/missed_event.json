@@ -1,0 +1,25 @@
+{
+  "event_id": 1534,
+  "start_unix": 1526767214,
+  "end_unix_exclusive": 1526767450,
+  "start_utc": "2018-05-19T22:00:14+00:00",
+  "duration_seconds": 236,
+  "low_intensity": true,
+  "eligible_origins": 47,
+  "confirmed_label_source": "Antarex recorded injected-leak interval",
+  "threshold_pp_per_minute": 0.4,
+  "max_observed_growth_pp_per_minute": 0.938200841208438,
+  "max_forecast_growth_pp_per_minute": 0.2155783067565433,
+  "max_joint_score_pp_per_minute": 0.1982202323583454,
+  "forecast_growth_qualifying_origins": 0,
+  "lstm_warning_origins": 0,
+  "trend_warning_origins": 23,
+  "trend_first_alarm": 1526767270,
+  "trend_delay_seconds": 56.0,
+  "memory_pressure_range_percentage_points": [
+    3.2036237418651496,
+    7.17222318053245
+  ],
+  "mechanism": "Forecast-growth condition never reaches 0.4 pp/min, so the conjunctive score never qualifies; confirmation length is not the primary cause.",
+  "limitation": "Aggregate telemetry cannot establish the allocation-level cause of this forecast error; injection-active labels do not require monotonic system memory."
+}

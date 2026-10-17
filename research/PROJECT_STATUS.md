@@ -1,6 +1,16 @@
 # Review 2 progress
 
-Last updated: 10 October 2026
+Last updated: 16 October 2026
+
+## Current checkpoint: professor's revision and SPIN format
+
+The [SPIN manuscript](../paper/spin2027/main.tex) now focuses on memory-pressure forecasting and growth warnings. A [23-point response](../paper/PROFESSOR_RESPONSE_20261016.md) maps the professor's requests to revisions. The [format notes](../paper/SPIN2027_REVISION_NOTES.md) document anonymous initial submission, Springer single-column layout, 8–15 pages, no page numbers and disclosure requirements. The named earlier drafts remain historical copies.
+
+Completed new evidence: 40 models across five seeds and two feature configurations on the unchanged four recordings; matched-window ablation; independent reconstruction of saved metrics and warnings; detailed analysis of original missed event 1534; replay/model-inference timing and resident-memory measurement. All 40 existing implementation tests passed. See [reproduction instructions](REVISION_REPRODUCTION.md) and [independent audit](../results/revision_diagnostics/revision_integrity_checks.json).
+
+The multivariate feature advantage is not uniform: mean RMSE improves on Antarex and Westermo 1 but worsens on Westermo 2 and 3. Warning precision/false alarms vary substantially across seeds. These are development sensitivity results on reused holdouts, not independent external validation. No additional labeled data, confirmed natural leaks, process-allocation diagnosis or exhaustion outcomes were added. A live collection attempt failed with inaccessible Windows performance counters; the user requested that live performance remain explicitly unvalidated.
+
+The revision is prepared for author review, not submitted to the conference. Public/reviewer code and data access, human review, additional independent labeled evaluation and successful controlled live/exhaustion studies remain outstanding. Earlier dated sections below describe their original checkpoints; statements there about seeds/ablations being future work are superseded by this October entry.
 
 ## Confirmed decisions
 

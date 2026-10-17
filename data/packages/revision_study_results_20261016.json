@@ -1,0 +1,11 @@
+{
+  "file": "revision_study_results_20261016.zip",
+  "sha256": "27d5ad576adccdf13924d17b2a5563e802117a0e0c339d8129cf1871cc083f98",
+  "bytes": 62574325,
+  "files": 322,
+  "restore_root": "results/revision_20261016",
+  "model_count": 40,
+  "contains": "All study-manifest files, including selected weights, configurations, training origins, histories, validation/test forecasts, warnings and summaries. Optimizer resume checkpoints are excluded.",
+  "input_package_required": "review2_lstm_inputs.zip",
+  "input_sha256": "208c3b38ffbd7564e95f7452e0a3d203b1d4734858383e43cf602093ef7a1222"
+}

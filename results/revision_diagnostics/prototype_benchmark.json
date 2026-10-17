@@ -1,0 +1,114 @@
+{
+  "started_utc": "2026-10-16T16:18:33.870911+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "logical_cpus": 8,
+  "physical_cpus": 4,
+  "installed_ram_gib": 7.781360626220703,
+  "psutil": "7.2.2",
+  "python": "3.12.14",
+  "rss_before_repository_mib": 25.3984375,
+  "training_complete_before_benchmark": true,
+  "timing_scope": "In-process replay assembly/JSON and model requests; excludes HTTP, browser rendering and remote transport.",
+  "repository_startup_seconds": 2.977534400008153,
+  "source_files_verified": 76,
+  "test_origins": 69559,
+  "rss_after_repository_mib": 187.30078125,
+  "recordings": [
+    {
+      "dataset": "antarex_mono",
+      "replay_ms": {
+        "n": 100,
+        "median": 21.844799994141795,
+        "p95": 24.03509999567177,
+        "min": 16.310899998643436,
+        "max": 24.3309999932535,
+        "mean": 21.803001000516815
+      },
+      "first_inference_request_ms": 5344.426299998304,
+      "warm_inference_ms": {
+        "n": 100,
+        "median": 0.4493000014917925,
+        "p95": 0.804100011009723,
+        "min": 0.3924999909941107,
+        "max": 1.3887000095564872,
+        "mean": 0.504999999247957
+      },
+      "max_prediction_difference_fraction": 0.0,
+      "inference_requests": 101
+    },
+    {
+      "dataset": "westermo_1",
+      "replay_ms": {
+        "n": 100,
+        "median": 7.777450002322439,
+        "p95": 11.46530000551138,
+        "min": 6.16269999591168,
+        "max": 16.510700006620027,
+        "mean": 8.303767999605043
+      },
+      "first_inference_request_ms": 108.40720000851434,
+      "warm_inference_ms": {
+        "n": 100,
+        "median": 0.5576499970629811,
+        "p95": 0.9579000034136698,
+        "min": 0.4076999903190881,
+        "max": 1.217600001837127,
+        "mean": 0.6130479999410454
+      },
+      "max_prediction_difference_fraction": 0.0,
+      "inference_requests": 101
+    },
+    {
+      "dataset": "westermo_2",
+      "replay_ms": {
+        "n": 100,
+        "median": 8.259399997768924,
+        "p95": 11.198899999726564,
+        "min": 6.2006000080145895,
+        "max": 13.914800001657568,
+        "mean": 8.582391000381904
+      },
+      "first_inference_request_ms": 111.40169999271166,
+      "warm_inference_ms": {
+        "n": 100,
+        "median": 0.4472499931580387,
+        "p95": 0.6920000014360994,
+        "min": 0.38409999979194254,
+        "max": 1.0695999953895807,
+        "mean": 0.49041400066926144
+      },
+      "max_prediction_difference_fraction": 0.0,
+      "inference_requests": 101
+    },
+    {
+      "dataset": "westermo_3",
+      "replay_ms": {
+        "n": 100,
+        "median": 7.052650005789474,
+        "p95": 9.252100004232489,
+        "min": 5.869799992069602,
+        "max": 13.722299991059117,
+        "mean": 7.339193000516389
+      },
+      "first_inference_request_ms": 106.72500000509899,
+      "warm_inference_ms": {
+        "n": 100,
+        "median": 0.49694999324856326,
+        "p95": 0.7233999931486323,
+        "min": 0.3856000112136826,
+        "max": 1.4253999979700893,
+        "mean": 0.507596000097692
+      },
+      "max_prediction_difference_fraction": 0.0,
+      "inference_requests": 101
+    }
+  ],
+  "rss_after_all_models_mib": 402.28515625,
+  "source_files_verified_after": 76,
+  "live": {
+    "completed": false,
+    "scope": "Live performance not measured in this run. The preceding restricted-environment attempt collected zero samples because Windows performance-counter access failed. An unrestricted rerun was not executed because automatic approval review was unavailable."
+  },
+  "completed_utc": "2026-10-16T16:18:48.149197+00:00"
+}

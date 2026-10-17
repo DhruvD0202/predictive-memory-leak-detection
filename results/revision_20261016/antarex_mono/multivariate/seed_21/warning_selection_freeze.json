@@ -1,0 +1,26 @@
+{
+  "selected": {
+    "trend_only": {
+      "threshold_pp_per_minute": 0.8,
+      "validation_f1": 0.8010204081632653,
+      "validation_fp": 408
+    },
+    "arima_growth": {
+      "threshold_pp_per_minute": null,
+      "validation_f1": 0.0,
+      "validation_fp": 0
+    },
+    "lstm_growth": {
+      "threshold_pp_per_minute": 0.4,
+      "validation_f1": 0.5534095388253844,
+      "validation_fp": 128
+    },
+    "always_off": {
+      "threshold_pp_per_minute": null,
+      "validation_f1": 0.0,
+      "validation_fp": 0
+    }
+  },
+  "selection_partition": "validation",
+  "test_scoring_started": false
+}
