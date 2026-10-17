@@ -12,3 +12,5 @@ src/warning_evaluation.py -text
 # Keep the supplied official Springer template byte-identical.
 paper/spin2027/llncs.cls -text
 paper/spin2027/splncs04.bst -text
+paper/spin2027_no_disclosure/llncs.cls -text
+paper/spin2027_no_disclosure/splncs04.bst -text

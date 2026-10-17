@@ -1,0 +1,16 @@
+{
+  "pages": 14,
+  "references": 36,
+  "disclosure_footnote_removed": true,
+  "disclosure_section_removed": true,
+  "caption_acknowledgements_removed": 8,
+  "other_manuscript_wording_unchanged": true,
+  "figures_and_bibliography_unchanged": true,
+  "no_overflow_or_unresolved_citations": true,
+  "original_version_preserved": true,
+  "all_pages_rendered_and_visually_checked": true,
+  "pdf_sha256": "58c8874246d788940beaade036d383896cd023b14457a77fd60a5fcd2ed3c224",
+  "overleaf_zip_sha256": "1c2820d9e0a1fe5fa736e437adef81015147b3228a41ed6baeaf42c6205e51a7",
+  "overleaf_payload_files": 12,
+  "date": "2026-10-17"
+}
