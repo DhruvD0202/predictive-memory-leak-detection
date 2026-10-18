@@ -1,16 +1,27 @@
 {
   "pages": 14,
   "references": 36,
-  "disclosure_footnote_removed": true,
-  "disclosure_section_removed": true,
-  "caption_acknowledgements_removed": 8,
-  "other_manuscript_wording_unchanged": true,
+  "updated_sections": [
+    "Dataset Choice and Forecast Horizons",
+    "Causal Preparation and Feature Availability",
+    "Conclusion",
+    "Reproducibility"
+  ],
+  "wording_changes_limited_to_requested_sections": true,
+  "antarex_citations": [
+    22,
+    24,
+    23
+  ],
+  "westermo_citation": 29,
   "figures_and_bibliography_unchanged": true,
+  "results_and_abstract_unchanged": true,
   "no_overflow_or_unresolved_citations": true,
-  "original_version_preserved": true,
+  "disclosures_remain_removed": true,
+  "source_version": "dfecc95",
+  "date": "2026-10-18",
   "all_pages_rendered_and_visually_checked": true,
-  "pdf_sha256": "58c8874246d788940beaade036d383896cd023b14457a77fd60a5fcd2ed3c224",
-  "overleaf_zip_sha256": "1c2820d9e0a1fe5fa736e437adef81015147b3228a41ed6baeaf42c6205e51a7",
-  "overleaf_payload_files": 12,
-  "date": "2026-10-17"
+  "pdf_sha256": "0d96a3b6e3346da974b03789264595da8b2d5c373b99b04c5e5174a96089cc9d",
+  "overleaf_zip_sha256": "ff8d0efc5210b24ca03dacca3a07d1c7d556eb6e5ce491e34ecf4c66c92214bd",
+  "overleaf_payload_files": 12
 }
