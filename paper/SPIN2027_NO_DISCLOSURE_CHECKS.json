@@ -1,27 +1,193 @@
 {
-  "pages": 14,
+  "date": "2026-10-22",
+  "pages": 15,
   "references": 36,
-  "updated_sections": [
-    "Dataset Choice and Forecast Horizons",
-    "Causal Preparation and Feature Availability",
-    "Conclusion",
-    "Reproducibility"
+  "figures": 3,
+  "tables": 6,
+  "algorithms": 1,
+  "numbered_equations": 2,
+  "architecture_figure": 1,
+  "architecture_page": 4,
+  "layout": "Springer LLNCS, single column, anonymous initial-submission copy; no page numbers",
+  "official_class_and_bibliography_style_unchanged": true,
+  "reference_key_citation_bibliography_sets_match": true,
+  "unique_dois": 32,
+  "reference_format_checked": true,
+  "author_initials_fixed": [
+    "Trivedi, K. S. (ref9)",
+    "Zhang, G. Peter (ref29)"
   ],
-  "wording_changes_limited_to_requested_sections": true,
+  "other_reference_format_fixes": [
+    "ASPLOS and POPL proceedings capitalization",
+    "Ordinal book editions",
+    "Issue-range en dash"
+  ],
+  "all_fonts_embedded": true,
+  "embedded_font_count": 11,
+  "no_overflow_missing_characters_or_unresolved_citations": true,
+  "nonfatal_font_and_underfull_diagnostics_remain": true,
+  "competing_interests": "None relevant, confirmed by user 2026-10-22",
+  "competing_interests_text_and_heading_size_pt": [
+    8.97
+  ],
+  "ai_disclosure_remains_removed_at_prior_user_request": true,
+  "results_and_abstract_numerically_unchanged": true,
+  "visual_check": "All 15 rendered pages inspected; no overlaps or clipping found.",
+  "page_geometry": [
+    {
+      "page": 1,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76463,
+      "x_max": 480.59811968000014,
+      "y_min": 114.39304417999995,
+      "y_max": 665.0842228799996
+    },
+    {
+      "page": 2,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76462999999998,
+      "x_max": 480.59931831999995,
+      "y_min": 117.99752288000002,
+      "y_max": 665.0842328799998
+    },
+    {
+      "page": 3,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76462999999998,
+      "x_max": 480.59776232000013,
+      "y_min": 114.87622108000005,
+      "y_max": 665.0842328799997
+    },
+    {
+      "page": 4,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76463,
+      "x_max": 480.59877167199994,
+      "y_min": 183.52118701489997,
+      "y_max": 611.1031235919999
+    },
+    {
+      "page": 5,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76462999999998,
+      "x_max": 480.59775232,
+      "y_min": 117.99752288000002,
+      "y_max": 665.0842528799998
+    },
+    {
+      "page": 6,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76458999999997,
+      "x_max": 480.5977523199999,
+      "y_min": 117.99752288000002,
+      "y_max": 668.1078828799999
+    },
+    {
+      "page": 7,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76460999999983,
+      "x_max": 480.59845064,
+      "y_min": 117.58906120000006,
+      "y_max": 665.0842228799999
+    },
+    {
+      "page": 8,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76461,
+      "x_max": 480.60011615999997,
+      "y_min": 117.87797120000005,
+      "y_max": 665.0842228799999
+    },
+    {
+      "page": 9,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76463,
+      "x_max": 480.59775232000015,
+      "y_min": 169.57388107999998,
+      "y_max": 608.9061235919999
+    },
+    {
+      "page": 10,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76462999999995,
+      "x_max": 480.59776231999996,
+      "y_min": 117.99752288000002,
+      "y_max": 665.0842228799999
+    },
+    {
+      "page": 11,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76463,
+      "x_max": 480.59775232000015,
+      "y_min": 147.99648107999997,
+      "y_max": 629.7482835919999
+    },
+    {
+      "page": 12,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76462999999995,
+      "x_max": 480.59775232,
+      "y_min": 117.99752288000002,
+      "y_max": 665.0842328799996
+    },
+    {
+      "page": 13,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76463,
+      "x_max": 480.59775432,
+      "y_min": 117.99752288000002,
+      "y_max": 664.868033592
+    },
+    {
+      "page": 14,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76463,
+      "x_max": 480.59775432000026,
+      "y_min": 118.777597592,
+      "y_max": 664.868033592
+    },
+    {
+      "page": 15,
+      "width_pt": 612,
+      "height_pt": 792,
+      "x_min": 134.76463,
+      "x_max": 480.5977523200004,
+      "y_min": 118.777597592,
+      "y_max": 555.1412335919999
+    }
+  ],
+  "pdf_sha256": "4e5110f140b3ca4b457085f78a375422e06d5d2bd7906dfc1be9a068e655a580",
+  "current_conference_webpage_retrieval": "Failed on 2026-10-22; conference-specific settings follow recorded 2026-10-16 verification.",
+  "publisher_instructions_rechecked": "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/26362278/data/v2",
+  "reference_scope": "Formatting, fields, unique identifiers, and citation matching; this is not a new full-text audit of every source.",
+  "overleaf_payload_files": 14,
+  "overleaf_zip_sha256": "c61d482342d55bbabe5cff7e5732a2e46df9e4cf6e0c4171ede991ed61b95683",
+  "overleaf_zip_crc_sizes_and_hashes_verified": true,
+  "overleaf_extracted_build_verified": true,
+  "original_body_preserved_except_architecture_and_interests_additions": true,
+  "abstract_identical_to_previous_version": true,
+  "results_identical_except_one_page_break_removed": true,
   "antarex_citations": [
     22,
     24,
     23
   ],
   "westermo_citation": 29,
-  "figures_and_bibliography_unchanged": true,
-  "results_and_abstract_unchanged": true,
-  "no_overflow_or_unresolved_citations": true,
-  "disclosures_remain_removed": true,
-  "source_version": "dfecc95",
-  "date": "2026-10-18",
   "all_pages_rendered_and_visually_checked": true,
-  "pdf_sha256": "0d96a3b6e3346da974b03789264595da8b2d5c373b99b04c5e5174a96089cc9d",
-  "overleaf_zip_sha256": "ff8d0efc5210b24ca03dacca3a07d1c7d556eb6e5ce491e34ecf4c66c92214bd",
-  "overleaf_payload_files": 12
+  "overleaf_build_matches_delivered_page_text": true,
+  "svg_whitespace_normalized_after_build": "Only unused SVG source whitespace and its package hash changed; every compilation input remains byte-identical to the verified extracted build."
 }

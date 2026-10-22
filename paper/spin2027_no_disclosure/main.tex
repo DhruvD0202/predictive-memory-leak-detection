@@ -71,6 +71,15 @@ Assumptions and benchmark quality affect anomaly-detection results~\cite{ref40,r
 \noindent\textbf{Research gap.} On these recordings, it remains unclear whether lower forecast error improves growth-warning coverage, false-alarm frequency and recognition delay under one temporal protocol. We address this question using matched origins, injected-event labels, repeated seeds and a memory-only ablation. Unlabeled workload data support forecasting comparisons, not leak-detection claims.
 
 \section{Data and Experimental Protocol}
+Figure~\ref{fig:architecture} summarizes the archived workflow. The forecast and warning branches are evaluated separately: labels calibrate and score the warning rules, but never enter the predictors. The live sampler is a separate exploratory trend-only path, described in Algorithm~\ref{alg:pipeline}.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=\textwidth]{architecture.pdf}
+\Description{Archived Antarex and Westermo telemetry undergo causal preparation and chronological splitting. Prepared observations feed forecasting models and a recent-memory-growth calculation. Forecasts are scored against future observations. Recent growth, optionally combined with ARIMA or LSTM forecast growth, produces warnings after three qualifying readings. Warning evaluation uses Antarex labels. The local dashboard displays archived replay and saved-model inference. Live sampling is a separate unvalidated path.}
+\caption{Architecture of the archived experiment. Horizons are 60 s for Antarex and 300 s for Westermo. Only ARIMA and LSTM forecasts assist the growth rules; persistence and linear trend are forecast baselines. Warning evaluation separates timestamp precision, recall and F1 from event misses, false alarm starts and recognition delay. Westermo supports forecast scores and descriptive alarm counts, not labeled warning scores. The original ARIMA warning rule was disabled after validation. pp: percentage points of RAM.}
+\label{fig:architecture}
+\end{figure}
+
 \subsection{Dataset Choice and Forecast Horizons}
 Antarex was selected because it combines real machine telemetry with recorded and controlled fault injections~\cite{ref3,ref4,ref5}. The experiment uses the complete recovered CPU-MEM\_mono block, which covers approximately 12 days and contains 228 injected leak episodes. Only the metric streams required for this pipeline were included. The nested archive was verified using its recorded size and CRC. However, the complete outer archive was not acquired, and its published MD5 was not verified. Therefore, the dataset used in this study represents a defined subset rather than a validation of the entire Antarex release.
 
@@ -176,6 +185,10 @@ Antarex never reaches the illustrative 80\% pressure level in the audited block;
 \begin{samepage}
 \paragraph{Conclusion.} Lower forecasting error and better warning performance are different outcomes. LSTM reduced RMSE compared to restricted ARIMA, but trend-only covered more labeled time and had higher warning F1. The original LSTM precision/false-alarm benefit was not consistent across seeds. Additional features improved mean RMSE on only two of four recordings, and the missed-event scores exposed a failed forecast-growth gate. These findings assist in evaluating forecast accuracy and operational warnings separately. They do not establish production leak diagnosis or pre-exhaustion warning; independent labeled trials, process measurements and longer live evaluation are the next tests.
 \end{samepage}
+
+\begin{credits}
+\subsubsection*{Disclosure of Interests.} The authors have no competing interests relevant to this study.
+\end{credits}
 
 \bibliographystyle{splncs04}
 \bibliography{references}

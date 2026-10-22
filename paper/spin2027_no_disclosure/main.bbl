@@ -22,7 +22,7 @@ Beneder, R., Glatz, B., Horauer, M., Rauscher, T.: {Memory leak detection
 
 \bibitem{ref24}
 Box, G.E.P., Jenkins, G.M., Reinsel, G.C.: {Time Series Analysis: Forecasting
-  and Control}. Wiley, 4 edn. (2008). \doi{10.1002/9781118619193}
+  and Control}. Wiley, 4th edn. (2008). \doi{10.1002/9781118619193}
 
 \bibitem{ref40}
 Chandola, V., Banerjee, A., Kumar, V.: {Anomaly detection: A survey}. ACM
@@ -41,20 +41,20 @@ Greff, K., Srivastava, R.K., Koutnik, J., Steunebrink, B.R., Schmidhuber, J.:
   \doi{10.1109/TNNLS.2016.2582924}
 
 \bibitem{ref9}
-Grottke, M., Li, L., Vaidyanathan, K., Trivedi, K.: {Analysis of Software Aging
-  in a Web Server}. IEEE Transactions on Reliability  \textbf{55}(3),  411--420
-  (2006). \doi{10.1109/TR.2006.879609}
+Grottke, M., Li, L., Vaidyanathan, K., Trivedi, K.S.: {Analysis of Software
+  Aging in a Web Server}. IEEE Transactions on Reliability  \textbf{55}(3),
+  411--420 (2006). \doi{10.1109/TR.2006.879609}
 
 \bibitem{ref35}
 Hamed, K.H., Ramachandra~Rao, A.: {A modified Mann-Kendall trend test for
-  autocorrelated data}. Journal of Hydrology  \textbf{204}(1-4),  182--196
+  autocorrelated data}. Journal of Hydrology  \textbf{204}(1--4),  182--196
   (1998). \doi{10.1016/S0022-1694(97)00125-X}
 
 \bibitem{ref14}
 Hauswirth, M., Chilimbi, T.M.: {Low-overhead memory leak detection using
-  adaptive statistical profiling}. In: Proceedings of the 11th international
-  conference on Architectural support for programming languages and operating
-  systems. pp. 156--164. ACM (2004). \doi{10.1145/1024393.1024412}
+  adaptive statistical profiling}. In: Proceedings of the 11th International
+  Conference on Architectural Support for Programming Languages and Operating
+  Systems. pp. 156--164. ACM (2004). \doi{10.1145/1024393.1024412}
 
 \bibitem{ref26}
 Hochreiter, S., Schmidhuber, J.: {Long Short-Term Memory}. Neural Computation
@@ -62,7 +62,7 @@ Hochreiter, S., Schmidhuber, J.: {Long Short-Term Memory}. Neural Computation
 
 \bibitem{ref25}
 Hyndman, R.J., Athanasopoulos, G.: {Forecasting: Principles and Practice}.
-  OTexts, 3 edn. (2021), \url{https://otexts.com/fpp3/}
+  OTexts, 3rd edn. (2021), \url{https://otexts.com/fpp3/}
 
 \bibitem{ref41}
 Hyndman, R.J., Koehler, A.B.: {Another look at measures of forecast accuracy}.
@@ -76,8 +76,8 @@ Jindal, A., Staab, P., Kulkarni, P., Cardoso, J., Gerndt, M., Podolskiy, V.:
 
 \bibitem{ref17}
 Jump, M., McKinley, K.S.: {Cork: dynamic memory leak detection for
-  garbage-collected languages}. In: Proceedings of the 34th annual ACM
-  SIGPLAN-SIGACT symposium on Principles of programming languages. pp. 31--38.
+  garbage-collected languages}. In: Proceedings of the 34th Annual ACM
+  SIGPLAN-SIGACT Symposium on Principles of Programming Languages. pp. 31--38.
   ACM (2007). \doi{10.1145/1190216.1190224}
 
 \bibitem{ref39}
@@ -187,7 +187,7 @@ Zeng, A., Chen, M., Zhang, L., Xu, Q.: {Are Transformers Effective for Time
   \doi{10.1609/aaai.v37i9.26317}
 
 \bibitem{ref29}
-Zhang, G.: {Time series forecasting using a hybrid ARIMA and neural network
+Zhang, G.P.: {Time series forecasting using a hybrid ARIMA and neural network
   model}. Neurocomputing  \textbf{50},  159--175 (2003).
   \doi{10.1016/S0925-2312(01)00702-0}
 

@@ -1,2 +1,3 @@
-1 (Fig. 1) - Actual and predicted memory pressure in percent of RAM over the fixed original first thirty minutes of Antarex test target times.
-2 (Fig. 2) - Two panels show memory pressure and growth scores around the original missed injection. Forecast growth stays below the warning threshold during the shaded interval.
+1 (Fig. 1) - Archived Antarex and Westermo telemetry undergo causal preparation and chronological splitting. Prepared observations feed forecasting models and a recent-memory-growth calculation. Forecasts are scored against future observations. Recent growth, optionally combined with ARIMA or LSTM forecast growth, produces warnings after three qualifying readings. Warning evaluation uses Antarex labels. The local dashboard displays archived replay and saved-model inference. Live sampling is a separate unvalidated path.
+2 (Fig. 2) - Actual and predicted memory pressure in percent of RAM over the fixed original first thirty minutes of Antarex test target times.
+3 (Fig. 3) - Two panels show memory pressure and growth scores around the original missed injection. Forecast growth stays below the warning threshold during the shaded interval.

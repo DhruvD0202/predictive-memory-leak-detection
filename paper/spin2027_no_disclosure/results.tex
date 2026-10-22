@@ -104,7 +104,6 @@ Memory-only & $0.551\pm0.028$ & $3.405\pm0.449$ & 0--2 & $30.4\pm2.7$\\
 \end{table}
 
 
-\clearpage
 \subsection{Prototype Checks and Measurement Limits}
 All 40 implementation tests passed, including loopback HTTP endpoints. Startup verified 76 source files covering 69,559 test origins. In a separate in-process benchmark on Windows with 8 logical CPUs and 7.8 GiB RAM, each recording received 100 replay/JSON requests and 100 warm model requests. Median replay times ranged from 7.05 to 21.84 ms; median warm inference ranged from 0.45 to 0.56 ms (95th percentiles 0.69--0.96 ms). All 404 first/warm inferences matched archived predictions within $10^{-6}$ pressure fraction. The first request, including library/model loading, took 5.34 s. Process resident memory increased from 25.4 to 402.3 MiB; this includes replay data, libraries and four models, not isolated monitoring overhead.
 
