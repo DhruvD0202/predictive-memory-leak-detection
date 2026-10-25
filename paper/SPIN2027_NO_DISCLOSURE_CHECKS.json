@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-25",
-  "pages": 15,
+  "date": "2026-10-26",
+  "pages": 16,
   "references": 36,
   "figures": 3,
   "tables": 6,
@@ -21,19 +21,36 @@
   "ai_disclosure_remains_omitted_at_prior_user_request": true,
   "anonymous_layout_retained": true,
   "no_overfull_missing_character_or_unresolved_reference_diagnostics": true,
-  "visual_check": "All 13 changed rendered pages checked; no clipping or overlaps. Pages 1 and 4 are pixel-identical to the previously reviewed version.",
-  "pdf_sha256": "dd0cb34ed9abc83ff3b9bde80811a1cf85262350148539157c7ce980618a4e95",
-  "overleaf_payload_files": 14,
-  "overleaf_zip_sha256": "f7fac0ed9ce60a76bfcd8b9b6a3adb62397907d0d3dc8d52abd98bc1e0a543d8",
+  "visual_check": "All 16 pages rendered and visually checked; the architecture is on landscape page 4. No clipping or overlaps found.",
+  "pdf_sha256": "dbf40c2fd9dfee2af91aafae60560280b210c908160fc88d63f3fedfe86b7e46",
+  "overleaf_payload_files": 13,
+  "overleaf_zip_sha256": "917d622653be70d660daa96f974c2c4ea46bf3866b2323094cd64256ed87dc4d",
   "overleaf_manifest_and_crc_verified": true,
   "overleaf_extracted_build_matches_delivered_pdf_text": true,
-  "results_wording_bibliography_and_all_figure_pdfs_unchanged": true,
   "layout_fix": {
     "research_gap_kept_together": true,
     "research_gap_page": 3,
     "position": "Immediately below Table 1",
     "missed_event_figure_placement_relaxed_to_preserve_15_pages": true,
     "all_manuscript_wording_unchanged": true,
-    "font_sizes_margins_and_figure_sizes_unchanged": true
+    "font_sizes_margins_and_figure_sizes_unchanged": true,
+    "scope": "Historical research-gap layout fix on 25 October; its page-3 paragraph grouping remains in place."
+  },
+  "results_wording_bibliography_and_result_figure_pdfs_unchanged": true,
+  "closing_sections_and_architecture_revision": {
+    "sections_replaced": [
+      "Limitations",
+      "Reproducibility",
+      "Conclusion"
+    ],
+    "author_supplied_wording_preserved_except_approved_correction": true,
+    "approved_correction": "a forecast-growth threshold that the missed event did not meet",
+    "correction_supported_by": "results/revision_diagnostics/missed_event.json",
+    "architecture_source": "User-uploaded PNG; embedded unchanged",
+    "architecture_page": 4,
+    "architecture_page_orientation": "landscape",
+    "image_sha256": "64550455a80d551b1acbc7e53a434143d1592823afaf28c0050ba67de9f68b1c",
+    "body_page_dimensions_restored": true,
+    "page_count_increase_explicitly_authorized": true
   }
 }

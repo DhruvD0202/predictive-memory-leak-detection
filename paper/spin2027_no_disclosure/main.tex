@@ -6,6 +6,8 @@
 \usepackage{newtxtext}
 \usepackage[varvw]{newtxmath}
 \usepackage{graphicx}
+\usepackage[pass]{geometry}
+\usepackage{pdflscape}
 \usepackage{booktabs,tabularx,array}
 \usepackage{amsmath}
 \usepackage{algorithm}
@@ -77,12 +79,17 @@ Assumptions and benchmark quality affect anomaly-detection results~\cite{ref40,r
 \section{Data and Experimental Protocol}
 Figure~\ref{fig:architecture} summarizes the archived workflow. The forecast and warning branches are evaluated separately: labels calibrate and score the warning rules, but never enter the predictors. The live sampler is a separate exploratory trend-only path, described in Algorithm~\ref{alg:pipeline}.
 
-\begin{figure}[htbp]
-\centering\includegraphics[width=\textwidth]{architecture.pdf}
+\clearpage
+\newgeometry{left=24pt,right=24pt,top=56pt,bottom=56pt}
+\begin{landscape}
+\begin{figure}[p]
+\centering\includegraphics[width=0.99\linewidth]{architecture_uploaded.png}
 \Description{Archived Antarex and Westermo telemetry undergo causal preparation and chronological splitting. Prepared observations feed forecasting models and a recent-memory-growth calculation. Forecasts are scored against future observations. Recent growth, optionally combined with ARIMA or LSTM forecast growth, produces warnings after three qualifying readings. Warning evaluation uses Antarex labels. The local dashboard displays archived replay and saved-model inference. Live sampling is a separate unvalidated path.}
 \caption{Architecture of the archived experiment. Horizons are 60 s for Antarex and 300 s for Westermo. Only ARIMA and LSTM forecasts assist the growth rules; persistence and linear trend are forecast baselines. Warning evaluation separates timestamp precision, recall and F1 from event misses, false alarm starts and recognition delay. Westermo supports forecast scores and descriptive alarm counts, not labeled warning scores. The original ARIMA warning rule was disabled after validation. pp: percentage points of RAM.}
 \label{fig:architecture}
 \end{figure}
+\end{landscape}
+\restoregeometry
 
 \subsection{Dataset Choice and Forecast Horizons}
 We chose the Antarex dataset because it pairs authentic machine telemetry with logged, controlled fault injections~\cite{ref3,ref4,ref5}. Specifically, our experiments draw on the fully recovered CPU-MEM\_mono block, which spans roughly 12 days and captures 228 injected leak episodes, filtering down to only the metric streams required by our pipeline. While we verified the integrity of this nested archive against its recorded byte size and CRC checksum, we did not download the full outer archive or check its published MD5 hash. Consequently, the traces analyzed here should be viewed as a targeted subset rather than a full validation of the complete Antarex release.
@@ -180,15 +187,15 @@ Event recognition requires a new alarm start inside a fully covered injected int
 \input{results.tex}
 
 \section{Limitations, Reproducibility and Conclusion}
-The expanded study still uses one labeled Antarex recording, controlled injections, overlapping windows and reused holdouts. Earlier test forecasts were inspected during development before the original warning protocol was finalized. Five-seed repetition measures optimization variability; it does not remove that development dependence. The multivariate/memory-only comparison controls history, origins and training settings but changes input dimension and parameter count. It cannot attribute improvement to an individual feature. Selected horizons, thresholds and confirmation length also require independent validation.
+The extended study is still based on a single labelled Antarex recording, controlled injections, overlapping time windows and reused holdouts. Some of the earlier test forecasts were examined during development, before the original warning protocol was finalized. Repeating the experiments with five different seeds helps measure variation in optimization, but it does not eliminate the influence of development choices. The multivariate and memory-only comparison accounts for history, origins and training settings, although the input dimensions and number of parameters also change. Therefore, the improvement cannot be linked to any one feature alone. The selected horizons, thresholds and confirmation length also need to be validated independently.
 
-Antarex never reaches the illustrative 80\% pressure level in the audited block; its peak is approximately 42.24\%. No exhaustion or crash outcome is observed. The study therefore makes no claim of warning before memory runs out. Such a claim needs labeled trials with resource limits, observed depletion times and warning lead times, including failures to warn. Westermo cannot establish real-leak detection because its leak labels are unknown. Additional labeled recordings, process-level allocation evidence, matched multivariate statistical baselines, independent temporal holdouts and longer compatible live trials remain future work.
+Antarex does not reach the illustrative 80\% pressure level within the audited block. The highest observed pressure is approximately 42.24\%. Since no exhaustion or crash was observed, the study cannot claim that the system can warn before memory runs out. Establishing this would require labelled trials with defined resource limits, measured depletion times and warning lead times, including cases where the warning fails to appear. Westermo cannot be used to establish real leak detection because its leak labels are unavailable. Further work should include more labelled recordings, process-level allocation evidence, multivariate statistical baselines evaluated under matched conditions, independent temporal holdouts and longer live trials in a compatible environment.
 
-\paragraph{Reproducibility.} The project retains preprocessing, baseline, LSTM and warning code, four executable notebooks, model configurations, weights, origin indices, checksums and scoring scripts. The revision adds a fixed seed/feature protocol, per-run forecasts and warning outcomes, a missed-event analysis and a prototype benchmark. Reproduction uses the verified input package, runs the seed study, then independently checks saved predictions and warning scores. The repository is currently private; these materials are not claimed to be publicly accessible. A masked supplementary code package accompanies this revision for author review, while raw/derived data packages require separate access. Public dataset sources are cited above; a public code release or reviewer-access route must be arranged before claiming open reproducibility.
+\paragraph{Reproducibility.} The project preserves the preprocessing steps, baseline, LSTM and warning code, four executable notebooks, model configurations, weights, origin indices, checksums and scoring scripts. This revision also introduces a fixed seed and feature protocol, forecasts and warning outcomes for each run, a missed-event analysis and a prototype benchmark. To reproduce the results, the verified input package is used to run the seed study, after which the saved predictions and warning scores are checked independently. The repository remains private, so the materials are not presented as publicly accessible. A masked supplementary code package is available to support author review, while access to the raw and derived data packages must be arranged separately. The public dataset sources are cited above. However, a public code release or a reviewer-access arrangement is needed before the work can be described as openly reproducible.
 
 \begin{samepage}
-\paragraph{Conclusion.} Lower forecasting error and better warning performance are different outcomes. LSTM reduced RMSE compared to restricted ARIMA, but trend-only covered more labeled time and had higher warning F1. The original LSTM precision/false-alarm benefit was not consistent across seeds. Additional features improved mean RMSE on only two of four recordings, and the missed-event scores exposed a failed forecast-growth gate. These findings assist in evaluating forecast accuracy and operational warnings separately. They do not establish production leak diagnosis or pre-exhaustion warning; independent labeled trials, process measurements and longer live evaluation are the next tests.
-\end{samepage}
+\paragraph{Conclusion.} Lower forecasting error and improved warning performance should be treated as separate results. The LSTM achieved a lower RMSE than the restricted ARIMA model, whereas the trend-only approach covered more labelled time and obtained a higher warning F1 score. The improvement in LSTM precision and false alarms observed in the original study was not consistent across all seeds. Additional features reduced the mean RMSE in only two of the four recordings, while the missed-event scores revealed a forecast-growth threshold that the missed event did not meet. These results help distinguish forecasting accuracy from the performance of operational warnings. However, they do not establish production-level leak diagnosis or prove that the system can warn before memory exhaustion. Independent labelled trials, process-level measurements and longer live evaluations are required next.
+\par\end{samepage}
 
 \bibliographystyle{splncs04}
 \bibliography{references}
