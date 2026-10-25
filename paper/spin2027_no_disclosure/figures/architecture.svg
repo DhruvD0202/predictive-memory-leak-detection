@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="346pt" height="355pt" viewBox="0 0 346 355" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="346pt" height="456pt" viewBox="0 0 346 456" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-22T12:46:07.682796</dc:date>
+    <dc:date>2026-10-26T01:21:07.852003</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,8 +21,8 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 355
-L 346 355
+   <path d="M 0 456
+L 346 456
 L 346 0
 L 0 0
 z
@@ -30,267 +30,336 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 173 46
-Q 173 54.750854 173 62.663183
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-    <path d="M 174.4 59.863183
-L 173 62.663183
-L 171.6 59.863183
+    <path d="M 173 80
+Q 173 86.499268 173 92.048206
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 174.4 89.248206
+L 173 92.048206
+L 171.6 89.248206
 z
-" clip-path="url(#p27d2502c5e)" style="stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
+" clip-path="url(#p506c651a91)" style="fill: #66798d; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
    </g>
    <g id="line2d_1">
-    <path d="M 173 133
-L 93 133
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: square"/>
-   </g>
-   <g id="patch_3">
-    <path d="M 93 133
-Q 93 138.251465 93 142.664404
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-    <path d="M 94.4 139.864404
-L 93 142.664404
-L 91.6 139.864404
-z
-" clip-path="url(#p27d2502c5e)" style="stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
+    <path d="M 173 162
+L 173 173
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
-    <path d="M 173 133
-L 271 133
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: square"/>
+    <path d="M 173 173
+L 83 173
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: square"/>
    </g>
-   <g id="patch_4">
-    <path d="M 271 133
-Q 271 138.251465 271 142.664404
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-    <path d="M 272.4 139.864404
-L 271 142.664404
-L 269.6 139.864404
+   <g id="patch_3">
+    <path d="M 83 173
+Q 83 178.500488 83 183.050648
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 84.4 180.250648
+L 83 183.050648
+L 81.6 180.250648
 z
-" clip-path="url(#p27d2502c5e)" style="stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-   </g>
-   <g id="patch_5">
-    <path d="M 271 184
-Q 271 193.750183 271 202.661841
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-    <path d="M 272.4 199.861841
-L 271 202.661841
-L 269.6 199.861841
-z
-" clip-path="url(#p27d2502c5e)" style="stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
+" clip-path="url(#p506c651a91)" style="fill: #66798d; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
    </g>
    <g id="line2d_3">
-    <path d="M 174 198
-L 191 198
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: square"/>
+    <path d="M 173 173
+L 263 173
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 263 173
+Q 263 178.500488 263 183.050648
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 264.4 180.250648
+L 263 183.050648
+L 261.6 180.250648
+z
+" clip-path="url(#p506c651a91)" style="fill: #66798d; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 263 253
+Q 263 257.999146 263 262.047962
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 264.4 259.247962
+L 263 262.047962
+L 261.6 259.247962
+z
+" clip-path="url(#p506c651a91)" style="fill: #66798d; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
    </g>
    <g id="line2d_4">
-    <path d="M 191 198
-L 191 225
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: square"/>
+    <path d="M 162 242
+L 172 242
+L 172 298
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: square"/>
    </g>
    <g id="patch_6">
-    <path d="M 191 225
-Q 198.750854 225 205.663183 225
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-    <path d="M 202.863183 223.6
-L 205.663183 225
-L 202.863183 226.4
+    <path d="M 172 298
+Q 177.500488 298 182.050648 298
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 179.250648 296.6
+L 182.050648 298
+L 179.250648 299.4
 z
-" clip-path="url(#p27d2502c5e)" style="stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
+" clip-path="url(#p506c651a91)" style="fill: #66798d; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
    </g>
    <g id="patch_7">
-    <path d="M 93 214
-Q 93 230.750183 93 246.661841
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-    <path d="M 94.4 243.861841
-L 93 246.661841
-L 91.6 243.861841
+    <path d="M 83 290
+Q 83 296.499268 83 302.048206
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 84.4 299.248206
+L 83 302.048206
+L 81.6 299.248206
 z
-" clip-path="url(#p27d2502c5e)" style="stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
+" clip-path="url(#p506c651a91)" style="fill: #66798d; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
    </g>
    <g id="patch_8">
-    <path d="M 271 264
-Q 271 271.251953 271 277.665381
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-    <path d="M 272.4 274.865381
-L 271 277.665381
-L 269.6 274.865381
+    <path d="M 263 345
+Q 263 351.499268 263 357.048206
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 264.4 354.248206
+L 263 357.048206
+L 261.6 354.248206
 z
-" clip-path="url(#p27d2502c5e)" style="stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-   </g>
-   <g id="patch_9">
-    <path d="M 173 329
-Q 173 331.251465 173 332.664404
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-    <path d="M 174.4 329.864404
-L 173 332.664404
-L 171.6 329.864404
-z
-" clip-path="url(#p27d2502c5e)" style="stroke: #000000; stroke-width: 0.75; stroke-linecap: round"/>
-   </g>
-   <g id="patch_10">
-    <path d="M 12 46
-L 334 46
-L 334 5
-L 12 5
-z
-" clip-path="url(#p27d2502c5e)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.75; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_11">
-    <path d="M 12 121
-L 334 121
-L 334 65
-L 12 65
-z
-" clip-path="url(#p27d2502c5e)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.75; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_12">
-    <path d="M 12 214
-L 174 214
-L 174 145
-L 12 145
-z
-" clip-path="url(#p27d2502c5e)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.75; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_13">
-    <path d="M 208 184
-L 334 184
-L 334 145
-L 208 145
-z
-" clip-path="url(#p27d2502c5e)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.75; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_14">
-    <path d="M 208 264
-L 334 264
-L 334 205
-L 208 205
-z
-" clip-path="url(#p27d2502c5e)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.75; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_15">
-    <path d="M 12 302
-L 174 302
-L 174 249
-L 12 249
-z
-" clip-path="url(#p27d2502c5e)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.75; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_16">
-    <path d="M 208 322
-L 334 322
-L 334 280
-L 208 280
-z
-" clip-path="url(#p27d2502c5e)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.75; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_17">
-    <path d="M 12 354.5
-L 334 354.5
-L 334 335
-L 12 335
-z
-" clip-path="url(#p27d2502c5e)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.75; stroke-linejoin: miter"/>
+" clip-path="url(#p506c651a91)" style="fill: #66798d; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
    </g>
    <g id="line2d_5">
-    <path d="M 173 121
-L 173 133
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: square"/>
+    <path d="M 83 383
+L 83 421
+L 263 421
+L 263 417
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: square"/>
    </g>
-   <g id="line2d_6">
-    <path d="M 93 302
-L 93 329
-L 271 329
-L 271 322
-" clip-path="url(#p27d2502c5e)" style="fill: none; stroke: #000000; stroke-width: 0.75; stroke-linecap: square"/>
+   <g id="patch_9">
+    <path d="M 173 421
+Q 173 423.500488 173 425.050648
+" clip-path="url(#p506c651a91)" style="fill: none; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 174.4 422.250648
+L 173 425.050648
+L 171.6 422.250648
+z
+" clip-path="url(#p506c651a91)" style="fill: #66798d; stroke: #66798d; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 8 80
+L 338 80
+Q 342 80 342 76
+L 342 32
+Q 342 28 338 28
+L 8 28
+Q 4 28 4 32
+L 4 76
+Q 4 80 8 80
+z
+" clip-path="url(#p506c651a91)" style="fill: #edf6fe; stroke: #9bbfe0; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 8 162
+L 338 162
+Q 342 162 342 158
+L 342 98
+Q 342 94 338 94
+L 8 94
+Q 4 94 4 98
+L 4 158
+Q 4 162 8 162
+z
+" clip-path="url(#p506c651a91)" style="fill: #f2effd; stroke: #b5a5e1; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 8 290
+L 158 290
+Q 162 290 162 286
+L 162 189
+Q 162 185 158 185
+L 8 185
+Q 4 185 4 189
+L 4 286
+Q 4 290 8 290
+z
+" clip-path="url(#p506c651a91)" style="fill: #edf8f2; stroke: #97c5af; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 188 253
+L 338 253
+Q 342 253 342 249
+L 342 189
+Q 342 185 338 185
+L 188 185
+Q 184 185 184 189
+L 184 249
+Q 184 253 188 253
+z
+" clip-path="url(#p506c651a91)" style="fill: #edf8f2; stroke: #97c5af; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 188 345
+L 338 345
+Q 342 345 342 341
+L 342 268
+Q 342 264 338 264
+L 188 264
+Q 184 264 184 268
+L 184 341
+Q 184 345 188 345
+z
+" clip-path="url(#p506c651a91)" style="fill: #fff8e8; stroke: #dfc682; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 8 383
+L 158 383
+Q 162 383 162 379
+L 162 308
+Q 162 304 158 304
+L 8 304
+Q 4 304 4 308
+L 4 379
+Q 4 383 8 383
+z
+" clip-path="url(#p506c651a91)" style="fill: #f3f6fc; stroke: #b5c2d2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 188 417
+L 338 417
+Q 342 417 342 413
+L 342 363
+Q 342 359 338 359
+L 188 359
+Q 184 359 184 363
+L 184 413
+Q 184 417 188 417
+z
+" clip-path="url(#p506c651a91)" style="fill: #f3f6fc; stroke: #b5c2d2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 8 455
+L 338 455
+Q 342 455 342 451
+L 342 431
+Q 342 427 338 427
+L 8 427
+Q 4 427 4 431
+L 4 451
+Q 4 455 8 455
+z
+" clip-path="url(#p506c651a91)" style="fill: #192e4e; stroke: #192e4e; stroke-width: 0.75; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle" x="173" y="22.339469" transform="rotate(-0 173 22.339469)">Archived telemetry</text>
+    <text style="font-weight: 700; font-size: 10.3px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #192e4e" x="173" y="14.801922" transform="rotate(-0 173 14.801922)">Telemetry forecasting and warning workflow</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="173" y="33.262688" transform="rotate(-0 173 33.262688)">Antarex (5 s) / Westermo systems 1-3 (30 s)</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #192e4e" x="173" y="43.448281" transform="rotate(-0 173 43.448281)">Archived telemetry</text>
    </g>
    <g id="text_3">
-    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle" x="173" y="78.873063" transform="rotate(-0 173 78.873063)">Causal preparation</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="173" y="58.262688" transform="rotate(-0 173 58.262688)">Antarex: 5-second intervals · Westermo</text>
    </g>
    <g id="text_4">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="173" y="89.762688" transform="rotate(-0 173 89.762688)">Past-only alignment and rates; preserve gaps</text>
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="173" y="70.262688" transform="rotate(-0 173 70.262688)">systems 1–3: 30-second intervals</text>
    </g>
    <g id="text_5">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="173" y="100.762687" transform="rotate(-0 173 100.762687)">70% / 15% / 15% chronological split</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #192e4e" x="173" y="110.483437" transform="rotate(-0 173 110.483437)">Causal data preparation</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="173" y="111.762687" transform="rotate(-0 173 111.762687)">Training-only feature selection and scaling</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="173" y="125.2075" transform="rotate(-0 173 125.2075)">Align observations and calculate rates using past data only;</text>
    </g>
    <g id="text_7">
-    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="159.873063" transform="rotate(-0 93 159.873063)">Forecast models</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="173" y="136.2075" transform="rotate(-0 173 136.2075)">retain gaps</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="170.762687" transform="rotate(-0 93 170.762687)">Persistence; linear trend</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="173" y="156.2075" transform="rotate(-0 173 156.2075)">Chronological split: 70% training · 15% validation · 15% test</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="181.762687" transform="rotate(-0 93 181.762687)">Restricted ARIMA; LSTM</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #192e4e" x="83" y="201.483438" transform="rotate(-0 83 201.483438)">Forecast models</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="192.762687" transform="rotate(-0 93 192.762687)">History: 60 observations</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="216.2075" transform="rotate(-0 83 216.2075)">Persistence and linear-trend</text>
    </g>
    <g id="text_11">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="203.762687" transform="rotate(-0 93 203.762687)">Horizon: 60 s / 300 s</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="227.2075" transform="rotate(-0 83 227.2075)">baselines</text>
    </g>
    <g id="text_12">
-    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="155.839469" transform="rotate(-0 271 155.839469)">Observed growth</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="241.2075" transform="rotate(-0 83 241.2075)">Restricted ARIMA and LSTM</text>
    </g>
    <g id="text_13">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="166.762687" transform="rotate(-0 271 166.762687)">Last 12 memory readings</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="256.2075" transform="rotate(-0 83 256.2075)">History: 60 observations ·</text>
    </g>
    <g id="text_14">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="177.762687" transform="rotate(-0 271 177.762687)">Slope in pp/min</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="267.2075" transform="rotate(-0 83 267.2075)">Forecast durations:</text>
    </g>
    <g id="text_15">
-    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="214.839469" transform="rotate(-0 271 214.839469)">Warning rules</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="278.2075" transform="rotate(-0 83 278.2075)">60 s and 300 s</text>
    </g>
    <g id="text_16">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="225.762687" transform="rotate(-0 271 225.762687)">Trend only or</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #192e4e" x="263" y="201.448281" transform="rotate(-0 263 201.448281)">Observed growth</text>
    </g>
    <g id="text_17">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="236.762687" transform="rotate(-0 271 236.762687)">ARIMA / LSTM + trend</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="216.2075" transform="rotate(-0 263 216.2075)">Slope from the latest 12</text>
    </g>
    <g id="text_18">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="247.762687" transform="rotate(-0 271 247.762687)">Validation thresholds;</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="227.2075" transform="rotate(-0 263 227.2075)">memory readings</text>
    </g>
    <g id="text_19">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="258.762687" transform="rotate(-0 271 258.762687)">3 consecutive readings</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="239.069531" transform="rotate(-0 263 239.069531)">Measured in percentage points</text>
    </g>
    <g id="text_20">
-    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="261.373063" transform="rotate(-0 93 261.373063)">Forecast evaluation</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="247.569531" transform="rotate(-0 263 247.569531)">of RAM per minute</text>
    </g>
    <g id="text_21">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="272.262687" transform="rotate(-0 93 272.262687)">Future actuals vs. forecasts</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #192e4e" x="263" y="280.448281" transform="rotate(-0 263 280.448281)">Warning rules</text>
    </g>
    <g id="text_22">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="283.262687" transform="rotate(-0 93 283.262687)">MAE / RMSE (pp of RAM)</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="295.2075" transform="rotate(-0 263 295.2075)">Trend-only rule or ARIMA/LSTM</text>
    </g>
    <g id="text_23">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="93" y="294.262687" transform="rotate(-0 93 294.262687)">All four recordings</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="306.2075" transform="rotate(-0 263 306.2075)">forecast plus trend</text>
    </g>
    <g id="text_24">
-    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="292.339469" transform="rotate(-0 271 292.339469)">Warning evaluation</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="321.2075" transform="rotate(-0 263 321.2075)">Require three consecutive</text>
    </g>
    <g id="text_25">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="303.262687" transform="rotate(-0 271 303.262687)">Antarex labels only</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="332.2075" transform="rotate(-0 263 332.2075)">readings</text>
    </g>
    <g id="text_26">
-    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="271" y="314.262687" transform="rotate(-0 271 314.262687)">Point / event measures</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #192e4e" x="83" y="320.483438" transform="rotate(-0 83 320.483438)">Forecast evaluation</text>
    </g>
    <g id="text_27">
-    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle" x="173" y="347.089469" transform="rotate(-0 173 347.089469)">Local dashboard: archived replay and saved-model inference</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="335.2075" transform="rotate(-0 83 335.2075)">Compare forecasts with</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="346.2075" transform="rotate(-0 83 346.2075)">future observations</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="358.2075" transform="rotate(-0 83 358.2075)">MAE and RMSE in percentage</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="369.2075" transform="rotate(-0 83 369.2075)">points of RAM</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="83" y="377.569531" transform="rotate(-0 83 377.569531)">Evaluate all four recordings</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #192e4e" x="263" y="374.448281" transform="rotate(-0 263 374.448281)">Warning evaluation</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="389.2075" transform="rotate(-0 263 389.2075)">Antarex labels only</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="402.2075" transform="rotate(-0 263 402.2075)">Point-level and event-level</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #354353" x="263" y="411.7075" transform="rotate(-0 263 411.7075)">measures</text>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="173" y="438.483437" transform="rotate(-0 173 438.483437)">Local dashboard</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="173" y="449.7075" transform="rotate(-0 173 449.7075)">Archived-data replay and inference with saved models</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #57697e" transform="translate(175.430469 243.999609) rotate(-270)">forecast input</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p27d2502c5e">
-   <rect x="0" y="0" width="346" height="355"/>
+  <clipPath id="p506c651a91">
+   <rect x="0" y="0" width="346" height="456"/>
   </clipPath>
  </defs>
 </svg>

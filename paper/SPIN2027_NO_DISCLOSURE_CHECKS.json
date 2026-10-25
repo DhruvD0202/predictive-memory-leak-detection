@@ -1,6 +1,6 @@
 {
   "date": "2026-10-26",
-  "pages": 16,
+  "pages": 15,
   "references": 36,
   "figures": 3,
   "tables": 6,
@@ -21,10 +21,10 @@
   "ai_disclosure_remains_omitted_at_prior_user_request": true,
   "anonymous_layout_retained": true,
   "no_overfull_missing_character_or_unresolved_reference_diagnostics": true,
-  "visual_check": "All 16 pages rendered and visually checked; the architecture is on landscape page 4. No clipping or overlaps found.",
-  "pdf_sha256": "dbf40c2fd9dfee2af91aafae60560280b210c908160fc88d63f3fedfe86b7e46",
-  "overleaf_payload_files": 13,
-  "overleaf_zip_sha256": "917d622653be70d660daa96f974c2c4ea46bf3866b2323094cd64256ed87dc4d",
+  "visual_check": "All 13 changed pages rendered and visually checked, including the portrait architecture page. Pages 1 and 2 match the previously reviewed version. No clipping or overlaps found.",
+  "pdf_sha256": "e13e6291ccff7d4c1758d734ff29ba34ee566a0c3eb974aa9f1e59a54e9b4498",
+  "overleaf_payload_files": 14,
+  "overleaf_zip_sha256": "6a9f35a5d7a363260dc5b3cebb1bac1dff437ea726390d57204a3fb174c7b66d",
   "overleaf_manifest_and_crc_verified": true,
   "overleaf_extracted_build_matches_delivered_pdf_text": true,
   "layout_fix": {
@@ -51,6 +51,27 @@
     "architecture_page_orientation": "landscape",
     "image_sha256": "64550455a80d551b1acbc7e53a434143d1592823afaf28c0050ba67de9f68b1c",
     "body_page_dimensions_restored": true,
-    "page_count_increase_explicitly_authorized": true
+    "page_count_increase_explicitly_authorized": true,
+    "scope": "Historical 25-26 October revision; the later portrait redraw supersedes its architecture layout."
+  },
+  "portrait_architecture_revision": {
+    "architecture_page": 4,
+    "orientation": "portrait",
+    "all_pages_standard_portrait": true,
+    "standard_body_page_dimensions_restored": true,
+    "landscape_packages_and_margin_overrides_removed": true,
+    "all_diagram_wording_matches_uploaded_design": true,
+    "all_manuscript_wording_preserved": true,
+    "format": "vector PDF and editable SVG",
+    "figure_dimensions_pt": [
+      346,
+      456
+    ],
+    "body_font_pt": 8,
+    "secondary_font_pt": 7.5,
+    "title_font_pt": 10.3,
+    "label_bounds_checked": 38,
+    "source_generator": "scripts/build_spin_architecture.py",
+    "image_reference_retained": "paper/spin2027_no_disclosure/figures/architecture_uploaded.png"
   }
 }

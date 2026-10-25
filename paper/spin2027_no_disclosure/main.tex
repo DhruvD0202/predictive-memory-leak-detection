@@ -6,8 +6,6 @@
 \usepackage{newtxtext}
 \usepackage[varvw]{newtxmath}
 \usepackage{graphicx}
-\usepackage[pass]{geometry}
-\usepackage{pdflscape}
 \usepackage{booktabs,tabularx,array}
 \usepackage{amsmath}
 \usepackage{algorithm}
@@ -79,17 +77,12 @@ Assumptions and benchmark quality affect anomaly-detection results~\cite{ref40,r
 \section{Data and Experimental Protocol}
 Figure~\ref{fig:architecture} summarizes the archived workflow. The forecast and warning branches are evaluated separately: labels calibrate and score the warning rules, but never enter the predictors. The live sampler is a separate exploratory trend-only path, described in Algorithm~\ref{alg:pipeline}.
 
-\clearpage
-\newgeometry{left=24pt,right=24pt,top=56pt,bottom=56pt}
-\begin{landscape}
 \begin{figure}[p]
-\centering\includegraphics[width=0.99\linewidth]{architecture_uploaded.png}
+\centering\includegraphics[width=\textwidth]{architecture.pdf}
 \Description{Archived Antarex and Westermo telemetry undergo causal preparation and chronological splitting. Prepared observations feed forecasting models and a recent-memory-growth calculation. Forecasts are scored against future observations. Recent growth, optionally combined with ARIMA or LSTM forecast growth, produces warnings after three qualifying readings. Warning evaluation uses Antarex labels. The local dashboard displays archived replay and saved-model inference. Live sampling is a separate unvalidated path.}
 \caption{Architecture of the archived experiment. Horizons are 60 s for Antarex and 300 s for Westermo. Only ARIMA and LSTM forecasts assist the growth rules; persistence and linear trend are forecast baselines. Warning evaluation separates timestamp precision, recall and F1 from event misses, false alarm starts and recognition delay. Westermo supports forecast scores and descriptive alarm counts, not labeled warning scores. The original ARIMA warning rule was disabled after validation. pp: percentage points of RAM.}
 \label{fig:architecture}
 \end{figure}
-\end{landscape}
-\restoregeometry
 
 \subsection{Dataset Choice and Forecast Horizons}
 We chose the Antarex dataset because it pairs authentic machine telemetry with logged, controlled fault injections~\cite{ref3,ref4,ref5}. Specifically, our experiments draw on the fully recovered CPU-MEM\_mono block, which spans roughly 12 days and captures 228 injected leak episodes, filtering down to only the metric streams required by our pipeline. While we verified the integrity of this nested archive against its recorded byte size and CRC checksum, we did not download the full outer archive or check its published MD5 hash. Consequently, the traces analyzed here should be viewed as a targeted subset rather than a full validation of the complete Antarex release.
