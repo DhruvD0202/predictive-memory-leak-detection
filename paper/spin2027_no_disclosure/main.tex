@@ -70,7 +70,9 @@ Kim et al.~\cite{ref44} & Evaluation of time-series anomaly detection & Warns ab
 
 Assumptions and benchmark quality affect anomaly-detection results~\cite{ref40,ref45,ref46}. Forecast errors and warning scores assess different outcomes~\cite{ref41,ref42,ref43}. Chronological holdouts and training-only scaling make the information available at each prediction explicit~\cite{ref36,ref39}.
 
+\begin{samepage}
 \noindent\textbf{Research gap.} When analyzing these traces under a single temporal protocol, does a lower forecasting error genuinely improve growth-warning coverage, cut down on false alarms, or speed up recognition? Answering this requires a controlled evaluation. We tackle this problem by pairing matched forecast origins with injected-event labels, running trials across repeated random seeds, and conducting a memory-only ablation. As for the unlabeled workload data, its role is strictly limited to comparing forecast performance rather than supporting leak-detection claims.
+\par\end{samepage}
 
 \section{Data and Experimental Protocol}
 Figure~\ref{fig:architecture} summarizes the archived workflow. The forecast and warning branches are evaluated separately: labels calibrate and score the warning rules, but never enter the predictors. The live sampler is a separate exploratory trend-only path, described in Algorithm~\ref{alg:pipeline}.

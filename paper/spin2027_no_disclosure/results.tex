@@ -78,7 +78,7 @@ ARIMA (off) & -- & 0.000 & 0.000 & 0 & 35 & --\\
 
 Event 1534, a low-intensity injection starting at 22:00:14 UTC on 19 May 2018, demonstrates this mechanism (Fig.~\ref{fig:missed}). During its 236 s and 47 eligible origins, forecast growth peaks at 0.216 pp/min, below the 0.4 threshold. Thus no reading can satisfy the forecast gate, irrespective of the three-reading requirement. Observed growth reaches 0.938 pp/min; trend-only warns after 56 s. Memory pressure spans approximately 3.20--7.17\%. The recorded scores explain the decision failure, not its allocation-level cause.
 
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
 \centering\includegraphics[width=\textwidth]{missed_event.pdf}
 \Description{Two panels show memory pressure and growth scores around the original missed injection. Forecast growth stays below the warning threshold during the shaded interval.}
 \caption{Original missed injected event 1534. Shading marks the recorded injection. Top: current pressure and the forecast issued at the same origin (its target is 60 s later). Bottom: observed and forecast growth; predicted growth remains below the LSTM gate throughout the injection. pp: percentage points of RAM.}

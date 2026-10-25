@@ -16,16 +16,24 @@
   ],
   "approved_correction": "Comment 3: adaptive or garbage-collector profiling [10,15]",
   "unselected_hybrid_model_paragraph_preserved": true,
-  "results_bibliography_and_all_figure_pdfs_unchanged": true,
   "all_citations_resolved_and_all_references_cited": true,
   "disclosure_of_interests_removed_at_user_request": true,
   "ai_disclosure_remains_omitted_at_prior_user_request": true,
   "anonymous_layout_retained": true,
   "no_overfull_missing_character_or_unresolved_reference_diagnostics": true,
-  "visual_check": "All 15 rendered pages checked; no clipping or overlaps found.",
-  "pdf_sha256": "d2fc68f5fe65d8eaa38d3b4b4534260598792245e6291cb68b3e18be2795b8c6",
+  "visual_check": "All 13 changed rendered pages checked; no clipping or overlaps. Pages 1 and 4 are pixel-identical to the previously reviewed version.",
+  "pdf_sha256": "dd0cb34ed9abc83ff3b9bde80811a1cf85262350148539157c7ce980618a4e95",
   "overleaf_payload_files": 14,
-  "overleaf_zip_sha256": "d262f72f1d9691c9d0d625756c8762f4ede7d5a97e190393bb8c7f30357b6d27",
+  "overleaf_zip_sha256": "f7fac0ed9ce60a76bfcd8b9b6a3adb62397907d0d3dc8d52abd98bc1e0a543d8",
   "overleaf_manifest_and_crc_verified": true,
-  "overleaf_extracted_build_matches_delivered_pdf_text": true
+  "overleaf_extracted_build_matches_delivered_pdf_text": true,
+  "results_wording_bibliography_and_all_figure_pdfs_unchanged": true,
+  "layout_fix": {
+    "research_gap_kept_together": true,
+    "research_gap_page": 3,
+    "position": "Immediately below Table 1",
+    "missed_event_figure_placement_relaxed_to_preserve_15_pages": true,
+    "all_manuscript_wording_unchanged": true,
+    "font_sizes_margins_and_figure_sizes_unchanged": true
+  }
 }
