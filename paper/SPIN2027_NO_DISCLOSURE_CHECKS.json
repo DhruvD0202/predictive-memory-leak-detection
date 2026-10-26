@@ -1,6 +1,6 @@
 {
   "date": "2026-10-26",
-  "pages": 15,
+  "pages": 16,
   "references": 36,
   "figures": 3,
   "tables": 6,
@@ -21,10 +21,10 @@
   "ai_disclosure_remains_omitted_at_prior_user_request": true,
   "anonymous_layout_retained": true,
   "no_overfull_missing_character_or_unresolved_reference_diagnostics": true,
-  "visual_check": "All 13 changed pages rendered and visually checked, including the portrait architecture page. Pages 1 and 2 match the previously reviewed version. No clipping or overlaps found.",
-  "pdf_sha256": "e13e6291ccff7d4c1758d734ff29ba34ee566a0c3eb974aa9f1e59a54e9b4498",
+  "visual_check": "All 9 changed pages (8-16) rendered and visually checked. Pages 1-7 match the previously reviewed version. No clipping or overlaps found.",
+  "pdf_sha256": "083451e52febe07e91c9e19a195134edeb8cff8a89ef70dc632b13884f85987e",
   "overleaf_payload_files": 14,
-  "overleaf_zip_sha256": "6a9f35a5d7a363260dc5b3cebb1bac1dff437ea726390d57204a3fb174c7b66d",
+  "overleaf_zip_sha256": "a84a4b8dfa9caeb32fe914147b60535a97ac6f951c4be4939082772f1893d4f7",
   "overleaf_manifest_and_crc_verified": true,
   "overleaf_extracted_build_matches_delivered_pdf_text": true,
   "layout_fix": {
@@ -73,5 +73,27 @@
     "label_bounds_checked": 38,
     "source_generator": "scripts/build_spin_architecture.py",
     "image_reference_retained": "paper/spin2027_no_disclosure/figures/architecture_uploaded.png"
+  },
+  "algorithm_wording_revision": {
+    "date": "2026-10-26",
+    "algorithm_page": 8,
+    "numbered_steps": 22,
+    "input_label": "Input",
+    "user_supplied_wording_applied": true,
+    "equation_cross_references_preserved": true,
+    "existing_type_size_preserved": true,
+    "all_other_manuscript_wording_unchanged": true,
+    "implementation_review": [
+      "src/preprocessing.py",
+      "src/baselines.py",
+      "src/lstm_forecasting.py",
+      "src/warning_evaluation.py",
+      "src/demo_service.py"
+    ],
+    "interpretation_notes": [
+      "High-level pseudocode combines archived processing and the separate exploratory live path.",
+      "Alarm starts are explicit saved flags; other changes are reconstructible from per-timestamp warning states.",
+      "Learned checkpoints use validation RMSE; baseline settings are selected separately."
+    ]
   }
 }

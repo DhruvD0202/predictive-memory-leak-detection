@@ -140,30 +140,31 @@ Algorithm~\ref{alg:pipeline} illustrates how we isolate offline model evaluation
 \begin{algorithm}[t]
 \caption{Telemetry forecasting and causal warning generation}
 \label{alg:pipeline}
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
 \begin{algorithmic}[1]
-\Require Archived telemetry or live OS sampler; history 60; trend history 12
-\If{archived experiment}
-  \State Align past observations; derive rates; retain gaps and label provenance
-  \State Split chronologically; fit scalers on training rows; form valid windows
-  \State Fit predictors on training data; select checkpoints on validation RMSE
-  \State Select warning thresholds using validation labels; freeze choices
+\Require archived telemetry or a live OS sampler; history window of 60 samples; trend window of 12 samples
+\If{the data come from an archived experiment}
+  \State Align the recorded observations in time and compute rates; keep gaps and note each value's source
+  \State Split the data chronologically, fit the scalers on training rows only, and build the valid input windows
+  \State Train the predictors on the training set and keep the checkpoints with the lowest validation RMSE
+  \State Choose the warning thresholds from the validation labels, then fix them
 \Else
-  \State Initialize five-second sampler and exploratory trend threshold
+  \State Start the five-second sampler and set an exploratory trend threshold
 \EndIf
 \For{each new observation at time $t$}
-  \State Read available telemetry; compute $y_t$ using Eq.~\ref{eq:target}
-  \State Reset history/count after a gap; wait until history is sufficient
-  \State Compute observed slope $g_t$ from the last 12 readings
-  \If{compatible archived-model inputs}
-    \State Scale history with saved training statistics; predict $f_m(t)$
-    \State Set $s_t=g_t$ for trend-only or Eq.~\ref{eq:score} for assisted rules
+  \State Read the available telemetry and compute $y_t$ using Eq.~\ref{eq:target}
+  \State After a gap, clear the history and the count, then wait until enough history has built up
+  \State Compute the observed slope $g_t$ over the last 12 readings
+  \If{the inputs are compatible with an archived model}
+    \State Scale the history using the saved training statistics and predict $f_m(t)$
+    \State Set $s_t=g_t$ for trend-only rules, or compute $s_t$ from Eq.~\ref{eq:score} for model-assisted rules
   \Else
-    \State Set $s_t=g_t$; do not substitute invented model inputs
+    \State Set $s_t=g_t$; no substitute model inputs are made up
   \EndIf
-  \State Update consecutive qualifying count; warn when count $\geq3$
-  \State Save forecast, score, warning and transition into alarm state
+  \State Update the count of consecutive qualifying steps and raise a warning once the count reaches 3
+  \State Store the forecast, the score, the warning, and any change in alarm state
 \EndFor
-\State Score stored forecasts/decisions only where suitable outcomes exist
+\State Evaluate the stored forecasts and decisions only where suitable outcomes are available
 \end{algorithmic}
 \end{algorithm}
 
