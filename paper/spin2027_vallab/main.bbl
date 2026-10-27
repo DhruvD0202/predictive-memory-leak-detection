@@ -1,0 +1,200 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{ref2}
+Assi, M.J., Fahad, A.A., Al-Sarray, B.: {Time series forecast modeling for the
+  Windows operating system performance using Box-Jenkins and LSTM models}.
+  International Journal of Nonlinear Analysis and Applications  \textbf{13}(2),
+   2121--2131 (2022). \doi{10.22075/ijnaa.2022.26974.3505}
+
+\bibitem{ref31}
+Battisti, F., Silva, A., Pereira, L., Carvalho, T., Araujo, J., Choi, E.,
+  et~al.: {hLSTM-Aging: A Hybrid LSTM Model for Software Aging Forecast}.
+  Applied Sciences  \textbf{12}(13), ~6412 (2022). \doi{10.3390/app12136412}
+
+\bibitem{ref19}
+Beneder, R., Glatz, B., Horauer, M., Rauscher, T.: {Memory leak detection
+  runtime-service for embedded Linux devices}. In: Proceedings of the 2014 IEEE
+  Emerging Technology and Factory Automation (ETFA). pp.~1--6. IEEE (2014).
+  \doi{10.1109/ETFA.2014.7005223}
+
+\bibitem{ref24}
+Box, G.E.P., Jenkins, G.M., Reinsel, G.C.: {Time Series Analysis: Forecasting
+  and Control}. Wiley, 4th edn. (2008). \doi{10.1002/9781118619193}
+
+\bibitem{ref40}
+Chandola, V., Banerjee, A., Kumar, V.: {Anomaly detection: A survey}. ACM
+  Computing Surveys  \textbf{41}(3),  1--58 (2009).
+  \doi{10.1145/1541880.1541882}
+
+\bibitem{ref10}
+Cotroneo, D., Natella, R., Pietrantuono, R., Russo, S.: {A survey of software
+  aging and rejuvenation studies}. ACM Journal on Emerging Technologies in
+  Computing Systems  \textbf{10}(1),  1--34 (2014). \doi{10.1145/2539117}
+
+\bibitem{ref28}
+Greff, K., Srivastava, R.K., Koutnik, J., Steunebrink, B.R., Schmidhuber, J.:
+  {LSTM: A Search Space Odyssey}. IEEE Transactions on Neural Networks and
+  Learning Systems  \textbf{28}(10),  2222--2232 (2017).
+  \doi{10.1109/TNNLS.2016.2582924}
+
+\bibitem{ref9}
+Grottke, M., Li, L., Vaidyanathan, K., Trivedi, K.S.: {Analysis of Software
+  Aging in a Web Server}. IEEE Transactions on Reliability  \textbf{55}(3),
+  411--420 (2006). \doi{10.1109/TR.2006.879609}
+
+\bibitem{ref35}
+Hamed, K.H., Ramachandra~Rao, A.: {A modified Mann-Kendall trend test for
+  autocorrelated data}. Journal of Hydrology  \textbf{204}(1--4),  182--196
+  (1998). \doi{10.1016/S0022-1694(97)00125-X}
+
+\bibitem{ref14}
+Hauswirth, M., Chilimbi, T.M.: {Low-overhead memory leak detection using
+  adaptive statistical profiling}. In: Proceedings of the 11th International
+  Conference on Architectural Support for Programming Languages and Operating
+  Systems. pp. 156--164. ACM (2004). \doi{10.1145/1024393.1024412}
+
+\bibitem{ref26}
+Hochreiter, S., Schmidhuber, J.: {Long Short-Term Memory}. Neural Computation
+  \textbf{9}(8),  1735--1780 (1997). \doi{10.1162/neco.1997.9.8.1735}
+
+\bibitem{ref25}
+Hyndman, R.J., Athanasopoulos, G.: {Forecasting: Principles and Practice}.
+  OTexts, 3rd edn. (2021), \url{https://otexts.com/fpp3/}
+
+\bibitem{ref41}
+Hyndman, R.J., Koehler, A.B.: {Another look at measures of forecast accuracy}.
+  International Journal of Forecasting  \textbf{22}(4),  679--688 (2006).
+  \doi{10.1016/j.ijforecast.2006.03.001}
+
+\bibitem{ref1}
+Jindal, A., Staab, P., Kulkarni, P., Cardoso, J., Gerndt, M., Podolskiy, V.:
+  {Memory Leak Detection Algorithms in the Cloud-based Infrastructure}. arXiv
+  preprint arXiv:2106.08938 (2021). \doi{10.48550/arXiv.2106.08938}
+
+\bibitem{ref17}
+Jump, M., McKinley, K.S.: {Cork: dynamic memory leak detection for
+  garbage-collected languages}. In: Proceedings of the 34th Annual ACM
+  SIGPLAN-SIGACT Symposium on Principles of Programming Languages. pp. 31--38.
+  ACM (2007). \doi{10.1145/1190216.1190224}
+
+\bibitem{ref39}
+Kapoor, S., Narayanan, A.: {Leakage and the reproducibility crisis in
+  machine-learning-based science}. Patterns  \textbf{4}(9),  100804 (2023).
+  \doi{10.1016/j.patter.2023.100804}
+
+\bibitem{ref44}
+Kim, S., Choi, K., Choi, H.S., Lee, B., Yoon, S.: {Towards a Rigorous
+  Evaluation of Time-Series Anomaly Detection}. Proceedings of the AAAI
+  Conference on Artificial Intelligence  \textbf{36}(7),  7194--7201 (2022).
+  \doi{10.1609/aaai.v36i7.20680}
+
+\bibitem{ref21}
+Lou, C., Chen, C., Huang, P., Dang, Y., Qin, S., Yang, X., et~al.: {RESIN: A
+  Holistic Service for Dealing with Memory Leaks in Production Cloud
+  Infrastructure}. In: 16th USENIX Symposium on Operating Systems Design and
+  Implementation (OSDI). pp. 109--125. USENIX Association (2022),
+  \url{https://www.usenix.org/conference/osdi22/presentation/lou-resin}
+
+\bibitem{ref33}
+Mann, H.B.: {Nonparametric Tests Against Trend}. Econometrica  \textbf{13}(3),
+  245--259 (1945). \doi{10.2307/1907187}
+
+\bibitem{ref20}
+Matias, R., Andrzejak, A., Machida, F., Elias, D., Trivedi, K.: {A Systematic
+  Differential Analysis for Fast and Robust Detection of Software Aging}. In:
+  2014 IEEE 33rd International Symposium on Reliable Distributed Systems. pp.
+  311--320. IEEE (2014). \doi{10.1109/SRDS.2014.38}
+
+\bibitem{ref12}
+Nethercote, N., Seward, J.: {Valgrind: a framework for heavyweight dynamic
+  binary instrumentation}. In: Proceedings of the 28th ACM SIGPLAN Conference
+  on Programming Language Design and Implementation. pp. 89--100. ACM (2007).
+  \doi{10.1145/1250734.1250746}
+
+\bibitem{ref3}
+Netti, A., Kiziltan, Z., Babaoglu, O., Sirbu, A., Bartolini, A., Borghesi, A.:
+  {Antarex HPC Fault Dataset}. Zenodo, version 1.0 (2018).
+  \doi{10.5281/zenodo.2553224}
+
+\bibitem{ref5}
+Netti, A., Kiziltan, Z., Babaoglu, O., Sirbu, A., Bartolini, A., Borghesi, A.:
+  {Online Fault Classification in HPC Systems through Machine Learning}. arXiv
+  preprint arXiv:1810.11208 (2018). \doi{10.48550/arXiv.1810.11208}, revised
+  2019
+
+\bibitem{ref4}
+Netti, A., Kiziltan, Z., Babaoglu, O., Sîrbu, A., Bartolini, A., Borghesi, A.:
+  {FINJ: A Fault Injection Tool for HPC Systems}. In: Euro-Par 2018: Parallel
+  Processing Workshops. Lecture Notes in Computer Science, vol. 11339, pp.
+  800--812. Springer International Publishing (2019).
+  \doi{10.1007/978-3-030-10549-5_62}
+
+\bibitem{ref42}
+Saito, T., Rehmsmeier, M.: {The Precision-Recall Plot Is More Informative than
+  the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets}. PLOS
+  ONE  \textbf{10}(3),  e0118432 (2015). \doi{10.1371/journal.pone.0118432}
+
+\bibitem{ref22}
+Salfner, F., Lenk, M., Malek, M.: {A survey of online failure prediction
+  methods}. ACM Computing Surveys  \textbf{42}(3),  1--42 (2010).
+  \doi{10.1145/1670679.1670680}
+
+\bibitem{ref30}
+Samal, U., Kumar, A.: {Improving software reliability: a hybrid ARIMA-LSTM
+  approach for fault prediction}. International Journal of System Assurance
+  Engineering and Management  \textbf{16}(5),  1757--1769 (2025).
+  \doi{10.1007/s13198-025-02743-2}
+
+\bibitem{ref46}
+Schmidl, S., Wenig, P., Papenbrock, T.: {Anomaly detection in time series: a
+  comprehensive evaluation}. Proceedings of the VLDB Endowment  \textbf{15}(9),
+   1779--1797 (2022). \doi{10.14778/3538598.3538602}
+
+\bibitem{ref6}
+Strandberg, P.E., Marklund, Y.: {The Westermo test system performance data
+  set}. arXiv preprint arXiv:2311.14510 (2023). \doi{10.48550/arXiv.2311.14510}
+
+\bibitem{ref36}
+Tashman, L.J.: {Out-of-sample tests of forecasting accuracy: an analysis and
+  review}. International Journal of Forecasting  \textbf{16}(4),  437--450
+  (2000). \doi{10.1016/S0169-2070(00)00065-0}
+
+\bibitem{ref43}
+Tatbul, N., Lee, T.J., Zdonik, S., Alam, M., Gottschlich, J.: {Precision and
+  Recall for Time Series}. In: Advances in Neural Information Processing
+  Systems. vol.~31 (2018),
+  \url{https://proceedings.neurips.cc/paper/2018/hash/8f468c873a32bb0619eaeb2050ba45d1-Abstract.html}
+
+\bibitem{ref8}
+Vaidyanathan, K., Trivedi, K.S.: {A measurement-based model for estimation of
+  resource exhaustion in operational software systems}. In: International
+  Symposium on Software Reliability Engineering. pp. 84--93. IEEE (1999),
+  \url{https://scholars.duke.edu/publication/755326}
+
+\bibitem{ref45}
+Wu, R., Keogh, E.: {Current Time Series Anomaly Detection Benchmarks are Flawed
+  and are Creating the Illusion of Progress}. IEEE Transactions on Knowledge
+  and Data Engineering  \textbf{35}(3),  2421--2429 (2023).
+  \doi{10.1109/TKDE.2021.3112126}
+
+\bibitem{ref32}
+Zeng, A., Chen, M., Zhang, L., Xu, Q.: {Are Transformers Effective for Time
+  Series Forecasting?} Proceedings of the AAAI Conference on Artificial
+  Intelligence  \textbf{37}(9),  11121--11128 (2023).
+  \doi{10.1609/aaai.v37i9.26317}
+
+\bibitem{ref29}
+Zhang, G.P.: {Time series forecasting using a hybrid ARIMA and neural network
+  model}. Neurocomputing  \textbf{50},  159--175 (2003).
+  \doi{10.1016/S0925-2312(01)00702-0}
+
+\bibitem{ref11}
+Zhao, J., Jin, Y., Trivedi, K.S., Matias~Jr., R.: {Injecting Memory Leaks to
+  Accelerate Software Failures}. In: 2011 IEEE 22nd International Symposium on
+  Software Reliability Engineering. pp. 260--269. IEEE (2011).
+  \doi{10.1109/ISSRE.2011.24}
+
+\end{thebibliography}
