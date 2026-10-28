@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-28",
+  "source_pdf": "C:/Users/hp/Downloads/Memory_Pressure_Forecasting_and_Growth_Based_Warnings__An_Empirical_Study.pdf",
+  "output": "output\\docx\\Memory_Pressure_Forecasting_and_Growth_Based_Warnings.docx",
+  "output_sha256": "0de1f20e8237468b77281a8c0df9afaa3b175de5731287a8f3e833c13005391b",
+  "pages_in_word": 16,
+  "native_tables": 6,
+  "embedded_figures": 3,
+  "native_math_objects": 65,
+  "algorithm_steps": 22,
+  "references": 36,
+  "all_pages_visually_reviewed": true,
+  "renderer": "Microsoft Word 14.0; standard renderer unavailable because LibreOffice is not installed",
+  "wording": "Source reconstruction matches uploaded PDF alphanumeric text, allowing extraction-order changes around floats; uploaded PDF additional wording retained.",
+  "pdf_body_alphanumeric_characters_excluding_figure_images": 31115,
+  "docx_body_alphanumeric_characters_including_native_math": 31115,
+  "body_character_counts_match_pdf": true,
+  "algorithm_number_sequence_verified": true,
+  "reference_number_sequence_verified": true
+}
