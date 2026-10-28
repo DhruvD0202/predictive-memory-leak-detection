@@ -104,7 +104,7 @@ def main():
     ], "#f3f6fc", "#b5c2d2")
     box(4, 1, 338, 28, "Local dashboard", 20, [
         ("Archived-data replay and inference with saved models", 8.5, 8.0),
-    ], NAVY, NAVY, dark=True)
+    ], "#edf6fe", "#9bbfe0")
 
     arrow([(173, 376), (173, 362)])
     line([(173, 294), (173, 283)])
